@@ -4,7 +4,7 @@
 <!--more-->
 但是我一直在学习、思考、实践，
 <!--more-->
-就这样就已经好于绝大部分观念还停留在“远古时代”的家长们了。
+就这样就已经好于绝大部分观念还停留在"远古时代"的家长们了。
 
 {{< figure src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/2022-06-13_1.jpeg" title="" >}}
 
