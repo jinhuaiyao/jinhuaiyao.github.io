@@ -6,7 +6,8 @@
 <!--more-->
 就这样就已经好于绝大部分观念还停留在“远古时代”的家长们了。
 
-{{< figure src="/images/2022-06-13_1.jpg" title="" >}}
+{{< figure src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/2022-06-13_1.jpeg" title="" >}}
+
 
 
 [《少年发声》陈瑜 ](https://weread.qq.com/book-detail?type=1&senderVid=37432009&v=45032570725cad7345009bfkcfc32da010cfcd208495488 "微信读书")
