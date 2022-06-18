@@ -4,34 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>不懂就不要乱管 - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="不懂就不要乱管" />
-<meta property="og:description" content="教育子女方面虽然我不是懂的很多，没有很多经验。" />
+        <title>实现一个需求 - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="实现一个需求" />
+<meta property="og:description" content="最近看sqlserver官方文档的pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.jinhuaiyao.com/2022/06/if-dont-understand-dont-mess-around/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-13T09:46:00+08:00" />
-<meta property="article:modified_time" content="2022-06-13T09:46:00+08:00" /><meta property="og:site_name" content="Jinhuaiyao&#39;s Records" />
+<meta property="og:url" content="http://www.jinhuaiyao.com/2022/06/implement-a-requirement/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-04T12:58:00+08:00" />
+<meta property="article:modified_time" content="2022-06-04T12:58:00+08:00" /><meta property="og:site_name" content="Jinhuaiyao&#39;s Records" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
 
-<meta name="twitter:title" content="不懂就不要乱管"/>
-<meta name="twitter:description" content="教育子女方面虽然我不是懂的很多，没有很多经验。"/>
+<meta name="twitter:title" content="实现一个需求"/>
+<meta name="twitter:description" content="最近看sqlserver官方文档的pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/2022/06/if-dont-understand-dont-mess-around/" /><link rel="prev" href="http://www.jinhuaiyao.com/2022/06/implement-a-requirement/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/2022/06/implement-a-requirement/" /><link rel="next" href="http://www.jinhuaiyao.com/2022/06/if-dont-understand-dont-mess-around/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "不懂就不要乱管",
+        "headline": "实现一个需求",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/www.jinhuaiyao.com\/2022\/06\/if-dont-understand-dont-mess-around\/"
-        },"genre": "posts","keywords": "教育","wordcount":  88 ,
-        "url": "http:\/\/www.jinhuaiyao.com\/2022\/06\/if-dont-understand-dont-mess-around\/","datePublished": "2022-06-13T09:46:00+08:00","dateModified": "2022-06-13T09:46:00+08:00","publisher": {
+            "@id": "http:\/\/www.jinhuaiyao.com\/2022\/06\/implement-a-requirement\/"
+        },"genre": "posts","keywords": "解决问题","wordcount":  382 ,
+        "url": "http:\/\/www.jinhuaiyao.com\/2022\/06\/implement-a-requirement\/","datePublished": "2022-06-04T12:58:00+08:00","dateModified": "2022-06-04T12:58:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -68,23 +68,60 @@
             </a></div>
     </div>
 </header><main class="main">
-                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">不懂就不要乱管</h1><div class="post-meta">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">实现一个需求</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Huaiyao Jin</a></span>&nbsp;<span class="post-category">included in <a href="/categories/notes/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Notes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-13">2022-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;88 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-04">2022-06-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;382 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="content" id="content"><p>教育子女方面虽然我不是懂的很多，没有很多经验。</p>
-<p>但是我一直在学习、思考、实践，</p>
-<!--more-->
-<p>就这样就已经好于绝大部分观念还停留在&quot;远古时代&quot;的家长们了。</p>
-<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/2022-06-13_1.jpeg"/>
+        </div><div class="content" id="content"><p>最近看sqlserver官方文档的pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_1.png"/>
 </figure>
 
-<p> </p>
-<p>图书<a href="https://weread.qq.com/book-detail?type=1&amp;senderVid=37432009&amp;v=45032570725cad7345009bfkcfc32da010cfcd208495488" title="微信读书" target="_blank" rel="noopener noreffer">《少年发声》陈瑜 </a></p></div><div class="post-footer" id="post-footer">
+<p>于是想着能不能有个工具，可以把pdf里的大纲提取出来，并且能够标记完成度，这样能有信心一点一点去学习，逐渐拨开层层迷雾。</p>
+<p>一顿谷歌，发现没有现成的工具可以一步到位实现需求。不过搜索过程中发现了OmniOutliner，试用了一下，发现它界面精美，可以展示大纲并且可以标记，完美符合我的需求。</p>
+<p>剩下的问题就是如何把pdf文档里的大纲导出然后导入OmniOutliner了。</p>
+<p>又是一番搜索，找到了https://mupdf.com，这个工具可以导出pdf大纲。</p>
+<p>虚拟机Windows里运行
+c:\mupdf-1.20.0-windows&gt;mutool.exe show SQLServer.pdf outline &gt;b.txt</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_2.png"/>
+</figure>
+
+<p>Mac里处理一下多余的字符
+去掉右面的#page=xxx
+vi b.txt
+:1,$s/#page.*$//g
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_3.png"/>
+</figure>
+</p>
+<p>:set list
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_4.png"/>
+</figure>
+</p>
+<p>去除左面多余|tab和-tab以及所有的双引号
+:1,$s/|^I//g
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_5.png"/>
+</figure>
+</p>
+<p>:1,$s/-^I//g
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_6.png"/>
+</figure>
+</p>
+<p>:1,$s/&quot;//g
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_7.png"/>
+</figure>
+</p>
+<p>:set nolist
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_8.png"/>
+</figure>
+</p>
+<p>搞定!</p>
+<p>导入OmniOutliner，看成果图，完美。
+<figure><img src="https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_9.png"/>
+</figure>
+</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-06-13</span>
+                <span>Updated on 2022-06-04</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
@@ -95,13 +132,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%95%99%E8%82%B2/">教育</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2022/06/implement-a-requirement/" class="prev" rel="prev" title="实现一个需求"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>实现一个需求</a></div>
+    <div class="post-nav">
+            <a href="/2022/06/if-dont-understand-dont-mess-around/" class="next" rel="next" title="不懂就不要乱管">不懂就不要乱管<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
