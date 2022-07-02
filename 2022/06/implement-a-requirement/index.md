@@ -70,7 +70,7 @@
 
 导入OmniOutliner，看成果图，完美。  
 
-![2](https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_9.png)
+![9](https://cdn.jsdelivr.net/gh/jinhuaiyao/image-hosting/images/implement-a-requirement_9.png)
 
 &lt;br&gt;
 
