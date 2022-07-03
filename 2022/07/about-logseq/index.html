@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/2022\/07\/about-logseq\/"
-        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  482 ,
+        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  664 ,
         "url": "http:\/\/www.jinhuaiyao.com\/2022\/07\/about-logseq\/","datePublished": "2022-07-02T13:55:55+08:00","dateModified": "2022-07-02T13:55:55+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -47,7 +47,7 @@
             <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a>
             </div>
@@ -63,15 +63,15 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
 </header><main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">关于 Logseq</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Huaiyao Jin</a></span>&nbsp;<span class="post-category"></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;482 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Huaiyao Jin</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;664 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="content" id="content"><p>这两礼拜每天都在用 Logseq，真是太好用，太喜欢了。</p>
 <p>这篇文章的形成也来自于 Logseq。</p>
 <p><img
@@ -125,7 +125,29 @@
 <h3 id="备份">备份</h3>
 <p>Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。</p>
 <p>一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录，不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次，最后改用了 rsync，只会更新有变化的。</p>
-<p><code>*/5 * * * * rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot;</code></p></div><div class="post-footer" id="post-footer">
+<p><code>*/5 * * * * rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot;</code></p>
+<p><em>-- update on 2022-07-03</em></p>
+<p>今天发现 cron job 并没有运行成功，文件没有同步到 OneDrive。先给 cron job 加一段输出用来调试一下。</p>
+<p><code>*/5 * * * * /usr/bin/rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot; &gt; /Users/huajin/Log/Logseq.bak.log 2&gt;&amp;1</code></p>
+<p>看一下 Logseq.bak.log，有众多的 Operation not permitted 报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-25&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-26&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-29&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-30&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>谷歌一下，找到了<a href="https://apple.stackexchange.com/questions/378553/crontab-operation-not-permitted" target="_blank" rel="noopener noreffer">解决方法</a>。</p>
+<p>简单的讲就是给<code>/usr/sbin/cron</code> grant <code>Full Disk Access</code> 权限。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
