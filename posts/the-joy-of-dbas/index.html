@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>数据库管理员的快乐 - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="数据库管理员的快乐" />
+<meta property="og:description" content="前几天需要用dbca新建个空数据库，但是报错。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.jinhuaiyao.com/posts/the-joy-of-dbas/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-07T15:25:53+08:00" />
+<meta property="article:modified_time" content="2021-03-07T15:25:53+08:00" /><meta property="og:site_name" content="Jinhuaiyao&#39;s Records" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
+
+<meta name="twitter:title" content="数据库管理员的快乐"/>
+<meta name="twitter:description" content="前几天需要用dbca新建个空数据库，但是报错。"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/posts/the-joy-of-dbas/" /><link rel="prev" href="http://www.jinhuaiyao.com/posts/2020-review-2021-plan/" /><link rel="next" href="http://www.jinhuaiyao.com/posts/everyone-has-their-own-luck/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "数据库管理员的快乐",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.jinhuaiyao.com\/posts\/the-joy-of-dbas\/"
+        },"genre": "posts","keywords": "DBA, Oracle","wordcount":  1228 ,
+        "url": "http:\/\/www.jinhuaiyao.com\/posts\/the-joy-of-dbas\/","datePublished": "2021-03-07T15:25:53+08:00","dateModified": "2021-03-07T15:25:53+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Huaiyao Jin"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">数据库管理员的快乐</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Huaiyao Jin</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-03-07">2021-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1228 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>前几天需要用dbca新建个空数据库，但是报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;dbca -silent \
+</span></span><span class="line"><span class="cl">&gt; -createDatabase \
+</span></span><span class="line"><span class="cl">&gt; -templateName General_Purpose.dbc \
+</span></span><span class="line"><span class="cl">&gt; -gdbName ARCHBMS \
+</span></span><span class="line"><span class="cl">&gt; -sid ARCHBMS \
+</span></span><span class="line"><span class="cl">&gt; -SysPassword xxxx \
+</span></span><span class="line"><span class="cl">&gt; -SystemPassword xxxx \
+</span></span><span class="line"><span class="cl">&gt; -emConfiguration NONE \
+</span></span><span class="line"><span class="cl">&gt; -redoLogFileSize 1000 \
+</span></span><span class="line"><span class="cl">&gt; -storageType FS \
+</span></span><span class="line"><span class="cl">&gt; -datafileDestination &#34;/oradata/archdb&#34; \
+</span></span><span class="line"><span class="cl">&gt; -characterSet AL32UTF8 \
+</span></span><span class="line"><span class="cl">&gt; -nationalCharacterSet AL16UTF16 \
+</span></span><span class="line"><span class="cl">&gt; -totalMemory 50000
+</span></span><span class="line"><span class="cl">[WARNING] [DBT-06208] The &#39;SYS&#39; password entered does not conform to the Oracle recommended standards.
+</span></span><span class="line"><span class="cl">   CAUSE:
+</span></span><span class="line"><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+</span></span><span class="line"><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
+</span></span><span class="line"><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+</span></span><span class="line"><span class="cl">[WARNING] [DBT-06208] The &#39;SYSTEM&#39; password entered does not conform to the Oracle recommended standards.
+</span></span><span class="line"><span class="cl">   CAUSE:
+</span></span><span class="line"><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+</span></span><span class="line"><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
+</span></span><span class="line"><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+</span></span><span class="line"><span class="cl">Copying database files
+</span></span><span class="line"><span class="cl">1% complete
+</span></span><span class="line"><span class="cl">2% complete
+</span></span><span class="line"><span class="cl">3% complete
+</span></span><span class="line"><span class="cl">DBCA Operation failed.
+</span></span><span class="line"><span class="cl">Look at the log file &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34; for further details.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>看一下 log：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;more &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34;
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:57.542 UTC ] Copying database files
+</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 1%
+</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 2%
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 3%
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.957 UTC ] ORA-01034: ORACLE not available
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.958 UTC ] ORA-01034: ORACLE not available
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:39:04.262 UTC ] DBCA_PROGRESS : DBCA Operation failed.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>从原点出发，报错信息 &ldquo;CRS error performing start on instance&rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？</p>
+<p>接下来就是一顿troubleshooting：</p>
+<ul>
+<li>
+<p>查看 cfgtoollogs/dbca/ARCHBMS 目录下其他 log，翻看了一堆 log，没有什么发现。</p>
+</li>
+<li>
+<p>试试 sqlplus 启动空 instance。</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&gt;si
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SQL*Plus: Release 12.2.0.1.0 Production on Tue Mar 2 02:55:43 2021
+</span></span><span class="line"><span class="cl">Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Connected to an idle instance.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SYS@ECOMBMS&gt; startup nomount;
+</span></span><span class="line"><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
+</span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
+</span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
+</span></span><span class="line"><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
+</span></span><span class="line"><span class="cl">clsr_start_resource2:500 clscrs_crsentitylist_first error clscrsret:11
+</span></span><span class="line"><span class="cl">clsr_start_resource2:900 exit status:254
+</span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
+</span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。</p>
+<ul>
+<li>
+<p>查看 alert log，没有什么特别的信息。</p>
+</li>
+<li>
+<p>确认没有安装 grid。</p>
+</li>
+<li>
+<p>Google 一下，google 和 metalink 上有几例类似的报错，跟我们这个报错不完全一致，没什么直接的帮助。不过通过搜索知道了真正的问题和报错信息 crs error 可能并没有什么关系。</p>
+</li>
+<li>
+<p>猜想会不会是空间空间导致一些莫名的问题，看一下系统空间 df -h，没问题。</p>
+</li>
+<li>
+<p>查看一下系统日志 /var/log/message 和 dmesg，没什么特殊的信息。</p>
+</li>
+<li>
+<p>尝试 trace 一下 sqlplus，strace -t sqlplus / as sysdba，没有什么发现。</p>
+</li>
+<li>
+<p>重启 server，没用。</p>
+</li>
+<li>
+<p>换一个 instance，create initAAA.ora 然后测试 startup nomount，同样报错。</p>
+</li>
+<li>
+<p>找了另外一台 server xxxx00dbx050, 创建 initAAA.ora 然后测试 startup nomount, 没有报错。</p>
+</li>
+<li>
+<p>怀疑是不是 db server 有什么问题, 尝试联系一下 INFRA team。</p>
+</li>
+</ul>
+<p>到这里就穷途末路了。研究了一个多小时了，感觉很疲惫，休息一下，和同事聊了一会儿，他随口说了一句，实在不行就重装 rdbms。柳暗花明，换个角度，直接绕开已有报错，不用重装，新装 /opt/oracle/database/12cR201_new，这次 dbca 不再报错，先去完成任务。</p>
+<hr>
+<p>DBA 工作和其他工作一样也有很多琐事、重复的事，做着做着可能就麻木了，但是偶尔有一次需要绞尽脑汁地寻求解决问题的方法并且最后解决了问题，就会让人感到由衷的快乐，这些断断续续的快乐就能支持我们再前行一会儿、再精进一点。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-03-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/dba/">DBA</a>,&nbsp;<a href="/tags/oracle/">Oracle</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+
+</div>
+<br>
+        <h3>Comments:</h3>
+        <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="8f0469f7-40b8-4c69-9a61-614cd6cb0f3e"
+        data-page-id="c89b73c2b30c9b141e34fa26bcee84b3"
+        data-page-url="http://www.jinhuaiyao.com/posts/the-joy-of-dbas/"
+        data-page-title="数据库管理员的快乐"
+      ></div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Huaiyao Jin</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -6,18 +6,18 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
             <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 02 Jul 2022 13:55:55 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/shell/" rel="self" type="application/rss+xml" /><item>
     <title>关于 Logseq</title>
-    <link>http://www.jinhuaiyao.com/2022/07/about-logseq/</link>
+    <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
     <pubDate>Sat, 02 Jul 2022 13:55:55 &#43;0800</pubDate>
     <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/2022/07/about-logseq/</guid>
+    <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
     <description><![CDATA[<p>这两礼拜每天都在用 Logseq，真是太好用，太喜欢了。</p>]]></description>
 </item>
 <item>
     <title>实现一个需求</title>
-    <link>http://www.jinhuaiyao.com/2022/06/implement-a-requirement/</link>
+    <link>http://www.jinhuaiyao.com/posts/implement-a-requirement/</link>
     <pubDate>Sat, 04 Jun 2022 12:58:00 &#43;0800</pubDate>
     <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/2022/06/implement-a-requirement/</guid>
+    <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
     <description><![CDATA[<p>最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。</p>]]></description>
 </item>
 </channel>
