@@ -124,7 +124,7 @@
 <p>每天早上打开 Journals，输入 /template 回车，然后选中 daily_templete 回车，就可以了。</p>
 <h3 id="备份">备份</h3>
 <p>Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。</p>
-<p>一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录，不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次，最后改用了 rsync，只会更新有变化的。</p>
+<p>一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录。不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次。最后改用了 rsync，只会拷备有变化的。</p>
 <p><code>*/5 * * * * rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot;</code></p>
 <p><em>-- update on 2022-07-03</em></p>
 <p>今天发现 cron job 并没有运行成功，文件没有同步到 OneDrive。先给 cron job 加一段输出用来调试一下。</p>
@@ -168,7 +168,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2022/06/if-dont-understand-dont-mess-around/" class="prev" rel="prev" title="不懂就不要乱管"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>不懂就不要乱管</a></div>
+
 </div>
 <br>
         <h3>Comments:</h3>
