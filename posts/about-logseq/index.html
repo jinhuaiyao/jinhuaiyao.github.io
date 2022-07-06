@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>关于 Logseq - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="关于 Logseq" />
-<meta property="og:description" content="这两礼拜每天都在用 Logseq，真是太好用，太喜欢了。" />
+<meta property="og:description" content="这两礼拜每天都在用 Logseq，真是太喜欢了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.jinhuaiyao.com/posts/about-logseq/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-02T13:55:55+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
 
 <meta name="twitter:title" content="关于 Logseq"/>
-<meta name="twitter:description" content="这两礼拜每天都在用 Logseq，真是太好用，太喜欢了。"/>
+<meta name="twitter:description" content="这两礼拜每天都在用 Logseq，真是太喜欢了。"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/about-logseq\/"
-        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  664 ,
+        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  680 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/about-logseq\/","datePublished": "2022-07-02T13:55:55+08:00","dateModified": "2022-07-03T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -70,9 +70,9 @@
 </header><main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">关于 Logseq</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Huaiyao Jin</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;664 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;680 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="content" id="content"><p>这两礼拜每天都在用 Logseq，真是太好用，太喜欢了。</p>
+        </div><div class="content" id="content"><p>这两礼拜每天都在用 Logseq，真是太喜欢了。</p>
 <p>这篇文章的形成也来自于 Logseq。</p>
 <p><img
         class="lazyload"
@@ -111,6 +111,8 @@
 <p>为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。</p>
 <p>比如如果 md 文件第一行是空行的话就把它删除。</p>
 <p><code>/usr/local/opt/gnu-sed/libexec/gnubin/sed -i '1{/^$/d;}' *.md</code></p>
+<p>也用到了 perl 的一个替换命令。</p>
+<p><code>perl -pi -e &quot;s/\t- ####/- ####/g&quot; *.md</code></p>
 <h3 id="daily-template">Daily template</h3>
 <p>自定义好 daily_templete</p>
 <p><img
