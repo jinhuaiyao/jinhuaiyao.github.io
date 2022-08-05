@@ -99,7 +99,7 @@
 <p>又看了下阿里云，4G 内存的主机每个月也要六七十块钱，偶尔用一下，不是很划算，放弃。</p>
 <hr>
 <p>最后，竟然在最后，才想到自己改造成家用服务器的 2013 年买的 MacBook Pro。只要在上面安装 VMware，然后直接加载以前保存的虚拟机文件就可以飞速得到一个 Oracle 实验环境。</p>
-<p>剩下的问题就是如何访问 Home Server (旧 macbook pro) 上的虚拟机，特别是不在家的时候该如何访问。</p>
+<p>剩下的问题就是如何访问 Home Server (旧 MacBook Pro) 上的虚拟机，特别是不在家的时候该如何访问。</p>
 <p>基本思路就是先 ssh 到 Home Server，然后再 ssh 到虚拟机里的 Linux，这样就可以运行 sqlplus 了。</p>
 <p>在家里、同一个网段下访问很方便。</p>
 <p><code>ssh -t -l &lt;username&gt; 10.0.0.6 ssh -o StrictHostKeyChecking=no oracle@192.168.156.121</code></p>
