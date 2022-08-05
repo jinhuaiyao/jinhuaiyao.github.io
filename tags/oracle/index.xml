@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/tags/oracle/</link>
         <description>Oracle - Tag - Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sun, 07 Mar 2021 15:25:53 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+    <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+    <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</link>
+    <pubDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</guid>
+    <description><![CDATA[<p>由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。</p>]]></description>
+</item>
+<item>
     <title>数据库管理员的快乐</title>
     <link>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</link>
     <pubDate>Sun, 07 Mar 2021 15:25:53 &#43;0800</pubDate>

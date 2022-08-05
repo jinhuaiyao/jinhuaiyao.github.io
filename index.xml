@@ -4,9 +4,17 @@
         <link>http://www.jinhuaiyao.com/</link>
         <description>Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 02 Jul 2022 13:55:55 &#43;0800</lastBuildDate>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</lastBuildDate>
             <atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+    <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</link>
+    <pubDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</guid>
+    <description><![CDATA[<p>由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。</p>]]></description>
+</item>
+<item>
     <title>关于 Logseq</title>
     <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
     <pubDate>Sat, 02 Jul 2022 13:55:55 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</guid>
     <description><![CDATA[<p>前几天需要用dbca新建个空数据库，但是报错。</p>]]></description>
-</item>
-<item>
-    <title>2020 回顾 &#43; 2021 期待</title>
-    <link>http://www.jinhuaiyao.com/posts/2020-review-2021-plan/</link>
-    <pubDate>Thu, 31 Dec 2020 21:07:48 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/2020-review-2021-plan/</guid>
-    <description><![CDATA[<p>转眼又一年。</p>]]></description>
 </item>
 </channel>
 </rss>

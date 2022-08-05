@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境 - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="M1 芯片 MacBook Pro 上搭建 Oracle 实验环境" />
+<meta property="og:description" content="由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-05T10:41:01+08:00" />
+<meta property="article:modified_time" content="2022-08-05T10:41:01+08:00" /><meta property="og:site_name" content="Jinhuaiyao&#39;s Records" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
+
+<meta name="twitter:title" content="M1 芯片 MacBook Pro 上搭建 Oracle 实验环境"/>
+<meta name="twitter:description" content="由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/" /><link rel="prev" href="http://www.jinhuaiyao.com/posts/about-logseq/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "M1 芯片 MacBook Pro 上搭建 Oracle 实验环境",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.jinhuaiyao.com\/posts\/oracle-test-env-under-m1-chip-macbook\/"
+        },"genre": "posts","keywords": "Oracle","wordcount":  1241 ,
+        "url": "http:\/\/www.jinhuaiyao.com\/posts\/oracle-test-env-under-m1-chip-macbook\/","datePublished": "2022-08-05T10:41:01+08:00","dateModified": "2022-08-05T10:41:01+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Huaiyao Jin"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><script async defer data-website-id="542da696-efaf-41dd-9dad-5e0ae890df9f" src="https://analysis.jinhuaiyao.com/huaiyao.js"></script><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-05">2022-08-05</time>&nbsp;</div>
+        </div><div class="content" id="content"><p>由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。</p>
+<hr>
+<p>先是尝试在 Parallels Desktop 上加载之前下载的 Linux iso 镜像文件，根本不能用。原来基于 Intel x86 架构的 Linux 不能装在基于 ARM 架构的 M1 芯片的笔记本上。</p>
+<p>尝试下载最新的基于 ARM 架构的 Oracle Linux，<a href="https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso" target="_blank" rel="noopener noreffer">https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso</a> ，安装没问题。装好以后抱有侥幸心理装一下 Oracle 12c，runInstaller 直接报错。</p>
+<p>一顿谷歌，搜索了很多文章，总结一下有几种可行方案。</p>
+<ol>
+<li>
+<p>用 Parallel，VMware 或者 <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreffer">UTM</a> 安装基于 ARM 的 Windows 11，然后在 Windows 11 里安装 Oracle。</p>
+<p>直接放弃，我要的是在 Linux 下的 Oracle db。</p>
+</li>
+<li>
+<p>用 docker。</p>
+<p>直接放弃，不想弄个黑盒子。</p>
+</li>
+<li>
+<p>用 UTM 安装基于 x86 平台的 Linux，然后再装 Oracle。</p>
+<p>这个看起来不错，开心去尝试。结果安装 Redhat Linux 就用了非常之久，性能问题太严重了。放弃。</p>
+</li>
+</ol>
+<p>以上探索过程花了几个小时，我已经基本上放弃在笔记本上安装 Oracle 实验环境的打算了。</p>
+<hr>
+<p>于是只好转换思路，不在本地安装虚拟机，能 ssh 到远程的 db server 上也可以。</p>
+<p>首先想到的是自己在 “搬瓦工” 上买的两个 VPS，平时只用来 “科学上网”，正好利用一下。找到原来的账号密码 ssh 上去一看，只有 1G 内存，放弃。</p>
+<p>尝试注册 Oracle Cloud，有文章说它可以提供永久免费的主机。注册搞了半天，最后通不过，应该是信用卡的问题。放弃。</p>
+<p>尝试 AWS，注册成功，看一下 4G 内存的云机器，不便宜，放弃。</p>
+<p>又看了下阿里云，4G 内存的主机每个月也要六七十块钱，偶尔用一下，不是很划算，放弃。</p>
+<hr>
+<p>最后，竟然在最后，才想到自己改造成家用服务器的 2013 年买的 MacBook Pro。只要在上面安装 VMware，然后直接加载以前保存的虚拟机文件就可以飞速得到一个 Oracle 实验环境。</p>
+<p>剩下的问题就是如何访问 Home Server (旧 macbook pro) 上的虚拟机，特别是不在家的时候该如何访问。</p>
+<p>基本思路就是先 ssh 到 Home Server，然后再 ssh 到虚拟机里的 Linux，这样就可以运行 sqlplus 了。</p>
+<p>在家里、同一个网段下访问很方便。</p>
+<p><code>ssh -t -l &lt;username&gt; 10.0.0.6 ssh -o StrictHostKeyChecking=no oracle@192.168.156.121</code></p>
+<p>外网访问的话有两个问题要解决，一是如何访问家里局域网里的 Home Server，二是安全问题。</p>
+<p>因为我有公网 IP，在路由器上简单做个端口映射就好。没有公网 IP 的话需要去研究一下内网穿透方案。</p>
+<p><code>ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt; ssh -o StrictHostKeyChecking=no oracle@192.168.156.121</code></p>
+<p>因为我的 IP 是暴露在公网上，所以安全问题尤为重要。</p>
+<ul>
+<li>
+<p>路由器端开启了防火墙，只开放了两个必要的端口，一个是 sceen sharing，还有一个是 ssh，都端口映射到非默认端口。</p>
+</li>
+<li>
+<p>先把 M1 笔记本上的 public key 复制到 Home Server 上的 <code>~/.ssh/authorized_keys</code>，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MaxAuthTries 6
+</span></span><span class="line"><span class="cl">MaxSessions 10
+</span></span><span class="line"><span class="cl">PubkeyAuthentication yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication no
+</span></span><span class="line"><span class="cl">ChallengeResponseAuthentication no
+</span></span><span class="line"><span class="cl">PermitRootLogin no
+</span></span><span class="line"><span class="cl">PermitEmptyPasswords no
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-- restart sshd
+</span></span><span class="line"><span class="cl">sudo launchctl stop com.openssh.sshd
+</span></span><span class="line"><span class="cl">sudo launchctl start com.openssh.sshd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在另外的机器上测试 ssh，会得到下面的报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~/.ssh &gt; ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt;
+</span></span><span class="line"><span class="cl">xxx@xxxx: Permission denied (publickey).
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>先这样吧，不折腾了。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/oracle/">Oracle</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+
+</div>
+<br>
+        <h3>Comments:</h3>
+        <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="8f0469f7-40b8-4c69-9a61-614cd6cb0f3e"
+        data-page-id="87af96a3ed16a07754fdb4bcf04ee441"
+        data-page-url="http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/"
+        data-page-title="M1 芯片 MacBook Pro 上搭建 Oracle 实验环境"
+      ></div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Huaiyao Jin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
