@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/about-logseq\/"
-        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  892 ,
+        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  898 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/about-logseq\/","datePublished": "2022-07-02T13:55:55+08:00","dateModified": "2022-08-06T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -165,8 +165,8 @@
 <p><em>-- added on 2022-07-22</em></p>
 <p>从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。</p>
 <p>本来想用 advanced query，可惜搞不定。只好用一些比较“笨拙”的方法。</p>
-<p>在旧 macbook 改造以后的 server 上加一个 cron job。</p>
-<p><code>1 5 * * * /bin/bash -x  /Users/rjin/Scripts/on_this_day.sh &gt; /Users/huaiyao/Log/on_this_day.log 2&gt;&amp;1</code></p>
+<p>在<del>旧 macbook 改造以后的 server</del> 新 MacBook Pro 上加一个 cron job。 <em>-- update on 2022-08-06</em></p>
+<p><code>5 5 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &gt; /Users/jinhuaiyao/Log/on_this_day.log 2&gt;&amp;1</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -181,13 +181,13 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">huaiyao@MacHomeServer Scripts % cat /Users/rjin/Scripts/on_this_day.sh
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span>  <span class="s2">&#34;/Users/huaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jinhuaiyao@JinHuaiyaos-MacBook-Pro ~ % cat /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span>  <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">DT</span><span class="o">=</span><span class="sb">`</span>date +%m_%d<span class="sb">`</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">&gt; ../pages/On_This_Day.md<span class="p">;</span>
 </span></span><span class="line"><span class="cl">ls <span class="p">|</span>grep <span class="nv">$DT</span> <span class="p">|</span>sort <span class="p">|</span><span class="k">while</span> <span class="nb">read</span> file
 </span></span><span class="line"><span class="cl"><span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- @@@@ [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] @@@@/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- ---- [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] ----/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
 </span></span><span class="line"><span class="cl">cat <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> &gt;&gt; ../pages/On_This_Day.md
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n&#34;</span> &gt;&gt; ../pages/On_This_Day.md
 </span></span><span class="line"><span class="cl"><span class="k">done</span>
@@ -197,10 +197,10 @@
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day.png"
-        data-srcset="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day.png, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day.png 1.5x, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day.png 2x"
+        data-src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_1.png"
+        data-srcset="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_1.png, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_1.png 1.5x, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_1.png 2x"
         data-sizes="auto"
-        alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day.png"
+        alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_1.png"
         title="on_this_day" /></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
