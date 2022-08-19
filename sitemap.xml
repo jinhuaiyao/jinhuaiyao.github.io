@@ -2,12 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://www.jinhuaiyao.com/</loc><lastmod>2022-08-06T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</loc><lastmod>2022-08-05T10:41:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tags/oracle/</loc><lastmod>2022-08-05T10:41:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/posts/</loc><lastmod>2022-08-06T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tags/</loc><lastmod>2022-08-06T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc><lastmod>2022-08-05T10:41:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/</loc><lastmod>2022-08-19T19:05:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/posts/</loc><lastmod>2022-08-19T19:05:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/</loc><lastmod>2022-08-19T19:05:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/%E5%81%A5%E5%BA%B7/</loc><lastmod>2022-08-19T19:05:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</loc><lastmod>2022-08-19T19:05:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/%E8%BF%90%E5%8A%A8/</loc><lastmod>2022-08-19T19:05:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</loc><lastmod>2022-08-05T10:41:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/oracle/</loc><lastmod>2022-08-05T10:41:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc><lastmod>2022-08-05T10:41:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://www.jinhuaiyao.com/tags/logseq/</loc><lastmod>2022-08-06T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>http://www.jinhuaiyao.com/tags/shell/</loc><lastmod>2022-08-06T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>http://www.jinhuaiyao.com/posts/about-logseq/</loc><lastmod>2022-08-06T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>

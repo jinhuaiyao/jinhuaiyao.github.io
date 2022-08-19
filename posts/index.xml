@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/posts/</link>
         <description> | Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Fri, 19 Aug 2022 19:05:40 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>减重 20 斤</title>
+    <link>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</link>
+    <pubDate>Fri, 19 Aug 2022 19:05:40 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</guid>
+    <description><![CDATA[<p>5 月 3 号到 8 月 18 号，3 个半月，减重 20 斤。时隔 7 年，终于成功了。</p>]]></description>
+</item>
+<item>
     <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
     <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</link>
     <pubDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/everyone-has-their-own-luck/</guid>
     <description><![CDATA[<p>这两天坐地铁上下班的路上一直看一本书，边看边庆幸，在这个时间点看到这本书真是我的幸运。又顺带回想一下过去类似的感慨，好像也不少。</p>]]></description>
-</item>
-<item>
-    <title>数据库管理员的快乐</title>
-    <link>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</link>
-    <pubDate>Sun, 07 Mar 2021 15:25:53 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</guid>
-    <description><![CDATA[<p>前几天需要用dbca新建个空数据库，但是报错。</p>]]></description>
 </item>
 </channel>
 </rss>
