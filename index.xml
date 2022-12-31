@@ -4,9 +4,17 @@
         <link>http://www.jinhuaiyao.com/</link>
         <description>Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sun, 23 Oct 2022 15:33:42 &#43;0800</lastBuildDate>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 31 Dec 2022 08:50:15 &#43;0800</lastBuildDate>
             <atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>2022 回顾 &#43; 2023 期待</title>
+    <link>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</link>
+    <pubDate>Sat, 31 Dec 2022 08:50:15 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</guid>
+    <description><![CDATA[<p>转眼又一年。</p>]]></description>
+</item>
+<item>
     <title>关于家庭教育的一点思考</title>
     <link>http://www.jinhuaiyao.com/posts/about-family-education/</link>
     <pubDate>Sun, 23 Oct 2022 15:33:42 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/2021-review-2022-plan/</guid>
     <description><![CDATA[<p>转眼又一年。</p>]]></description>
-</item>
-<item>
-    <title>改进一下工作笔记</title>
-    <link>http://www.jinhuaiyao.com/posts/impove-note-taking/</link>
-    <pubDate>Fri, 09 Jul 2021 09:07:55 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/impove-note-taking/</guid>
-    <description><![CDATA[<p>上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。</p>]]></description>
 </item>
 </channel>
 </rss>
