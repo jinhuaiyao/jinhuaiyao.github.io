@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Some Records for RAC Installation on Macbook - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="Some Records for RAC Installation on Macbook" />
+<meta property="og:description" content="这阵子比较闲了，想着好好利用一下以前的工作笔记本。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-02T16:19:18+08:00" />
+<meta property="article:modified_time" content="2023-02-02T16:19:18+08:00" /><meta property="og:site_name" content="Jinhuaiyao&#39;s Records" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
+
+<meta name="twitter:title" content="Some Records for RAC Installation on Macbook"/>
+<meta name="twitter:description" content="这阵子比较闲了，想着好好利用一下以前的工作笔记本。"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/" /><link rel="prev" href="http://www.jinhuaiyao.com/posts/2022-review-2023-plan/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Some Records for RAC Installation on Macbook",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.jinhuaiyao.com\/posts\/some-records-for-rac-installation-on-macbook\/"
+        },"genre": "posts","keywords": "Oracle","wordcount":  1476 ,
+        "url": "http:\/\/www.jinhuaiyao.com\/posts\/some-records-for-rac-installation-on-macbook\/","datePublished": "2023-02-02T16:19:18+08:00","dateModified": "2023-02-02T16:19:18+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Huaiyao Jin"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><script async defer data-website-id="542da696-efaf-41dd-9dad-5e0ae890df9f" src="https://analysis.jinhuaiyao.com/huaiyao.js"></script><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Archives </a><a class="menu-item" href="/links/"> Links </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Archives</a><a class="menu-item" href="/links/" title="">Links</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Some Records for RAC Installation on Macbook</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-02">2023-02-02</time>&nbsp;</div>
+        </div><div class="content" id="content"><p>这阵子比较闲了，想着好好利用一下以前的工作笔记本。</p>
+<p>Intel 芯片的 Macbook Pro，离职以后公司免费送给我们的福利之一。</p>
+<p>决定在上面装个 Oracle RAC 测试环境。之前 2013 年的 MacBook Pro 已经在爱回收上卖掉了，上面的测试环境也就没有了。</p>
+<p>以下是一些零散的记录，写在这里以后找起来也容易。</p>
+<h3 id="yum-install-package-很慢">yum install package 很慢</h3>
+<p>研究一番，最后发现是电信网络的问题，改用手机热点，虚拟机 IP 也跟着变化，重新 ssh，之后 yum install 就很快了。</p>
+<h3 id="public-ip-网络配置">Public IP 网络配置</h3>
+<p>之前都是自定义一个虚拟的网段，这次在 VMWare 里改用成和家庭网络网段一样，10.0.0.x，一个好处是 db server 可以直接访问外网，另外家庭网络里其他笔记本可以直接 ssh 到 db server（以前需要先 ssh 到笔记本上然后再 ssh 到 db server），算是一个改进。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#Public
+</span></span><span class="line"><span class="cl">10.0.0.218 pve01dbs005
+</span></span><span class="line"><span class="cl">10.0.0.219 pve01dbs006
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Private
+</span></span><span class="line"><span class="cl">192.168.1.2 pve01dbs005p1
+</span></span><span class="line"><span class="cl">192.168.1.3 pve01dbs006p1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Virtual
+</span></span><span class="line"><span class="cl">10.0.0.221 pve01dbs005v1
+</span></span><span class="line"><span class="cl">10.0.0.222 pve01dbs006v1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#scan
+</span></span><span class="line"><span class="cl">10.0.0.223 pve01dbs-scan
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="avahi-daemonservice">avahi-daemon.service</h3>
+<p>Oracle Linux 7.7 上安装 RAC，需要 disable 这个服务。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">systemctl status avahi-daemon.service
+</span></span><span class="line"><span class="cl">systemctl stop avahi-daemon.service
+</span></span><span class="line"><span class="cl">systemctl disable avahi-daemon.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="vmware-里共享硬盘的配置">VMWare 里共享硬盘的配置</h3>
+<p>两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png"
+        data-srcset="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png 1.5x, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png 2x"
+        data-sizes="auto"
+        alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png"
+        title="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl"># BEGIN SHARED STORAGE
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl"># -  Here we NEW SCSI BUS. Set it to &#34;Virtual&#34; and disk.locking = &#34;false&#34;
+</span></span><span class="line"><span class="cl">#    
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">disk.EnableUUID = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">diskLib.dataCacheMaxSize = &#34;0&#34;
+</span></span><span class="line"><span class="cl">diskLib.dataCacheMaxReadAheadSize = &#34;0&#34;
+</span></span><span class="line"><span class="cl">diskLib.dataCacheMinReadAheadSize = &#34;0&#34;
+</span></span><span class="line"><span class="cl">diskLib.dataCachePageSize = &#34;4096&#34;
+</span></span><span class="line"><span class="cl">diskLib.maxUnsyncedWrites = &#34;0&#34;
+</span></span><span class="line"><span class="cl">disk.locking = &#34;false&#34;
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">#   Create HBA (just as if you had a SAN storage), LSILOGIC or BUSLOGIC
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">scsi1.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi1.sharedBus = &#34;virtual&#34;
+</span></span><span class="line"><span class="cl">scsi1.virtualDev = &#34;lsilogic&#34;
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">#   Creating virtual SCSI disks on that HBA
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">scsi1:0.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi1:0.fileName = &#34;asm01.vmdk&#34;
+</span></span><span class="line"><span class="cl">scsi1:0.redo = &#34;&#34;
+</span></span><span class="line"><span class="cl">scsi1:0.mode = &#34;independent-persistent&#34;
+</span></span><span class="line"><span class="cl">scsi1:0.deviceType = &#34;disk&#34;
+</span></span><span class="line"><span class="cl">scsi1:1.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi1:1.fileName = &#34;asm02.vmdk&#34;
+</span></span><span class="line"><span class="cl">scsi1:1.redo = &#34;&#34;
+</span></span><span class="line"><span class="cl">scsi1:1.mode = &#34;independent-persistent&#34;
+</span></span><span class="line"><span class="cl">scsi1:1.deviceType = &#34;disk&#34;
+</span></span><span class="line"><span class="cl">scsi1:2.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi1:2.fileName = &#34;asm03.vmdk&#34;
+</span></span><span class="line"><span class="cl">scsi1:2.redo = &#34;&#34;
+</span></span><span class="line"><span class="cl">scsi1:2.mode = &#34;independent-persistent&#34;
+</span></span><span class="line"><span class="cl">scsi1:2.deviceType = &#34;disk&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scsi1.pciSlotNumber = &#34;37&#34;
+</span></span><span class="line"><span class="cl">scsi0:1.fileName = &#34;vote01.vmdk&#34;
+</span></span><span class="line"><span class="cl">scsi0:1.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi0:1.mode = &#34;independent-persistent&#34;
+</span></span><span class="line"><span class="cl">scsi0:1.deviceType = &#34;disk&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scsi0:2.fileName = &#34;vote02.vmdk&#34;
+</span></span><span class="line"><span class="cl">scsi0:2.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi0:2.mode = &#34;independent-persistent&#34;
+</span></span><span class="line"><span class="cl">scsi0:2.deviceType = &#34;disk&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scsi0:3.fileName = &#34;vote03.vmdk&#34;
+</span></span><span class="line"><span class="cl">scsi0:3.present = &#34;TRUE&#34;
+</span></span><span class="line"><span class="cl">scsi0:3.mode = &#34;independent-persistent&#34;
+</span></span><span class="line"><span class="cl">scsi0:3.deviceType = &#34;disk&#34;
+</span></span><span class="line"><span class="cl">scsi0:3.redo = &#34;&#34;
+</span></span><span class="line"><span class="cl">scsi0:1.redo = &#34;&#34;
+</span></span><span class="line"><span class="cl">scsi0:2.redo = &#34;&#34;
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span><span class="line"><span class="cl"># END SHARED STORAGE
+</span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ocr">OCR</h3>
+<p>忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png"
+        data-srcset="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png 1.5x, https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png 2x"
+        data-sizes="auto"
+        alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png"
+        title="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg
+</span></span><span class="line"><span class="cl">State    Type    Rebal  Sector  Logical_Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_MB  Usable_file_MB  Offline_disks  Voting_files  Name
+</span></span><span class="line"><span class="cl">MOUNTED  NORMAL  N         512             512   4096  4194304     15360    14420             5120            4650              0             Y  VOTE_DG/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装-grid-时节点一-rootsh-报错">安装 Grid 时节点一 root.sh 报错</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2023/01/31 16:14:56 CLSRSC-594: Executing installation step 18 of 19: &#39;ConfigNode&#39;.
+</span></span><span class="line"><span class="cl"> PRCR-1013 : Failed to start resource ora.ons
+</span></span><span class="line"><span class="cl">PRCR-1064 : Failed to start resource ora.ons on node pve01dbs005
+</span></span><span class="line"><span class="cl">CRS-2674: Start of &#39;ora.ons&#39; on &#39;pve01dbs005&#39; failed
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2023/01/31 16:15:44 Oracle Clusterware infrastructure error in CLSECHO (OS PID 7018): ADR home path /u01/app/grid/diag/crs/pve01dbs005v1/crs does not exist; ADR initialization will try to create it
+</span></span><span class="line"><span class="cl"> CLSRSC-180: An error occurred while executing the command &#39;srvctl start nodeapps -n pve01dbs005&#39;
+</span></span><span class="line"><span class="cl">2023/01/31 16:15:44 CLSRSC-287: FirstNode configuration failed
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>搜索了一下，有篇 metelink 文章正好解决这个问题，PRCR-1013 : Failed to start resource ora.ons  - 12.2 : Grid Infrastructure Installation Fails with Error “PRCR-1013 : Failed to start resource ora.ons” (Doc ID 2380526.1)</p>
+<p>解决方法是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@pve01dbs005 ~]# service NetworkManager status
+</span></span><span class="line"><span class="cl">[root@pve01dbs005 ~]# service NetworkManager stop
+</span></span><span class="line"><span class="cl">[root@pve01dbs005 ~]# chkconfig NetworkManager off
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重新运行 root.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@pve01dbs005 ~]# /u01/app/19.3.0/grid/root.sh
+</span></span><span class="line"><span class="cl">Performing root user operation.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The following environment variables are set as:
+</span></span><span class="line"><span class="cl">    ORACLE_OWNER= grid
+</span></span><span class="line"><span class="cl">    ORACLE_HOME=  /u01/app/19.3.0/grid
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Enter the full pathname of the local bin directory: [/usr/local/bin]:
+</span></span><span class="line"><span class="cl">The contents of &#34;dbhome&#34; have not changed. No need to overwrite.
+</span></span><span class="line"><span class="cl">The contents of &#34;oraenv&#34; have not changed. No need to overwrite.
+</span></span><span class="line"><span class="cl">The contents of &#34;coraenv&#34; have not changed. No need to overwrite.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Entries will be added to the /etc/oratab file as needed by
+</span></span><span class="line"><span class="cl">Database Configuration Assistant when a database is created
+</span></span><span class="line"><span class="cl">Finished running generic part of root script.
+</span></span><span class="line"><span class="cl">Now product-specific root actions will be performed.
+</span></span><span class="line"><span class="cl">Relinking oracle with rac_on option
+</span></span><span class="line"><span class="cl">Using configuration parameter file: /u01/app/19.3.0/grid/crs/install/crsconfig_params
+</span></span><span class="line"><span class="cl">The log of current session can be found at:
+</span></span><span class="line"><span class="cl">  /u01/app/grid/crsdata/pve01dbs005/crsconfig/rootcrs_pve01dbs005_2023-01-31_04-25-49PM.log
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:54 CLSRSC-594: Executing installation step 1 of 19: &#39;SetupTFA&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:54 CLSRSC-594: Executing installation step 2 of 19: &#39;ValidateEnv&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:54 CLSRSC-363: User ignored prerequisites during installation
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:54 CLSRSC-594: Executing installation step 3 of 19: &#39;CheckFirstNode&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:54 CLSRSC-4002: Successfully installed Oracle Trace File Analyzer (TFA) Collector.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:55 CLSRSC-594: Executing installation step 4 of 19: &#39;GenSiteGUIDs&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:56 CLSRSC-594: Executing installation step 5 of 19: &#39;SetupOSD&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:56 CLSRSC-594: Executing installation step 6 of 19: &#39;CheckCRSConfig&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:57 CLSRSC-594: Executing installation step 7 of 19: &#39;SetupLocalGPNP&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:25:57 CLSRSC-594: Executing installation step 8 of 19: &#39;CreateRootCert&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:02 CLSRSC-594: Executing installation step 9 of 19: &#39;ConfigOLR&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:02 CLSRSC-594: Executing installation step 10 of 19: &#39;ConfigCHMOS&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:02 CLSRSC-594: Executing installation step 11 of 19: &#39;CreateOHASD&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:03 CLSRSC-594: Executing installation step 12 of 19: &#39;ConfigOHASD&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:05 CLSRSC-594: Executing installation step 13 of 19: &#39;InstallAFD&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:05 CLSRSC-594: Executing installation step 14 of 19: &#39;InstallACFS&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:06 CLSRSC-594: Executing installation step 15 of 19: &#39;InstallKA&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:09 CLSRSC-594: Executing installation step 16 of 19: &#39;InitConfig&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:26:45 CLSRSC-594: Executing installation step 17 of 19: &#39;StartCluster&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:28:12 CLSRSC-343: Successfully started Oracle Clusterware stack
+</span></span><span class="line"><span class="cl">2023/01/31 16:28:12 CLSRSC-594: Executing installation step 18 of 19: &#39;ConfigNode&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:28:58 CLSRSC-594: Executing installation step 19 of 19: &#39;PostConfig&#39;.
+</span></span><span class="line"><span class="cl">2023/01/31 16:29:19 CLSRSC-325: Configure Oracle Grid Infrastructure for a Cluster ... succeeded
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="193-rdbms安装和-12c-不同">19.3 rdbms安装和 12c 不同</h3>
+<p>和 Grid 安装方式类似，需要把 zip 文件 unzip 到预设的目录，然后运行 runInstaller。以前是随便 unzip 到一个目录，安装时候选择 ORACLE_HOME。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-02-02</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/oracle/">Oracle</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+
+</div>
+<br>
+        <h3>Comments:</h3>
+        <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="8f0469f7-40b8-4c69-9a61-614cd6cb0f3e"
+        data-page-id="9423aef76cad231dabfa0bb3e44257f1"
+        data-page-url="http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/"
+        data-page-title="Some Records for RAC Installation on Macbook"
+      ></div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Huaiyao Jin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

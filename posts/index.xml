@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/posts/</link>
         <description> | Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 31 Dec 2022 08:50:15 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Thu, 02 Feb 2023 16:19:18 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Some Records for RAC Installation on Macbook</title>
+    <link>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</link>
+    <pubDate>Thu, 02 Feb 2023 16:19:18 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</guid>
+    <description><![CDATA[<p>这阵子比较闲了，想着好好利用一下以前的工作笔记本。</p>]]></description>
+</item>
+<item>
     <title>2022 回顾 &#43; 2023 期待</title>
     <link>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</link>
     <pubDate>Sat, 31 Dec 2022 08:50:15 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/creation-begins-with-imitation/</guid>
     <description><![CDATA[<p>最近除了学习象棋就是学习 Python，象棋不谈也罢，Python的学习是通过学习 flask 框架进行的。</p>]]></description>
-</item>
-<item>
-    <title>2021 回顾 &#43; 2022 期待</title>
-    <link>http://www.jinhuaiyao.com/posts/2021-review-2022-plan/</link>
-    <pubDate>Fri, 31 Dec 2021 11:54:15 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/2021-review-2022-plan/</guid>
-    <description><![CDATA[<p>转眼又一年。</p>]]></description>
 </item>
 </channel>
 </rss>

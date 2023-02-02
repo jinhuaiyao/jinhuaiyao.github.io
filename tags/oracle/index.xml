@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/tags/oracle/</link>
         <description>Oracle - Tag - Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Thu, 02 Feb 2023 16:19:18 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+    <title>Some Records for RAC Installation on Macbook</title>
+    <link>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</link>
+    <pubDate>Thu, 02 Feb 2023 16:19:18 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</guid>
+    <description><![CDATA[<p>这阵子比较闲了，想着好好利用一下以前的工作笔记本。</p>]]></description>
+</item>
+<item>
     <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
     <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</link>
     <pubDate>Fri, 05 Aug 2022 10:41:01 &#43;0800</pubDate>
