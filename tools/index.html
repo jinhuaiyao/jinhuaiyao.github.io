@@ -6,9 +6,10 @@
         <meta name="robots" content="noodp" />
         <title> Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="" />
 <meta property="og:description" content="Python 小抄 类的写法
-字符串f的用法
-1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&#34;{self.year} {self.make} {self.model}&#34; return long_name.title() 文件内容写到列表。
-zfill，字符串右对齐，前面填充0。
+用法：f&quot;{year}&quot;
+1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&#34;{self.year} {self.make} {self.model}&#34; return long_name.title() 文件内容写到列表
+zfill，字符串右对齐，前面填充0
+用法：&ldquo;if birthday in pi_str&rdquo;
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 filename = &#39;pi_million_digits.txt&#39; with open(filename) as file_object: lines = file_object." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.jinhuaiyao.com/tools/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="" />
@@ -20,9 +21,10 @@ zfill，字符串右对齐，前面填充0。
 
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Python 小抄 类的写法
-字符串f的用法
-1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&#34;{self.year} {self.make} {self.model}&#34; return long_name.title() 文件内容写到列表。
-zfill，字符串右对齐，前面填充0。
+用法：f&quot;{year}&quot;
+1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&#34;{self.year} {self.make} {self.model}&#34; return long_name.title() 文件内容写到列表
+zfill，字符串右对齐，前面填充0
+用法：&ldquo;if birthday in pi_str&rdquo;
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 filename = &#39;pi_million_digits.txt&#39; with open(filename) as file_object: lines = file_object."/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -38,7 +40,7 @@ zfill，字符串右对齐，前面填充0。
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/tools\/"
-        },"genre": "page","wordcount":  110 ,
+        },"genre": "page","wordcount":  180 ,
         "url": "http:\/\/www.jinhuaiyao.com\/tools\/","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -83,7 +85,7 @@ zfill，字符串右对齐，前面填充0。
 <p>类的写法</p>
 </li>
 <li>
-<p>字符串f的用法</p>
+<p>用法：f&quot;{year}&quot;</p>
 </li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -117,10 +119,13 @@ zfill，字符串右对齐，前面填充0。
 </div><hr>
 <ul>
 <li>
-<p>文件内容写到列表。</p>
+<p>文件内容写到列表</p>
 </li>
 <li>
-<p>zfill，字符串右对齐，前面填充0。</p>
+<p>zfill，字符串右对齐，前面填充0</p>
+</li>
+<li>
+<p>用法：&ldquo;if birthday in pi_str&rdquo;</p>
 </li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -164,6 +169,58 @@ zfill，字符串右对齐，前面填充0。
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
+<ul>
+<li>
+<p>json的用法</p>
+</li>
+<li>
+<p>用法：ensure_ascii=False</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">contents</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Sorry, the file </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> does not exist.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">words</span> <span class="o">=</span> <span class="n">contents</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">words</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;alice.txt&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">save_file</span> <span class="o">=</span> <span class="s1">&#39;json.txt&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<br>
 <h3 id="工具">工具</h3>
 <ul>
 <li>
