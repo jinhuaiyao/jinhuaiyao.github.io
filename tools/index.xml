@@ -14,7 +14,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>jinhuaiyao@gmail.com (Huaiyao Jin)</author>
       <guid>http://www.jinhuaiyao.com/tools/python/</guid>
-      <description>Python 小抄 ------- 类的写法 用法：f&amp;quot;{year}&amp;quot; 1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&amp;#34;{self.year} {self.make} {self.model}&amp;#34; return long_name.title() -------</description>
+      <description>Python 小抄 类的写法 用法：f&amp;quot;{year}&amp;quot; 1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&amp;#34;{self.year} {self.make} {self.model}&amp;#34; return long_name.title() 文件</description>
     </item>
     
     <item>
