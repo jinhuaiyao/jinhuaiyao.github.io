@@ -4,9 +4,17 @@
         <link>http://www.jinhuaiyao.com/</link>
         <description>Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sun, 09 Apr 2023 08:29:07 &#43;0800</lastBuildDate>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sun, 09 Apr 2023 14:01:33 &#43;0800</lastBuildDate>
             <atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>最近解决的几个问题</title>
+    <link>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</link>
+    <pubDate>Sun, 09 Apr 2023 14:01:33 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
+    <description><![CDATA[<p>记录一下最近解决的几个问题。</p>]]></description>
+</item>
+<item>
     <title>用上了期盼已久的截图翻译</title>
     <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
     <pubDate>Sun, 09 Apr 2023 08:29:07 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/if-dont-understand-dont-mess-around/</guid>
     <description><![CDATA[<p>教育子女方面虽然我不是懂的很多，没有很多经验。但是我一直在学习、思考、实践。</p>]]></description>
-</item>
-<item>
-    <title>实现一个需求</title>
-    <link>http://www.jinhuaiyao.com/posts/implement-a-requirement/</link>
-    <pubDate>Sat, 04 Jun 2022 12:58:00 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
-    <description><![CDATA[<p>最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。</p>]]></description>
 </item>
 </channel>
 </rss>
