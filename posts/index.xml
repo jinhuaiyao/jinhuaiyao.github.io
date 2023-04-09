@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/posts/</link>
         <description> | Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Thu, 16 Feb 2023 21:41:23 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 08 Apr 2023 19:29:07 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>用上了期盼已久的截图翻译</title>
+    <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
+    <pubDate>Sat, 08 Apr 2023 19:29:07 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
+    <description><![CDATA[<p>昨日傍晚时分终于用上了期盼已久的截图翻译工具。</p>]]></description>
+</item>
+<item>
     <title>Rewrite On This Day Script With Python</title>
     <link>http://www.jinhuaiyao.com/posts/rewrite-on-this-day-script-with-python/</link>
     <pubDate>Thu, 16 Feb 2023 21:41:23 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
     <description><![CDATA[<p>最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。</p>]]></description>
-</item>
-<item>
-    <title>备份备份再备份</title>
-    <link>http://www.jinhuaiyao.com/posts/backup-backup-backup/</link>
-    <pubDate>Thu, 24 Feb 2022 11:53:00 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/backup-backup-backup/</guid>
-    <description><![CDATA[<p>昨天有个朋友家用 NAS 升级系统后资料不能访问了，数据没有其他备份，很难办。</p>]]></description>
 </item>
 </channel>
 </rss>
