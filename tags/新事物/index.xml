@@ -5,7 +5,7 @@
         <description>新事物 - Tag - Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
             <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" rel="self" type="application/rss+xml" /><item>
-    <title>配置 Cloudflare WARP 解锁 ChatGPT</title>
+    <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
     <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
     <pubDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</pubDate>
     <author>Huaiyao Jin</author>
