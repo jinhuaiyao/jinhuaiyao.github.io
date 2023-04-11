@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/unlocking-chatgpt-with-cloudflare-warp\/"
-        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  668 ,
+        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  663 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/unlocking-chatgpt-with-cloudflare-warp\/","datePublished": "2023-04-11T10:24:16+08:00","dateModified": "2023-04-11T10:24:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -134,6 +134,7 @@
 <p><code>curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg</code></p>
 <p><code>echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&quot; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list</code></p>
 <p><code>sudo apt update</code></p>
+<hr>
 <p>参考 <a href="https://developers.cloudflare.com/warp-client/get-started/linux/" target="_blank" rel="noopener noreffer">https://developers.cloudflare.com/warp-client/get-started/linux/</a></p>
 <p><code>sudo apt install cloudflare-warp</code></p>
 <p><code>systemctl status warp-svc</code></p>
@@ -142,7 +143,7 @@
 <p><code>warp-cli connect</code></p>
 <p><code>warp-cli enable-always-on</code></p>
 <p><code>warp-cli warp-stats</code></p>
-<p>参考 <a href="https://www.4spaces.org/3750.html" target="_blank" rel="noopener noreffer">https://www.4spaces.org/3750.html</a></p>
+<hr>
 <p><code>vi /usr/local/etc/v2ray/config.json</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -191,7 +192,6 @@
 </span><span class="lnt">43
 </span><span class="lnt">44
 </span><span class="lnt">45
-</span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
@@ -232,8 +232,7 @@
 </span></span><span class="line"><span class="cl">        &#34;type&#34;: &#34;field&#34;,
 </span></span><span class="line"><span class="cl">        &#34;domain&#34;: [
 </span></span><span class="line"><span class="cl">            &#34;openai.com&#34;,
-</span></span><span class="line"><span class="cl">            &#34;ai.com&#34;,
-</span></span><span class="line"><span class="cl">            &#34;geosite:netflix&#34;
+</span></span><span class="line"><span class="cl">            &#34;ai.com&#34;
 </span></span><span class="line"><span class="cl">        ],
 </span></span><span class="line"><span class="cl">        &#34;outboundTag&#34;: &#34;warp&#34;
 </span></span><span class="line"><span class="cl">    }
@@ -244,6 +243,7 @@
 </div>
 </div><p><code>systemctl stop v2ray</code></p>
 <p><code>systemctl start v2ray</code></p>
+<hr>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -300,7 +300,8 @@
 </span></span><span class="line"><span class="cl">&#34;readme&#34;: &#34;https://ipinfo.io/missingauth&#34;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>在电脑上重启一下 V2rayU ，就可以正常访问 <a href="https://chat.openai.com/auth/login" target="_blank" rel="noopener noreffer">https://chat.openai.com/auth/login</a> 了。</p>
+</div><hr>
+<p>在电脑上重启一下 V2rayU ，就可以正常访问 <a href="https://chat.openai.com/auth/login" target="_blank" rel="noopener noreffer">https://chat.openai.com/auth/login</a> 了。</p>
 </li>
 </ol></div><div class="post-footer" id="post-footer">
     <div class="post-info">
