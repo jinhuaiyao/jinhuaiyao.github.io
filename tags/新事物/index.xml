@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
         <description>新事物 - Tag - Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sun, 09 Apr 2023 14:01:33 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" rel="self" type="application/rss+xml" /><item>
+    <title>配置 Cloudflare WARP 解锁 ChatGPT</title>
+    <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
+    <pubDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
+    <description><![CDATA[<p>使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。</p>]]></description>
+</item>
+<item>
     <title>最近解决的几个问题</title>
     <link>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</link>
     <pubDate>Sun, 09 Apr 2023 14:01:33 &#43;0800</pubDate>
