@@ -4,7 +4,15 @@
         <link>http://www.jinhuaiyao.com/posts/</link>
         <description> | Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Thu, 20 Apr 2023 08:14:37 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>The Preparation for Running</title>
+    <link>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</link>
+    <pubDate>Thu, 20 Apr 2023 08:14:37 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
+    <description><![CDATA[<p>最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。</p>]]></description>
+</item>
+<item>
     <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
     <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
     <pubDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</guid>
     <description><![CDATA[<p>由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。</p>]]></description>
-</item>
-<item>
-    <title>关于 Logseq</title>
-    <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
-    <pubDate>Sat, 02 Jul 2022 13:55:55 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
-    <description><![CDATA[<p>这两礼拜每天都在用 Logseq，真是太喜欢了。</p>]]></description>
 </item>
 </channel>
 </rss>
