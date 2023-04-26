@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title> Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="" />
-<meta property="og:description" content="Python 小抄 类的写法 用法：f&quot;{year}&quot; 1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&#34;{self.year} {self.make} {self.model}&#34; return long_name.title() 文件" />
+<meta property="og:description" content="Python 小抄 1 2 3 4 5 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往前倒序排列，得到一个新的" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.jinhuaiyao.com/tools/python/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="tools" />
 
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Python 小抄 类的写法 用法：f&quot;{year}&quot; 1 2 3 4 5 6 7 8 9 10 11 class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.odometer_reading = 0 def get_desc_name(self): long_name = f&#34;{self.year} {self.make} {self.model}&#34; return long_name.title() 文件"/>
+<meta name="twitter:description" content="Python 小抄 1 2 3 4 5 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往前倒序排列，得到一个新的"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/tools\/python\/"
-        },"genre": "tools","wordcount":  260 ,
+        },"genre": "tools","wordcount":  418 ,
         "url": "http:\/\/www.jinhuaiyao.com\/tools\/python\/","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,54 +104,46 @@
 </header><main class="main">
                 <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster"></h1><div class="content" id="content"><h3 id="python-小抄">Python 小抄</h3>
 <hr>
-<ul>
-<li>
-<p>类的写法</p>
-</li>
-<li>
-<p>用法：f&quot;{year}&quot;</p>
-</li>
-</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span> 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_desc_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">long_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">该代码中的</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">表示一个字符串</span> <span class="n">w</span> <span class="n">的反向字符串</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">也就是说</span><span class="err">，</span><span class="n">它会将</span> <span class="n">w</span> <span class="n">中的字符从后往前倒序排列</span><span class="err">，</span><span class="n">得到一个新的字符串</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">例如</span><span class="err">，</span><span class="n">如果</span> <span class="n">w</span> <span class="n">是</span> <span class="s2">&#34;hello&#34;</span><span class="err">，</span><span class="n">那么</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">就是</span> <span class="s2">&#34;olleh&#34;</span><span class="err">。</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<ul>
-<li>
-<p>文件内容写到列表</p>
-</li>
-<li>
-<p>zfill，字符串右对齐，前面填充0</p>
-</li>
-<li>
-<p>用法：&ldquo;if birthday in pi_str&rdquo;</p>
-</li>
-</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">值交换</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="mf">4.5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -168,39 +160,25 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;pi_million_digits.txt&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">类的写法</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">lines</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">pi_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pi_str</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">birthday</span> <span class="o">=</span> <span class="s1">&#39;1805&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">birthday</span> <span class="o">=</span> <span class="n">birthday</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">birthday</span> <span class="ow">in</span> <span class="n">pi_str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">birthday</span><span class="si">}</span><span class="s2"> - yes&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">birthday</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_desc_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">long_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<ul>
-<li>
-<p>json的用法</p>
-</li>
-<li>
-<p>用法：ensure_ascii=False</p>
-</li>
-</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -221,9 +199,64 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">文件内容写到列表</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">zfill</span><span class="err">，</span><span class="n">字符串右对齐</span><span class="err">，</span><span class="n">前面填充0</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="s2">&#34;if birthday in pi_str&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;pi_million_digits.txt&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lines</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pi_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pi_str</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">birthday</span> <span class="o">=</span> <span class="s1">&#39;1805&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">birthday</span> <span class="o">=</span> <span class="n">birthday</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">birthday</span> <span class="ow">in</span> <span class="n">pi_str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">birthday</span><span class="si">}</span><span class="s2"> - yes&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">birthday</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">json的用法</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
