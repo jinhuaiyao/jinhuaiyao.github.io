@@ -14,7 +14,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>jinhuaiyao@gmail.com (Huaiyao Jin)</author>
       <guid>http://www.jinhuaiyao.com/tools/python/</guid>
-      <description>Python 小抄 1 2 3 4 5 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往前倒序排列，得到一个新的</description>
+      <description>Python 小抄 1 2 3 4 5 6 7 - [::-1]的用法 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往</description>
     </item>
     
     <item>

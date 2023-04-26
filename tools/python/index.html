@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title> Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="" />
-<meta property="og:description" content="Python 小抄 1 2 3 4 5 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往前倒序排列，得到一个新的" />
+<meta property="og:description" content="Python 小抄 1 2 3 4 5 6 7 - [::-1]的用法 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.jinhuaiyao.com/tools/python/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="tools" />
 
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Python 小抄 1 2 3 4 5 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往前倒序排列，得到一个新的"/>
+<meta name="twitter:description" content="Python 小抄 1 2 3 4 5 6 7 - [::-1]的用法 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/tools\/python\/"
-        },"genre": "tools","wordcount":  418 ,
+        },"genre": "tools","wordcount":  430 ,
         "url": "http:\/\/www.jinhuaiyao.com\/tools\/python\/","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -111,9 +111,13 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span> 
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="n">的用法</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">该代码中的</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">表示一个字符串</span> <span class="n">w</span> <span class="n">的反向字符串</span><span class="err">。</span>
 </span></span><span class="line"><span class="cl"><span class="n">也就是说</span><span class="err">，</span><span class="n">它会将</span> <span class="n">w</span> <span class="n">中的字符从后往前倒序排列</span><span class="err">，</span><span class="n">得到一个新的字符串</span><span class="err">。</span>
