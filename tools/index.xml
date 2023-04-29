@@ -14,7 +14,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>jinhuaiyao@gmail.com (Huaiyao Jin)</author>
       <guid>http://www.jinhuaiyao.com/tools/python/</guid>
-      <description>Python 小抄 1 2 3 4 5 6 7 - [::-1]的用法 {w for w in words if len(w) == 6 and w[::-1] in words} 该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。 也就是说，它会将 w 中的字符从后往</description>
+      <description>Python 小抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 - doctest def divide_exact(n, d): &amp;#34;&amp;#34;&amp;#34; &amp;gt;&amp;gt;&amp;gt; q, r = divide_exact(2013, 10) &amp;gt;&amp;gt;&amp;gt; q 201 &amp;gt;&amp;gt;&amp;gt; r 3 &amp;#34;&amp;#34;&amp;#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest</description>
     </item>
     
     <item>

@@ -2,12 +2,12 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://www.jinhuaiyao.com/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/posts/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tags/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/posts/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc><lastmod>2023-04-20T08:14:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</loc><lastmod>2023-04-11T10:24:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</loc><lastmod>2023-04-09T14:01:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</loc><lastmod>2023-04-09T08:29:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
