@@ -51,6 +51,6 @@
             <loc>http://www.jinhuaiyao.com/links/</loc><priority>0</priority></url><url>
             <loc>http://www.jinhuaiyao.com/tools/python/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://www.jinhuaiyao.com/tools/toolbox/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://www.jinhuaiyao.com/tools/words/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://www.jinhuaiyao.com/words/</loc><priority>0</priority></url><url>
             <loc>http://www.jinhuaiyao.com/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://www.jinhuaiyao.com/tools/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
