@@ -4,9 +4,17 @@
         <link>http://www.jinhuaiyao.com/</link>
         <description>Jinhuaiyao&#39;s Records</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 27 May 2023 15:51:04 &#43;0800</lastBuildDate>
+            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</lastBuildDate>
             <atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Nginx Reverse Proxy OpenAI API</title>
+    <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
+    <pubDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</pubDate>
+    <author>Huaiyao Jin</author>
+    <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
+    <description><![CDATA[<p>同事问到这个，记录在这里吧。</p>]]></description>
+</item>
+<item>
     <title>每日复习单词</title>
     <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
     <pubDate>Sat, 27 May 2023 15:51:04 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/about-family-education/</guid>
     <description><![CDATA[<p>这是一篇小朋友幼儿园要求写的文章，花了几段时间终于写好了，也算是一段时间的总结吧。</p>]]></description>
-</item>
-<item>
-    <title>减重 20 斤</title>
-    <link>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</link>
-    <pubDate>Fri, 19 Aug 2022 19:05:40 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</guid>
-    <description><![CDATA[<p>5 月 3 号到 8 月 18 号，3 个半月，减重 20 斤。时隔 7 年，终于成功了。</p>]]></description>
 </item>
 </channel>
 </rss>
