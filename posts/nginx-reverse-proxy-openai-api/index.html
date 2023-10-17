@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>Nginx Reverse Proxy OpenAI API - Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="Nginx Reverse Proxy OpenAI API" />
-<meta property="og:description" content="同事问到这个，记录在这里吧。
-国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。" />
+<meta property="og:description" content="同事问到这个，记录在这里吧。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-10-16T22:13:21+08:00" />
@@ -16,8 +15,7 @@
 <meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
 
 <meta name="twitter:title" content="Nginx Reverse Proxy OpenAI API"/>
-<meta name="twitter:description" content="同事问到这个，记录在这里吧。
-国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。"/>
+<meta name="twitter:description" content="同事问到这个，记录在这里吧。"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,7 +47,7 @@
   <meta name="referrer" content="no-referrer-when-downgrade"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
         </div>
         <div class="menu">
             <div class="menu-inner">
@@ -61,14 +59,9 @@
                     href="/words/" > Words 
                 </a><a class="menu-item"
                     href="/links/" > Links 
-                </a>
-                <div class="dropdown">
-                    <a href="javascript:void(0);" 
-                        class="menu-item menu-more dropbtn" title="" > Tools 
-                    </a>
-                    <div class="menu-more-content dropdown-content"><a href="/tools/toolbox/" title="" > Toolbox </a><a href="/tools/python/" title="" > Python </a></div>
-                </div>
-                <a class="menu-item"
+                </a><a class="menu-item"
+                    href="/tools/" > Tools 
+                </a><a class="menu-item"
                     href="/about/" > About 
                 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
@@ -80,7 +73,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao</a>
+                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -90,13 +83,8 @@
                 </a><a class="menu-item" href="/posts/"> Posts 
                 </a><a class="menu-item" href="/words/"> Words 
                 </a><a class="menu-item" href="/links/"> Links 
-                </a>
-                <div class="dropdown">
-                    <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" > Tools 
-                    </a>
-                    <div class="menu-more-content dropdown-content"><a href="/tools/toolbox/" title="" > Toolbox </a><a href="/tools/python/" title="" > Python </a></div>
-                </div>
-            <a class="menu-item" href="/about/"> About 
+                </a><a class="menu-item" href="/tools/"> Tools 
+                </a><a class="menu-item" href="/about/"> About 
                 </a>
             
             <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">

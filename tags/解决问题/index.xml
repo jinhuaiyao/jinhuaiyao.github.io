@@ -10,8 +10,7 @@
     <pubDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</pubDate>
     <author>Huaiyao Jin</author>
     <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
-    <description><![CDATA[<p>同事问到这个，记录在这里吧。</p>
-<p>国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。</p>]]></description>
+    <description><![CDATA[<p>同事问到这个，记录在这里吧。</p>]]></description>
 </item>
 <item>
     <title>每日复习单词</title>
