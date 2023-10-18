@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/review-the-words-daily\/"
-        },"genre": "posts","keywords": "解决问题, Shell, 新事物","wordcount":  459 ,
+        },"genre": "posts","keywords": "解决问题, Shell, 新事物","wordcount":  440 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/review-the-words-daily\/","datePublished": "2023-05-27T15:51:04+08:00","dateModified": "2023-05-27T15:51:04+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -163,44 +163,44 @@
         alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png"
         title="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png" /></p>
 <p>我自己写了发送到 Things3 的部分，整个脚本如下。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&#34;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">rm output_file_*.txt
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/MyNotes/English.md&#34;</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nv">BUFFER</span><span class="o">=()</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nv">OUTPUT_NUM</span><span class="o">=</span><span class="m">1</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">
-</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r LINE<span class="p">;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="k">if</span> <span class="o">[[</span> <span class="nv">$LINE</span> <span class="o">==</span> --- <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="ln">15</span><span class="cl">      <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="s2">&#34;output_file_</span><span class="si">${</span><span class="nv">OUTPUT_NUM</span><span class="si">}</span><span class="s2">.txt&#34;</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">      <span class="nv">BUFFER</span><span class="o">=()</span>
-</span></span><span class="line"><span class="ln">17</span><span class="cl">      <span class="o">((</span>OUTPUT_NUM++<span class="o">))</span>
-</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="k">fi</span>
-</span></span><span class="line"><span class="ln">19</span><span class="cl">  <span class="k">else</span>
-</span></span><span class="line"><span class="ln">20</span><span class="cl">    <span class="nv">BUFFER</span><span class="o">+=(</span><span class="s2">&#34;</span><span class="nv">$LINE</span><span class="s2">&#34;</span><span class="o">)</span>
-</span></span><span class="line"><span class="ln">21</span><span class="cl">  <span class="k">fi</span>
-</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$FILE</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="ln">23</span><span class="cl">
-</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c1"># 处理文件结尾的内容</span>
-</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="ln">26</span><span class="cl">  <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="s2">&#34;output_file_</span><span class="si">${</span><span class="nv">OUTPUT_NUM</span><span class="si">}</span><span class="s2">.txt&#34;</span>
-</span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="k">fi</span>
-</span></span><span class="line"><span class="ln">28</span><span class="cl">
-</span></span><span class="line"><span class="ln">29</span><span class="cl">
-</span></span><span class="line"><span class="ln">30</span><span class="cl">ls output_file_*.txt <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> file
-</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="k">do</span>
-</span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="nv">word</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$file</span> <span class="p">|</span>grep -v <span class="s1">&#39;^$&#39;</span><span class="p">|</span> head -1<span class="sb">`</span>
-</span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="nv">expl</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$file</span> <span class="p">|</span>grep -v <span class="s1">&#39;^$&#39;</span><span class="p">|</span> sed -n <span class="s1">&#39;2,$&#39;</span>p<span class="sb">`</span>
-</span></span><span class="line"><span class="ln">34</span><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">word</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span> !<span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">]</span>
-</span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="k">then</span>
-</span></span><span class="line"><span class="ln">36</span><span class="cl">  open <span class="s2">&#34;things:///add?title=</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">&amp;notes=</span><span class="si">${</span><span class="nv">expl</span><span class="si">}</span><span class="s2">&amp;when=today&#34;</span>
-</span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="k">fi</span>
-</span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="k">done</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm output_file_*.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/MyNotes/English.md&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">BUFFER</span><span class="o">=()</span>
+</span></span><span class="line"><span class="cl"><span class="nv">OUTPUT_NUM</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r LINE<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[[</span> <span class="nv">$LINE</span> <span class="o">==</span> --- <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="s2">&#34;output_file_</span><span class="si">${</span><span class="nv">OUTPUT_NUM</span><span class="si">}</span><span class="s2">.txt&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">BUFFER</span><span class="o">=()</span>
+</span></span><span class="line"><span class="cl">      <span class="o">((</span>OUTPUT_NUM++<span class="o">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">BUFFER</span><span class="o">+=(</span><span class="s2">&#34;</span><span class="nv">$LINE</span><span class="s2">&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$FILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 处理文件结尾的内容</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="s2">&#34;output_file_</span><span class="si">${</span><span class="nv">OUTPUT_NUM</span><span class="si">}</span><span class="s2">.txt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls output_file_*.txt <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> file
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl"><span class="nv">word</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$file</span> <span class="p">|</span>grep -v <span class="s1">&#39;^$&#39;</span><span class="p">|</span> head -1<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="nv">expl</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$file</span> <span class="p">|</span>grep -v <span class="s1">&#39;^$&#39;</span><span class="p">|</span> sed -n <span class="s1">&#39;2,$&#39;</span>p<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">word</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span> !<span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  open <span class="s2">&#34;things:///add?title=</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">&amp;notes=</span><span class="si">${</span><span class="nv">expl</span><span class="si">}</span><span class="s2">&amp;when=today&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
 </span></span></code></pre></div><p>如果某些单词不用再复习了，就再其前面加上 # 号，<code>${word:0:1} != '#'</code> 会去过滤。</p>
 <p>最后把脚本加到 cron job 即可。</p>
 <p>最后效果如下，直接变成当天的待办事项，相当“暴力”。</p>

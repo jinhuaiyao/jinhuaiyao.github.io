@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/tool-to-get-ocr-translation-by-screenshot\/"
-        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  1167 ,
+        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  1139 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/tool-to-get-ocr-translation-by-screenshot\/","datePublished": "2023-04-09T08:29:07+08:00","dateModified": "2023-04-09T08:29:07+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -164,89 +164,89 @@
 <p>VPS 上 <code>vi /usr/local/etc/v2ray/config.json</code></p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">{
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    &#34;inbounds&#34;: [
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">        {
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">            &#34;port&#34;: 10086, // 服务器监听端口
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">            &#34;protocol&#34;: &#34;vmess&#34;,
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            &#34;settings&#34;: {
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">                &#34;clients&#34;: [
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">                    {
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">                        &#34;id&#34;: &#34;09096d21-dd57-48ee-9111-38421e6a6b90&#34;
-</span></span><span class="line"><span class="ln">10</span><span class="cl">                    }
-</span></span><span class="line"><span class="ln">11</span><span class="cl">                ]
-</span></span><span class="line"><span class="ln">12</span><span class="cl">            }
-</span></span><span class="line"><span class="ln">13</span><span class="cl">        }
-</span></span><span class="line"><span class="ln">14</span><span class="cl">    ],
-</span></span><span class="line"><span class="ln">15</span><span class="cl">    &#34;outbounds&#34;: [
-</span></span><span class="line"><span class="ln">16</span><span class="cl">        {
-</span></span><span class="line"><span class="ln">17</span><span class="cl">            &#34;protocol&#34;: &#34;freedom&#34;
-</span></span><span class="line"><span class="ln">18</span><span class="cl">        }
-</span></span><span class="line"><span class="ln">19</span><span class="cl">    ]
-</span></span><span class="line"><span class="ln">20</span><span class="cl">}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;inbounds&#34;: [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;port&#34;: 10086, // 服务器监听端口
+</span></span><span class="line"><span class="cl">            &#34;protocol&#34;: &#34;vmess&#34;,
+</span></span><span class="line"><span class="cl">            &#34;settings&#34;: {
+</span></span><span class="line"><span class="cl">                &#34;clients&#34;: [
+</span></span><span class="line"><span class="cl">                    {
+</span></span><span class="line"><span class="cl">                        &#34;id&#34;: &#34;09096d21-dd57-48ee-9111-38421e6a6b90&#34;
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;outbounds&#34;: [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;protocol&#34;: &#34;freedom&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    ]
+</span></span><span class="line"><span class="cl">}
 </span></span></code></pre></div><ol start="3">
 <li>配置一下防火墙</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">sudo ufw status
-</span></span><span class="line"><span class="ln">2</span><span class="cl">ufw allow 10086
-</span></span><span class="line"><span class="ln">3</span><span class="cl">sudo ufw status
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ufw status
+</span></span><span class="line"><span class="cl">ufw allow 10086
+</span></span><span class="line"><span class="cl">sudo ufw status
 </span></span></code></pre></div><ol start="4">
 <li>启动 v2ray</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">root@vultr:~# systemctl enable v2ray
-</span></span><span class="line"><span class="ln">2</span><span class="cl">root@vultr:~# systemctl start v2ray
-</span></span><span class="line"><span class="ln">3</span><span class="cl">root@vultr:~# systemctl status v2ray
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr:~# systemctl enable v2ray
+</span></span><span class="line"><span class="cl">root@vultr:~# systemctl start v2ray
+</span></span><span class="line"><span class="cl">root@vultr:~# systemctl status v2ray
 </span></span></code></pre></div><ol start="5">
 <li>VPS 安全设置</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">root@vultr:~# adduser rjin
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">--
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">visudo
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">add 
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">rjin	ALL=(ALL)	NOPASSWD:ALL
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
-</span></span><span class="line"><span class="ln">10</span><span class="cl">ctl + o
-</span></span><span class="line"><span class="ln">11</span><span class="cl">ctl + x
-</span></span><span class="line"><span class="ln">12</span><span class="cl">
-</span></span><span class="line"><span class="ln">13</span><span class="cl">--
-</span></span><span class="line"><span class="ln">14</span><span class="cl">jinhuaiyao@JinHuaiyaos-MacBook-Pro ~ % ssh-copy-id rjin@xxx.xxx.xxx.xxx
-</span></span><span class="line"><span class="ln">15</span><span class="cl">
-</span></span><span class="line"><span class="ln">16</span><span class="cl">--
-</span></span><span class="line"><span class="ln">17</span><span class="cl">vi /etc/ssh/sshd_config
-</span></span><span class="line"><span class="ln">18</span><span class="cl">
-</span></span><span class="line"><span class="ln">19</span><span class="cl">PermitRootLogin no
-</span></span><span class="line"><span class="ln">20</span><span class="cl">MaxAuthTries 6
-</span></span><span class="line"><span class="ln">21</span><span class="cl">MaxSessions 10
-</span></span><span class="line"><span class="ln">22</span><span class="cl">PubkeyAuthentication yes
-</span></span><span class="line"><span class="ln">23</span><span class="cl">PasswordAuthentication no
-</span></span><span class="line"><span class="ln">24</span><span class="cl">ChallengeResponseAuthentication no
-</span></span><span class="line"><span class="ln">25</span><span class="cl">PermitEmptyPasswords no
-</span></span><span class="line"><span class="ln">26</span><span class="cl">
-</span></span><span class="line"><span class="ln">27</span><span class="cl">root@vultr:~# cat /etc/ssh/sshd_config |grep -v &#39;^#&#39; |grep -v &#39;^$&#39;
-</span></span><span class="line"><span class="ln">28</span><span class="cl">PermitRootLogin no
-</span></span><span class="line"><span class="ln">29</span><span class="cl">Include /etc/ssh/sshd_config.d/*.conf
-</span></span><span class="line"><span class="ln">30</span><span class="cl">MaxAuthTries 6
-</span></span><span class="line"><span class="ln">31</span><span class="cl">MaxSessions 10
-</span></span><span class="line"><span class="ln">32</span><span class="cl">PubkeyAuthentication yes
-</span></span><span class="line"><span class="ln">33</span><span class="cl">PasswordAuthentication no
-</span></span><span class="line"><span class="ln">34</span><span class="cl">PermitEmptyPasswords no
-</span></span><span class="line"><span class="ln">35</span><span class="cl">ChallengeResponseAuthentication no
-</span></span><span class="line"><span class="ln">36</span><span class="cl">UsePAM yes
-</span></span><span class="line"><span class="ln">37</span><span class="cl">X11Forwarding yes
-</span></span><span class="line"><span class="ln">38</span><span class="cl">PrintMotd no
-</span></span><span class="line"><span class="ln">39</span><span class="cl">AcceptEnv LANG LC_*
-</span></span><span class="line"><span class="ln">40</span><span class="cl">Subsystem sftp	/usr/lib/openssh/sftp-server
-</span></span><span class="line"><span class="ln">41</span><span class="cl">
-</span></span><span class="line"><span class="ln">42</span><span class="cl">root@vultr:/etc/ssh/sshd_config.d# more 50-cloud-init.conf
-</span></span><span class="line"><span class="ln">43</span><span class="cl">PasswordAuthentication yes
-</span></span><span class="line"><span class="ln">44</span><span class="cl">root@vultr:/etc/ssh/sshd_config.d# mv 50-cloud-init.conf 50-cloud-init.conf.1
-</span></span><span class="line"><span class="ln">45</span><span class="cl">
-</span></span><span class="line"><span class="ln">46</span><span class="cl">systemctl stop ssh.service
-</span></span><span class="line"><span class="ln">47</span><span class="cl">systemctl start ssh.service
-</span></span><span class="line"><span class="ln">48</span><span class="cl">systemctl status ssh.service
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr:~# adduser rjin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--
+</span></span><span class="line"><span class="cl">visudo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">add 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rjin	ALL=(ALL)	NOPASSWD:ALL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ctl + o
+</span></span><span class="line"><span class="cl">ctl + x
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--
+</span></span><span class="line"><span class="cl">jinhuaiyao@JinHuaiyaos-MacBook-Pro ~ % ssh-copy-id rjin@xxx.xxx.xxx.xxx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--
+</span></span><span class="line"><span class="cl">vi /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PermitRootLogin no
+</span></span><span class="line"><span class="cl">MaxAuthTries 6
+</span></span><span class="line"><span class="cl">MaxSessions 10
+</span></span><span class="line"><span class="cl">PubkeyAuthentication yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication no
+</span></span><span class="line"><span class="cl">ChallengeResponseAuthentication no
+</span></span><span class="line"><span class="cl">PermitEmptyPasswords no
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@vultr:~# cat /etc/ssh/sshd_config |grep -v &#39;^#&#39; |grep -v &#39;^$&#39;
+</span></span><span class="line"><span class="cl">PermitRootLogin no
+</span></span><span class="line"><span class="cl">Include /etc/ssh/sshd_config.d/*.conf
+</span></span><span class="line"><span class="cl">MaxAuthTries 6
+</span></span><span class="line"><span class="cl">MaxSessions 10
+</span></span><span class="line"><span class="cl">PubkeyAuthentication yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication no
+</span></span><span class="line"><span class="cl">PermitEmptyPasswords no
+</span></span><span class="line"><span class="cl">ChallengeResponseAuthentication no
+</span></span><span class="line"><span class="cl">UsePAM yes
+</span></span><span class="line"><span class="cl">X11Forwarding yes
+</span></span><span class="line"><span class="cl">PrintMotd no
+</span></span><span class="line"><span class="cl">AcceptEnv LANG LC_*
+</span></span><span class="line"><span class="cl">Subsystem sftp	/usr/lib/openssh/sftp-server
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@vultr:/etc/ssh/sshd_config.d# more 50-cloud-init.conf
+</span></span><span class="line"><span class="cl">PasswordAuthentication yes
+</span></span><span class="line"><span class="cl">root@vultr:/etc/ssh/sshd_config.d# mv 50-cloud-init.conf 50-cloud-init.conf.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">systemctl stop ssh.service
+</span></span><span class="line"><span class="cl">systemctl start ssh.service
+</span></span><span class="line"><span class="cl">systemctl status ssh.service
 </span></span></code></pre></div><h5 id="client-端配置">Client 端配置</h5>
 <p>Mac 上 V2rayU 添加节点：</p>
 <p><img

@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/rewrite-on-this-day-script-with-python\/"
-        },"genre": "posts","keywords": "Python","wordcount":  276 ,
+        },"genre": "posts","keywords": "Python","wordcount":  247 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/rewrite-on-this-day-script-with-python\/","datePublished": "2023-02-16T21:41:23+08:00","dateModified": "2023-02-16T21:41:23+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -101,63 +101,63 @@
 
         </div><div class="content" id="content"><p>这两天重新过了一遍 Python 的基础语法，今天花了一点时间把“那年今日”的 shell 脚本用 Python 实现一下，记录在此。</p>
 <p>原先的 shell 脚本内容：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nb">cd</span>  <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nv">DT</span><span class="o">=</span><span class="sb">`</span>date +%m_%d<span class="sb">`</span><span class="p">;</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">&gt; ../pages/On_This_Day.md<span class="p">;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">ls <span class="p">|</span>grep <span class="s2">&#34;_</span><span class="nv">$DT</span><span class="s2">&#34;</span> <span class="p">|</span>sort <span class="p">|</span><span class="k">while</span> <span class="nb">read</span> file
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="k">do</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- -------- [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] --------/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">cat <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="ln">10</span><span class="cl">
-</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="k">done</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span>  <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DT</span><span class="o">=</span><span class="sb">`</span>date +%m_%d<span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">&gt; ../pages/On_This_Day.md<span class="p">;</span>
+</span></span><span class="line"><span class="cl">ls <span class="p">|</span>grep <span class="s2">&#34;_</span><span class="nv">$DT</span><span class="s2">&#34;</span> <span class="p">|</span>sort <span class="p">|</span><span class="k">while</span> <span class="nb">read</span> file
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- -------- [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] --------/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
 </span></span></code></pre></div><p>改写以后的 Python 脚本：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">fnmatch</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="n">base_dir</span> <span class="o">=</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents&#34;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="n">journal_dir</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">base_dir</span><span class="si">}</span><span class="s2">/journals&#34;</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">base_dir</span><span class="si">}</span><span class="s2">/pages/On_This_Day2.md&#34;</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="n">file_object</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
-</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c1"># print(filename)</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">
-</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="n">today_date_str</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%m_</span><span class="si">%d</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>  <span class="c1"># e.g. 02_16</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c1"># print(today_date_str)</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">
-</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="n">today_date_files</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl">
-</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="k">for</span> <span class="n">f_name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">journal_dir</span><span class="p">):</span>
-</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="s2">&#34;&#34;&#34;search file to get files with this day&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;*_</span><span class="si">{</span><span class="n">today_date_str</span><span class="si">}</span><span class="s1">.md&#39;</span><span class="p">):</span>
-</span></span><span class="line"><span class="ln">20</span><span class="cl">        <span class="n">today_date_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">21</span><span class="cl">
-</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="n">today_date_files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-</span></span><span class="line"><span class="ln">23</span><span class="cl">
-</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c1"># print(today_date_files)</span>
-</span></span><span class="line"><span class="ln">25</span><span class="cl">
-</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="c1"># from &#39;2011_02_16.md&#39; to get &#39;- -------- [[2011-02-16]] --------&#39;</span>
-</span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="c1"># print(&#39;- -------- [[&#39; + today_date_file[0].replace(&#39;.md&#39;,&#39;&#39;).replace(&#39;_&#39;,&#39;-&#39;) + &#39;]] --------&#39;)</span>
-</span></span><span class="line"><span class="ln">28</span><span class="cl">
-</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="k">for</span> <span class="n">today_date_file</span> <span class="ow">in</span> <span class="n">today_date_files</span><span class="p">:</span>
-</span></span><span class="line"><span class="ln">30</span><span class="cl">    <span class="n">today_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">journal_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">today_date_file</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="ln">31</span><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">target_file</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">today_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">source_file</span><span class="p">:</span>
-</span></span><span class="line"><span class="ln">32</span><span class="cl">        <span class="s2">&#34;&#34;&#34;generate header&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="ln">33</span><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;- -------- [[&#39;</span> <span class="o">+</span> <span class="n">today_date_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;]] --------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">34</span><span class="cl">
-</span></span><span class="line"><span class="ln">35</span><span class="cl">        <span class="s2">&#34;&#34;&#34;copy each file&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="ln">36</span><span class="cl">        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">source_file</span><span class="p">:</span>
-</span></span><span class="line"><span class="ln">37</span><span class="cl">            <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">38</span><span class="cl">
-</span></span><span class="line"><span class="ln">39</span><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">40</span><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;-</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">41</span><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;-</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="ln">42</span><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;-</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">fnmatch</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">base_dir</span> <span class="o">=</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">journal_dir</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">base_dir</span><span class="si">}</span><span class="s2">/journals&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">base_dir</span><span class="si">}</span><span class="s2">/pages/On_This_Day2.md&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file_object</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># print(filename)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">today_date_str</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%m_</span><span class="si">%d</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>  <span class="c1"># e.g. 02_16</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(today_date_str)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">today_date_files</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">f_name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">journal_dir</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;search file to get files with this day&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;*_</span><span class="si">{</span><span class="n">today_date_str</span><span class="si">}</span><span class="s1">.md&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">today_date_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">today_date_files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># print(today_date_files)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># from &#39;2011_02_16.md&#39; to get &#39;- -------- [[2011-02-16]] --------&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(&#39;- -------- [[&#39; + today_date_file[0].replace(&#39;.md&#39;,&#39;&#39;).replace(&#39;_&#39;,&#39;-&#39;) + &#39;]] --------&#39;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">today_date_file</span> <span class="ow">in</span> <span class="n">today_date_files</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">today_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">journal_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">today_date_file</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">target_file</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">today_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">source_file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;generate header&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;- -------- [[&#39;</span> <span class="o">+</span> <span class="n">today_date_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;]] --------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;copy each file&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">source_file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;-</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;-</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">target_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;-</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><p>Python 脚本写得相对少很多，先实现功能，以后再优化。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
