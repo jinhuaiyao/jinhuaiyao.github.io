@@ -16,8 +16,8 @@
 
 <meta name="twitter:title" content="数据库管理员的快乐"/>
 <meta name="twitter:description" content="前几天需要用dbca新建个空数据库，但是报错。"/>
-<meta name="application-name" content="我的网站">
-<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Jinhuaiyao&#39;s Records">
+<meta name="apple-mobile-web-app-title" content="Jinhuaiyao&#39;s Records"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/posts/the-joy-of-dbas/" /><link rel="prev" href="http://www.jinhuaiyao.com/posts/2020-review-2021-plan/" /><link rel="next" href="http://www.jinhuaiyao.com/posts/everyone-has-their-own-luck/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/the-joy-of-dbas\/"
-        },"genre": "posts","keywords": "DBA, Oracle","wordcount":  1228 ,
+        },"genre": "posts","keywords": "DBA, Oracle","wordcount":  1179 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/the-joy-of-dbas\/","datePublished": "2021-03-07T15:25:53+08:00","dateModified": "2021-03-07T15:25:53+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -47,7 +47,7 @@
   <meta name="referrer" content="no-referrer-when-downgrade"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
+            <a href="/" title="Jinhuaiyao&#39;s Records"></a>
         </div>
         <div class="menu">
             <div class="menu-inner">
@@ -63,9 +63,7 @@
                     href="/tools/" > Tools 
                 </a><a class="menu-item"
                     href="/about/" > About 
-                </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
+                </a></a>
             </div>
         </div>
     </div>
@@ -73,7 +71,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
+                <a href="/" title="Jinhuaiyao&#39;s Records"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -87,8 +85,7 @@
                 </a><a class="menu-item" href="/about/"> About 
                 </a>
             
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+
             </a></div>
     </div>
 </header><main class="main">
@@ -103,108 +100,52 @@
 
 
         </div><div class="content" id="content"><p>前几天需要用dbca新建个空数据库，但是报错。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;dbca -silent \
-</span></span><span class="line"><span class="cl">&gt; -createDatabase \
-</span></span><span class="line"><span class="cl">&gt; -templateName General_Purpose.dbc \
-</span></span><span class="line"><span class="cl">&gt; -gdbName ARCHBMS \
-</span></span><span class="line"><span class="cl">&gt; -sid ARCHBMS \
-</span></span><span class="line"><span class="cl">&gt; -SysPassword xxxx \
-</span></span><span class="line"><span class="cl">&gt; -SystemPassword xxxx \
-</span></span><span class="line"><span class="cl">&gt; -emConfiguration NONE \
-</span></span><span class="line"><span class="cl">&gt; -redoLogFileSize 1000 \
-</span></span><span class="line"><span class="cl">&gt; -storageType FS \
-</span></span><span class="line"><span class="cl">&gt; -datafileDestination &#34;/oradata/archdb&#34; \
-</span></span><span class="line"><span class="cl">&gt; -characterSet AL32UTF8 \
-</span></span><span class="line"><span class="cl">&gt; -nationalCharacterSet AL16UTF16 \
-</span></span><span class="line"><span class="cl">&gt; -totalMemory 50000
-</span></span><span class="line"><span class="cl">[WARNING] [DBT-06208] The &#39;SYS&#39; password entered does not conform to the Oracle recommended standards.
-</span></span><span class="line"><span class="cl">   CAUSE:
-</span></span><span class="line"><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
-</span></span><span class="line"><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
-</span></span><span class="line"><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
-</span></span><span class="line"><span class="cl">[WARNING] [DBT-06208] The &#39;SYSTEM&#39; password entered does not conform to the Oracle recommended standards.
-</span></span><span class="line"><span class="cl">   CAUSE:
-</span></span><span class="line"><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
-</span></span><span class="line"><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
-</span></span><span class="line"><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
-</span></span><span class="line"><span class="cl">Copying database files
-</span></span><span class="line"><span class="cl">1% complete
-</span></span><span class="line"><span class="cl">2% complete
-</span></span><span class="line"><span class="cl">3% complete
-</span></span><span class="line"><span class="cl">DBCA Operation failed.
-</span></span><span class="line"><span class="cl">Look at the log file &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34; for further details.
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>看一下 log：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;more &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34;
-</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:57.542 UTC ] Copying database files
-</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 1%
-</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 2%
-</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 3%
-</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.957 UTC ] ORA-01034: ORACLE not available
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.958 UTC ] ORA-01034: ORACLE not available
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[ 2021-03-02 02:39:04.262 UTC ] DBCA_PROGRESS : DBCA Operation failed.
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>从原点出发，报错信息 &ldquo;CRS error performing start on instance&rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;dbca -silent \
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">&gt; -createDatabase \
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">&gt; -templateName General_Purpose.dbc \
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">&gt; -gdbName ARCHBMS \
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">&gt; -sid ARCHBMS \
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">&gt; -SysPassword xxxx \
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">&gt; -SystemPassword xxxx \
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">&gt; -emConfiguration NONE \
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">&gt; -redoLogFileSize 1000 \
+</span></span><span class="line"><span class="ln">10</span><span class="cl">&gt; -storageType FS \
+</span></span><span class="line"><span class="ln">11</span><span class="cl">&gt; -datafileDestination &#34;/oradata/archdb&#34; \
+</span></span><span class="line"><span class="ln">12</span><span class="cl">&gt; -characterSet AL32UTF8 \
+</span></span><span class="line"><span class="ln">13</span><span class="cl">&gt; -nationalCharacterSet AL16UTF16 \
+</span></span><span class="line"><span class="ln">14</span><span class="cl">&gt; -totalMemory 50000
+</span></span><span class="line"><span class="ln">15</span><span class="cl">[WARNING] [DBT-06208] The &#39;SYS&#39; password entered does not conform to the Oracle recommended standards.
+</span></span><span class="line"><span class="ln">16</span><span class="cl">   CAUSE:
+</span></span><span class="line"><span class="ln">17</span><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+</span></span><span class="line"><span class="ln">18</span><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
+</span></span><span class="line"><span class="ln">19</span><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+</span></span><span class="line"><span class="ln">20</span><span class="cl">[WARNING] [DBT-06208] The &#39;SYSTEM&#39; password entered does not conform to the Oracle recommended standards.
+</span></span><span class="line"><span class="ln">21</span><span class="cl">   CAUSE:
+</span></span><span class="line"><span class="ln">22</span><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+</span></span><span class="line"><span class="ln">23</span><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
+</span></span><span class="line"><span class="ln">24</span><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+</span></span><span class="line"><span class="ln">25</span><span class="cl">Copying database files
+</span></span><span class="line"><span class="ln">26</span><span class="cl">1% complete
+</span></span><span class="line"><span class="ln">27</span><span class="cl">2% complete
+</span></span><span class="line"><span class="ln">28</span><span class="cl">3% complete
+</span></span><span class="line"><span class="ln">29</span><span class="cl">DBCA Operation failed.
+</span></span><span class="line"><span class="ln">30</span><span class="cl">Look at the log file &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34; for further details.
+</span></span></code></pre></div><p>看一下 log：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;more &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34;
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">[ 2021-03-02 02:38:57.542 UTC ] Copying database files
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">DBCA_PROGRESS : 1%
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">DBCA_PROGRESS : 2%
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">DBCA_PROGRESS : 3%
+</span></span><span class="line"><span class="ln">10</span><span class="cl">[ 2021-03-02 02:38:58.957 UTC ] ORA-01034: ORACLE not available
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl">[ 2021-03-02 02:38:58.958 UTC ] ORA-01034: ORACLE not available
+</span></span><span class="line"><span class="ln">13</span><span class="cl">
+</span></span><span class="line"><span class="ln">14</span><span class="cl">[ 2021-03-02 02:39:04.262 UTC ] DBCA_PROGRESS : DBCA Operation failed.
+</span></span></code></pre></div><p>从原点出发，报错信息 &ldquo;CRS error performing start on instance&rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？</p>
 <p>接下来就是一顿troubleshooting：</p>
 <ul>
 <li>
@@ -214,45 +155,23 @@
 <p>试试 sqlplus 启动空 instance。</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&gt;si
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">SQL*Plus: Release 12.2.0.1.0 Production on Tue Mar 2 02:55:43 2021
-</span></span><span class="line"><span class="cl">Copyright (c) 1982, 2016, Oracle.  All rights reserved.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Connected to an idle instance.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">SYS@ECOMBMS&gt; startup nomount;
-</span></span><span class="line"><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
-</span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
-</span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
-</span></span><span class="line"><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
-</span></span><span class="line"><span class="cl">clsr_start_resource2:500 clscrs_crsentitylist_first error clscrsret:11
-</span></span><span class="line"><span class="cl">clsr_start_resource2:900 exit status:254
-</span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
-</span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&gt;si
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">SQL*Plus: Release 12.2.0.1.0 Production on Tue Mar 2 02:55:43 2021
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">Connected to an idle instance.
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">SYS@ECOMBMS&gt; startup nomount;
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
+</span></span><span class="line"><span class="ln">10</span><span class="cl">clsr_start_resource:260 status:254
+</span></span><span class="line"><span class="ln">11</span><span class="cl">clsrapi_start_db:start_asmdbs status:254
+</span></span><span class="line"><span class="ln">12</span><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
+</span></span><span class="line"><span class="ln">13</span><span class="cl">clsr_start_resource2:500 clscrs_crsentitylist_first error clscrsret:11
+</span></span><span class="line"><span class="ln">14</span><span class="cl">clsr_start_resource2:900 exit status:254
+</span></span><span class="line"><span class="ln">15</span><span class="cl">clsr_start_resource:260 status:254
+</span></span><span class="line"><span class="ln">16</span><span class="cl">clsrapi_start_db:start_asmdbs status:254
+</span></span></code></pre></div><p>同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。</p>
 <ul>
 <li>
 <p>查看 alert log，没有什么特别的信息。</p>
@@ -332,8 +251,7 @@
       ></div>
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Huaiyao Jin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span></div>
 
             
 

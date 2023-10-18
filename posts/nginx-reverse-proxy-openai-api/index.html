@@ -16,8 +16,8 @@
 
 <meta name="twitter:title" content="Nginx Reverse Proxy OpenAI API"/>
 <meta name="twitter:description" content="同事问到这个，记录在这里吧。"/>
-<meta name="application-name" content="我的网站">
-<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Jinhuaiyao&#39;s Records">
+<meta name="apple-mobile-web-app-title" content="Jinhuaiyao&#39;s Records"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/" /><link rel="prev" href="http://www.jinhuaiyao.com/posts/review-the-words-daily/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/nginx-reverse-proxy-openai-api\/"
-        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  321 ,
+        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  276 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/nginx-reverse-proxy-openai-api\/","datePublished": "2023-10-16T22:13:21+08:00","dateModified": "2023-10-16T22:13:21+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -47,7 +47,7 @@
   <meta name="referrer" content="no-referrer-when-downgrade"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
+            <a href="/" title="Jinhuaiyao&#39;s Records"></a>
         </div>
         <div class="menu">
             <div class="menu-inner">
@@ -63,9 +63,7 @@
                     href="/tools/" > Tools 
                 </a><a class="menu-item"
                     href="/about/" > About 
-                </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
+                </a></a>
             </div>
         </div>
     </div>
@@ -73,7 +71,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
+                <a href="/" title="Jinhuaiyao&#39;s Records"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -87,8 +85,7 @@
                 </a><a class="menu-item" href="/about/"> About 
                 </a>
             
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+
             </a></div>
     </div>
 </header><main class="main">
@@ -105,187 +102,89 @@
         </div><div class="content" id="content"><p>同事问到这个，记录在这里吧。</p>
 <p>国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。</p>
 <h3 id="config-server">Config server</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr-3:~# lsb_release -a
-</span></span><span class="line"><span class="cl">No LSB modules are available.
-</span></span><span class="line"><span class="cl">Distributor ID:	Ubuntu
-</span></span><span class="line"><span class="cl">Description:	Ubuntu 20.04.6 LTS
-</span></span><span class="line"><span class="cl">Release:	20.04
-</span></span><span class="line"><span class="cl">Codename:	focal
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">root@vultr-3:~# apt update
-</span></span><span class="line"><span class="cl">root@vultr-3:~# apt upgrade
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ssh-copy-id root@xx.xx.xx.xx
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ssh root@xx.xx.xx.xx
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cp /etc/ssh/sshd_config /etc/ssh/sshd_config.1
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">vi /etc/ssh/sshd_config
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Port 10086
-</span></span><span class="line"><span class="cl">MaxAuthTries 6
-</span></span><span class="line"><span class="cl">MaxSessions 10
-</span></span><span class="line"><span class="cl">PubkeyAuthentication yes
-</span></span><span class="line"><span class="cl">PasswordAuthentication no
-</span></span><span class="line"><span class="cl">PermitEmptyPasswords no
-</span></span><span class="line"><span class="cl">ChallengeResponseAuthentication no
-</span></span><span class="line"><span class="cl">UsePAM yes
-</span></span><span class="line"><span class="cl">X11Forwarding yes
-</span></span><span class="line"><span class="cl">PrintMotd no
-</span></span><span class="line"><span class="cl">AcceptEnv LANG LC_*
-</span></span><span class="line"><span class="cl">Subsystem sftp	/usr/lib/openssh/sftp-server
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">systemctl restart ssh.service
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ufw allow 10086
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="nginx-setup-and-config">Nginx setup and config</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh root@xx.xx.xx.xx -p 10086
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ufw allow 80
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">apt install nginx
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">systemctl status nginx
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">http://xx.xx.xx.xx  -- will get &#34;Welcome to nginx!&#34;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.1
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">vi /etc/nginx/nginx.conf
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">add below to under &#34;http {&#34;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">server {
-</span></span><span class="line"><span class="cl">listen       80;
-</span></span><span class="line"><span class="cl">server_name xx.xx.xx.xx;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">location /v1 {
-</span></span><span class="line"><span class="cl">    proxy_pass  https://api.openai.com/v1;  
-</span></span><span class="line"><span class="cl">    proxy_ssl_server_name on;  
-</span></span><span class="line"><span class="cl">    proxy_set_header Host api.openai.com;  
-</span></span><span class="line"><span class="cl">    chunked_transfer_encoding off;  
-</span></span><span class="line"><span class="cl">    proxy_buffering off;  
-</span></span><span class="line"><span class="cl">    proxy_cache off;  
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">systemctl reload nginx
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">systemctl status nginx
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="test-in-local">Test in local</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">PROXY_URL=&#34;http://xx.xx.xx.xx/v1/chat/completions&#34;
-</span></span><span class="line"><span class="cl">OPENAI_API_KEY=&#34;xxxx&#34;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">curl -s -k $PROXY_URL \
-</span></span><span class="line"><span class="cl">    -H &#34;Content-Type: application/json&#34; \
-</span></span><span class="line"><span class="cl">    -H &#34;Authorization: Bearer $OPENAI_API_KEY&#34; \
-</span></span><span class="line"><span class="cl">    -d &#39;{
-</span></span><span class="line"><span class="cl">     &#34;model&#34;: &#34;gpt-3.5-turbo&#34;,
-</span></span><span class="line"><span class="cl">     &#34;messages&#34;: [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;你好&#34;}],
-</span></span><span class="line"><span class="cl">     &#34;temperature&#34;: 0.7
-</span></span><span class="line"><span class="cl">     }&#39;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="use">Use</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">root@vultr-3:~# lsb_release -a
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">No LSB modules are available.
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">Distributor ID:	Ubuntu
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">Description:	Ubuntu 20.04.6 LTS
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">Release:	20.04
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">Codename:	focal
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">root@vultr-3:~# apt update
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">root@vultr-3:~# apt upgrade
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl">ssh-copy-id root@xx.xx.xx.xx
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl">ssh root@xx.xx.xx.xx
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl">cp /etc/ssh/sshd_config /etc/ssh/sshd_config.1
+</span></span><span class="line"><span class="ln">16</span><span class="cl">
+</span></span><span class="line"><span class="ln">17</span><span class="cl">vi /etc/ssh/sshd_config
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl">Port 10086
+</span></span><span class="line"><span class="ln">20</span><span class="cl">MaxAuthTries 6
+</span></span><span class="line"><span class="ln">21</span><span class="cl">MaxSessions 10
+</span></span><span class="line"><span class="ln">22</span><span class="cl">PubkeyAuthentication yes
+</span></span><span class="line"><span class="ln">23</span><span class="cl">PasswordAuthentication no
+</span></span><span class="line"><span class="ln">24</span><span class="cl">PermitEmptyPasswords no
+</span></span><span class="line"><span class="ln">25</span><span class="cl">ChallengeResponseAuthentication no
+</span></span><span class="line"><span class="ln">26</span><span class="cl">UsePAM yes
+</span></span><span class="line"><span class="ln">27</span><span class="cl">X11Forwarding yes
+</span></span><span class="line"><span class="ln">28</span><span class="cl">PrintMotd no
+</span></span><span class="line"><span class="ln">29</span><span class="cl">AcceptEnv LANG LC_*
+</span></span><span class="line"><span class="ln">30</span><span class="cl">Subsystem sftp	/usr/lib/openssh/sftp-server
+</span></span><span class="line"><span class="ln">31</span><span class="cl">
+</span></span><span class="line"><span class="ln">32</span><span class="cl">
+</span></span><span class="line"><span class="ln">33</span><span class="cl">systemctl restart ssh.service
+</span></span><span class="line"><span class="ln">34</span><span class="cl">
+</span></span><span class="line"><span class="ln">35</span><span class="cl">ufw allow 10086
+</span></span></code></pre></div><h3 id="nginx-setup-and-config">Nginx setup and config</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">ssh root@xx.xx.xx.xx -p 10086
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">ufw allow 80
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">apt install nginx
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">systemctl status nginx
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">http://xx.xx.xx.xx  -- will get &#34;Welcome to nginx!&#34;
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl">cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.1
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl">vi /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl">add below to under &#34;http {&#34;
+</span></span><span class="line"><span class="ln">16</span><span class="cl">
+</span></span><span class="line"><span class="ln">17</span><span class="cl">
+</span></span><span class="line"><span class="ln">18</span><span class="cl">server {
+</span></span><span class="line"><span class="ln">19</span><span class="cl">listen       80;
+</span></span><span class="line"><span class="ln">20</span><span class="cl">server_name xx.xx.xx.xx;
+</span></span><span class="line"><span class="ln">21</span><span class="cl">
+</span></span><span class="line"><span class="ln">22</span><span class="cl">location /v1 {
+</span></span><span class="line"><span class="ln">23</span><span class="cl">    proxy_pass  https://api.openai.com/v1;  
+</span></span><span class="line"><span class="ln">24</span><span class="cl">    proxy_ssl_server_name on;  
+</span></span><span class="line"><span class="ln">25</span><span class="cl">    proxy_set_header Host api.openai.com;  
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    chunked_transfer_encoding off;  
+</span></span><span class="line"><span class="ln">27</span><span class="cl">    proxy_buffering off;  
+</span></span><span class="line"><span class="ln">28</span><span class="cl">    proxy_cache off;  
+</span></span><span class="line"><span class="ln">29</span><span class="cl">}
+</span></span><span class="line"><span class="ln">30</span><span class="cl">}
+</span></span><span class="line"><span class="ln">31</span><span class="cl">
+</span></span><span class="line"><span class="ln">32</span><span class="cl">systemctl reload nginx
+</span></span><span class="line"><span class="ln">33</span><span class="cl">
+</span></span><span class="line"><span class="ln">34</span><span class="cl">systemctl status nginx
+</span></span></code></pre></div><h3 id="test-in-local">Test in local</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">PROXY_URL=&#34;http://xx.xx.xx.xx/v1/chat/completions&#34;
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">OPENAI_API_KEY=&#34;xxxx&#34;
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">curl -s -k $PROXY_URL \
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    -H &#34;Content-Type: application/json&#34; \
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    -H &#34;Authorization: Bearer $OPENAI_API_KEY&#34; \
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    -d &#39;{
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">     &#34;model&#34;: &#34;gpt-3.5-turbo&#34;,
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">     &#34;messages&#34;: [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;你好&#34;}],
+</span></span><span class="line"><span class="ln">10</span><span class="cl">     &#34;temperature&#34;: 0.7
+</span></span><span class="line"><span class="ln">11</span><span class="cl">     }&#39;
+</span></span></code></pre></div><h3 id="use">Use</h3>
 <ol>
 <li>OpenAI Translator</li>
 <li>OpenCat</li>
@@ -334,8 +233,7 @@
       ></div>
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Huaiyao Jin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span></div>
 
             
 

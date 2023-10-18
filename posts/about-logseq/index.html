@@ -16,8 +16,8 @@
 
 <meta name="twitter:title" content="关于 Logseq"/>
 <meta name="twitter:description" content="这两礼拜每天都在用 Logseq，真是太喜欢了。"/>
-<meta name="application-name" content="我的网站">
-<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Jinhuaiyao&#39;s Records">
+<meta name="apple-mobile-web-app-title" content="Jinhuaiyao&#39;s Records"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/posts/about-logseq/" /><link rel="prev" href="http://www.jinhuaiyao.com/posts/if-dont-understand-dont-mess-around/" /><link rel="next" href="http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/about-logseq\/"
-        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  918 ,
+        },"genre": "posts","keywords": "新事物, Shell, Logseq","wordcount":  900 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/about-logseq\/","datePublished": "2022-07-02T13:55:55+08:00","dateModified": "2023-05-18T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -47,7 +47,7 @@
   <meta name="referrer" content="no-referrer-when-downgrade"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
+            <a href="/" title="Jinhuaiyao&#39;s Records"></a>
         </div>
         <div class="menu">
             <div class="menu-inner">
@@ -63,9 +63,7 @@
                     href="/tools/" > Tools 
                 </a><a class="menu-item"
                     href="/about/" > About 
-                </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
+                </a></a>
             </div>
         </div>
     </div>
@@ -73,7 +71,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Jinhuaiyao&#39;s Records">Jinhuaiyao&#39;s Records</a>
+                <a href="/" title="Jinhuaiyao&#39;s Records"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -87,8 +85,7 @@
                 </a><a class="menu-item" href="/about/"> About 
                 </a>
             
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+
             </a></div>
     </div>
 </header><main class="main">
@@ -117,23 +114,12 @@
 <p><a href="https://limboy.me/posts/logseq/" target="_blank" rel="noopener noreffer">我的 Logseq 使用习惯</a></p>
 <h3 id="macos-上的快速输入">macOS 上的快速输入</h3>
 <p>自己做了一个非常简单的 Alfred workflow，把输入的内容附加在当天的 journal md 文件末尾。希望以后官方 app 能够发布更强大更高效的快速输入方式。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">query</span><span class="o">=</span><span class="nv">$1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">D1</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">&#39;+%Y_%m_%d&#39;</span><span class="sb">`</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n- </span><span class="nv">$query</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals/</span><span class="si">${</span><span class="nv">D1</span><span class="si">}</span><span class="s2">.md&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="ios-上的快速输入">iOS 上的快速输入</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nv">query</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nv">D1</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">&#39;+%Y_%m_%d&#39;</span><span class="sb">`</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n- </span><span class="nv">$query</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals/</span><span class="si">${</span><span class="nv">D1</span><span class="si">}</span><span class="s2">.md&#34;</span>
+</span></span></code></pre></div><h3 id="ios-上的快速输入">iOS 上的快速输入</h3>
 <p>目前搞不定，等官方吧。</p>
 <h3 id="dayone-迁移到-logseq">Dayone 迁移到 Logseq</h3>
 <p>又花了一点时间把 Dayone 里的几千个记录迁移到 Logseq，慢慢带着加以整理、回顾、形成一些联系。</p>
@@ -163,23 +149,12 @@
 <p>今天发现 cron job 并没有运行成功，文件没有同步到 OneDrive。先给 cron job 加一段输出用来调试一下。</p>
 <p><code>*/5 * * * * /usr/bin/rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot; &gt; /Users/huajin/Log/Logseq.bak.log 2&gt;&amp;1</code></p>
 <p>看一下 Logseq.bak.log，有众多的 Operation not permitted 报错。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-25&#34;: Operation not permitted (1)
-</span></span><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-26&#34;: Operation not permitted (1)
-</span></span><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-29&#34;: Operation not permitted (1)
-</span></span><span class="line"><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-30&#34;: Operation not permitted (1)
-</span></span><span class="line"><span class="cl">...
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>谷歌一下，找到了<a href="https://apple.stackexchange.com/questions/378553/crontab-operation-not-permitted" target="_blank" rel="noopener noreffer">解决方法</a>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-25&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="ln">2</span><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-26&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="ln">3</span><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-29&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="ln">4</span><span class="cl">rsync: failed to set times on &#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-30&#34;: Operation not permitted (1)
+</span></span><span class="line"><span class="ln">5</span><span class="cl">...
+</span></span></code></pre></div><p>谷歌一下，找到了<a href="https://apple.stackexchange.com/questions/378553/crontab-operation-not-permitted" target="_blank" rel="noopener noreffer">解决方法</a>。</p>
 <p>简单的讲就是给<code>/usr/sbin/cron</code> 赋予 <code>Full Disk Access</code> 权限。</p>
 <hr>
 <p><em>-- update on 2022-08-06</em></p>
@@ -199,37 +174,19 @@
 <p>在<del>旧 macbook 改造以后的 server</del> 新 MacBook Pro 上加一个 cron job。 <em>-- update on 2022-08-06</em></p>
 <p><code>5 5 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &gt; /Users/jinhuaiyao/Log/on_this_day.log 2&gt;&amp;1</code></p>
 <p><em>-- updated shell script on 2023-05-18</em></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span>  <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">DT</span><span class="o">=</span><span class="sb">`</span>date +%m_%d<span class="sb">`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">&gt; ../pages/On_This_Day.md<span class="p">;</span>
-</span></span><span class="line"><span class="cl">ls <span class="p">|</span>grep <span class="s2">&#34;_</span><span class="nv">$DT</span><span class="s2">&#34;</span> <span class="p">|</span>sort <span class="p">|</span><span class="k">while</span> <span class="nb">read</span> file
-</span></span><span class="line"><span class="cl"><span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- -------- [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] --------/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;  collapsed:: true&#34;</span> &gt;&gt;../pages/On_This_Day.md
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">awk <span class="s1">&#39;{print &#34;    &#34; $0}&#39;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n-\n-\n&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">done</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>可以展开或折叠，效果如下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nb">cd</span>  <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nv">DT</span><span class="o">=</span><span class="sb">`</span>date +%m_%d<span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">&gt; ../pages/On_This_Day.md<span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">ls <span class="p">|</span>grep <span class="s2">&#34;_</span><span class="nv">$DT</span><span class="s2">&#34;</span> <span class="p">|</span>sort <span class="p">|</span><span class="k">while</span> <span class="nb">read</span> file
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- -------- [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] --------/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;  collapsed:: true&#34;</span> &gt;&gt;../pages/On_This_Day.md
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">awk <span class="s1">&#39;{print &#34;    &#34; $0}&#39;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n-\n-\n&#34;</span> &gt;&gt; ../pages/On_This_Day.md
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><p>可以展开或折叠，效果如下。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -282,8 +239,7 @@
       ></div>
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Huaiyao Jin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span></div>
 
             
 
