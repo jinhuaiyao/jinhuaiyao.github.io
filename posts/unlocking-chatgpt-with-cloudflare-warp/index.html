@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/unlocking-chatgpt-with-cloudflare-warp\/"
-        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  593 ,
+        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  663 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/unlocking-chatgpt-with-cloudflare-warp\/","datePublished": "2023-04-11T10:24:16+08:00","dateModified": "2023-04-11T10:24:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -132,7 +132,56 @@
 <p><code>warp-cli warp-stats</code></p>
 <hr>
 <p><code>vi /usr/local/etc/v2ray/config.json</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">    &#34;inbounds&#34;: [
 </span></span><span class="line"><span class="cl">        {
 </span></span><span class="line"><span class="cl">            &#34;port&#34;: 10086, 
@@ -177,10 +226,41 @@
 </span></span><span class="line"><span class="cl">    ]
 </span></span><span class="line"><span class="cl">}
 </span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><p><code>systemctl stop v2ray</code></p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>systemctl stop v2ray</code></p>
 <p><code>systemctl start v2ray</code></p>
 <hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rjin@vultr:~$ curl ipinfo.io
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rjin@vultr:~$ curl ipinfo.io
 </span></span><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">&#34;ip&#34;: &#34;xxx.xxx.xxx.xxx&#34;,
 </span></span><span class="line"><span class="cl">&#34;hostname&#34;: &#34;xxx.xxx.xxx.xxx.vultrusercontent.com&#34;,
@@ -205,7 +285,9 @@
 </span></span><span class="line"><span class="cl">&#34;postal&#34;: &#34;10314&#34;,
 </span></span><span class="line"><span class="cl">&#34;timezone&#34;: &#34;America/New_York&#34;,
 </span></span><span class="line"><span class="cl">&#34;readme&#34;: &#34;https://ipinfo.io/missingauth&#34;
-</span></span></code></pre></div><hr>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>在电脑上重启一下 V2rayU ，就可以正常访问 <a href="https://chat.openai.com/auth/login" target="_blank" rel="noopener noreffer">https://chat.openai.com/auth/login</a> 了。</p>
 </li>
 </ol></div><div class="post-footer" id="post-footer">

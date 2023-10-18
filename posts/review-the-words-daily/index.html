@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/review-the-words-daily\/"
-        },"genre": "posts","keywords": "解决问题, Shell, 新事物","wordcount":  440 ,
+        },"genre": "posts","keywords": "解决问题, Shell, 新事物","wordcount":  478 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/review-the-words-daily\/","datePublished": "2023-05-27T15:51:04+08:00","dateModified": "2023-05-27T15:51:04+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -163,7 +163,49 @@
         alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png"
         title="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png" /></p>
 <p>我自己写了发送到 Things3 的部分，整个脚本如下。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -201,7 +243,9 @@
 </span></span><span class="line"><span class="cl">  open <span class="s2">&#34;things:///add?title=</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">&amp;notes=</span><span class="si">${</span><span class="nv">expl</span><span class="si">}</span><span class="s2">&amp;when=today&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">fi</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span>
-</span></span></code></pre></div><p>如果某些单词不用再复习了，就再其前面加上 # 号，<code>${word:0:1} != '#'</code> 会去过滤。</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果某些单词不用再复习了，就再其前面加上 # 号，<code>${word:0:1} != '#'</code> 会去过滤。</p>
 <p>最后把脚本加到 cron job 即可。</p>
 <p>最后效果如下，直接变成当天的待办事项，相当“暴力”。</p>
 <p><img

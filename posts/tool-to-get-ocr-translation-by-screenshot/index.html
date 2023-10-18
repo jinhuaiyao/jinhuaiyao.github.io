@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/tool-to-get-ocr-translation-by-screenshot\/"
-        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  1139 ,
+        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  1213 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/tool-to-get-ocr-translation-by-screenshot\/","datePublished": "2023-04-09T08:29:07+08:00","dateModified": "2023-04-09T08:29:07+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -164,7 +164,31 @@
 <p>VPS 上 <code>vi /usr/local/etc/v2ray/config.json</code></p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">    &#34;inbounds&#34;: [
 </span></span><span class="line"><span class="cl">        {
 </span></span><span class="line"><span class="cl">            &#34;port&#34;: 10086, // 服务器监听端口
@@ -184,22 +208,94 @@
 </span></span><span class="line"><span class="cl">        }
 </span></span><span class="line"><span class="cl">    ]
 </span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><ol start="3">
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
 <li>配置一下防火墙</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ufw status
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo ufw status
 </span></span><span class="line"><span class="cl">ufw allow 10086
 </span></span><span class="line"><span class="cl">sudo ufw status
-</span></span></code></pre></div><ol start="4">
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
 <li>启动 v2ray</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr:~# systemctl enable v2ray
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr:~# systemctl enable v2ray
 </span></span><span class="line"><span class="cl">root@vultr:~# systemctl start v2ray
 </span></span><span class="line"><span class="cl">root@vultr:~# systemctl status v2ray
-</span></span></code></pre></div><ol start="5">
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
 <li>VPS 安全设置</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr:~# adduser rjin
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr:~# adduser rjin
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">--
 </span></span><span class="line"><span class="cl">visudo
@@ -247,7 +343,9 @@
 </span></span><span class="line"><span class="cl">systemctl stop ssh.service
 </span></span><span class="line"><span class="cl">systemctl start ssh.service
 </span></span><span class="line"><span class="cl">systemctl status ssh.service
-</span></span></code></pre></div><h5 id="client-端配置">Client 端配置</h5>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="client-端配置">Client 端配置</h5>
 <p>Mac 上 V2rayU 添加节点：</p>
 <p><img
         class="lazyload"

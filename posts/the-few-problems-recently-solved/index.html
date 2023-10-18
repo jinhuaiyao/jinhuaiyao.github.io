@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/the-few-problems-recently-solved\/"
-        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  846 ,
+        },"genre": "posts","keywords": "新事物, 解决问题","wordcount":  868 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/the-few-problems-recently-solved\/","datePublished": "2023-04-09T14:01:33+08:00","dateModified": "2023-04-09T14:01:33+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -155,7 +155,20 @@
 <li>
 <p>在 Ubuntu 上安装 VMWare Workstation</p>
 <p>安装参考 <a href="https://waydo.xyz/soft/linux/ubuntu-vmware-workstation/" target="_blank" rel="noopener noreffer">https://waydo.xyz/soft/linux/ubuntu-vmware-workstation/</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
 </span></span><span class="line"><span class="cl">Extracting VMware Installer...done.
 </span></span><span class="line"><span class="cl">root access is required for the operations you have chosen.
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ sudo ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
@@ -164,11 +177,21 @@
 </span></span><span class="line"><span class="cl">    Configuring...
 </span></span><span class="line"><span class="cl">[######################################################################] 100%
 </span></span><span class="line"><span class="cl">Installation was successful.
-</span></span></code></pre></div><p>运行时遇到报错 &ldquo;GNU C Compiler (gcc) version 9.4.0, was not found.&rdquo;</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行时遇到报错 &ldquo;GNU C Compiler (gcc) version 9.4.0, was not found.&rdquo;</p>
 <p>参考 <a href="https://codeantenna.com/a/GEL9CxW11A" target="_blank" rel="noopener noreffer">https://codeantenna.com/a/GEL9CxW11A</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
 </span></span><span class="line"><span class="cl">sudo apt-get install build-essential
-</span></span></code></pre></div><p>然后重新运行按照提示编译就可以了。</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重新运行按照提示编译就可以了。</p>
 </li>
 <li>
 <p>把 MacBook 的虚拟机文件 copy 到 Ubuntu 上，重新配置。最重要的是配置 RAC private 网络，需要自定义 192.168.1.0 的 subnet。</p>
@@ -188,7 +211,22 @@
 </li>
 <li>
 <p>配置 PubkeyAuthentication only。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">MaxAuthTries 6
 </span></span><span class="line"><span class="cl">MaxSessions 10
@@ -199,7 +237,9 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ sudo service ssh stop
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ sudo service ssh start
-</span></span></code></pre></div></li>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p>路由器配置端口转发，可以从外网访问 RAC。</p>
 </li>

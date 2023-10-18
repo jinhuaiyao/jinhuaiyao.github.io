@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title> Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="" />
-<meta property="og:description" content="Python 小抄 - doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.py Trying: q, r = divide_exact(2013, 10) Expecting nothing ok Trying: q Expecting: 201 ok Trying: r Expecting: 3 ok 1 items had no tests: test 1 items passed all tests: 3 tests in test.divide_exact 3 tests in 2 items." />
+<meta property="og:description" content="Python 小抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 - doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.jinhuaiyao.com/python/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="" />
 
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Python 小抄 - doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.py Trying: q, r = divide_exact(2013, 10) Expecting nothing ok Trying: q Expecting: 201 ok Trying: r Expecting: 3 ok 1 items had no tests: test 1 items passed all tests: 3 tests in test.divide_exact 3 tests in 2 items."/>
+<meta name="twitter:description" content="Python 小抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 - doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test."/>
 <meta name="application-name" content="Jinhuaiyao&#39;s Records">
 <meta name="apple-mobile-web-app-title" content="Jinhuaiyao&#39;s Records"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/python\/"
-        },"genre": "page","wordcount":  267 ,
+        },"genre": "page","wordcount":  374 ,
         "url": "http:\/\/www.jinhuaiyao.com\/python\/","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -91,7 +91,46 @@
 </header><main class="main">
                 <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster"></h1><div class="content" id="content"><h3 id="python-小抄">Python 小抄</h3>
 <hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">doctest</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">doctest</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">divide_exact</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
@@ -126,16 +165,44 @@
 </span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mi">2</span> <span class="n">items</span><span class="o">.</span>
 </span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">passed</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">failed</span><span class="o">.</span>
 </span></span><span class="line"><span class="cl"><span class="n">Test</span> <span class="n">passed</span><span class="o">.</span>
-</span></span></code></pre></div><hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="n">的用法</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="n">的用法</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">该代码中的</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">表示一个字符串</span> <span class="n">w</span> <span class="n">的反向字符串</span><span class="err">。</span>
 </span></span><span class="line"><span class="cl"><span class="n">也就是说</span><span class="err">，</span><span class="n">它会将</span> <span class="n">w</span> <span class="n">中的字符从后往前倒序排列</span><span class="err">，</span><span class="n">得到一个新的字符串</span><span class="err">。</span>
 </span></span><span class="line"><span class="cl"><span class="n">例如</span><span class="err">，</span><span class="n">如果</span> <span class="n">w</span> <span class="n">是</span> <span class="s2">&#34;hello&#34;</span><span class="err">，</span><span class="n">那么</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">就是</span> <span class="s2">&#34;olleh&#34;</span><span class="err">。</span>
-</span></span></code></pre></div><hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">赋值方式</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">赋值方式</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">值交换</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span>
@@ -144,8 +211,28 @@
 </span></span><span class="line"><span class="cl"><span class="mf">4.5</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span>
 </span></span><span class="line"><span class="cl"><span class="mi">3</span>
-</span></span></code></pre></div><hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">类的写法</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">类的写法</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
@@ -159,8 +246,35 @@
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_desc_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">long_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-</span></span></code></pre></div><hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">文件内容写到列表</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">文件内容写到列表</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">zfill</span><span class="err">，</span><span class="n">字符串右对齐</span><span class="err">，</span><span class="n">前面填充0</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="s2">&#34;if birthday in pi_str&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -181,8 +295,35 @@
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">birthday</span><span class="si">}</span><span class="s2"> - yes&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">birthday</span><span class="p">)</span>
-</span></span></code></pre></div><hr>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">json的用法</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">json的用法</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
@@ -203,7 +344,9 @@
 </span></span><span class="line"><span class="cl"><span class="n">save_file</span> <span class="o">=</span> <span class="s1">&#39;json.txt&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span></code></pre></div><hr>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 </div></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span></div>

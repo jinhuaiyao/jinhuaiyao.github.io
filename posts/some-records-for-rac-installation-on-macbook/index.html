@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/some-records-for-rac-installation-on-macbook\/"
-        },"genre": "posts","keywords": "Oracle","wordcount":  1340 ,
+        },"genre": "posts","keywords": "Oracle","wordcount":  1476 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/some-records-for-rac-installation-on-macbook\/","datePublished": "2023-02-02T16:19:18+08:00","dateModified": "2023-02-02T16:19:18+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,7 +107,25 @@
 <p>研究一番，最后发现是电信网络的问题，改用手机热点，虚拟机 IP 也跟着变化，重新 ssh，之后 yum install 就很快了。</p>
 <h3 id="public-ip-网络配置">Public IP 网络配置</h3>
 <p>之前都是自定义一个虚拟的网段，这次在 VMWare 里改用成和家庭网络网段一样，10.0.0.x，一个好处是 db server 可以直接访问外网，另外家庭网络里其他笔记本可以直接 ssh 到 db server（以前需要先 ssh 到笔记本上然后再 ssh 到 db server），算是一个改进。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#Public
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#Public
 </span></span><span class="line"><span class="cl">10.0.0.218 pve01dbs005
 </span></span><span class="line"><span class="cl">10.0.0.219 pve01dbs006
 </span></span><span class="line"><span class="cl">
@@ -121,12 +139,23 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">#scan
 </span></span><span class="line"><span class="cl">10.0.0.223 pve01dbs-scan
-</span></span></code></pre></div><h3 id="avahi-daemonservice">avahi-daemon.service</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="avahi-daemonservice">avahi-daemon.service</h3>
 <p>Oracle Linux 7.7 上安装 RAC，需要 disable 这个服务。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">systemctl status avahi-daemon.service
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">systemctl status avahi-daemon.service
 </span></span><span class="line"><span class="cl">systemctl stop avahi-daemon.service
 </span></span><span class="line"><span class="cl">systemctl disable avahi-daemon.service
-</span></span></code></pre></div><h3 id="vmware-里共享硬盘的配置">VMWare 里共享硬盘的配置</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="vmware-里共享硬盘的配置">VMWare 里共享硬盘的配置</h3>
 <p>两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。</p>
 <p><img
         class="lazyload"
@@ -136,7 +165,73 @@
         data-sizes="auto"
         alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png"
         title="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png" /></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
 </span></span><span class="line"><span class="cl"># BEGIN SHARED STORAGE
 </span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
@@ -198,7 +293,9 @@
 </span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
 </span></span><span class="line"><span class="cl"># END SHARED STORAGE
 </span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
-</span></span></code></pre></div><h3 id="ocr">OCR</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ocr">OCR</h3>
 <p>忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。</p>
 <p><img
         class="lazyload"
@@ -208,11 +305,32 @@
         data-sizes="auto"
         alt="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png"
         title="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png" /></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg
 </span></span><span class="line"><span class="cl">State    Type    Rebal  Sector  Logical_Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_MB  Usable_file_MB  Offline_disks  Voting_files  Name
 </span></span><span class="line"><span class="cl">MOUNTED  NORMAL  N         512             512   4096  4194304     15360    14420             5120            4650              0             Y  VOTE_DG/
-</span></span></code></pre></div><h3 id="安装-grid-时节点一-rootsh-报错">安装 Grid 时节点一 root.sh 报错</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2023/01/31 16:14:56 CLSRSC-594: Executing installation step 18 of 19: &#39;ConfigNode&#39;.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装-grid-时节点一-rootsh-报错">安装 Grid 时节点一 root.sh 报错</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2023/01/31 16:14:56 CLSRSC-594: Executing installation step 18 of 19: &#39;ConfigNode&#39;.
 </span></span><span class="line"><span class="cl"> PRCR-1013 : Failed to start resource ora.ons
 </span></span><span class="line"><span class="cl">PRCR-1064 : Failed to start resource ora.ons on node pve01dbs005
 </span></span><span class="line"><span class="cl">CRS-2674: Start of &#39;ora.ons&#39; on &#39;pve01dbs005&#39; failed
@@ -220,13 +338,71 @@
 </span></span><span class="line"><span class="cl">2023/01/31 16:15:44 Oracle Clusterware infrastructure error in CLSECHO (OS PID 7018): ADR home path /u01/app/grid/diag/crs/pve01dbs005v1/crs does not exist; ADR initialization will try to create it
 </span></span><span class="line"><span class="cl"> CLSRSC-180: An error occurred while executing the command &#39;srvctl start nodeapps -n pve01dbs005&#39;
 </span></span><span class="line"><span class="cl">2023/01/31 16:15:44 CLSRSC-287: FirstNode configuration failed
-</span></span></code></pre></div><p>搜索了一下，有篇 metelink 文章正好解决这个问题，PRCR-1013 : Failed to start resource ora.ons  - 12.2 : Grid Infrastructure Installation Fails with Error “PRCR-1013 : Failed to start resource ora.ons” (Doc ID 2380526.1)</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>搜索了一下，有篇 metelink 文章正好解决这个问题，PRCR-1013 : Failed to start resource ora.ons  - 12.2 : Grid Infrastructure Installation Fails with Error “PRCR-1013 : Failed to start resource ora.ons” (Doc ID 2380526.1)</p>
 <p>解决方法是：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@pve01dbs005 ~]# service NetworkManager status
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@pve01dbs005 ~]# service NetworkManager status
 </span></span><span class="line"><span class="cl">[root@pve01dbs005 ~]# service NetworkManager stop
 </span></span><span class="line"><span class="cl">[root@pve01dbs005 ~]# chkconfig NetworkManager off
-</span></span></code></pre></div><p>然后重新运行 root.sh</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@pve01dbs005 ~]# /u01/app/19.3.0/grid/root.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重新运行 root.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@pve01dbs005 ~]# /u01/app/19.3.0/grid/root.sh
 </span></span><span class="line"><span class="cl">Performing root user operation.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">The following environment variables are set as:
@@ -269,7 +445,9 @@
 </span></span><span class="line"><span class="cl">2023/01/31 16:28:12 CLSRSC-594: Executing installation step 18 of 19: &#39;ConfigNode&#39;.
 </span></span><span class="line"><span class="cl">2023/01/31 16:28:58 CLSRSC-594: Executing installation step 19 of 19: &#39;PostConfig&#39;.
 </span></span><span class="line"><span class="cl">2023/01/31 16:29:19 CLSRSC-325: Configure Oracle Grid Infrastructure for a Cluster ... succeeded
-</span></span></code></pre></div><h3 id="193-rdbms安装和-12c-不同">19.3 rdbms安装和 12c 不同</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="193-rdbms安装和-12c-不同">19.3 rdbms安装和 12c 不同</h3>
 <p>和 Grid 安装方式类似，需要把 zip 文件 unzip 到预设的目录，然后运行 runInstaller。以前是随便 unzip 到一个目录，安装时候选择 ORACLE_HOME。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/oracle-test-env-under-m1-chip-macbook\/"
-        },"genre": "posts","keywords": "Oracle, 解决问题","wordcount":  1226 ,
+        },"genre": "posts","keywords": "Oracle, 解决问题","wordcount":  1241 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/oracle-test-env-under-m1-chip-macbook\/","datePublished": "2022-08-05T10:41:01+08:00","dateModified": "2022-08-05T10:41:01+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -143,7 +143,24 @@
 <p>先把 M1 笔记本上的 public key 复制到 Home Server 上的 <code>~/.ssh/authorized_keys</code>，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">MaxAuthTries 6
 </span></span><span class="line"><span class="cl">MaxSessions 10
@@ -156,10 +173,20 @@
 </span></span><span class="line"><span class="cl">-- restart sshd
 </span></span><span class="line"><span class="cl">sudo launchctl stop com.openssh.sshd
 </span></span><span class="line"><span class="cl">sudo launchctl start com.openssh.sshd
-</span></span></code></pre></div><p>在另外的机器上测试 ssh，会得到下面的报错。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~/.ssh &gt; ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在另外的机器上测试 ssh，会得到下面的报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~/.ssh &gt; ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt;
 </span></span><span class="line"><span class="cl">xxx@xxxx: Permission denied (publickey).
-</span></span></code></pre></div><hr>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>先这样吧，不折腾了。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

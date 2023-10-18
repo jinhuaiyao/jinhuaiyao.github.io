@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/www.jinhuaiyao.com\/posts\/the-joy-of-dbas\/"
-        },"genre": "posts","keywords": "DBA, Oracle","wordcount":  1168 ,
+        },"genre": "posts","keywords": "DBA, Oracle","wordcount":  1228 ,
         "url": "http:\/\/www.jinhuaiyao.com\/posts\/the-joy-of-dbas\/","datePublished": "2021-03-07T15:25:53+08:00","dateModified": "2021-03-07T15:25:53+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -100,7 +100,41 @@
 
 
         </div><div class="content" id="content"><p>前几天需要用dbca新建个空数据库，但是报错。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;dbca -silent \
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;dbca -silent \
 </span></span><span class="line"><span class="cl">&gt; -createDatabase \
 </span></span><span class="line"><span class="cl">&gt; -templateName General_Purpose.dbc \
 </span></span><span class="line"><span class="cl">&gt; -gdbName ARCHBMS \
@@ -130,8 +164,28 @@
 </span></span><span class="line"><span class="cl">3% complete
 </span></span><span class="line"><span class="cl">DBCA Operation failed.
 </span></span><span class="line"><span class="cl">Look at the log file &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34; for further details.
-</span></span></code></pre></div><p>看一下 log：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;more &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>看一下 log：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;more &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34;
 </span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:57.542 UTC ] Copying database files
 </span></span><span class="line"><span class="cl">DBCA_PROGRESS : 1%
 </span></span><span class="line"><span class="cl">DBCA_PROGRESS : 2%
@@ -145,7 +199,9 @@
 </span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.958 UTC ] ORA-01034: ORACLE not available
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">[ 2021-03-02 02:39:04.262 UTC ] DBCA_PROGRESS : DBCA Operation failed.
-</span></span></code></pre></div><p>从原点出发，报错信息 &ldquo;CRS error performing start on instance&rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>从原点出发，报错信息 &ldquo;CRS error performing start on instance&rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？</p>
 <p>接下来就是一顿troubleshooting：</p>
 <ul>
 <li>
@@ -155,7 +211,27 @@
 <p>试试 sqlplus 启动空 instance。</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&gt;si
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&gt;si
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">SQL*Plus: Release 12.2.0.1.0 Production on Tue Mar 2 02:55:43 2021
 </span></span><span class="line"><span class="cl">Copyright (c) 1982, 2016, Oracle.  All rights reserved.
@@ -171,7 +247,9 @@
 </span></span><span class="line"><span class="cl">clsr_start_resource2:900 exit status:254
 </span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
 </span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
-</span></span></code></pre></div><p>同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。</p>
 <ul>
 <li>
 <p>查看 alert log，没有什么特别的信息。</p>
