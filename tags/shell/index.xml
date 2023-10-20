@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on Huaiyao Jin</title>
-    <link>http://example.org/tags/shell/</link>
+    <link>http://www.jinhuaiyao.com/tags/shell/</link>
     <description>Recent content in Shell on Huaiyao Jin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 27 May 2023 15:51:04 +0800</lastBuildDate><atom:link href="http://example.org/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 May 2023 15:51:04 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>每日复习单词</title>
-      <link>http://example.org/posts/review-the-words-daily/</link>
+      <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
       <pubDate>Sat, 27 May 2023 15:51:04 +0800</pubDate>
       
-      <guid>http://example.org/posts/review-the-words-daily/</guid>
+      <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
       <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>关于 Logseq</title>
-      <link>http://example.org/posts/about-logseq/</link>
+      <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
       <pubDate>Sat, 02 Jul 2022 13:55:55 +0800</pubDate>
       
-      <guid>http://example.org/posts/about-logseq/</guid>
+      <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
       <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>实现一个需求</title>
-      <link>http://example.org/posts/implement-a-requirement/</link>
+      <link>http://www.jinhuaiyao.com/posts/implement-a-requirement/</link>
       <pubDate>Sat, 04 Jun 2022 12:58:00 +0800</pubDate>
       
-      <guid>http://example.org/posts/implement-a-requirement/</guid>
+      <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
       <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;</description>
     </item>
     
