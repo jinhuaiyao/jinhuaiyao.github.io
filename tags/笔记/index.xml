@@ -1,16 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>笔记 - Tag - Jinhuaiyao&#39;s Records</title>
-        <link>http://www.jinhuaiyao.com/tags/%E7%AC%94%E8%AE%B0/</link>
-        <description>笔记 - Tag - Jinhuaiyao&#39;s Records</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Fri, 09 Jul 2021 09:07:55 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
-    <title>改进一下工作笔记</title>
-    <link>http://www.jinhuaiyao.com/posts/impove-note-taking/</link>
-    <pubDate>Fri, 09 Jul 2021 09:07:55 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/impove-note-taking/</guid>
-    <description><![CDATA[<p>上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记 on Huaiyao Jin</title>
+    <link>http://example.org/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on Huaiyao Jin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2017 - {year}</copyright>
+    <lastBuildDate>Fri, 09 Jul 2021 09:07:55 +0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>改进一下工作笔记</title>
+      <link>http://example.org/posts/impove-note-taking/</link>
+      <pubDate>Fri, 09 Jul 2021 09:07:55 +0800</pubDate>
+      
+      <guid>http://example.org/posts/impove-note-taking/</guid>
+      <description>&lt;p&gt;上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

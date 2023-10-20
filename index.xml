@@ -1,90 +1,307 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Jinhuaiyao&#39;s Records</title>
-        <link>http://www.jinhuaiyao.com/</link>
-        <description>Jinhuaiyao&#39;s Records</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</lastBuildDate>
-            <atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Nginx Reverse Proxy OpenAI API</title>
-    <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
-    <pubDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
-    <description><![CDATA[<p>同事问到这个，记录在这里吧。</p>]]></description>
-</item>
-<item>
-    <title>每日复习单词</title>
-    <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
-    <pubDate>Sat, 27 May 2023 15:51:04 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
-    <description><![CDATA[<p>最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。</p>]]></description>
-</item>
-<item>
-    <title>The Preparation for Running</title>
-    <link>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</link>
-    <pubDate>Thu, 20 Apr 2023 08:14:37 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
-    <description><![CDATA[<p>最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。</p>]]></description>
-</item>
-<item>
-    <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
-    <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
-    <pubDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
-    <description><![CDATA[<p>使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。</p>]]></description>
-</item>
-<item>
-    <title>最近解决的几个问题</title>
-    <link>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</link>
-    <pubDate>Sun, 09 Apr 2023 14:01:33 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
-    <description><![CDATA[<p>记录一下最近解决的几个问题。</p>]]></description>
-</item>
-<item>
-    <title>用上了期盼已久的截图翻译</title>
-    <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
-    <pubDate>Sun, 09 Apr 2023 08:29:07 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
-    <description><![CDATA[<p>昨日傍晚时分终于用上了期盼已久的截图翻译工具。</p>]]></description>
-</item>
-<item>
-    <title>Rewrite On This Day Script With Python</title>
-    <link>http://www.jinhuaiyao.com/posts/rewrite-on-this-day-script-with-python/</link>
-    <pubDate>Thu, 16 Feb 2023 21:41:23 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/rewrite-on-this-day-script-with-python/</guid>
-    <description><![CDATA[<p>这两天重新过了一遍 Python 的基础语法，今天花了一点时间把“那年今日”的 shell 脚本用 Python 实现一下，记录在此。</p>]]></description>
-</item>
-<item>
-    <title>Some Records for RAC Installation on Macbook</title>
-    <link>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</link>
-    <pubDate>Thu, 02 Feb 2023 16:19:18 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</guid>
-    <description><![CDATA[<p>这阵子比较闲了，想着好好利用一下以前的工作笔记本。</p>]]></description>
-</item>
-<item>
-    <title>2022 回顾 &#43; 2023 期待</title>
-    <link>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</link>
-    <pubDate>Sat, 31 Dec 2022 08:50:15 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</guid>
-    <description><![CDATA[<p>转眼又一年。</p>]]></description>
-</item>
-<item>
-    <title>关于家庭教育的一点思考</title>
-    <link>http://www.jinhuaiyao.com/posts/about-family-education/</link>
-    <pubDate>Sun, 23 Oct 2022 15:33:42 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/about-family-education/</guid>
-    <description><![CDATA[<p>这是一篇小朋友幼儿园要求写的文章，花了几段时间终于写好了，也算是一段时间的总结吧。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ABOUT ME on Huaiyao Jin</title>
+    <link>http://example.org/</link>
+    <description>Recent content in ABOUT ME on Huaiyao Jin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2017 - {year}</copyright>
+    <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Reverse Proxy OpenAI API</title>
+      <link>http://example.org/posts/nginx-reverse-proxy-openai-api/</link>
+      <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
+      
+      <guid>http://example.org/posts/nginx-reverse-proxy-openai-api/</guid>
+      <description>&lt;p&gt;同事问到这个，记录在这里吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>每日复习单词</title>
+      <link>http://example.org/posts/review-the-words-daily/</link>
+      <pubDate>Sat, 27 May 2023 15:51:04 +0800</pubDate>
+      
+      <guid>http://example.org/posts/review-the-words-daily/</guid>
+      <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Preparation for Running</title>
+      <link>http://example.org/posts/the-preparation-for-running/</link>
+      <pubDate>Thu, 20 Apr 2023 08:14:37 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-preparation-for-running/</guid>
+      <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
+      <link>http://example.org/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
+      <pubDate>Tue, 11 Apr 2023 10:24:16 +0800</pubDate>
+      
+      <guid>http://example.org/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
+      <description>&lt;p&gt;使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>最近解决的几个问题</title>
+      <link>http://example.org/posts/the-few-problems-recently-solved/</link>
+      <pubDate>Sun, 09 Apr 2023 14:01:33 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-few-problems-recently-solved/</guid>
+      <description>&lt;p&gt;记录一下最近解决的几个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用上了期盼已久的截图翻译</title>
+      <link>http://example.org/posts/tool-to-get-ocr-translation-by-screenshot/</link>
+      <pubDate>Sun, 09 Apr 2023 08:29:07 +0800</pubDate>
+      
+      <guid>http://example.org/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
+      <description>&lt;p&gt;昨日傍晚时分终于用上了期盼已久的截图翻译工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rewrite On This Day Script With Python</title>
+      <link>http://example.org/posts/rewrite-on-this-day-script-with-python/</link>
+      <pubDate>Thu, 16 Feb 2023 21:41:23 +0800</pubDate>
+      
+      <guid>http://example.org/posts/rewrite-on-this-day-script-with-python/</guid>
+      <description>&lt;p&gt;这两天重新过了一遍 Python 的基础语法，今天花了一点时间把“那年今日”的 shell 脚本用 Python 实现一下，记录在此。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Some Records for RAC Installation on Macbook</title>
+      <link>http://example.org/posts/some-records-for-rac-installation-on-macbook/</link>
+      <pubDate>Thu, 02 Feb 2023 16:19:18 +0800</pubDate>
+      
+      <guid>http://example.org/posts/some-records-for-rac-installation-on-macbook/</guid>
+      <description>&lt;p&gt;这阵子比较闲了，想着好好利用一下以前的工作笔记本。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2022 回顾 &#43; 2023 期待</title>
+      <link>http://example.org/posts/2022-review-2023-plan/</link>
+      <pubDate>Sat, 31 Dec 2022 08:50:15 +0800</pubDate>
+      
+      <guid>http://example.org/posts/2022-review-2023-plan/</guid>
+      <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于家庭教育的一点思考</title>
+      <link>http://example.org/posts/about-family-education/</link>
+      <pubDate>Sun, 23 Oct 2022 15:33:42 +0800</pubDate>
+      
+      <guid>http://example.org/posts/about-family-education/</guid>
+      <description>&lt;p&gt;这是一篇小朋友幼儿园要求写的文章，花了几段时间终于写好了，也算是一段时间的总结吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>减重 20 斤</title>
+      <link>http://example.org/posts/lose-weight-10kg/</link>
+      <pubDate>Fri, 19 Aug 2022 19:05:40 +0800</pubDate>
+      
+      <guid>http://example.org/posts/lose-weight-10kg/</guid>
+      <description>&lt;p&gt;5 月 3 号到 8 月 18 号，3 个半月，减重 20 斤。时隔 7 年，终于成功了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+      <link>http://example.org/posts/oracle-test-env-under-m1-chip-macbook/</link>
+      <pubDate>Fri, 05 Aug 2022 10:41:01 +0800</pubDate>
+      
+      <guid>http://example.org/posts/oracle-test-env-under-m1-chip-macbook/</guid>
+      <description>&lt;p&gt;由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于 Logseq</title>
+      <link>http://example.org/posts/about-logseq/</link>
+      <pubDate>Sat, 02 Jul 2022 13:55:55 +0800</pubDate>
+      
+      <guid>http://example.org/posts/about-logseq/</guid>
+      <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>不懂就不要乱管</title>
+      <link>http://example.org/posts/if-dont-understand-dont-mess-around/</link>
+      <pubDate>Mon, 13 Jun 2022 09:46:00 +0800</pubDate>
+      
+      <guid>http://example.org/posts/if-dont-understand-dont-mess-around/</guid>
+      <description>&lt;p&gt;教育子女方面虽然我不是懂的很多，没有很多经验。但是我一直在学习、思考、实践。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>实现一个需求</title>
+      <link>http://example.org/posts/implement-a-requirement/</link>
+      <pubDate>Sat, 04 Jun 2022 12:58:00 +0800</pubDate>
+      
+      <guid>http://example.org/posts/implement-a-requirement/</guid>
+      <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>http://example.org/links/</link>
+      <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
+      
+      <guid>http://example.org/links/</guid>
+      <description>文章 中文独立博客列表 阮一峰的网络日志 写出更好的文章 人在绝境怎么办？ A Note on Practice and Persistence 对话远川杨天楠：我真希望！我在买房前知道这些房地产常识 - 02/25/2023 免费的 Prompt Engineering 教程 - 04/01/2023 从失眠到高效早晨：我的 5AM Club 计划分享 - 04/10/2023 我的风险防范模型 - 04/15/2023 CS 自学指南 - 04/18/2023 科学上网 - 04/25/2023 My productivity app is a never-ending .</description>
+    </item>
+    
+    <item>
+      <title>备份备份再备份</title>
+      <link>http://example.org/posts/backup-backup-backup/</link>
+      <pubDate>Thu, 24 Feb 2022 11:53:00 +0800</pubDate>
+      
+      <guid>http://example.org/posts/backup-backup-backup/</guid>
+      <description>&lt;p&gt;昨天有个朋友家用 NAS 升级系统后资料不能访问了，数据没有其他备份，很难办。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>只言片语 </title>
+      <link>http://example.org/words/</link>
+      <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
+      
+      <guid>http://example.org/words/</guid>
+      <description>&amp;ndash;
+10/15/2023 09:18:26
+上周真得太忙了。
+04/25/2023 16:11:25
+利用 http://composingprograms.com 和 OpenAI Translator，学习计算机科学的同时也在提升英语水平。
+04/15/2023 16:41:50
+中午出太阳了，和老妈、等等一起到楼顶晒被子和衣服。刚刚又上楼去，在夕阳照映下和暖风包围中把被子衣服收下来。突然感觉这很生活。
+04/13/2023 15:21:55</description>
+    </item>
+    
+    <item>
+      <title>创造从模仿开始</title>
+      <link>http://example.org/posts/creation-begins-with-imitation/</link>
+      <pubDate>Sun, 30 Jan 2022 15:14:38 +0800</pubDate>
+      
+      <guid>http://example.org/posts/creation-begins-with-imitation/</guid>
+      <description>&lt;p&gt;最近除了学习象棋就是学习 Python，象棋不谈也罢，Python的学习是通过学习 flask 框架进行的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2021 回顾 &#43; 2022 期待</title>
+      <link>http://example.org/posts/2021-review-2022-plan/</link>
+      <pubDate>Fri, 31 Dec 2021 11:54:15 +0800</pubDate>
+      
+      <guid>http://example.org/posts/2021-review-2022-plan/</guid>
+      <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>改进一下工作笔记</title>
+      <link>http://example.org/posts/impove-note-taking/</link>
+      <pubDate>Fri, 09 Jul 2021 09:07:55 +0800</pubDate>
+      
+      <guid>http://example.org/posts/impove-note-taking/</guid>
+      <description>&lt;p&gt;上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>每个人都有属于自己的幸运</title>
+      <link>http://example.org/posts/everyone-has-their-own-luck/</link>
+      <pubDate>Fri, 02 Apr 2021 08:26:52 +0800</pubDate>
+      
+      <guid>http://example.org/posts/everyone-has-their-own-luck/</guid>
+      <description>&lt;p&gt;这两天坐地铁上下班的路上一直看一本书，边看边庆幸，在这个时间点看到这本书真是我的幸运。又顺带回想一下过去类似的感慨，好像也不少。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>数据库管理员的快乐</title>
+      <link>http://example.org/posts/the-joy-of-dbas/</link>
+      <pubDate>Sun, 07 Mar 2021 15:25:53 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-joy-of-dbas/</guid>
+      <description>&lt;p&gt;前几天需要用dbca新建个空数据库，但是报错。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020 回顾 &#43; 2021 期待</title>
+      <link>http://example.org/posts/2020-review-2021-plan/</link>
+      <pubDate>Thu, 31 Dec 2020 21:07:48 +0800</pubDate>
+      
+      <guid>http://example.org/posts/2020-review-2021-plan/</guid>
+      <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2019 回顾 &#43; 2020 期待</title>
+      <link>http://example.org/posts/2019-review-2020-plan/</link>
+      <pubDate>Tue, 31 Dec 2019 17:06:21 +0800</pubDate>
+      
+      <guid>http://example.org/posts/2019-review-2020-plan/</guid>
+      <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>好好珍惜自己的资料</title>
+      <link>http://example.org/posts/take-good-care-of-your-stuff/</link>
+      <pubDate>Sat, 30 Mar 2019 18:04:16 +0800</pubDate>
+      
+      <guid>http://example.org/posts/take-good-care-of-your-stuff/</guid>
+      <description>&lt;p&gt;上周看到一条朋友圈，以前大学里的辅导员 iPhone 手机成了&amp;quot;白苹果&amp;quot;，询问有什么办法可以把照片导出来。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2018 回顾 &#43; 2019 期待</title>
+      <link>http://example.org/posts/2018-review-2019-plan/</link>
+      <pubDate>Mon, 31 Dec 2018 18:41:40 +0800</pubDate>
+      
+      <guid>http://example.org/posts/2018-review-2019-plan/</guid>
+      <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>What Is Important To You</title>
+      <link>http://example.org/posts/what-is-important-to-you/</link>
+      <pubDate>Sat, 15 Sep 2018 22:09:35 +0800</pubDate>
+      
+      <guid>http://example.org/posts/what-is-important-to-you/</guid>
+      <description>&lt;p&gt;最近断断续续地在想生活中有哪些是重要的事。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>怦然心动的人生整理魔法</title>
+      <link>http://example.org/posts/the-magic-of-tidying-up-your-life/</link>
+      <pubDate>Thu, 02 Aug 2018 08:34:49 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-magic-of-tidying-up-your-life/</guid>
+      <description>&lt;p&gt;前几年看过《断舍离》，扔了一大波东西，但是不彻底。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2017 回顾 &#43; 2018 期待</title>
+      <link>http://example.org/posts/2017-review-2018-plan/</link>
+      <pubDate>Sun, 31 Dec 2017 18:51:33 +0800</pubDate>
+      
+      <guid>http://example.org/posts/2017-review-2018-plan/</guid>
+      <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/python/</guid>
+      <description>Python 小抄 - doctest def divide_exact(n, d): &amp;quot;&amp;quot;&amp;quot; &amp;gt;&amp;gt;&amp;gt; q, r = divide_exact(2013, 10) &amp;gt;&amp;gt;&amp;gt; q 201 &amp;gt;&amp;gt;&amp;gt; r 3 &amp;quot;&amp;quot;&amp;quot; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tools/</guid>
+      <description>软件推荐 Logseq - 06/19/2022 &amp;ldquo;A privacy-first, open-source knowledge base.&amp;rdquo; 关于 Logseq Cubox - 01/04/2023 &amp;ldquo;一站式信息收集、阅读、管理和回顾，善用网络碎片构建个人知识库。&amp;quot; 解决了我的两个“痛点”： 看不完的微信文章，知乎文章，网页，不能够优雅地处理。 DEVONthink里标注和批注不太方便。 还可以将 Cubox 中的收藏和标注自动同步至 Notion。 Noto - 02/19/2023 Noto Review: Beautifully Modern and Versatile Note-Taking 简约，流畅，易用。目前只用来替换 Pendo 去做去记录日常的一些事情，Pendo 在 macOS 上的同步问题太让人心烦了，而 Noto 在 iOS 和 macOS 上的同步几乎是瞬间完成的。 Lunar - 03/20/2023 &amp;ldquo;Lunar - The defacto app for controlling monitor brightness&amp;rdquo; 用 app 控制外接显示器亮度，很方便。 Poe - 03/26/2023 &amp;ldquo;Poe - Fast, Helpful AI Chat.</description>
+    </item>
+    
+  </channel>
 </rss>

@@ -1,24 +1,30 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>断舍离 - Tag - Jinhuaiyao&#39;s Records</title>
-        <link>http://www.jinhuaiyao.com/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/</link>
-        <description>断舍离 - Tag - Jinhuaiyao&#39;s Records</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Sat, 15 Sep 2018 22:09:35 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/" rel="self" type="application/rss+xml" /><item>
-    <title>What Is Important To You</title>
-    <link>http://www.jinhuaiyao.com/posts/what-is-important-to-you/</link>
-    <pubDate>Sat, 15 Sep 2018 22:09:35 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/what-is-important-to-you/</guid>
-    <description><![CDATA[<p>最近断断续续地在想生活中有哪些是重要的事。</p>]]></description>
-</item>
-<item>
-    <title>怦然心动的人生整理魔法</title>
-    <link>http://www.jinhuaiyao.com/posts/the-magic-of-tidying-up-your-life/</link>
-    <pubDate>Thu, 02 Aug 2018 08:34:49 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/the-magic-of-tidying-up-your-life/</guid>
-    <description><![CDATA[<p>前几年看过《断舍离》，扔了一大波东西，但是不彻底。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>断舍离 on Huaiyao Jin</title>
+    <link>http://example.org/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/</link>
+    <description>Recent content in 断舍离 on Huaiyao Jin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2017 - {year}</copyright>
+    <lastBuildDate>Sat, 15 Sep 2018 22:09:35 +0800</lastBuildDate><atom:link href="http://example.org/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Important To You</title>
+      <link>http://example.org/posts/what-is-important-to-you/</link>
+      <pubDate>Sat, 15 Sep 2018 22:09:35 +0800</pubDate>
+      
+      <guid>http://example.org/posts/what-is-important-to-you/</guid>
+      <description>&lt;p&gt;最近断断续续地在想生活中有哪些是重要的事。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>怦然心动的人生整理魔法</title>
+      <link>http://example.org/posts/the-magic-of-tidying-up-your-life/</link>
+      <pubDate>Thu, 02 Aug 2018 08:34:49 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-magic-of-tidying-up-your-life/</guid>
+      <description>&lt;p&gt;前几年看过《断舍离》，扔了一大波东西，但是不彻底。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

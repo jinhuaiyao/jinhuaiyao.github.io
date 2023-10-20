@@ -1,72 +1,84 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>新事物 - Tag - Jinhuaiyao&#39;s Records</title>
-        <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
-        <description>新事物 - Tag - Jinhuaiyao&#39;s Records</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
-            <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><lastBuildDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" rel="self" type="application/rss+xml" /><item>
-    <title>Nginx Reverse Proxy OpenAI API</title>
-    <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
-    <pubDate>Mon, 16 Oct 2023 22:13:21 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
-    <description><![CDATA[<p>同事问到这个，记录在这里吧。</p>]]></description>
-</item>
-<item>
-    <title>每日复习单词</title>
-    <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
-    <pubDate>Sat, 27 May 2023 15:51:04 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
-    <description><![CDATA[<p>最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。</p>]]></description>
-</item>
-<item>
-    <title>The Preparation for Running</title>
-    <link>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</link>
-    <pubDate>Thu, 20 Apr 2023 08:14:37 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
-    <description><![CDATA[<p>最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。</p>]]></description>
-</item>
-<item>
-    <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
-    <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
-    <pubDate>Tue, 11 Apr 2023 10:24:16 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
-    <description><![CDATA[<p>使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。</p>]]></description>
-</item>
-<item>
-    <title>最近解决的几个问题</title>
-    <link>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</link>
-    <pubDate>Sun, 09 Apr 2023 14:01:33 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
-    <description><![CDATA[<p>记录一下最近解决的几个问题。</p>]]></description>
-</item>
-<item>
-    <title>用上了期盼已久的截图翻译</title>
-    <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
-    <pubDate>Sun, 09 Apr 2023 08:29:07 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
-    <description><![CDATA[<p>昨日傍晚时分终于用上了期盼已久的截图翻译工具。</p>]]></description>
-</item>
-<item>
-    <title>关于 Logseq</title>
-    <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
-    <pubDate>Sat, 02 Jul 2022 13:55:55 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
-    <description><![CDATA[<p>这两礼拜每天都在用 Logseq，真是太喜欢了。</p>]]></description>
-</item>
-<item>
-    <title>实现一个需求</title>
-    <link>http://www.jinhuaiyao.com/posts/implement-a-requirement/</link>
-    <pubDate>Sat, 04 Jun 2022 12:58:00 &#43;0800</pubDate>
-    <author>Huaiyao Jin</author>
-    <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
-    <description><![CDATA[<p>最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>新事物 on Huaiyao Jin</title>
+    <link>http://example.org/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
+    <description>Recent content in 新事物 on Huaiyao Jin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2017 - {year}</copyright>
+    <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate><atom:link href="http://example.org/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Reverse Proxy OpenAI API</title>
+      <link>http://example.org/posts/nginx-reverse-proxy-openai-api/</link>
+      <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
+      
+      <guid>http://example.org/posts/nginx-reverse-proxy-openai-api/</guid>
+      <description>&lt;p&gt;同事问到这个，记录在这里吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>每日复习单词</title>
+      <link>http://example.org/posts/review-the-words-daily/</link>
+      <pubDate>Sat, 27 May 2023 15:51:04 +0800</pubDate>
+      
+      <guid>http://example.org/posts/review-the-words-daily/</guid>
+      <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Preparation for Running</title>
+      <link>http://example.org/posts/the-preparation-for-running/</link>
+      <pubDate>Thu, 20 Apr 2023 08:14:37 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-preparation-for-running/</guid>
+      <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
+      <link>http://example.org/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
+      <pubDate>Tue, 11 Apr 2023 10:24:16 +0800</pubDate>
+      
+      <guid>http://example.org/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
+      <description>&lt;p&gt;使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>最近解决的几个问题</title>
+      <link>http://example.org/posts/the-few-problems-recently-solved/</link>
+      <pubDate>Sun, 09 Apr 2023 14:01:33 +0800</pubDate>
+      
+      <guid>http://example.org/posts/the-few-problems-recently-solved/</guid>
+      <description>&lt;p&gt;记录一下最近解决的几个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用上了期盼已久的截图翻译</title>
+      <link>http://example.org/posts/tool-to-get-ocr-translation-by-screenshot/</link>
+      <pubDate>Sun, 09 Apr 2023 08:29:07 +0800</pubDate>
+      
+      <guid>http://example.org/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
+      <description>&lt;p&gt;昨日傍晚时分终于用上了期盼已久的截图翻译工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于 Logseq</title>
+      <link>http://example.org/posts/about-logseq/</link>
+      <pubDate>Sat, 02 Jul 2022 13:55:55 +0800</pubDate>
+      
+      <guid>http://example.org/posts/about-logseq/</guid>
+      <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>实现一个需求</title>
+      <link>http://example.org/posts/implement-a-requirement/</link>
+      <pubDate>Sat, 04 Jun 2022 12:58:00 +0800</pubDate>
+      
+      <guid>http://example.org/posts/implement-a-requirement/</guid>
+      <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

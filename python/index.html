@@ -1,366 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title> Jinhuaiyao&#39;s Records</title><meta name="Description" content="Jinhuaiyao&#39;s Records"><meta property="og:title" content="" />
-<meta property="og:description" content="Python 小抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 - doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.jinhuaiyao.com/python/" /><meta property="og:image" content="http://www.jinhuaiyao.com/logo.png"/><meta property="article:section" content="" />
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<meta name="description" content="Python 小抄 - doctest def divide_exact(n, d): &quot;&quot;&quot; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &quot;&quot;&quot; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.">
+<link rel="canonical" href="http://example.org/python/">
+<link rel="robots" href="/robots.txt" />
 
-<meta property="og:site_name" content="Jinhuaiyao&#39;s Records" />
+<link rel="stylesheet" href="http://example.org/css/app.min.18fa3c6f7441f42a7d6673da5f353f233db80e2afd4631db2bab10d8806931bd.css" integrity="sha256-GPo8b3RB9Cp9ZnPaXzU/Iz24Dir9RjHbK6sQ2IBpMb0=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+  
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="http://example.org/">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_500x500_fill_q100_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+    </a>
+</div>
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://www.jinhuaiyao.com/logo.png"/>
-
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Python 小抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 - doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test."/>
-<meta name="application-name" content="Jinhuaiyao&#39;s Records">
-<meta name="apple-mobile-web-app-title" content="Jinhuaiyao&#39;s Records"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.jinhuaiyao.com/python/" /><link rel="prev" href="http://www.jinhuaiyao.com/tools/" /><link rel="next" href="http://www.jinhuaiyao.com/links/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "",
-        "inLanguage": "en",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/www.jinhuaiyao.com\/python\/"
-        },"genre": "page","wordcount":  374 ,
-        "url": "http:\/\/www.jinhuaiyao.com\/python\/","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "Huaiyao Jin"
-            },"description": ""
-    }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"> 
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Jinhuaiyao&#39;s Records"></a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner">
-                <a class="menu-item"
-                    href="/" > Home 
-                </a><a class="menu-item"
-                    href="/posts/" > Posts 
-                </a><a class="menu-item"
-                    href="/words/" > Words 
-                </a><a class="menu-item"
-                    href="/links/" > Links 
-                </a><a class="menu-item"
-                    href="/tools/" > Tools 
-                </a><a class="menu-item"
-                    href="/about/" > About 
-                </a></a>
-            </div>
-        </div>
+    <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
     </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Jinhuaiyao&#39;s Records"></a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/"> Home 
-                </a><a class="menu-item" href="/posts/"> Posts 
-                </a><a class="menu-item" href="/words/"> Words 
-                </a><a class="menu-item" href="/links/"> Links 
-                </a><a class="menu-item" href="/tools/"> Tools 
-                </a><a class="menu-item" href="/about/"> About 
-                </a>
-            
+</header>
+        <main id="content">
+<article class="flex flex-col gap-10">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-2xl leading-snug font-bold text-gray-900"></h2>
 
-            </a></div>
-    </div>
-</header><main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster"></h1><div class="content" id="content"><h3 id="python-小抄">Python 小抄</h3>
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+<time datetime="0001-01-01 00:00:00 &#43;0000 UTC" title="0001-01-01 00:00:00 &#43;0000 UTC">
+    0001/01/01
+</time>
+        
+        </div>
+    </header>
+    <section class="content text-lg text-gray-800">
+    <h3 id="python-小抄">Python 小抄</h3>
 <hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">doctest</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">divide_exact</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &gt;&gt;&gt; q, r = divide_exact(2013, 10)
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &gt;&gt;&gt; q
-</span></span></span><span class="line"><span class="cl"><span class="s2">    201
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &gt;&gt;&gt; r
-</span></span></span><span class="line"><span class="cl"><span class="s2">    3
-</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">n</span> <span class="o">//</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span> <span class="o">%</span> <span class="n">d</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">jinhuaiyao</span><span class="nd">@JinHuaiyaos</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span> <span class="n">hw01</span> <span class="o">%</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">doctest</span> <span class="o">-</span><span class="n">v</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span>
-</span></span><span class="line"><span class="cl"><span class="n">Trying</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">divide_exact</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">Expecting</span> <span class="n">nothing</span>
-</span></span><span class="line"><span class="cl"><span class="n">ok</span>
-</span></span><span class="line"><span class="cl"><span class="n">Trying</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">q</span>
-</span></span><span class="line"><span class="cl"><span class="n">Expecting</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">201</span>
-</span></span><span class="line"><span class="cl"><span class="n">ok</span>
-</span></span><span class="line"><span class="cl"><span class="n">Trying</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">r</span>
-</span></span><span class="line"><span class="cl"><span class="n">Expecting</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="n">ok</span>
-</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="n">items</span> <span class="n">had</span> <span class="n">no</span> <span class="n">tests</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test</span>
-</span></span><span class="line"><span class="cl"><span class="mi">1</span> <span class="n">items</span> <span class="n">passed</span> <span class="nb">all</span> <span class="n">tests</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">   <span class="mi">3</span> <span class="n">tests</span> <span class="ow">in</span> <span class="n">test</span><span class="o">.</span><span class="n">divide_exact</span>
-</span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mi">2</span> <span class="n">items</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">passed</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">failed</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl"><span class="n">Test</span> <span class="n">passed</span><span class="o">.</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="n">的用法</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span> 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">该代码中的</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">表示一个字符串</span> <span class="n">w</span> <span class="n">的反向字符串</span><span class="err">。</span>
-</span></span><span class="line"><span class="cl"><span class="n">也就是说</span><span class="err">，</span><span class="n">它会将</span> <span class="n">w</span> <span class="n">中的字符从后往前倒序排列</span><span class="err">，</span><span class="n">得到一个新的字符串</span><span class="err">。</span>
-</span></span><span class="line"><span class="cl"><span class="n">例如</span><span class="err">，</span><span class="n">如果</span> <span class="n">w</span> <span class="n">是</span> <span class="s2">&#34;hello&#34;</span><span class="err">，</span><span class="n">那么</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">就是</span> <span class="s2">&#34;olleh&#34;</span><span class="err">。</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">赋值方式</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">值交换</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl"><span class="mf">4.5</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span>
-</span></span><span class="line"><span class="cl"><span class="mi">3</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">类的写法</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_desc_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">long_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">文件内容写到列表</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">zfill</span><span class="err">，</span><span class="n">字符串右对齐</span><span class="err">，</span><span class="n">前面填充0</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="s2">&#34;if birthday in pi_str&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;pi_million_digits.txt&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">lines</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">pi_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pi_str</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">birthday</span> <span class="o">=</span> <span class="s1">&#39;1805&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">birthday</span> <span class="o">=</span> <span class="n">birthday</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">birthday</span> <span class="ow">in</span> <span class="n">pi_str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">birthday</span><span class="si">}</span><span class="s2"> - yes&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">birthday</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">json的用法</span>
-</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">contents</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Sorry, the file </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> does not exist.&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">words</span> <span class="o">=</span> <span class="n">contents</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="n">num_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">words</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;alice.txt&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">save_file</span> <span class="o">=</span> <span class="s1">&#39;json.txt&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-</div></div></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2023</span></div>
+<pre><code class="language-python">- doctest
 
-            
+def divide_exact(n, d):
+    &quot;&quot;&quot;
+    &gt;&gt;&gt; q, r = divide_exact(2013, 10)
+    &gt;&gt;&gt; q
+    201
+    &gt;&gt;&gt; r
+    3
+    &quot;&quot;&quot;
+    return n // d, n % d
 
 
-        </div>
-    </footer></div>
+jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.py
+Trying:
+    q, r = divide_exact(2013, 10)
+Expecting nothing
+ok
+Trying:
+    q
+Expecting:
+    201
+ok
+Trying:
+    r
+Expecting:
+    3
+ok
+1 items had no tests:
+    test
+1 items passed all tests:
+   3 tests in test.divide_exact
+3 tests in 2 items.
+3 passed and 0 failed.
+Test passed.
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</code></pre>
+<hr>
+<pre><code class="language-python">- [::-1]的用法
+
+{w for w in words if len(w) == 6 and w[::-1] in words} 
+
+该代码中的 w[::-1] 表示一个字符串 w 的反向字符串。
+也就是说，它会将 w 中的字符从后往前倒序排列，得到一个新的字符串。
+例如，如果 w 是 &quot;hello&quot;，那么 w[::-1] 就是 &quot;olleh&quot;。
+</code></pre>
+<hr>
+<pre><code class="language-python">- 赋值方式
+- 值交换
+
+&gt;&gt;&gt; x, y = 3, 4.5
+&gt;&gt;&gt; y, x = x, y
+&gt;&gt;&gt; x
+4.5
+&gt;&gt;&gt; y
+3
+</code></pre>
+<hr>
+<pre><code class="language-python">- 类的写法
+- 用法：f&quot;{year}&quot;
+
+class Car:
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_desc_name(self):
+        long_name = f&quot;{self.year} {self.make} {self.model}&quot;
+        return long_name.title()
+</code></pre>
+<hr>
+<pre><code class="language-python">- 文件内容写到列表
+- zfill，字符串右对齐，前面填充0
+- 用法：&quot;if birthday in pi_str&quot;
+
+filename = 'pi_million_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_str = ''
+for line in lines:
+    pi_str += line.strip()
+
+for i in range(1, 32):
+    birthday = '1805'
+    birthday = birthday + str(i).zfill(2)
+
+    if birthday in pi_str:
+        print(f&quot;{birthday} - yes&quot;)
+    else:
+        print(birthday)
+</code></pre>
+<hr>
+<pre><code class="language-python">- json的用法
+- 用法：ensure_ascii=False
+
+import json
+
+def count_words(filename):
+    try:
+        with open(filename, encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        print(f&quot;Sorry, the file {filename} does not exist.&quot;)
+    else:
+        words = contents.split()
+        num_words = len(words)
+        return words[:10]
+
+filename = 'alice.txt'
+
+save_file = 'json.txt'
+with open(save_file, 'w', encoding='utf-8') as f:
+    json.dump(count_words(filename), f, ensure_ascii=False)
+</code></pre>
+<hr>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+
+    </footer>
+</article>
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2023  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
 </html>
