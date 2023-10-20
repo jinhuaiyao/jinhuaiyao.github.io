@@ -8,7 +8,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.18fa3c6f7441f42a7d6673da5f353f233db80e2afd4631db2bab10d8806931bd.css" integrity="sha256-GPo8b3RB9Cp9ZnPaXzU/Iz24Dir9RjHbK6sQ2IBpMb0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -38,7 +38,7 @@
     </div>
 </header>
         <main id="content">
-<article class="flex flex-col gap-10">
+<article class="flex flex-col gap-5">
     <header class="flex flex-col gap-2">
         <h2 class="text-2xl leading-snug font-bold text-gray-900">使用 Cloudflare WARP 解锁 ChatGPT</h2>
 
@@ -50,7 +50,7 @@
         
         </div>
     </header>
-    <section class="content text-lg text-gray-800">
+    <section class="content text-base text-gray-800">
     <p>使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。</p>
 <p>简单使用的话也未必一定要访问网页版，可以用 <a href="https://poe.com/">Poe</a> 或者 <a href="https://opencat.app/">OpenCat</a>。只是我想试用一下 ChatGPT Plus 才能用的 GPT-4，不得不访问网页版。</p>
 <p>做了一番尝试：</p>
@@ -84,82 +84,80 @@
 <p><code>warp-cli warp-stats</code></p>
 <hr>
 <p><code>vi /usr/local/etc/v2ray/config.json</code></p>
-<pre><code>{
-    &quot;inbounds&quot;: [
-        {
-            &quot;port&quot;: 10086, 
-            &quot;protocol&quot;: &quot;vmess&quot;,
-            &quot;settings&quot;: {
-                &quot;clients&quot;: [
-                    {
-                        &quot;id&quot;: &quot;09096d21-dd57-48ee-9111-38421e6a6b90&quot;
-                    }
-                ]
-            }
-        }
-    ],
-    &quot;outbounds&quot;: [
-        {
-            &quot;protocol&quot;: &quot;freedom&quot;
-        },
-        {
-            &quot;tag&quot;: &quot;warp&quot;,
-            &quot;protocol&quot;: &quot;socks&quot;,
-            &quot;settings&quot;: {
-                &quot;servers&quot;: [
-                    {
-                        &quot;address&quot;: &quot;127.0.0.1&quot;,
-                        &quot;port&quot;: 40000,
-                        &quot;users&quot;: []
-                    }
-                ]
-            }
-        }
-    ],
-    &quot;routing&quot;: {
-    &quot;rules&quot;: [
-        {
-        &quot;type&quot;: &quot;field&quot;,
-        &quot;domain&quot;: [
-            &quot;openai.com&quot;,
-            &quot;ai.com&quot;
-        ],
-        &quot;outboundTag&quot;: &quot;warp&quot;
-    }
-    ]
-}
-}
-</code></pre>
-<p><code>systemctl stop v2ray</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;inbounds&#34;: [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;port&#34;: 10086, 
+</span></span><span class="line"><span class="cl">            &#34;protocol&#34;: &#34;vmess&#34;,
+</span></span><span class="line"><span class="cl">            &#34;settings&#34;: {
+</span></span><span class="line"><span class="cl">                &#34;clients&#34;: [
+</span></span><span class="line"><span class="cl">                    {
+</span></span><span class="line"><span class="cl">                        &#34;id&#34;: &#34;09096d21-dd57-48ee-9111-38421e6a6b90&#34;
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;outbounds&#34;: [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;protocol&#34;: &#34;freedom&#34;
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;tag&#34;: &#34;warp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;protocol&#34;: &#34;socks&#34;,
+</span></span><span class="line"><span class="cl">            &#34;settings&#34;: {
+</span></span><span class="line"><span class="cl">                &#34;servers&#34;: [
+</span></span><span class="line"><span class="cl">                    {
+</span></span><span class="line"><span class="cl">                        &#34;address&#34;: &#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;port&#34;: 40000,
+</span></span><span class="line"><span class="cl">                        &#34;users&#34;: []
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;routing&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;rules&#34;: [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">        &#34;type&#34;: &#34;field&#34;,
+</span></span><span class="line"><span class="cl">        &#34;domain&#34;: [
+</span></span><span class="line"><span class="cl">            &#34;openai.com&#34;,
+</span></span><span class="line"><span class="cl">            &#34;ai.com&#34;
+</span></span><span class="line"><span class="cl">        ],
+</span></span><span class="line"><span class="cl">        &#34;outboundTag&#34;: &#34;warp&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    ]
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p><code>systemctl stop v2ray</code></p>
 <p><code>systemctl start v2ray</code></p>
 <hr>
-<pre><code>rjin@vultr:~$ curl ipinfo.io
-{
-&quot;ip&quot;: &quot;xxx.xxx.xxx.xxx&quot;,
-&quot;hostname&quot;: &quot;xxx.xxx.xxx.xxx.vultrusercontent.com&quot;,
-&quot;city&quot;: &quot;Piscataway&quot;,
-&quot;region&quot;: &quot;New Jersey&quot;,
-&quot;country&quot;: &quot;US&quot;,
-&quot;loc&quot;: &quot;40.4993,-74.3990&quot;,
-&quot;org&quot;: &quot;AS20473 The Constant Company, LLC&quot;,
-&quot;postal&quot;: &quot;08854&quot;,
-&quot;timezone&quot;: &quot;America/New_York&quot;,
-&quot;readme&quot;: &quot;https://ipinfo.io/missingauth&quot;
-
-
-rjin@vultr:~$ curl -x &quot;socks5://127.0.0.1:40000&quot; ipinfo.io
-{
-&quot;ip&quot;: &quot;104.28.215.142&quot;,
-&quot;city&quot;: &quot;Willowbrook&quot;,
-&quot;region&quot;: &quot;New York&quot;,
-&quot;country&quot;: &quot;US&quot;,
-&quot;loc&quot;: &quot;40.6032,-74.1385&quot;,
-&quot;org&quot;: &quot;AS13335 Cloudflare, Inc.&quot;,
-&quot;postal&quot;: &quot;10314&quot;,
-&quot;timezone&quot;: &quot;America/New_York&quot;,
-&quot;readme&quot;: &quot;https://ipinfo.io/missingauth&quot;
-</code></pre>
-<hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rjin@vultr:~$ curl ipinfo.io
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">&#34;ip&#34;: &#34;xxx.xxx.xxx.xxx&#34;,
+</span></span><span class="line"><span class="cl">&#34;hostname&#34;: &#34;xxx.xxx.xxx.xxx.vultrusercontent.com&#34;,
+</span></span><span class="line"><span class="cl">&#34;city&#34;: &#34;Piscataway&#34;,
+</span></span><span class="line"><span class="cl">&#34;region&#34;: &#34;New Jersey&#34;,
+</span></span><span class="line"><span class="cl">&#34;country&#34;: &#34;US&#34;,
+</span></span><span class="line"><span class="cl">&#34;loc&#34;: &#34;40.4993,-74.3990&#34;,
+</span></span><span class="line"><span class="cl">&#34;org&#34;: &#34;AS20473 The Constant Company, LLC&#34;,
+</span></span><span class="line"><span class="cl">&#34;postal&#34;: &#34;08854&#34;,
+</span></span><span class="line"><span class="cl">&#34;timezone&#34;: &#34;America/New_York&#34;,
+</span></span><span class="line"><span class="cl">&#34;readme&#34;: &#34;https://ipinfo.io/missingauth&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rjin@vultr:~$ curl -x &#34;socks5://127.0.0.1:40000&#34; ipinfo.io
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">&#34;ip&#34;: &#34;104.28.215.142&#34;,
+</span></span><span class="line"><span class="cl">&#34;city&#34;: &#34;Willowbrook&#34;,
+</span></span><span class="line"><span class="cl">&#34;region&#34;: &#34;New York&#34;,
+</span></span><span class="line"><span class="cl">&#34;country&#34;: &#34;US&#34;,
+</span></span><span class="line"><span class="cl">&#34;loc&#34;: &#34;40.6032,-74.1385&#34;,
+</span></span><span class="line"><span class="cl">&#34;org&#34;: &#34;AS13335 Cloudflare, Inc.&#34;,
+</span></span><span class="line"><span class="cl">&#34;postal&#34;: &#34;10314&#34;,
+</span></span><span class="line"><span class="cl">&#34;timezone&#34;: &#34;America/New_York&#34;,
+</span></span><span class="line"><span class="cl">&#34;readme&#34;: &#34;https://ipinfo.io/missingauth&#34;
+</span></span></code></pre></div><hr>
 <p>在电脑上重启一下 V2rayU ，就可以正常访问 <a href="https://chat.openai.com/auth/login">https://chat.openai.com/auth/login</a> 了。</p>
 </li>
 </ol>

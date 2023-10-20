@@ -291,7 +291,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.jinhuaiyao.com/python/</guid>
-      <description>Python 小抄 - doctest def divide_exact(n, d): &amp;quot;&amp;quot;&amp;quot; &amp;gt;&amp;gt;&amp;gt; q, r = divide_exact(2013, 10) &amp;gt;&amp;gt;&amp;gt; q 201 &amp;gt;&amp;gt;&amp;gt; r 3 &amp;quot;&amp;quot;&amp;quot; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.</description>
+      <description>Python 小抄 - doctest def divide_exact(n, d): &amp;#34;&amp;#34;&amp;#34; &amp;gt;&amp;gt;&amp;gt; q, r = divide_exact(2013, 10) &amp;gt;&amp;gt;&amp;gt; q 201 &amp;gt;&amp;gt;&amp;gt; r 3 &amp;#34;&amp;#34;&amp;#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.</description>
     </item>
     
     <item>

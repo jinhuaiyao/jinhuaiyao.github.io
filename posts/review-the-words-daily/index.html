@@ -8,7 +8,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/review-the-words-daily/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.18fa3c6f7441f42a7d6673da5f353f233db80e2afd4631db2bab10d8806931bd.css" integrity="sha256-GPo8b3RB9Cp9ZnPaXzU/Iz24Dir9RjHbK6sQ2IBpMb0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -38,7 +38,7 @@
     </div>
 </header>
         <main id="content">
-<article class="flex flex-col gap-10">
+<article class="flex flex-col gap-5">
     <header class="flex flex-col gap-2">
         <h2 class="text-2xl leading-snug font-bold text-gray-900">每日复习单词</h2>
 
@@ -50,7 +50,7 @@
         
         </div>
     </header>
-    <section class="content text-lg text-gray-800">
+    <section class="content text-base text-gray-800">
     <p>最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。</p>
 <h5 id="记录单词到文件">记录单词到文件</h5>
 <p>用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。</p>
@@ -66,46 +66,45 @@
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png" alt=""></p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png" alt=""></p>
 <p>我自己写了发送到 Things3 的部分，整个脚本如下。</p>
-<pre><code class="language-bash">#!/bin/bash
-
-cd &quot;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&quot;
-
-rm output_file_*.txt
-
-FILE=&quot;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/MyNotes/English.md&quot;
-
-BUFFER=()
-OUTPUT_NUM=1
-
-while IFS= read -r LINE; do
-  if [[ $LINE == --- ]]; then
-    if [ ${#BUFFER[@]} -gt 0 ]; then
-      printf '%s\n' &quot;${BUFFER[@]}&quot; &gt; &quot;output_file_${OUTPUT_NUM}.txt&quot;
-      BUFFER=()
-      ((OUTPUT_NUM++))
-    fi
-  else
-    BUFFER+=(&quot;$LINE&quot;)
-  fi
-done &lt; &quot;$FILE&quot;
-
-# 处理文件结尾的内容
-if [ ${#BUFFER[@]} -gt 0 ]; then
-  printf '%s\n' &quot;${BUFFER[@]}&quot; &gt; &quot;output_file_${OUTPUT_NUM}.txt&quot;
-fi
-
-
-ls output_file_*.txt | while read file
-do
-word=`cat $file |grep -v '^$'| head -1`
-expl=`cat $file |grep -v '^$'| sed -n '2,$'p`
-if [ ${word:0:1} != '#' ]
-then
-  open &quot;things:///add?title=${word}&amp;notes=${expl}&amp;when=today&quot;
-fi
-done
-</code></pre>
-<p>如果某些单词不用再复习了，就再其前面加上 # 号，<code>${word:0:1} != '#'</code> 会去过滤。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm output_file_*.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">FILE</span><span class="o">=</span><span class="s2">&#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/MyNotes/English.md&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">BUFFER</span><span class="o">=()</span>
+</span></span><span class="line"><span class="cl"><span class="nv">OUTPUT_NUM</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r LINE<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[[</span> <span class="nv">$LINE</span> <span class="o">==</span> --- <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="s2">&#34;output_file_</span><span class="si">${</span><span class="nv">OUTPUT_NUM</span><span class="si">}</span><span class="s2">.txt&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">BUFFER</span><span class="o">=()</span>
+</span></span><span class="line"><span class="cl">      <span class="o">((</span>OUTPUT_NUM++<span class="o">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">BUFFER</span><span class="o">+=(</span><span class="s2">&#34;</span><span class="nv">$LINE</span><span class="s2">&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$FILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 处理文件结尾的内容</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="si">${#</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BUFFER</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="s2">&#34;output_file_</span><span class="si">${</span><span class="nv">OUTPUT_NUM</span><span class="si">}</span><span class="s2">.txt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls output_file_*.txt <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> file
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl"><span class="nv">word</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$file</span> <span class="p">|</span>grep -v <span class="s1">&#39;^$&#39;</span><span class="p">|</span> head -1<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="nv">expl</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$file</span> <span class="p">|</span>grep -v <span class="s1">&#39;^$&#39;</span><span class="p">|</span> sed -n <span class="s1">&#39;2,$&#39;</span>p<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">word</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span> !<span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">  open <span class="s2">&#34;things:///add?title=</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">&amp;notes=</span><span class="si">${</span><span class="nv">expl</span><span class="si">}</span><span class="s2">&amp;when=today&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><p>如果某些单词不用再复习了，就再其前面加上 # 号，<code>${word:0:1} != '#'</code> 会去过滤。</p>
 <p>最后把脚本加到 cron job 即可。</p>
 <p>最后效果如下，直接变成当天的待办事项，相当“暴力”。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png" alt=""></p>

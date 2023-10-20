@@ -8,7 +8,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.18fa3c6f7441f42a7d6673da5f353f233db80e2afd4631db2bab10d8806931bd.css" integrity="sha256-GPo8b3RB9Cp9ZnPaXzU/Iz24Dir9RjHbK6sQ2IBpMb0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -38,7 +38,7 @@
     </div>
 </header>
         <main id="content">
-<article class="flex flex-col gap-10">
+<article class="flex flex-col gap-5">
     <header class="flex flex-col gap-2">
         <h2 class="text-2xl leading-snug font-bold text-gray-900">M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</h2>
 
@@ -50,7 +50,7 @@
         
         </div>
     </header>
-    <section class="content text-lg text-gray-800">
+    <section class="content text-base text-gray-800">
     <p>由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。</p>
 <hr>
 <p>先是尝试在 Parallels Desktop 上加载之前下载的 Linux iso 镜像文件，根本不能用。原来基于 Intel x86 架构的 Linux 不能装在基于 ARM 架构的 M1 芯片的笔记本上。</p>
@@ -95,25 +95,23 @@
 <p>先把 M1 笔记本上的 public key 复制到 Home Server 上的 <code>~/.ssh/authorized_keys</code>，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。</p>
 </li>
 </ul>
-<pre><code>vi /etc/ssh/sshd_config
-
-MaxAuthTries 6
-MaxSessions 10
-PubkeyAuthentication yes
-PasswordAuthentication no
-ChallengeResponseAuthentication no
-PermitRootLogin no
-PermitEmptyPasswords no
-
--- restart sshd
-sudo launchctl stop com.openssh.sshd
-sudo launchctl start com.openssh.sshd
-</code></pre>
-<p>在另外的机器上测试 ssh，会得到下面的报错。</p>
-<pre><code>➜  ~/.ssh &gt; ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt;
-xxx@xxxx: Permission denied (publickey).
-</code></pre>
-<hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MaxAuthTries 6
+</span></span><span class="line"><span class="cl">MaxSessions 10
+</span></span><span class="line"><span class="cl">PubkeyAuthentication yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication no
+</span></span><span class="line"><span class="cl">ChallengeResponseAuthentication no
+</span></span><span class="line"><span class="cl">PermitRootLogin no
+</span></span><span class="line"><span class="cl">PermitEmptyPasswords no
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-- restart sshd
+</span></span><span class="line"><span class="cl">sudo launchctl stop com.openssh.sshd
+</span></span><span class="line"><span class="cl">sudo launchctl start com.openssh.sshd
+</span></span></code></pre></div><p>在另外的机器上测试 ssh，会得到下面的报错。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~/.ssh &gt; ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt;
+</span></span><span class="line"><span class="cl">xxx@xxxx: Permission denied (publickey).
+</span></span></code></pre></div><hr>
 <p>先这样吧，不折腾了。</p>
     </section>
     
