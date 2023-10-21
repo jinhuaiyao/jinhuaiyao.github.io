@@ -45,7 +45,7 @@
         <div class="text-sm font-semibold text-gray-500 flex gap-3">
         
 <time datetime="2022-07-02 13:55:55 &#43;0800 CST" title="2022-07-02 13:55:55 &#43;0800 CST">
-    2022/07/07
+    2022/07/02
 </time>
         
         </div>
@@ -54,35 +54,34 @@
     <p>这两礼拜每天都在用 Logseq，真是太喜欢了。</p>
 <p>这篇文章的形成也来自于 Logseq。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-sample_1.png" alt="Logseq"></p>
-<h3 id="对我启发最大的两个资源">对我启发最大的两个资源</h3>
-<p><a href="https://www.bilibili.com/video/BV1X44y1K7X1?vd_source=326dc31e3febf5f2fd25078a753ea3d0">我如何使用 Logseq 管理我的生活和笔记</a></p>
-<p><a href="https://limboy.me/posts/logseq/">我的 Logseq 使用习惯</a></p>
-<h3 id="macos-上的快速输入">macOS 上的快速输入</h3>
+<h5 id="对我启发最大的两个资源">对我启发最大的两个资源</h5>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1X44y1K7X1?vd_source=326dc31e3febf5f2fd25078a753ea3d0">我如何使用 Logseq 管理我的生活和笔记</a></li>
+<li><a href="https://limboy.me/posts/logseq/">我的 Logseq 使用习惯</a></li>
+</ul>
+<h5 id="macos-上的快速输入">macOS 上的快速输入</h5>
 <p>自己做了一个非常简单的 Alfred workflow，把输入的内容附加在当天的 journal md 文件末尾。希望以后官方 app 能够发布更强大更高效的快速输入方式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">query</span><span class="o">=</span><span class="nv">$1</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">D1</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">&#39;+%Y_%m_%d&#39;</span><span class="sb">`</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n- </span><span class="nv">$query</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals/</span><span class="si">${</span><span class="nv">D1</span><span class="si">}</span><span class="s2">.md&#34;</span>
-</span></span></code></pre></div><h3 id="ios-上的快速输入">iOS 上的快速输入</h3>
+</span></span></code></pre></div><h5 id="ios-上的快速输入">iOS 上的快速输入</h5>
 <p>目前搞不定，等官方吧。</p>
-<h3 id="dayone-迁移到-logseq">Dayone 迁移到 Logseq</h3>
-<p>又花了一点时间把 Dayone 里的几千个记录迁移到 Logseq，慢慢带着加以整理、回顾、形成一些联系。</p>
-<p>使用的是这个脚本， <a href="https://github.com/mhejda/dayone2logseq-md">dayone2markdown</a> 。</p>
-<p>为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。</p>
-<p>比如如果 md 文件第一行是空行的话就把它删除。</p>
+<h5 id="dayone-迁移到-logseq">Dayone 迁移到 Logseq</h5>
+<p>又花了一点时间把 Dayone 里的几千个记录迁移到 Logseq，慢慢带着加以整理、回顾、形成一些联系。
+使用的是这个脚本， <a href="https://github.com/mhejda/dayone2logseq-md">dayone2markdown</a> 。</p>
+<p>为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。
+比如如果 md 文件第一行是空行的话就把它删除。</p>
 <p><code>/usr/local/opt/gnu-sed/libexec/gnubin/sed -i '1{/^$/d;}' *.md</code></p>
 <p>也用到了 perl 的一个替换命令。</p>
 <p><code>perl -pi -e &quot;s/\t- ####/- ####/g&quot; *.md</code></p>
-<h3 id="daily-template">Daily template</h3>
-<p>自定义好 daily_template_journals</p>
+<h5 id="daily-template">Daily template</h5>
+<p>自定义好 daily_template_journals:</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-daily-template_1.png" alt="daily-template"></p>
 <p>每天早上打开 Journals，输入 /template 回车，然后选中 daily_template_journals 回车，就可以了。</p>
-<h3 id="备份">备份</h3>
+<h5 id="备份">备份</h5>
 <p>Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。</p>
 <p>一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录。不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次。最后改用了 rsync，只会拷备有变化的。</p>
 <p><code>*/5 * * * * rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot;</code></p>
-<hr>
 <p><em>-- update on 2022-07-03</em></p>
 <p>今天发现 cron job 并没有运行成功，文件没有同步到 OneDrive。先给 cron job 加一段输出用来调试一下。</p>
 <p><code>*/5 * * * * /usr/bin/rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot; &gt; /Users/huajin/Log/Logseq.bak.log 2&gt;&amp;1</code></p>
@@ -94,11 +93,10 @@
 </span></span><span class="line"><span class="cl">...
 </span></span></code></pre></div><p>谷歌一下，找到了<a href="https://apple.stackexchange.com/questions/378553/crontab-operation-not-permitted">解决方法</a>。</p>
 <p>简单的讲就是给<code>/usr/sbin/cron</code> 赋予 <code>Full Disk Access</code> 权限。</p>
-<hr>
 <p><em>-- update on 2022-08-06</em></p>
 <p>今天在 QNAP NAS 里开启了 Time Machine 服务，配置新 MacBook 上的 Time Machine 备份到 NAS 里，这样每个小时都会自动备份，又多了一重保障。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/logseq_backup_to_timemachine_2.png" alt=""></p>
-<h3 id="那年今日">那年今日</h3>
+<h5 id="那年今日">那年今日</h5>
 <p><em>-- added on 2022-07-22</em></p>
 <p>从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。</p>
 <p>本来想用 advanced query，可惜搞不定。只好用一些比较“笨拙”的方法。</p>
@@ -112,10 +110,8 @@
 </span></span><span class="line"><span class="cl"><span class="k">do</span>
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span>sed <span class="s1">&#39;s/.md//g&#39;</span><span class="p">|</span>sed <span class="s1">&#39;s/_/-/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/^/- -------- [[/g&#39;</span> <span class="p">|</span>sed <span class="s1">&#39;s/$/]] --------/g&#39;</span> &gt;&gt; ../pages/On_This_Day.md
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;  collapsed:: true&#34;</span> &gt;&gt;../pages/On_This_Day.md
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">awk <span class="s1">&#39;{print &#34;    &#34; $0}&#39;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> &gt;&gt; ../pages/On_This_Day.md
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n-\n-\n&#34;</span> &gt;&gt; ../pages/On_This_Day.md
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">done</span>
 </span></span></code></pre></div><p>可以展开或折叠，效果如下。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_2.png" alt="on_this_day"></p>
