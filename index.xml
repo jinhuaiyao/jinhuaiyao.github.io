@@ -17,16 +17,16 @@
   
   
   <item>
-    <title>Post</title>
+    <title>POSTS</title>
     <link>http://www.jinhuaiyao.com/posts/</link>
     <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
     
     <guid>http://www.jinhuaiyao.com/posts/</guid>
-    <description></description>
+    <description> </description>
   </item>
   
   <item>
-    <title>Links</title>
+    <title>LINKS</title>
     <link>http://www.jinhuaiyao.com/links/</link>
     <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
     
@@ -35,7 +35,21 @@
   </item>
   
   <item>
-    <title>只言片语 </title>
+    <title>TOOLS</title>
+    <link>http://www.jinhuaiyao.com/tools/</link>
+    <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/tools/</guid>
+    <description>软件推荐 Logseq
+&amp;ndash; &amp;ldquo;A privacy-first, open-source knowledge base.&amp;rdquo;
+&amp;ndash; 关于 Logseq
+Cubox
+&amp;ndash; &amp;ldquo;一站式信息收集、阅读、管理和回顾，善用网络碎片构建个人知识库。&amp;rdquo;
+&amp;ndash; 解决了我的两个“痛点”，看不完的微信文章，知乎文章，网页，不方便处理；DEVONthink里标注和批注不方便。</description>
+  </item>
+  
+  <item>
+    <title>WORDS</title>
     <link>http://www.jinhuaiyao.com/words/</link>
     <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
     
@@ -46,15 +60,6 @@ Tailwind CSS 用起来很方便。
 上周真得太忙了。
 2023/04/25 16:11:25
 利用 http://composingprograms.com 和 OpenAI Translator，学习计算机科学的同时也在提升英语水平。</description>
-  </item>
-  
-  <item>
-    <title></title>
-    <link>http://www.jinhuaiyao.com/tools/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-    
-    <guid>http://www.jinhuaiyao.com/tools/</guid>
-    <description>软件推荐 Logseq - 06/19/2022 &amp;ldquo;A privacy-first, open-source knowledge base.&amp;rdquo; 关于 Logseq Cubox - 01/04/2023 &amp;ldquo;一站式信息收集、阅读、管理和回顾，善用网络碎片构建个人知识库。&amp;quot; 解决了我的两个“痛点”： 看不完的微信文章，知乎文章，网页，不能够优雅地处理。 DEVONthink里标注和批注不太方便。 还可以将 Cubox 中的收藏和标注自动同步至 Notion。 Noto - 02/19/2023 Noto Review: Beautifully Modern and Versatile Note-Taking 简约，流畅，易用。目前只用来替换 Pendo 去做去记录日常的一些事情，Pendo 在 macOS 上的同步问题太让人心烦了，而 Noto 在 iOS 和 macOS 上的同步几乎是瞬间完成的。 Lunar - 03/20/2023 &amp;ldquo;Lunar - The defacto app for controlling monitor brightness&amp;rdquo; 用 app 控制外接显示器亮度，很方便。 Poe - 03/26/2023 &amp;ldquo;Poe - Fast, Helpful AI Chat.</description>
   </item>
   
 </channel>
