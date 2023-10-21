@@ -23,6 +23,12 @@
     <loc>http://www.jinhuaiyao.com/posts/review-the-words-daily/</loc>
     <lastmod>2023-05-27T15:51:04+08:00</lastmod>
   </url><url>
+    <loc>http://www.jinhuaiyao.com/tags/python/</loc>
+    <lastmod>2023-04-20T08:26:39+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/posts/python-cheat-sheet/</loc>
+    <lastmod>2023-04-20T08:26:39+08:00</lastmod>
+  </url><url>
     <loc>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</loc>
     <lastmod>2023-04-20T08:14:37+08:00</lastmod>
   </url><url>
@@ -34,9 +40,6 @@
   </url><url>
     <loc>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</loc>
     <lastmod>2023-04-09T08:29:07+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/python/</loc>
-    <lastmod>2023-02-16T21:41:23+08:00</lastmod>
   </url><url>
     <loc>http://www.jinhuaiyao.com/posts/rewrite-on-this-day-script-with-python/</loc>
     <lastmod>2023-02-16T21:41:23+08:00</lastmod>
@@ -145,9 +148,6 @@
   </url><url>
     <loc>http://www.jinhuaiyao.com/posts/2017-review-2018-plan/</loc>
     <lastmod>2017-12-31T18:51:33+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/python/</loc>
-    <priority>0</priority>
   </url><url>
     <loc>http://www.jinhuaiyao.com/tools/</loc>
     <priority>0</priority>

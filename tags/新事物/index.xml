@@ -1,84 +1,678 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>新事物 on Huaiyao Jin</title>
-    <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
-    <description>Recent content in 新事物 on Huaiyao Jin</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Nginx Reverse Proxy OpenAI API</title>
-      <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
-      <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
-      <description>&lt;p&gt;同事问到这个，记录在这里吧。&lt;/p&gt;</description>
-    </item>
+<channel>
+  <title>新事物 on Huaiyao Jin</title>
+  <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
+  <description>Recent content in 新事物 on Huaiyao Jin</description>
+  <generator>Hugo -- gohugo.io</generator>
+  
+  <language>en-us</language>
+  
+  
+  
+  <copyright>2017 - {year}</copyright>
+  
+  <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate>
+  
+      <atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+  
+  
+  <item>
+    <title>Nginx Reverse Proxy OpenAI API</title>
+    <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
+    <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
     
-    <item>
-      <title>每日复习单词</title>
-      <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
-      <pubDate>Sat, 27 May 2023 15:51:04 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
-      <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
+    <description>&lt;p&gt;同事问到这个，记录在这里吧。&lt;/p&gt;
+&lt;p&gt;国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。&lt;/p&gt;
+&lt;h5 id=&#34;config-server&#34;&gt;Config server&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# lsb_release -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No LSB modules are available.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Distributor ID:	Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Description:	Ubuntu 20.04.6 LTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Release:	20.04
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codename:	focal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-copy-id root@xx.xx.xx.xx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@xx.xx.xx.xx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /etc/ssh/sshd_config /etc/ssh/sshd_config.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Port 10086
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UsePAM yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;X11Forwarding yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PrintMotd no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AcceptEnv LANG LC_*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subsystem sftp	/usr/lib/openssh/sftp-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl restart ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 10086
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;nginx-setup-and-config&#34;&gt;Nginx setup and config&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@xx.xx.xx.xx -p 10086
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://xx.xx.xx.xx  -- will get &amp;#34;Welcome to nginx!&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add below to under &amp;#34;http {&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;listen       80;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_name xx.xx.xx.xx;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location /v1 {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_pass  https://api.openai.com/v1;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_ssl_server_name on;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_set_header Host api.openai.com;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    chunked_transfer_encoding off;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_buffering off;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_cache off;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl reload nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;test-in-local&#34;&gt;Test in local&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PROXY_URL=&amp;#34;http://xx.xx.xx.xx/v1/chat/completions&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OPENAI_API_KEY=&amp;#34;xxxx&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -s -k $PROXY_URL \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -H &amp;#34;Content-Type: application/json&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -H &amp;#34;Authorization: Bearer $OPENAI_API_KEY&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -d &amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;model&amp;#34;: &amp;#34;gpt-3.5-turbo&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;messages&amp;#34;: [{&amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;, &amp;#34;content&amp;#34;: &amp;#34;你好&amp;#34;}],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;temperature&amp;#34;: 0.7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     }&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;use&#34;&gt;Use&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;OpenAI Translator&lt;/li&gt;
+&lt;li&gt;OpenCat&lt;/li&gt;
+&lt;/ol&gt;</description>
+  </item>
+  
+  <item>
+    <title>每日复习单词</title>
+    <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
+    <pubDate>Sat, 27 May 2023 15:51:04 +0800</pubDate>
     
-    <item>
-      <title>The Preparation for Running</title>
-      <link>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</link>
-      <pubDate>Thu, 20 Apr 2023 08:14:37 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
-      <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
+    <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;
+&lt;h5 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h5&gt;
+&lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
+&lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;每日复习&#34;&gt;每日复习&lt;/h5&gt;
+&lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
+&lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我自己写了发送到 Things3 的部分，整个脚本如下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm output_file_*.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/MyNotes/English.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;OUTPUT_NUM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -r LINE&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$LINE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; --- &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;%s\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_file_&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;OUTPUT_NUM&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;OUTPUT_NUM++&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LINE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 处理文件结尾的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;%s\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_file_&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;OUTPUT_NUM&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls output_file_*.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat &lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -1&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;expl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat &lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed -n &lt;span class=&#34;s1&#34;&gt;&amp;#39;2,$&amp;#39;&lt;/span&gt;p&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  open &lt;span class=&#34;s2&#34;&gt;&amp;#34;things:///add?title=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;amp;notes=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;expl&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;amp;when=today&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果某些单词不用再复习了，就再其前面加上 # 号，&lt;code&gt;${word:0:1} != &#39;#&#39;&lt;/code&gt; 会去过滤。&lt;/p&gt;
+&lt;p&gt;最后把脚本加到 cron job 即可。&lt;/p&gt;
+&lt;p&gt;最后效果如下，直接变成当天的待办事项，相当“暴力”。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>The Preparation for Running</title>
+    <link>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</link>
+    <pubDate>Thu, 20 Apr 2023 08:14:37 +0800</pubDate>
     
-    <item>
-      <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
-      <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
-      <pubDate>Tue, 11 Apr 2023 10:24:16 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
-      <description>&lt;p&gt;使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
+    <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;
+&lt;h3 id=&#34;配置-apple-watch&#34;&gt;配置 Apple Watch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;再次开通 eSIM 卡，不需要带手机。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;顾村公园年卡照片放入手机照片里的“个人收藏”，手表里可以快速打开，进园不用带实体卡。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;手表上 Keep app 心率显示还是有问题，改用自带的“体能训练” app，特别好用，去年竟然没想过去用一下。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网易云音乐离线下载歌曲太费劲了，改用 Apple Music，离线批量下载很方便，而且完美搭配“体能训练”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开通手表上的微信支付，跑完步正好去买点早饭，不过需要商家扫我的二维码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h3&gt;
+&lt;p&gt;速干衣，跑步水杯，跑步袜。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个水杯一直拿着太轻便了，去年用的水杯太大，得放在路边，结果今年第一次跑步就被环卫工人收走了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;早上6点多起来，简单洗漱，拉伸一下，穿上跑鞋，戴上 AirPods 和 Apple watch，水杯加点水，迅速下楼。&lt;/p&gt;
+&lt;p&gt;整个跑步体验比去年的好多了。&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
+    <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
+    <pubDate>Tue, 11 Apr 2023 10:24:16 +0800</pubDate>
     
-    <item>
-      <title>最近解决的几个问题</title>
-      <link>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</link>
-      <pubDate>Sun, 09 Apr 2023 14:01:33 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
-      <description>&lt;p&gt;记录一下最近解决的几个问题。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
+    <description>&lt;p&gt;使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。&lt;/p&gt;
+&lt;p&gt;简单使用的话也未必一定要访问网页版，可以用 &lt;a href=&#34;https://poe.com/&#34;&gt;Poe&lt;/a&gt; 或者 &lt;a href=&#34;https://opencat.app/&#34;&gt;OpenCat&lt;/a&gt;。只是我想试用一下 ChatGPT Plus 才能用的 GPT-4，不得不访问网页版。&lt;/p&gt;
+&lt;p&gt;做了一番尝试：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置远程桌面到 VPS，在 VPS 上用浏览器访问 chat.openai.com，Access denied。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;尝试在 Vultr 上创建其他地区的 VPS，试了四五个地区，仍然 Access denied。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只好谷歌一番，原来在最新的限制下，使用 ChatGPT 还得需要“原生 IP”，所谓“原生 IP ”就是指该网站的 IP 地址和其机房的 IP 地址是一致的。或者还有其他什么限制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;试试使用原生 IP，网上大致有两个解决方案：有的 VPS 厂商能提供美国原生 IP；使用 Cloudflare Warp 。&lt;/p&gt;
+&lt;p&gt;方案一花了一些时间去搜索，最后还是放弃了，一是这些服务商名气不大，我之前也没有用过；二是万一 IP 被封了也比较麻烦；三是已经在 Vultr 付费了，不想再另起炉灶。&lt;/p&gt;
+&lt;p&gt;于是实施一下方案二。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://pkg.cloudflareclient.com/install&#34;&gt;https://pkg.cloudflareclient.com/install&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 20.04 LTS 下&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo &amp;quot;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&amp;quot; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://developers.cloudflare.com/warp-client/get-started/linux/&#34;&gt;https://developers.cloudflare.com/warp-client/get-started/linux/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install cloudflare-warp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;systemctl status warp-svc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli register&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli set-mode proxy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli connect&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli enable-always-on&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli warp-stats&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;vi /usr/local/etc/v2ray/config.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;inbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;port&amp;#34;: 10086, 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;settings&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;#34;clients&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;id&amp;#34;: &amp;#34;09096d21-dd57-48ee-9111-38421e6a6b90&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;outbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;tag&amp;#34;: &amp;#34;warp&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;settings&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;#34;servers&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;port&amp;#34;: 40000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;users&amp;#34;: []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;routing&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;rules&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;domain&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;openai.com&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;ai.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;outboundTag&amp;#34;: &amp;#34;warp&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;systemctl stop v2ray&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;systemctl start v2ray&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl ipinfo.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;hostname&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx.vultrusercontent.com&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;city&amp;#34;: &amp;#34;Piscataway&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;region&amp;#34;: &amp;#34;New Jersey&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;country&amp;#34;: &amp;#34;US&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;loc&amp;#34;: &amp;#34;40.4993,-74.3990&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;org&amp;#34;: &amp;#34;AS20473 The Constant Company, LLC&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;postal&amp;#34;: &amp;#34;08854&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;timezone&amp;#34;: &amp;#34;America/New_York&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;readme&amp;#34;: &amp;#34;https://ipinfo.io/missingauth&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl -x &amp;#34;socks5://127.0.0.1:40000&amp;#34; ipinfo.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;104.28.215.142&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;city&amp;#34;: &amp;#34;Willowbrook&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;region&amp;#34;: &amp;#34;New York&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;country&amp;#34;: &amp;#34;US&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;loc&amp;#34;: &amp;#34;40.6032,-74.1385&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;org&amp;#34;: &amp;#34;AS13335 Cloudflare, Inc.&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;postal&amp;#34;: &amp;#34;10314&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;timezone&amp;#34;: &amp;#34;America/New_York&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;readme&amp;#34;: &amp;#34;https://ipinfo.io/missingauth&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;在电脑上重启一下 V2rayU ，就可以正常访问 &lt;a href=&#34;https://chat.openai.com/auth/login&#34;&gt;https://chat.openai.com/auth/login&lt;/a&gt; 了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+  </item>
+  
+  <item>
+    <title>最近解决的几个问题</title>
+    <link>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</link>
+    <pubDate>Sun, 09 Apr 2023 14:01:33 +0800</pubDate>
     
-    <item>
-      <title>用上了期盼已久的截图翻译</title>
-      <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
-      <pubDate>Sun, 09 Apr 2023 08:29:07 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
-      <description>&lt;p&gt;昨日傍晚时分终于用上了期盼已久的截图翻译工具。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
+    <description>&lt;p&gt;记录一下最近解决的几个问题。&lt;/p&gt;
+&lt;h3 id=&#34;icloud-照片备份问题&#34;&gt;iCloud 照片备份问题&lt;/h3&gt;
+&lt;p&gt;最近改用了一个新的照片备份方案。&lt;/p&gt;
+&lt;p&gt;在原来公司 MacBook 上设置下载保留原片。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;将桌面移动硬盘连接到电脑上，并设置每小时自动开启 TimeMachine 备份。&lt;/p&gt;
+&lt;p&gt;除了备份照片外，iCloud Drive 中的某些文件夹也会被顺便备份。&lt;/p&gt;
+&lt;p&gt;目前，iCloud 照片仅有 430G，远小于电脑硬盘 1T 的容量，因此这个方案可以使用很长一段时间。&lt;/p&gt;
+&lt;p&gt;之前曾将照片备份到 OneDrive 和 NAS 中，现已停用。&lt;/p&gt;
+&lt;h3 id=&#34;桌面移动硬盘声音响&#34;&gt;桌面移动硬盘声音响&lt;/h3&gt;
+&lt;p&gt;西部数据的桌面移动硬盘运行时声音太响，忍了很久都没有好的解决办法，直到某天看到快递里的防震气泡袋。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reeder-5-icloud-rss-不能批量删除问题&#34;&gt;Reeder 5 iCloud RSS 不能批量删除问题&lt;/h3&gt;
+&lt;p&gt;之前在 Reeder 中添加了 iCloud Feeds，这样 MacOS 和 iOS 设备上的 RSS 订阅可以通过 iCloud 同步。&lt;/p&gt;
+&lt;p&gt;某天导入了一个包含中文博客 &lt;a href=&#34;https://github.com/timqian/chinese-independent-blogs/blob/master/feed.opml&#34;&gt;opml 文件&lt;/a&gt; 的文件，一下子增加了很多 RSS 订阅。想删除其中一些时，发现 Reeder 没有提供批量删除的选项。&lt;/p&gt;
+&lt;p&gt;一顿研究，决定先清空 iCloud Feeds，并编辑 opml 文件后重新导入。然而在尝试删除账户以清空 iCloud Feeds 时并不起作用；重新添加账户后原来的 Feeds 会再次出现。因此需要找到另外一种方法来彻底清空 iCloud 数据。最后终于找到了可行的方法。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;虚拟机运行导致-mac-发热严重&#34;&gt;虚拟机运行导致 Mac 发热严重&lt;/h3&gt;
+&lt;p&gt;之前文章 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/&#34;&gt;Some Records for RAC Installation on Macbook&lt;/a&gt; 里说到在 Intel 芯片的 Macbook Pro 上装 Oracle RAC 测试环境，使用时候发现笔记本经常发热，风扇嗡嗡响，让人不是很自在。而且笔记本经常会休眠，连接 RAC 之前还得登录一下系统，不方便。&lt;/p&gt;
+&lt;p&gt;最后决定启用 Dell T7820 工作站。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先给工作站加上内存条，原来只有 32G，加了 4 根 32G 内存条。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;搜索之后决定给工作站安装 Ubuntu 20.04 LTS，认证过的。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ubuntu.com/certified/201702-25401&#34;&gt;https://ubuntu.com/certified/201702-25401&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装过程参考以下链接：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dell.com/support/kbdoc/en-us/000131655/how-to-install-ubuntu-linux-on-your-dell-pc&#34;&gt;https://www.dell.com/support/kbdoc/en-us/000131655/how-to-install-ubuntu-linux-on-your-dell-pc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.sysgeek.cn/make-ubuntu-usb-flash-drive/&#34;&gt;https://www.sysgeek.cn/make-ubuntu-usb-flash-drive/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.sysgeek.cn/install-ubuntu-20-04-lts-desktop/&#34;&gt;https://www.sysgeek.cn/install-ubuntu-20-04-lts-desktop/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 Ubuntu 上安装 VMWare Workstation&lt;/p&gt;
+&lt;p&gt;安装参考 &lt;a href=&#34;https://waydo.xyz/soft/linux/ubuntu-vmware-workstation/&#34;&gt;https://waydo.xyz/soft/linux/ubuntu-vmware-workstation/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyao-t7820:~$ ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Extracting VMware Installer...done.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root access is required for the operations you have chosen.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyao-t7820:~$ sudo ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Extracting VMware Installer...done.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Installing VMware Workstation 17.0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Configuring...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[######################################################################] 100%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Installation was successful.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行时遇到报错 &amp;ldquo;GNU C Compiler (gcc) version 9.4.0, was not found.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://codeantenna.com/a/GEL9CxW11A&#34;&gt;https://codeantenna.com/a/GEL9CxW11A&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install build-essential
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后重新运行按照提示编译就可以了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把 MacBook 的虚拟机文件 copy 到 Ubuntu 上，重新配置。最重要的是配置 RAC private 网络，需要自定义 192.168.1.0 的 subnet。&lt;/p&gt;
+&lt;p&gt;打开 Virtual Network Editor，编辑 vmnet1。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置远程桌面，以后图形界面无需外接显示器。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://juejin.cn/post/6939860863125815303&#34;&gt;https://juejin.cn/post/6939860863125815303&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置 PubkeyAuthentication only。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyao-t7820:~$ sudo service ssh stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyao-t7820:~$ sudo service ssh start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路由器配置端口转发，可以从外网访问 RAC。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;完毕！&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>用上了期盼已久的截图翻译</title>
+    <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
+    <pubDate>Sun, 09 Apr 2023 08:29:07 +0800</pubDate>
     
-    <item>
-      <title>关于 Logseq</title>
-      <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
-      <pubDate>Sat, 02 Jul 2022 13:55:55 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
-      <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
+    <description>&lt;p&gt;昨日傍晚时分终于用上了期盼已久的截图翻译工具。&lt;/p&gt;
+&lt;p&gt;之前看 《Designing Data-Intensive Applications》的时候，有些段落理解不到位，用 Google Translator 翻译成中文，需要把在 PDF 文件里把需要的段落复制到 Google Translator，点击翻译然后得到结果，感觉很不方便。想着有没有什么工具可以直接能把截图上的英文翻译成中文，当时找了一下，无果，只能记在 to do list 里。&lt;/p&gt;
+&lt;p&gt;随着 ChatGPT 的到来，发现已经有工具能够 exactly 实现我的诉求了。&lt;/p&gt;
+&lt;p&gt;就是 &lt;a href=&#34;https://www.iplaysoft.com/openai-translator.html&#34;&gt;OpenAI Translator - 最强开源 AI 划词翻译工具&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
+&lt;h3 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h3&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
+&lt;h3 id=&#34;糟糕的-网络环境&#34;&gt;糟糕的 “网络环境”&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;又联想到经常遇到的无法使用 ChatGPT 网页版。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;于是上午开始研究独立的 VPS，以及科学上网工具。&lt;/p&gt;
+&lt;p&gt;一番研究后决定选用 Vultr，注册账号然后支付宝充值 50 刀，因为优惠（&lt;a href=&#34;https://www.vultryhw.cn/rules-for-free-credit-in-vultrmatch/&#34;&gt;Vultr充多少送多少活动&lt;/a&gt;）总共得到 100 刀，可以用上一年了。&lt;/p&gt;
+&lt;p&gt;选用 Los Angeles 6$/month 套餐，Ubuntu 20.04 LTS 系统，很快得到一个主机和 IP。(外加一句，后面我又创建了 3 台不同地区的主机做测试，Vultr 是按照使用时间收费而不是主机数量，这一点就特别好，即使 IP 有问题，创建个新的主机就好，不用额外付费。)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
+&lt;h4 id=&#34;安装&#34;&gt;安装&lt;/h4&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# bash &amp;lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;server-端配置&#34;&gt;Server 端配置&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;用 &lt;a href=&#34;https://www.uuidgenerator.net/&#34;&gt;https://www.uuidgenerator.net/&lt;/a&gt; 随机生成一个 UUID 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VPS 上 &lt;code&gt;vi /usr/local/etc/v2ray/config.json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;inbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;port&amp;#34;: 10086, // 服务器监听端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;settings&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;#34;clients&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;id&amp;#34;: &amp;#34;09096d21-dd57-48ee-9111-38421e6a6b90&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;outbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;配置一下防火墙&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 10086
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;启动 v2ray&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# systemctl enable v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# systemctl start v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# systemctl status v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;VPS 安全设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# adduser rjin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;visudo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin	ALL=(ALL)	NOPASSWD:ALL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctl + o
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctl + x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@JinHuaiyaos-MacBook-Pro ~ % ssh-copy-id rjin@xxx.xxx.xxx.xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitRootLogin no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# cat /etc/ssh/sshd_config |grep -v &amp;#39;^#&amp;#39; |grep -v &amp;#39;^$&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitRootLogin no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Include /etc/ssh/sshd_config.d/*.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UsePAM yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;X11Forwarding yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PrintMotd no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AcceptEnv LANG LC_*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subsystem sftp	/usr/lib/openssh/sftp-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:/etc/ssh/sshd_config.d# more 50-cloud-init.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:/etc/ssh/sshd_config.d# mv 50-cloud-init.conf 50-cloud-init.conf.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl start ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;client-端配置&#34;&gt;Client 端配置&lt;/h5&gt;
+&lt;p&gt;Mac 上 V2rayU 添加节点：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
+&lt;h3 id=&#34;you-exceeded-your-current-quota-please-check-your-plan-and-billing-details&#34;&gt;You exceeded your current quota, please check your plan and billing details&lt;/h3&gt;
+&lt;p&gt;第一次使用 API ，怎么会没有配额。联想到看过的 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt-api-tools.html&#34;&gt;比 ChatGPT 网页版好用百倍！8 款整合 API 的智能客户端工具与 Ai 插件推荐&lt;/a&gt; 里面提到 “使用频率有限制，绑定信用卡后可解”，估计添加信用卡可以解决。&lt;/p&gt;
+&lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;
+&lt;h3 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>关于 Logseq</title>
+    <link>http://www.jinhuaiyao.com/posts/about-logseq/</link>
+    <pubDate>Sat, 02 Jul 2022 13:55:55 +0800</pubDate>
     
-    <item>
-      <title>实现一个需求</title>
-      <link>http://www.jinhuaiyao.com/posts/implement-a-requirement/</link>
-      <pubDate>Sat, 04 Jun 2022 12:58:00 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
-      <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;</description>
-    </item>
+    <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
+    <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;
+&lt;p&gt;这篇文章的形成也来自于 Logseq。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-sample_1.png&#34; alt=&#34;Logseq&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;对我启发最大的两个资源&#34;&gt;对我启发最大的两个资源&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1X44y1K7X1?vd_source=326dc31e3febf5f2fd25078a753ea3d0&#34;&gt;我如何使用 Logseq 管理我的生活和笔记&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://limboy.me/posts/logseq/&#34;&gt;我的 Logseq 使用习惯&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;macos-上的快速输入&#34;&gt;macOS 上的快速输入&lt;/h3&gt;
+&lt;p&gt;自己做了一个非常简单的 Alfred workflow，把输入的内容附加在当天的 journal md 文件末尾。希望以后官方 app 能够发布更强大更高效的快速输入方式。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;D1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date &lt;span class=&#34;s1&#34;&gt;&amp;#39;+%Y_%m_%d&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;\n- &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$query&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;D1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ios-上的快速输入&#34;&gt;iOS 上的快速输入&lt;/h3&gt;
+&lt;p&gt;目前搞不定，等官方吧。&lt;/p&gt;
+&lt;h3 id=&#34;dayone-迁移到-logseq&#34;&gt;Dayone 迁移到 Logseq&lt;/h3&gt;
+&lt;p&gt;又花了一点时间把 Dayone 里的几千个记录迁移到 Logseq，慢慢带着加以整理、回顾、形成一些联系。&lt;/p&gt;
+&lt;p&gt;使用的是这个脚本， &lt;a href=&#34;https://github.com/mhejda/dayone2logseq-md&#34;&gt;dayone2markdown&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。&lt;/p&gt;
+&lt;p&gt;比如如果 md 文件第一行是空行的话就把它删除。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/usr/local/opt/gnu-sed/libexec/gnubin/sed -i &#39;1{/^$/d;}&#39; *.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;也用到了 perl 的一个替换命令。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;perl -pi -e &amp;quot;s/\t- ####/- ####/g&amp;quot; *.md&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;daily-template&#34;&gt;Daily template&lt;/h3&gt;
+&lt;p&gt;自定义好 daily_template_journals&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-daily-template_1.png&#34; alt=&#34;daily-template&#34;&gt;&lt;/p&gt;
+&lt;p&gt;每天早上打开 Journals，输入 /template 回车，然后选中 daily_template_journals 回车，就可以了。&lt;/p&gt;
+&lt;h3 id=&#34;备份&#34;&gt;备份&lt;/h3&gt;
+&lt;p&gt;Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。&lt;/p&gt;
+&lt;p&gt;一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录。不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次。最后改用了 rsync，只会拷备有变化的。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;*/5 * * * * rsync -a &amp;quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;quot; &amp;quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;-- update on 2022-07-03&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;今天发现 cron job 并没有运行成功，文件没有同步到 OneDrive。先给 cron job 加一段输出用来调试一下。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;*/5 * * * * /usr/bin/rsync -a &amp;quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;quot; &amp;quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;quot; &amp;gt; /Users/huajin/Log/Logseq.bak.log 2&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;看一下 Logseq.bak.log，有众多的 Operation not permitted 报错。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-25&amp;#34;: Operation not permitted (1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-26&amp;#34;: Operation not permitted (1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-29&amp;#34;: Operation not permitted (1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-30&amp;#34;: Operation not permitted (1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;谷歌一下，找到了&lt;a href=&#34;https://apple.stackexchange.com/questions/378553/crontab-operation-not-permitted&#34;&gt;解决方法&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;简单的讲就是给&lt;code&gt;/usr/sbin/cron&lt;/code&gt; 赋予 &lt;code&gt;Full Disk Access&lt;/code&gt; 权限。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;-- update on 2022-08-06&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;今天在 QNAP NAS 里开启了 Time Machine 服务，配置新 MacBook 上的 Time Machine 备份到 NAS 里，这样每个小时都会自动备份，又多了一重保障。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/logseq_backup_to_timemachine_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;那年今日&#34;&gt;那年今日&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;-- added on 2022-07-22&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。&lt;/p&gt;
+&lt;p&gt;本来想用 advanced query，可惜搞不定。只好用一些比较“笨拙”的方法。&lt;/p&gt;
+&lt;p&gt;在&lt;del&gt;旧 macbook 改造以后的 server&lt;/del&gt; 新 MacBook Pro 上加一个 cron job。 &lt;em&gt;-- update on 2022-08-06&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;5 5 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;-- updated shell script on 2023-05-18&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date +%m_%d&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ../pages/On_This_Day.md&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep &lt;span class=&#34;s2&#34;&gt;&amp;#34;_&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$DT&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/.md//g&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/_/-/g&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/^/- -------- [[/g&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/$/]] --------/g&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ../pages/On_This_Day.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;  collapsed:: true&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt;../pages/On_This_Day.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print &amp;#34;    &amp;#34; $0}&amp;#39;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ../pages/On_This_Day.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;\n-\n-\n&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ../pages/On_This_Day.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以展开或折叠，效果如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_2.png&#34; alt=&#34;on_this_day&#34;&gt;&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>实现一个需求</title>
+    <link>http://www.jinhuaiyao.com/posts/implement-a-requirement/</link>
+    <pubDate>Sat, 04 Jun 2022 12:58:00 +0800</pubDate>
     
-  </channel>
+    <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
+    <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;于是想着能不能有个工具，可以把 pdf 里的大纲提取出来，并且能够标记完成度，这样能有信心一点一点去学习，逐渐拨开层层迷雾。&lt;/p&gt;
+&lt;p&gt;一顿谷歌，发现没有现成的工具可以一步到位实现需求。不过搜索过程中发现了 OmniOutliner，试用了一下，发现它界面精美，可以展示大纲并且可以标记，完美符合我的需求。&lt;/p&gt;
+&lt;p&gt;剩下的问题就是如何把 pdf 文档里的大纲导出然后导入 OmniOutliner 了。&lt;/p&gt;
+&lt;p&gt;又是一番搜索，找到了 &lt;a href=&#34;https://mupdf.com&#34;&gt;mupdf&lt;/a&gt;，这个工具可以导出 pdf 大纲。&lt;/p&gt;
+&lt;p&gt;虚拟机 Windows 里运行
+&lt;code&gt;c:\mupdf-1.20.0-windows&amp;gt;mutool.exe show SQLServer.pdf outline &amp;gt;b.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Mac 里处理一下多余的字符&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;去掉右面的 #page=xxx&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vi b.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,$s/#page.*$//g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;code&gt;:set list&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;去除左面多余 |tab 和 -tab 以及所有的双引号&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,$s/|^I//g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;code&gt;:1,$s/-^I//g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;code&gt;:1,$s/&amp;quot;//g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;code&gt;:set nolist&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;搞定!&lt;/p&gt;
+&lt;p&gt;导入 OmniOutliner，看成果图，完美。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
+  </item>
+  
+</channel>
 </rss>
