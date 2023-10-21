@@ -8,14 +8,14 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/review-the-words-daily/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
   
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
     <a href="http://www.jinhuaiyao.com/">
-        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_500x500_fill_q100_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
     </a>
 </div>
 
@@ -55,16 +55,30 @@
 <h5 id="记录单词到文件">记录单词到文件</h5>
 <p>用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。</p>
 <p>设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-2.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-3.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-2.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-3.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png" width="80%"/>
+</figure>
+
 <h5 id="每日复习">每日复习</h5>
 <p>思路是将 English.md 文件里以 &lsquo;---&rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。</p>
 <p>利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png" width="80%"/>
+</figure>
+
 <p>我自己写了发送到 Things3 的部分，整个脚本如下。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
@@ -107,8 +121,11 @@
 </span></span></code></pre></div><p>如果某些单词不用再复习了，就再其前面加上 # 号，<code>${word:0:1} != '#'</code> 会去过滤。</p>
 <p>最后把脚本加到 cron job 即可。</p>
 <p>最后效果如下，直接变成当天的待办事项，相当“暴力”。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-9.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-9.png" width="80%"/>
+</figure>
     </section>
     
     
@@ -125,12 +142,12 @@
                         解决问题
                     </a>
             
-                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/shell/" alt="Shell" >
-                        Shell
-                    </a>
-            
                     <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" alt="新事物" >
                         新事物
+                    </a>
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/shell/" alt="Shell" >
+                        Shell
                     </a>
             
         </div>

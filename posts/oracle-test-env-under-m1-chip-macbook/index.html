@@ -8,14 +8,14 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
   
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
     <a href="http://www.jinhuaiyao.com/">
-        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_500x500_fill_q100_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
     </a>
 </div>
 
@@ -52,32 +52,26 @@
     </header>
     <section class="content text-base text-gray-800">
     <p>由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。</p>
-<hr>
+<p>&ndash;</p>
 <p>先是尝试在 Parallels Desktop 上加载之前下载的 Linux iso 镜像文件，根本不能用。原来基于 Intel x86 架构的 Linux 不能装在基于 ARM 架构的 M1 芯片的笔记本上。</p>
 <p>尝试下载最新的基于 ARM 架构的 Oracle Linux，<a href="https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso">https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso</a> ，安装没问题。装好以后抱有侥幸心理装一下 Oracle 12c，runInstaller 直接报错。</p>
 <p>一顿谷歌，搜索了很多文章，总结一下有几种可行方案。</p>
 <ol>
-<li>
-<p>用 Parallel，VMware 或者 <a href="https://mac.getutm.app/">UTM</a> 安装基于 ARM 的 Windows 11，然后在 Windows 11 里安装 Oracle。</p>
-<p>直接放弃，我要的是在 Linux 下的 Oracle db。</p>
-</li>
-<li>
-<p>用 docker。</p>
-<p>直接放弃，不想弄个黑盒子。</p>
-</li>
-<li>
-<p>用 UTM 安装基于 x86 平台的 Linux，然后再装 Oracle。</p>
-<p>这个看起来不错，开心去尝试。结果安装 Redhat Linux 就用了非常之久，性能问题太严重了。放弃。</p>
-</li>
+<li>用 Parallel，VMware 或者 <a href="https://mac.getutm.app/">UTM</a> 安装基于 ARM 的 Windows 11，然后在 Windows 11 里安装 Oracle。 <br>
+直接放弃，我要的是在 Linux 下的 Oracle db。</li>
+<li>用 docker。
+直接放弃，不想弄个黑盒子。</li>
+<li>用 UTM 安装基于 x86 平台的 Linux，然后再装 Oracle。
+这个看起来不错，开心去尝试。结果安装 Redhat Linux 就用了非常之久，性能问题太严重了。放弃。</li>
 </ol>
 <p>以上探索过程花了几个小时，我已经基本上放弃在笔记本上安装 Oracle 实验环境的打算了。</p>
-<hr>
+<p>&ndash;</p>
 <p>于是只好转换思路，不在本地安装虚拟机，能 ssh 到远程的 db server 上也可以。</p>
 <p>首先想到的是自己在 “搬瓦工” 上买的两个 VPS，平时只用来 “科学上网”，正好利用一下。找到原来的账号密码 ssh 上去一看，只有 1G 内存，放弃。</p>
 <p>尝试注册 Oracle Cloud，有文章说它可以提供永久免费的主机。注册搞了半天，最后通不过，应该是信用卡的问题。放弃。</p>
 <p>尝试 AWS，注册成功，看一下 4G 内存的云机器，不便宜，放弃。</p>
 <p>又看了下阿里云，4G 内存的主机每个月也要六七十块钱，偶尔用一下，不是很划算，放弃。</p>
-<hr>
+<p>&ndash;</p>
 <p>最后，竟然在最后，才想到自己改造成家用服务器的 2013 年买的 MacBook Pro。只要在上面安装 VMware，然后直接加载以前保存的虚拟机文件就可以飞速得到一个 Oracle 实验环境。</p>
 <p>剩下的问题就是如何访问 Home Server (旧 MacBook Pro) 上的虚拟机，特别是不在家的时候该如何访问。</p>
 <p>基本思路就是先 ssh 到 Home Server，然后再 ssh 到虚拟机里的 Linux，这样就可以运行 sqlplus 了。</p>
@@ -88,12 +82,8 @@
 <p><code>ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt; ssh -o StrictHostKeyChecking=no oracle@192.168.156.121</code></p>
 <p>因为我的 IP 是暴露在公网上，所以安全问题尤为重要。</p>
 <ul>
-<li>
-<p>路由器端开启了防火墙，只开放了两个必要的端口，一个是 sceen sharing，还有一个是 ssh，都端口映射到非默认端口。</p>
-</li>
-<li>
-<p>先把 M1 笔记本上的 public key 复制到 Home Server 上的 <code>~/.ssh/authorized_keys</code>，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。</p>
-</li>
+<li>路由器端开启了防火墙，只开放了两个必要的端口，一个是 sceen sharing，还有一个是 ssh，都端口映射到非默认端口。</li>
+<li>先把 M1 笔记本上的 public key 复制到 Home Server 上的 <code>~/.ssh/authorized_keys</code>，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
 </span></span><span class="line"><span class="cl">
@@ -111,8 +101,8 @@
 </span></span></code></pre></div><p>在另外的机器上测试 ssh，会得到下面的报错。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~/.ssh &gt; ssh -t -l &lt;username&gt; -p &lt;port&gt; &lt;public ip or dns name&gt;
 </span></span><span class="line"><span class="cl">xxx@xxxx: Permission denied (publickey).
-</span></span></code></pre></div><hr>
-<p>先这样吧，不折腾了。</p>
+</span></span></code></pre></div><p>&ndash;
+先这样吧，不折腾了。</p>
     </section>
     
     

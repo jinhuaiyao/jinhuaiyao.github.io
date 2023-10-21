@@ -3,19 +3,20 @@
     <head><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Python Cheat Sheet</title>
-<meta name="description" content="- doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.">
+<title>Python 小抄</title>
+<meta name="description" content="&ndash;
+- doctest def divide_exact(n, d): &#34;&#34;&#34; &gt;&gt;&gt; q, r = divide_exact(2013, 10) &gt;&gt;&gt; q 201 &gt;&gt;&gt; r 3 &#34;&#34;&#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest -v test.">
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/python-cheat-sheet/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
   
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
     <a href="http://www.jinhuaiyao.com/">
-        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_500x500_fill_q100_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
     </a>
 </div>
 
@@ -40,7 +41,7 @@
         <main id="content">
 <article class="flex flex-col gap-5">
     <header class="flex flex-col gap-2">
-        <h2 class="text-2xl leading-snug font-bold text-gray-900">Python Cheat Sheet</h2>
+        <h2 class="text-2xl leading-snug font-bold text-gray-900">Python 小抄</h2>
 
         <div class="text-sm font-semibold text-gray-500 flex gap-3">
         
@@ -51,7 +52,7 @@
         </div>
     </header>
     <section class="content text-base text-gray-800">
-    <hr>
+    <p>&ndash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">doctest</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">divide_exact</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
@@ -87,7 +88,7 @@
 </span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">tests</span> <span class="ow">in</span> <span class="mi">2</span> <span class="n">items</span><span class="o">.</span>
 </span></span><span class="line"><span class="cl"><span class="mi">3</span> <span class="n">passed</span> <span class="ow">and</span> <span class="mi">0</span> <span class="n">failed</span><span class="o">.</span>
 </span></span><span class="line"><span class="cl"><span class="n">Test</span> <span class="n">passed</span><span class="o">.</span>
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><p>&ndash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="n">的用法</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">{</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">words</span><span class="p">}</span> 
@@ -95,7 +96,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">该代码中的</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">表示一个字符串</span> <span class="n">w</span> <span class="n">的反向字符串</span><span class="err">。</span>
 </span></span><span class="line"><span class="cl"><span class="n">也就是说</span><span class="err">，</span><span class="n">它会将</span> <span class="n">w</span> <span class="n">中的字符从后往前倒序排列</span><span class="err">，</span><span class="n">得到一个新的字符串</span><span class="err">。</span>
 </span></span><span class="line"><span class="cl"><span class="n">例如</span><span class="err">，</span><span class="n">如果</span> <span class="n">w</span> <span class="n">是</span> <span class="s2">&#34;hello&#34;</span><span class="err">，</span><span class="n">那么</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">就是</span> <span class="s2">&#34;olleh&#34;</span><span class="err">。</span>
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><p>&ndash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">赋值方式</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">值交换</span>
 </span></span><span class="line"><span class="cl">
@@ -105,7 +106,7 @@
 </span></span><span class="line"><span class="cl"><span class="mf">4.5</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span>
 </span></span><span class="line"><span class="cl"><span class="mi">3</span>
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><p>&ndash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">类的写法</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -120,7 +121,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_desc_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">long_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><p>&ndash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">文件内容写到列表</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">zfill</span><span class="err">，</span><span class="n">字符串右对齐</span><span class="err">，</span><span class="n">前面填充0</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="s2">&#34;if birthday in pi_str&#34;</span>
@@ -142,7 +143,7 @@
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">birthday</span><span class="si">}</span><span class="s2"> - yes&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">birthday</span><span class="p">)</span>
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><p>&ndash;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="n">json的用法</span>
 </span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="n">用法</span><span class="err">：</span><span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span>
 </span></span><span class="line"><span class="cl">
@@ -164,8 +165,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">save_file</span> <span class="o">=</span> <span class="s1">&#39;json.txt&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span></code></pre></div><hr>
-
+</span></span></code></pre></div>
     </section>
     
     

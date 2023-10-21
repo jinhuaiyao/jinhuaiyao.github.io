@@ -8,14 +8,14 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
   
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
     <a href="http://www.jinhuaiyao.com/">
-        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_500x500_fill_q100_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
     </a>
 </div>
 
@@ -55,19 +55,25 @@
 <h3 id="icloud-照片备份问题">iCloud 照片备份问题</h3>
 <p>最近改用了一个新的照片备份方案。</p>
 <p>在原来公司 MacBook 上设置下载保留原片。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png" width="80%"/>
+</figure>
+
 <p>将桌面移动硬盘连接到电脑上，并设置每小时自动开启 TimeMachine 备份。</p>
 <p>除了备份照片外，iCloud Drive 中的某些文件夹也会被顺便备份。</p>
 <p>目前，iCloud 照片仅有 430G，远小于电脑硬盘 1T 的容量，因此这个方案可以使用很长一段时间。</p>
 <p>之前曾将照片备份到 OneDrive 和 NAS 中，现已停用。</p>
 <h3 id="桌面移动硬盘声音响">桌面移动硬盘声音响</h3>
 <p>西部数据的桌面移动硬盘运行时声音太响，忍了很久都没有好的解决办法，直到某天看到快递里的防震气泡袋。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png" width="80%"/>
+</figure>
+
 <h3 id="reeder-5-icloud-rss-不能批量删除问题">Reeder 5 iCloud RSS 不能批量删除问题</h3>
 <p>之前在 Reeder 中添加了 iCloud Feeds，这样 MacOS 和 iOS 设备上的 RSS 订阅可以通过 iCloud 同步。</p>
 <p>某天导入了一个包含中文博客 <a href="https://github.com/timqian/chinese-independent-blogs/blob/master/feed.opml">opml 文件</a> 的文件，一下子增加了很多 RSS 订阅。想删除其中一些时，发现 Reeder 没有提供批量删除的选项。</p>
 <p>一顿研究，决定先清空 iCloud Feeds，并编辑 opml 文件后重新导入。然而在尝试删除账户以清空 iCloud Feeds 时并不起作用；重新添加账户后原来的 Feeds 会再次出现。因此需要找到另外一种方法来彻底清空 iCloud 数据。最后终于找到了可行的方法。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png" width="80%"/>
+</figure>
+
 <h3 id="虚拟机运行导致-mac-发热严重">虚拟机运行导致 Mac 发热严重</h3>
 <p>之前文章 <a href="https://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/">Some Records for RAC Installation on Macbook</a> 里说到在 Intel 芯片的 Macbook Pro 上装 Oracle RAC 测试环境，使用时候发现笔记本经常发热，风扇嗡嗡响，让人不是很自在。而且笔记本经常会休眠，连接 RAC 之前还得登录一下系统，不方便。</p>
 <p>最后决定启用 Dell T7820 工作站。</p>
@@ -104,8 +110,12 @@
 <li>
 <p>把 MacBook 的虚拟机文件 copy 到 Ubuntu 上，重新配置。最重要的是配置 RAC private 网络，需要自定义 192.168.1.0 的 subnet。</p>
 <p>打开 Virtual Network Editor，编辑 vmnet1。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-4.png" alt=""></p>
 </li>
+</ol>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-4.png" width="80%"/>
+</figure>
+
+<ol start="5">
 <li>
 <p>配置远程桌面，以后图形界面无需外接显示器。</p>
 <p>参考 <a href="https://juejin.cn/post/6939860863125815303">https://juejin.cn/post/6939860863125815303</a></p>
@@ -128,7 +138,6 @@
 <p>路由器配置端口转发，可以从外网访问 RAC。</p>
 </li>
 </ol>
-<hr>
 <p>完毕！</p>
     </section>
     

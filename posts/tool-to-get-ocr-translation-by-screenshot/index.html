@@ -3,19 +3,19 @@
     <head><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>用上了期盼已久的截图翻译</title>
+<title>期盼已久的截图翻译</title>
 <meta name="description" content="昨日傍晚时分终于用上了期盼已久的截图翻译工具。">
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b38eb336467e25c4b12630264434c97889ca3d16eca72a601b1e15f85a790a8d.css" integrity="sha256-s46zNkZ+JcSxJjAmRDTJeInKPRbspypgGx4V+Fp5Co0=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
   
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
     <a href="http://www.jinhuaiyao.com/">
-        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_500x500_fill_q100_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
     </a>
 </div>
 
@@ -40,7 +40,7 @@
         <main id="content">
 <article class="flex flex-col gap-5">
     <header class="flex flex-col gap-2">
-        <h2 class="text-2xl leading-snug font-bold text-gray-900">用上了期盼已久的截图翻译</h2>
+        <h2 class="text-2xl leading-snug font-bold text-gray-900">期盼已久的截图翻译</h2>
 
         <div class="text-sm font-semibold text-gray-500 flex gap-3">
         
@@ -55,24 +55,34 @@
 <p>之前看 《Designing Data-Intensive Applications》的时候，有些段落理解不到位，用 Google Translator 翻译成中文，需要把在 PDF 文件里把需要的段落复制到 Google Translator，点击翻译然后得到结果，感觉很不方便。想着有没有什么工具可以直接能把截图上的英文翻译成中文，当时找了一下，无果，只能记在 to do list 里。</p>
 <p>随着 ChatGPT 的到来，发现已经有工具能够 exactly 实现我的诉求了。</p>
 <p>就是 <a href="https://www.iplaysoft.com/openai-translator.html">OpenAI Translator - 最强开源 AI 划词翻译工具</a>。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-1.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-1.png" width="80%"/>
+</figure>
+
 <p>本文记录了安装、配置和使用过程中遇到的问题及其解决方法。</p>
-<h3 id="安装步骤">安装步骤</h3>
+<h5 id="安装步骤">安装步骤</h5>
 <p>参考 <a href="https://github.com/yetone/openai-translator">https://github.com/yetone/openai-translator</a> 即可，并无难处。</p>
-<h3 id="糟糕的-网络环境">糟糕的 “网络环境”</h3>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-3.png" alt=""></p>
+<h5 id="糟糕的-网络环境">糟糕的 “网络环境”</h5>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png" width="80%"/>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-3.png" width="80%"/>
+</figure>
+
 <p>又联想到经常遇到的无法使用 ChatGPT 网页版。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-4.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-4.png" width="80%"/>
+</figure>
+
 <p>于是上午开始研究独立的 VPS，以及科学上网工具。</p>
 <p>一番研究后决定选用 Vultr，注册账号然后支付宝充值 50 刀，因为优惠（<a href="https://www.vultryhw.cn/rules-for-free-credit-in-vultrmatch/">Vultr充多少送多少活动</a>）总共得到 100 刀，可以用上一年了。</p>
 <p>选用 Los Angeles 6$/month 套餐，Ubuntu 20.04 LTS 系统，很快得到一个主机和 IP。(外加一句，后面我又创建了 3 台不同地区的主机做测试，Vultr 是按照使用时间收费而不是主机数量，这一点就特别好，即使 IP 有问题，创建个新的主机就好，不用额外付费。)</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png" width="80%"/>
+</figure>
+
 <p>又一番研究，决定选用 VMess 协议的 V2Ray 工具。</p>
-<h4 id="安装">安装</h4>
+<h6 id="安装">安装</h6>
 <p>参考 <a href="https://github.com/v2fly/fhs-install-v2ray">https://github.com/v2fly/fhs-install-v2ray</a>，其实就是一个命令：</p>
 <p><code># bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</code></p>
-<h5 id="server-端配置">Server 端配置</h5>
+<p>Server 端配置</p>
 <ol>
 <li>
 <p>用 <a href="https://www.uuidgenerator.net/">https://www.uuidgenerator.net/</a> 随机生成一个 UUID 。</p>
@@ -164,16 +174,20 @@
 </span></span><span class="line"><span class="cl">systemctl stop ssh.service
 </span></span><span class="line"><span class="cl">systemctl start ssh.service
 </span></span><span class="line"><span class="cl">systemctl status ssh.service
-</span></span></code></pre></div><h5 id="client-端配置">Client 端配置</h5>
+</span></span></code></pre></div><p>Client 端配置</p>
 <p>Mac 上 V2rayU 添加节点：</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-5.png" alt=""></p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-5.png" width="80%"/>
+</figure>
+
 <p>自此，不再出现 IP 问题，结果又报了另外的错误。</p>
-<h3 id="you-exceeded-your-current-quota-please-check-your-plan-and-billing-details">You exceeded your current quota, please check your plan and billing details</h3>
+<h5 id="you-exceeded-your-current-quota-please-check-your-plan-and-billing-details">You exceeded your current quota, please check your plan and billing details</h5>
 <p>第一次使用 API ，怎么会没有配额。联想到看过的 <a href="https://www.iplaysoft.com/chatgpt-api-tools.html">比 ChatGPT 网页版好用百倍！8 款整合 API 的智能客户端工具与 Ai 插件推荐</a> 里面提到 “使用频率有限制，绑定信用卡后可解”，估计添加信用卡可以解决。</p>
 <p>于是开始研究如何申请一张「虚拟信用卡」。</p>
 <p>参考 <a href="https://www.iplaysoft.com/chatgpt.html">ChatGPT 怎样注册账号</a>，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 <a href="https://platform.openai.com/account/billing/payment-methods">Payment methods</a>，终于可以正常使用 OpenAI Translator 了。</p>
-<h3 id="设置图标不要总是显示">设置图标不要总是显示</h3>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png" alt=""></p>
+<h5 id="设置图标不要总是显示">设置图标不要总是显示</h5>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png" width="80%"/>
+</figure>
+
 <p>不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。</p>
 <hr>
 <p>最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。</p>
