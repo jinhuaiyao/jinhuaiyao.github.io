@@ -1,0 +1,29 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>DBA on Huaiyao Jin</title>
+  <link>http://www.jinhuaiyao.com/tags/dba/</link>
+  <description>Recent content in DBA on Huaiyao Jin</description>
+  <generator>Hugo -- gohugo.io</generator>
+  
+  <language>en-us</language>
+  
+  
+  
+  <copyright>2017 - {year}</copyright>
+  
+  <lastBuildDate>Sun, 07 Mar 2021 15:25:53 +0800</lastBuildDate>
+  
+      <atom:link href="http://www.jinhuaiyao.com/tags/dba/index.xml" rel="self" type="application/rss+xml" />
+  
+  
+  <item>
+    <title>数据库管理员的快乐</title>
+    <link>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</link>
+    <pubDate>Sun, 07 Mar 2021 15:25:53 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</guid>
+    <description>&lt;p&gt;前几天需要用dbca新建个空数据库，但是报错。&lt;/p&gt;</description>
+  </item>
+  
+</channel>
+</rss>

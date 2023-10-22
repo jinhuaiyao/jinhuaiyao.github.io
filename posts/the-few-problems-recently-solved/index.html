@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最近解决的几个问题</title>
+<meta name="description" content="记录一下最近解决的几个问题。">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+  
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="http://www.jinhuaiyao.com/">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">最近解决的几个问题</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2023-04-09 14:01:33 &#43;0800 CST" title="2023-04-09 14:01:33 &#43;0800 CST">
+    2023/04/09
+</time>
+        
+        
+        </div>
+    </header>
+    <section class="content text-base text-gray-800">
+    <p>记录一下最近解决的几个问题。</p>
+<h3 id="icloud-照片备份问题">iCloud 照片备份问题</h3>
+<p>最近改用了一个新的照片备份方案。</p>
+<p>在原来公司 MacBook 上设置下载保留原片。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png" width="80%"/>
+</figure>
+
+<p>将桌面移动硬盘连接到电脑上，并设置每小时自动开启 TimeMachine 备份。</p>
+<p>除了备份照片外，iCloud Drive 中的某些文件夹也会被顺便备份。</p>
+<p>目前，iCloud 照片仅有 430G，远小于电脑硬盘 1T 的容量，因此这个方案可以使用很长一段时间。</p>
+<p>之前曾将照片备份到 OneDrive 和 NAS 中，现已停用。</p>
+<h3 id="桌面移动硬盘声音响">桌面移动硬盘声音响</h3>
+<p>西部数据的桌面移动硬盘运行时声音太响，忍了很久都没有好的解决办法，直到某天看到快递里的防震气泡袋。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png" width="80%"/>
+</figure>
+
+<h3 id="reeder-5-icloud-rss-不能批量删除问题">Reeder 5 iCloud RSS 不能批量删除问题</h3>
+<p>之前在 Reeder 中添加了 iCloud Feeds，这样 MacOS 和 iOS 设备上的 RSS 订阅可以通过 iCloud 同步。</p>
+<p>某天导入了一个包含中文博客 <a href="https://github.com/timqian/chinese-independent-blogs/blob/master/feed.opml">opml 文件</a> 的文件，一下子增加了很多 RSS 订阅。想删除其中一些时，发现 Reeder 没有提供批量删除的选项。</p>
+<p>一顿研究，决定先清空 iCloud Feeds，并编辑 opml 文件后重新导入。然而在尝试删除账户以清空 iCloud Feeds 时并不起作用；重新添加账户后原来的 Feeds 会再次出现。因此需要找到另外一种方法来彻底清空 iCloud 数据。最后终于找到了可行的方法。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png" width="80%"/>
+</figure>
+
+<h3 id="虚拟机运行导致-mac-发热严重">虚拟机运行导致 Mac 发热严重</h3>
+<p>之前文章 <a href="https://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/">Some Records for RAC Installation on Macbook</a> 里说到在 Intel 芯片的 Macbook Pro 上装 Oracle RAC 测试环境，使用时候发现笔记本经常发热，风扇嗡嗡响，让人不是很自在。而且笔记本经常会休眠，连接 RAC 之前还得登录一下系统，不方便。</p>
+<p>最后决定启用 Dell T7820 工作站。</p>
+<ol>
+<li>
+<p>先给工作站加上内存条，原来只有 32G，加了 4 根 32G 内存条。</p>
+</li>
+<li>
+<p>搜索之后决定给工作站安装 Ubuntu 20.04 LTS，认证过的。</p>
+<p><a href="https://ubuntu.com/certified/201702-25401">https://ubuntu.com/certified/201702-25401</a></p>
+<p>安装过程参考以下链接：</p>
+<p><a href="https://www.dell.com/support/kbdoc/en-us/000131655/how-to-install-ubuntu-linux-on-your-dell-pc">https://www.dell.com/support/kbdoc/en-us/000131655/how-to-install-ubuntu-linux-on-your-dell-pc</a></p>
+<p><a href="https://www.sysgeek.cn/make-ubuntu-usb-flash-drive/">https://www.sysgeek.cn/make-ubuntu-usb-flash-drive/</a></p>
+<p><a href="https://www.sysgeek.cn/install-ubuntu-20-04-lts-desktop/">https://www.sysgeek.cn/install-ubuntu-20-04-lts-desktop/</a></p>
+</li>
+<li>
+<p>在 Ubuntu 上安装 VMWare Workstation</p>
+<p>安装参考 <a href="https://waydo.xyz/soft/linux/ubuntu-vmware-workstation/">https://waydo.xyz/soft/linux/ubuntu-vmware-workstation/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+</span></span><span class="line"><span class="cl">Extracting VMware Installer...done.
+</span></span><span class="line"><span class="cl">root access is required for the operations you have chosen.
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ sudo ./VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+</span></span><span class="line"><span class="cl">Extracting VMware Installer...done.
+</span></span><span class="line"><span class="cl">Installing VMware Workstation 17.0.0
+</span></span><span class="line"><span class="cl">    Configuring...
+</span></span><span class="line"><span class="cl">[######################################################################] 100%
+</span></span><span class="line"><span class="cl">Installation was successful.
+</span></span></code></pre></div><p>运行时遇到报错 &ldquo;GNU C Compiler (gcc) version 9.4.0, was not found.&rdquo;</p>
+<p>参考 <a href="https://codeantenna.com/a/GEL9CxW11A">https://codeantenna.com/a/GEL9CxW11A</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install build-essential
+</span></span></code></pre></div><p>然后重新运行按照提示编译就可以了。</p>
+</li>
+<li>
+<p>把 MacBook 的虚拟机文件 copy 到 Ubuntu 上，重新配置。最重要的是配置 RAC private 网络，需要自定义 192.168.1.0 的 subnet。</p>
+<p>打开 Virtual Network Editor，编辑 vmnet1。</p>
+</li>
+</ol>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-4.png" width="80%"/>
+</figure>
+
+<ol start="5">
+<li>
+<p>配置远程桌面，以后图形界面无需外接显示器。</p>
+<p>参考 <a href="https://juejin.cn/post/6939860863125815303">https://juejin.cn/post/6939860863125815303</a></p>
+</li>
+<li>
+<p>配置 PubkeyAuthentication only。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MaxAuthTries 6
+</span></span><span class="line"><span class="cl">MaxSessions 10
+</span></span><span class="line"><span class="cl">PubkeyAuthentication yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication no
+</span></span><span class="line"><span class="cl">ChallengeResponseAuthentication no
+</span></span><span class="line"><span class="cl">PermitEmptyPasswords no
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ sudo service ssh stop
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyao-t7820:~$ sudo service ssh start
+</span></span></code></pre></div></li>
+<li>
+<p>路由器配置端口转发，可以从外网访问 RAC。</p>
+</li>
+</ol>
+<p>完毕！</p>
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" alt="新事物" >
+                        新事物
+                    </a>
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" alt="解决问题" >
+                        解决问题
+                    </a>
+            
+        </div>
+
+
+    </footer>
+</article>
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2023  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据库管理员的快乐</title>
+<meta name="description" content="前几天需要用dbca新建个空数据库，但是报错。">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/the-joy-of-dbas/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+  
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="http://www.jinhuaiyao.com/">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">数据库管理员的快乐</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2021-03-07 15:25:53 &#43;0800 CST" title="2021-03-07 15:25:53 &#43;0800 CST">
+    2021/03/07
+</time>
+        
+        
+        </div>
+    </header>
+    <section class="content text-base text-gray-800">
+    <p>前几天需要用dbca新建个空数据库，但是报错。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;dbca -silent \
+</span></span><span class="line"><span class="cl">&gt; -createDatabase \
+</span></span><span class="line"><span class="cl">&gt; -templateName General_Purpose.dbc \
+</span></span><span class="line"><span class="cl">&gt; -gdbName ARCHBMS \
+</span></span><span class="line"><span class="cl">&gt; -sid ARCHBMS \
+</span></span><span class="line"><span class="cl">&gt; -SysPassword xxxx \
+</span></span><span class="line"><span class="cl">&gt; -SystemPassword xxxx \
+</span></span><span class="line"><span class="cl">&gt; -emConfiguration NONE \
+</span></span><span class="line"><span class="cl">&gt; -redoLogFileSize 1000 \
+</span></span><span class="line"><span class="cl">&gt; -storageType FS \
+</span></span><span class="line"><span class="cl">&gt; -datafileDestination &#34;/oradata/archdb&#34; \
+</span></span><span class="line"><span class="cl">&gt; -characterSet AL32UTF8 \
+</span></span><span class="line"><span class="cl">&gt; -nationalCharacterSet AL16UTF16 \
+</span></span><span class="line"><span class="cl">&gt; -totalMemory 50000
+</span></span><span class="line"><span class="cl">[WARNING] [DBT-06208] The &#39;SYS&#39; password entered does not conform to the Oracle recommended standards.
+</span></span><span class="line"><span class="cl">   CAUSE:
+</span></span><span class="line"><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+</span></span><span class="line"><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
+</span></span><span class="line"><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+</span></span><span class="line"><span class="cl">[WARNING] [DBT-06208] The &#39;SYSTEM&#39; password entered does not conform to the Oracle recommended standards.
+</span></span><span class="line"><span class="cl">   CAUSE:
+</span></span><span class="line"><span class="cl">a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+</span></span><span class="line"><span class="cl">b.The password entered is a keyword that Oracle does not recommend to be used as password
+</span></span><span class="line"><span class="cl">   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+</span></span><span class="line"><span class="cl">Copying database files
+</span></span><span class="line"><span class="cl">1% complete
+</span></span><span class="line"><span class="cl">2% complete
+</span></span><span class="line"><span class="cl">3% complete
+</span></span><span class="line"><span class="cl">DBCA Operation failed.
+</span></span><span class="line"><span class="cl">Look at the log file &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34; for further details.
+</span></span></code></pre></div><p>看一下 log：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/oradata/archdb&gt;more &#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&#34;
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:57.542 UTC ] Copying database files
+</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 1%
+</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 2%
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &#39;ARCHBMS&#39; on &#39;ARCHBMS&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DBCA_PROGRESS : 3%
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.957 UTC ] ORA-01034: ORACLE not available
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:38:58.958 UTC ] ORA-01034: ORACLE not available
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[ 2021-03-02 02:39:04.262 UTC ] DBCA_PROGRESS : DBCA Operation failed.
+</span></span></code></pre></div><p>从原点出发，报错信息 &ldquo;CRS error performing start on instance&rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？</p>
+<p>接下来就是一顿troubleshooting：</p>
+<ul>
+<li>查看 cfgtoollogs/dbca/ARCHBMS 目录下其他 log，翻看了一堆 log，没有什么发现。</li>
+<li>试试 sqlplus 启动空 instance。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&gt;si
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SQL*Plus: Release 12.2.0.1.0 Production on Tue Mar 2 02:55:43 2021
+</span></span><span class="line"><span class="cl">Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Connected to an idle instance.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SYS@ECOMBMS&gt; startup nomount;
+</span></span><span class="line"><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
+</span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
+</span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
+</span></span><span class="line"><span class="cl">ORA-39510: CRS error performing start on instance &#39;ECOMBMS&#39; on &#39;ECOMBMS&#39;
+</span></span><span class="line"><span class="cl">clsr_start_resource2:500 clscrs_crsentitylist_first error clscrsret:11
+</span></span><span class="line"><span class="cl">clsr_start_resource2:900 exit status:254
+</span></span><span class="line"><span class="cl">clsr_start_resource:260 status:254
+</span></span><span class="line"><span class="cl">clsrapi_start_db:start_asmdbs status:254
+</span></span></code></pre></div><p>同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。</p>
+<ul>
+<li>查看 alert log，没有什么特别的信息。</li>
+<li>确认没有安装 grid。</li>
+<li>Google 一下，google 和 metalink 上有几例类似的报错，跟我们这个报错不完全一致，没什么直接的帮助。不过通过搜索知道了真正的问题和报错信息 crs error 可能并没有什么关系。</li>
+<li>猜想会不会是空间空间导致一些莫名的问题，看一下系统空间 df -h，没问题。</li>
+<li>查看一下系统日志 /var/log/message 和 dmesg，没什么特殊的信息。</li>
+<li>尝试 trace 一下 sqlplus，strace -t sqlplus / as sysdba，没有什么发现。</li>
+<li>重启 server，没用。</li>
+<li>换一个 instance，create initAAA.ora 然后测试 startup nomount，同样报错。</li>
+<li>找了另外一台 server xxxx00dbx050, 创建 initAAA.ora 然后测试 startup nomount, 没有报错。</li>
+<li>怀疑是不是 db server 有什么问题, 尝试联系一下 INFRA team。</li>
+</ul>
+<p>到这里就穷途末路了。研究了一个多小时了，感觉很疲惫，休息一下，和同事聊了一会儿，他随口说了一句，实在不行就重装 rdbms。柳暗花明，换个角度，直接绕开已有报错，不用重装，新装 /opt/oracle/database/12cR201_new，这次 dbca 不再报错，先去完成任务。</p>
+<p>&ndash;</p>
+<p>DBA 工作和其他工作一样也有很多琐事、重复的事，做着做着可能就麻木了，但是偶尔有一次需要绞尽脑汁地寻求解决问题的方法并且最后解决了问题，就会让人感到由衷的快乐，这些断断续续的快乐就能支持我们再前行一会儿、再精进一点。</p>
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/dba/" alt="DBA" >
+                        DBA
+                    </a>
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/oracle/" alt="Oracle" >
+                        Oracle
+                    </a>
+            
+        </div>
+
+
+    </footer>
+</article>
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2023  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>

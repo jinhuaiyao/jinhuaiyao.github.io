@@ -1,0 +1,47 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Oracle on Huaiyao Jin</title>
+  <link>http://www.jinhuaiyao.com/tags/oracle/</link>
+  <description>Recent content in Oracle on Huaiyao Jin</description>
+  <generator>Hugo -- gohugo.io</generator>
+  
+  <language>en-us</language>
+  
+  
+  
+  <copyright>2017 - {year}</copyright>
+  
+  <lastBuildDate>Thu, 02 Feb 2023 16:19:18 +0800</lastBuildDate>
+  
+      <atom:link href="http://www.jinhuaiyao.com/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+  
+  
+  <item>
+    <title>在 Macbook 上安装 RAC 的一些记录</title>
+    <link>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</link>
+    <pubDate>Thu, 02 Feb 2023 16:19:18 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</guid>
+    <description>&lt;p&gt;这阵子比较闲了，想着好好利用一下以前的工作笔记本。&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+    <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</link>
+    <pubDate>Fri, 05 Aug 2022 10:41:01 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</guid>
+    <description>&lt;p&gt;由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。&lt;/p&gt;</description>
+  </item>
+  
+  <item>
+    <title>数据库管理员的快乐</title>
+    <link>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</link>
+    <pubDate>Sun, 07 Mar 2021 15:25:53 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</guid>
+    <description>&lt;p&gt;前几天需要用dbca新建个空数据库，但是报错。&lt;/p&gt;</description>
+  </item>
+  
+</channel>
+</rss>
