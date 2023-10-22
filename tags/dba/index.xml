@@ -14,7 +14,90 @@
       <pubDate>Sun, 07 Mar 2021 15:25:53 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/posts/the-joy-of-dbas/</guid>
-      <description>&lt;p&gt;前几天需要用dbca新建个空数据库，但是报错。&lt;/p&gt;</description>
+      <description>&lt;p&gt;前几天需要用dbca新建个空数据库，但是报错。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xxxx00dbx051@oracle:/oradata/archdb&amp;gt;dbca -silent \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -createDatabase \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -templateName General_Purpose.dbc \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -gdbName ARCHBMS \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -sid ARCHBMS \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -SysPassword xxxx \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -SystemPassword xxxx \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -emConfiguration NONE \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -redoLogFileSize 1000 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -storageType FS \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -datafileDestination &amp;#34;/oradata/archdb&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -characterSet AL32UTF8 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -nationalCharacterSet AL16UTF16 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; -totalMemory 50000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[WARNING] [DBT-06208] The &amp;#39;SYS&amp;#39; password entered does not conform to the Oracle recommended standards.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   CAUSE:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b.The password entered is a keyword that Oracle does not recommend to be used as password
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[WARNING] [DBT-06208] The &amp;#39;SYSTEM&amp;#39; password entered does not conform to the Oracle recommended standards.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   CAUSE:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9].
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b.The password entered is a keyword that Oracle does not recommend to be used as password
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ACTION: Specify a strong password. If required refer Oracle documentation for guidelines.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Copying database files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1% complete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2% complete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3% complete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DBCA Operation failed.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Look at the log file &amp;#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&amp;#34; for further details.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看一下 log：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xxxx00dbx051@oracle:/oradata/archdb&amp;gt;more &amp;#34;/opt/oracle/cfgtoollogs/dbca/ARCHBMS/ARCHBMS.log&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 2021-03-02 02:38:57.542 UTC ] Copying database files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DBCA_PROGRESS : 1%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DBCA_PROGRESS : 2%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &amp;#39;ARCHBMS&amp;#39; on &amp;#39;ARCHBMS&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 2021-03-02 02:38:58.955 UTC ] ORA-39510: CRS error performing start on instance &amp;#39;ARCHBMS&amp;#39; on &amp;#39;ARCHBMS&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DBCA_PROGRESS : 3%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 2021-03-02 02:38:58.957 UTC ] ORA-01034: ORACLE not available
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 2021-03-02 02:38:58.958 UTC ] ORA-01034: ORACLE not available
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[ 2021-03-02 02:39:04.262 UTC ] DBCA_PROGRESS : DBCA Operation failed.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;从原点出发，报错信息 &amp;ldquo;CRS error performing start on instance&amp;rdquo;，这个报错让人很奇怪，印象中这个 db server 并没有装 oracle grid，为什么会报 crs error 呢？&lt;/p&gt;
+&lt;p&gt;接下来就是一顿troubleshooting：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 cfgtoollogs/dbca/ARCHBMS 目录下其他 log，翻看了一堆 log，没有什么发现。&lt;/li&gt;
+&lt;li&gt;试试 sqlplus 启动空 instance。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xxxx00dbx051@oracle:/opt/oracle/database/12cR201/dbs&amp;gt;si
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SQL*Plus: Release 12.2.0.1.0 Production on Tue Mar 2 02:55:43 2021
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Copyright (c) 1982, 2016, Oracle.  All rights reserved.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connected to an idle instance.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SYS@ECOMBMS&amp;gt; startup nomount;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ORA-39510: CRS error performing start on instance &amp;#39;ECOMBMS&amp;#39; on &amp;#39;ECOMBMS&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clsr_start_resource:260 status:254
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clsrapi_start_db:start_asmdbs status:254
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ORA-39510: CRS error performing start on instance &amp;#39;ECOMBMS&amp;#39; on &amp;#39;ECOMBMS&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clsr_start_resource2:500 clscrs_crsentitylist_first error clscrsret:11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clsr_start_resource2:900 exit status:254
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clsr_start_resource:260 status:254
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clsrapi_start_db:start_asmdbs status:254
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;同样报错，看来不是 dbca 的问题。回忆一下上礼拜还是可以用 sqlplus 的，唯一的变化似乎就是上周 server 响应很慢，有一堆 grep 进程占用大量 cpu，因为是测试环境，直接重启 server了。另外，sqlplus 比 dbca 多一些的 clsr_start_resource 相关的报错也让人摸不着头脑。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 alert log，没有什么特别的信息。&lt;/li&gt;
+&lt;li&gt;确认没有安装 grid。&lt;/li&gt;
+&lt;li&gt;Google 一下，google 和 metalink 上有几例类似的报错，跟我们这个报错不完全一致，没什么直接的帮助。不过通过搜索知道了真正的问题和报错信息 crs error 可能并没有什么关系。&lt;/li&gt;
+&lt;li&gt;猜想会不会是空间空间导致一些莫名的问题，看一下系统空间 df -h，没问题。&lt;/li&gt;
+&lt;li&gt;查看一下系统日志 /var/log/message 和 dmesg，没什么特殊的信息。&lt;/li&gt;
+&lt;li&gt;尝试 trace 一下 sqlplus，strace -t sqlplus / as sysdba，没有什么发现。&lt;/li&gt;
+&lt;li&gt;重启 server，没用。&lt;/li&gt;
+&lt;li&gt;换一个 instance，create initAAA.ora 然后测试 startup nomount，同样报错。&lt;/li&gt;
+&lt;li&gt;找了另外一台 server xxxx00dbx050, 创建 initAAA.ora 然后测试 startup nomount, 没有报错。&lt;/li&gt;
+&lt;li&gt;怀疑是不是 db server 有什么问题, 尝试联系一下 INFRA team。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;到这里就穷途末路了。研究了一个多小时了，感觉很疲惫，休息一下，和同事聊了一会儿，他随口说了一句，实在不行就重装 rdbms。柳暗花明，换个角度，直接绕开已有报错，不用重装，新装 /opt/oracle/database/12cR201_new，这次 dbca 不再报错，先去完成任务。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;DBA 工作和其他工作一样也有很多琐事、重复的事，做着做着可能就麻木了，但是偶尔有一次需要绞尽脑汁地寻求解决问题的方法并且最后解决了问题，就会让人感到由衷的快乐，这些断断续续的快乐就能支持我们再前行一会儿、再精进一点。&lt;/p&gt;</description>
     </item>
     
   </channel>
