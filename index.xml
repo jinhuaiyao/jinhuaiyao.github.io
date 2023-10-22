@@ -31,7 +31,7 @@
     <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
     
     <guid>http://www.jinhuaiyao.com/links/</guid>
-    <description>文章 中文独立博客列表 阮一峰的网络日志 写出更好的文章 人在绝境怎么办？ A Note on Practice and Persistence 对话远川杨天楠：我真希望！我在买房前知道这些房地产常识 - 2023.02 免费的 Prompt Engineering 教程 - 2023.</description>
+    <description>文章 中文独立博客列表 阮一峰的网络日志 写出更好的文章 人在绝境怎么办？ A Note on Practice and Persistence 对话远川杨天楠：我真希望！我在买房前知道这些房地产常识 - 02/25/2023 免费的 Prompt Engineering 教程 - 04/01/2023 从失眠到高效早晨：我的 5AM Club 计划分享 - 04/10/2023 我的风险防范模型 - 04/15/2023 CS 自学指南 - 04/18/2023 科学上网 - 04/25/2023 My productivity app is a never-ending .</description>
   </item>
   
   <item>
@@ -40,11 +40,12 @@
     <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
     
     <guid>http://www.jinhuaiyao.com/tools/</guid>
-    <description>软件推荐 Logseq ★★★★★
+    <description>软件推荐 Logseq
 &amp;ndash; &amp;ldquo;A privacy-first, open-source knowledge base.&amp;rdquo;
 &amp;ndash; 关于 Logseq
 Cubox
-&amp;ndash; &amp;ldquo;一站式信息收集、阅读、管理和回顾，善用网络碎片构建个人知识库。&amp;rdquo;</description>
+&amp;ndash; &amp;ldquo;一站式信息收集、阅读、管理和回顾，善用网络碎片构建个人知识库。&amp;rdquo;
+&amp;ndash; 解决了我的两个“痛点”，看不完的微信文章，知乎文章，网页，不方便处理；DEVONthink里标注和批注不方便。</description>
   </item>
   
   <item>
@@ -53,22 +54,15 @@ Cubox
     <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
     
     <guid>http://www.jinhuaiyao.com/words/</guid>
-<<<<<<< HEAD
-    <description>2023.10.22 13:12:06
-开车的时候听《赖世雄中级英语》。
-2023.10.21 19:39:00
+    <description>&amp;ndash;
+2023/10/21 19:39:00
 Tailwind CSS 用起来很方便。
-2023.10.15 09:18:26
-上周真得太忙了。 2023.04.25 16:11:25
-利用 http://composingprograms.</description>
-=======
-    <description>2023/10/21 19:39:00
-Tailwind CSS 用起来很方便。
+&amp;ndash;
 2023/10/15 09:18:26
 上周真得太忙了。
+&amp;ndash;
 2023/04/25 16:11:25
 利用 http://composingprograms.com 和 OpenAI Translator，学习计算机科学的同时也在提升英语水平。</description>
->>>>>>> parent of 1ee33aa (new)
   </item>
   
 </channel>

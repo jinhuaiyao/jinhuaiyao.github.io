@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Jinhuaiyao&#39;s Records</title>
+    <link>http://www.jinhuaiyao.com/tools/</link>
+    <description>Recent content in Tools on Jinhuaiyao&#39;s Records</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>jinhuaiyao@gmail.com (Huaiyao Jin)</managingEditor>
+    <webMaster>jinhuaiyao@gmail.com (Huaiyao Jin)</webMaster><atom:link href="http://www.jinhuaiyao.com/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://www.jinhuaiyao.com/tools/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>jinhuaiyao@gmail.com (Huaiyao Jin)</author>
+      <guid>http://www.jinhuaiyao.com/tools/python/</guid>
+      <description>Python 小抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 - doctest def divide_exact(n, d): &amp;#34;&amp;#34;&amp;#34; &amp;gt;&amp;gt;&amp;gt; q, r = divide_exact(2013, 10) &amp;gt;&amp;gt;&amp;gt; q 201 &amp;gt;&amp;gt;&amp;gt; r 3 &amp;#34;&amp;#34;&amp;#34; return n // d, n % d jinhuaiyao@JinHuaiyaos-MacBook-Pro hw01 % python3 -m doctest</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.jinhuaiyao.com/tools/toolbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>jinhuaiyao@gmail.com (Huaiyao Jin)</author>
+      <guid>http://www.jinhuaiyao.com/tools/toolbox/</guid>
+      <description>软件 Logseq - 06/19/2022 &amp;ldquo;A privacy-first, open-source knowledge base.&amp;rdquo; 关于 Logseq Cubox - 01/04/2023 &amp;ldquo;一站式信息收集、阅读、管理和回顾，善用网络碎片构建个人知识库。&amp;quot; 解决了我的两个“痛点</description>
+    </item>
+    
+  </channel>
+</rss>
