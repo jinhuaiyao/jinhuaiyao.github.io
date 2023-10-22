@@ -11,10 +11,20 @@
   
   <copyright>2017 - {year}</copyright>
   
-  <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 22 Oct 2023 15:17:30 +0800</lastBuildDate>
   
       <atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
   
+  
+  <item>
+    <title>UPDATE - M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+    <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</link>
+    <pubDate>Sun, 22 Oct 2023 15:17:30 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
+    <description>距离 M1 芯片 MacBook Pro 上搭建 Oracle 实验环境已经过去了一年。
+今年 6 月底 Oracle 宣布支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。</description>
+  </item>
   
   <item>
     <title>Nginx 反向代理 OpenAI API</title>
@@ -96,15 +106,6 @@
     
     <guid>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</guid>
     <description>&lt;p&gt;这阵子比较闲了，想着好好利用一下以前的工作笔记本。&lt;/p&gt;</description>
-  </item>
-  
-  <item>
-    <title>2022 回顾 &#43; 2023 期待</title>
-    <link>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</link>
-    <pubDate>Sat, 31 Dec 2022 08:50:15 +0800</pubDate>
-    
-    <guid>http://www.jinhuaiyao.com/posts/2022-review-2023-plan/</guid>
-    <description>&lt;p&gt;转眼又一年。&lt;/p&gt;</description>
   </item>
   
 </channel>

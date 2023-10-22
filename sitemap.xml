@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://www.jinhuaiyao.com/tags/oracle/</loc>
+    <lastmod>2023-10-22T15:17:30+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/posts/</loc>
+    <lastmod>2023-10-22T15:17:30+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/tags/</loc>
+    <lastmod>2023-10-22T15:17:30+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</loc>
+    <lastmod>2023-10-22T15:17:30+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2023-10-22T15:17:30+08:00</lastmod>
+  </url><url>
     <loc>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</loc>
     <lastmod>2023-10-16T22:13:21+08:00</lastmod>
   </url><url>
-    <loc>http://www.jinhuaiyao.com/posts/</loc>
-    <lastmod>2023-10-16T22:13:21+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/</loc>
-    <lastmod>2023-10-16T22:13:21+08:00</lastmod>
-  </url><url>
     <loc>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</loc>
-    <lastmod>2023-10-16T22:13:21+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2023-10-16T22:13:21+08:00</lastmod>
   </url><url>
     <loc>http://www.jinhuaiyao.com/tags/shell/</loc>
@@ -43,9 +49,6 @@
   </url><url>
     <loc>http://www.jinhuaiyao.com/posts/rewrite-on-this-day-script-with-python/</loc>
     <lastmod>2023-02-16T21:41:23+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/oracle/</loc>
-    <lastmod>2023-02-02T16:19:18+08:00</lastmod>
   </url><url>
     <loc>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</loc>
     <lastmod>2023-02-02T16:19:18+08:00</lastmod>

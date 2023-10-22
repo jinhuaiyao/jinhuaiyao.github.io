@@ -11,10 +11,20 @@
   
   <copyright>2017 - {year}</copyright>
   
-  <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 22 Oct 2023 15:17:30 +0800</lastBuildDate>
   
       <atom:link href="http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
   
+  
+  <item>
+    <title>UPDATE - M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+    <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</link>
+    <pubDate>Sun, 22 Oct 2023 15:17:30 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
+    <description>距离 M1 芯片 MacBook Pro 上搭建 Oracle 实验环境已经过去了一年。
+今年 6 月底 Oracle 宣布支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。</description>
+  </item>
   
   <item>
     <title>Nginx 反向代理 OpenAI API</title>

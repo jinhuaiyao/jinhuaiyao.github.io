@@ -11,10 +11,28 @@
   
   <copyright>2017 - {year}</copyright>
   
-  <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 22 Oct 2023 15:17:30 +0800</lastBuildDate>
   
       <atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
   
+  
+  <item>
+    <title>Oracle</title>
+    <link>http://www.jinhuaiyao.com/tags/oracle/</link>
+    <pubDate>Sun, 22 Oct 2023 15:17:30 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/tags/oracle/</guid>
+    <description></description>
+  </item>
+  
+  <item>
+    <title>解决问题</title>
+    <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Sun, 22 Oct 2023 15:17:30 +0800</pubDate>
+    
+    <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
+    <description></description>
+  </item>
   
   <item>
     <title>新事物</title>
@@ -22,15 +40,6 @@
     <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
     
     <guid>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</guid>
-    <description></description>
-  </item>
-  
-  <item>
-    <title>解决问题</title>
-    <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
-    <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
-    
-    <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
     <description></description>
   </item>
   
@@ -49,15 +58,6 @@
     <pubDate>Thu, 20 Apr 2023 08:26:39 +0800</pubDate>
     
     <guid>http://www.jinhuaiyao.com/tags/python/</guid>
-    <description></description>
-  </item>
-  
-  <item>
-    <title>Oracle</title>
-    <link>http://www.jinhuaiyao.com/tags/oracle/</link>
-    <pubDate>Thu, 02 Feb 2023 16:19:18 +0800</pubDate>
-    
-    <guid>http://www.jinhuaiyao.com/tags/oracle/</guid>
     <description></description>
   </item>
   
