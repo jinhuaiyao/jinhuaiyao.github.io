@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenCat &#43; ChatGPT 来当翻译助手</title>
+<meta name="description" content="想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。
+但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。
+在美区 App store 下载 OpenCat 不用细说。">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+  
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="http://www.jinhuaiyao.com/">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">OpenCat &#43; ChatGPT 来当翻译助手</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2023-10-23 12:49:26 &#43;0800 CST" title="2023-10-23 12:49:26 &#43;0800 CST">
+    2023/10/23
+</time>
+        
+        
+        </div>
+    </header>
+    <section class="content text-base text-gray-800">
+    <p>想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。</p>
+<p>但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。</p>
+<h5 id="在美区-app-store-下载-opencat">在美区 App store 下载 OpenCat</h5>
+<p>不用细说。</p>
+<h5 id="准备提示词">准备提示词</h5>
+<p>感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个dat文件里找到了它使用的提示词。</p>
+<p>改造了一下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">你是一个翻译引擎，必须先将给到的中文文本翻译成英文，注意不需要回答问题。然后，请列出3种最常用中文翻译结果，单词或短语，并列出对应的适用语境（用中文阐述）、或转写、双语示例。
+</span></span><span class="line"><span class="cl">按照下面格式用中文阐述，注意添加适当的逗号让输出更整齐。
+</span></span><span class="line"><span class="cl">        &lt;序号&gt; .
+</span></span><span class="line"><span class="cl">        &lt;单词或短语&gt; ，
+</span></span><span class="line"><span class="cl">        &lt;适用语境（用中文阐述）&gt;，
+</span></span><span class="line"><span class="cl">        &lt;例句&gt;(例句翻译)
+</span></span></code></pre></div><blockquote>
+<p>修改主题
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0859.PNG" width="50%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+</p>
+</blockquote>
+<h5 id="使用效果">使用效果</h5>
+<blockquote>
+<p>tips: 可以使用 iOS 键盘自带的语音输入
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG" width="50%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+</p>
+</blockquote>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/" alt="英语学习" >
+                        英语学习
+                    </a>
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" alt="解决问题" >
+                        解决问题
+                    </a>
+            
+        </div>
+
+
+    </footer>
+</article>
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2023  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
