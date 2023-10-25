@@ -1500,7 +1500,7 @@
     </item>
     
     <item>
-      <title>LINKS</title>
+      <title>链接</title>
       <link>http://www.jinhuaiyao.com/links/</link>
       <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
       
@@ -1639,7 +1639,81 @@
     </item>
     
     <item>
-      <title>TOOLS</title>
+      <title>只言片语</title>
+      <link>http://www.jinhuaiyao.com/words/</link>
+      <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/words/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.10.24 21:28:53&lt;/em&gt;&lt;br&gt;
+等等洗好澡以后我又陪他在被窝里玩闹了好一会儿。“大脏熊”，“大灰狼”，“不要漏光”，好几个自创的游戏，还有背古诗、关于颜色混合的问答。太温馨啦，享受这些快乐的时光。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.10.23 12:27:07&lt;/em&gt;&lt;br&gt;
+天气很舒服，早上继续跑步。
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0856.jpeg&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.10.22 16:44:28&lt;/em&gt;&lt;br&gt;
+上周五 Wellness day，从那天早上开始就一直忙着给博客换个更简约的主题，历经各种问题，研究了一点 Tailwind CSS，琢磨了 Lowkey Hugo theme 的结构，借助谷歌 + ChatGPT，结合自己的不断试验，终于把博客弄成现在还算满意的样子。
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2023-10-22_18-59-55.png&#34; width=&#34;90%&#34;/&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.10.22 13:12:06&lt;/em&gt;&lt;br&gt;
+开车的时候听《赖世雄中级英语》。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.10.21 19:39:00&lt;/em&gt;&lt;br&gt;
+Tailwind CSS 用起来很方便。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.10.15 09:18:26&lt;/em&gt;&lt;br&gt;
+上周真得太忙了。
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-10-15_09-21-41.png&#34; width=&#34;60%&#34;/&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.04.25 16:11:25&lt;/em&gt;&lt;br&gt;
+利用 &lt;a href=&#34;http://composingprograms.com&#34;&gt;http://composingprograms.com&lt;/a&gt; 和 OpenAI Translator，学习计算机科学的同时也在提升英语水平。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.04.15 16:41:50&lt;/em&gt;&lt;br&gt;
+中午出太阳了，和老妈、等等一起到楼顶晒被子和衣服。刚刚又上楼去，在夕阳照映下和暖风包围中把被子衣服收下来。突然感觉这很生活。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.04.13 15:21:55&lt;/em&gt;&lt;br&gt;
+用 OpenAI Translator 看英文文档实在太便利了。以前遇到反复难以理解的段落就会心生畏惧，看不下去，现在完全不一样了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.04.09 20:00:00&lt;/em&gt;&lt;br&gt;
+有了这个利器，我决定从头再看《Designing Data-Intensive Applications》。&lt;br&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/essential_tools.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.03.01 21:35:21&lt;/em&gt;&lt;br&gt;
+听说今天A股涨了不少，看一下基金收益的时候突然想到中行里面还有 2015 年没卖的基金，时光荏苒。打开易方达基金 app 看了下，第一笔定投是在2010年底，有些遥远了。已经定投了这么多年了，感慨一下。
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-03-01-1.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.02.25 15:10:43&lt;/em&gt;&lt;br&gt;
+这几天开车的时候用微信听书听《好妈妈胜过好老师》，又听到关于阅读这一部分，再次提醒自己，要坚定不移地多陪等等读书。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.02.24 11:40:14&lt;/em&gt;&lt;br&gt;
+跳绳太容易进步了，只要每天都跳。前两天跳200个就气喘吁吁，还中断了好几次，今天就能连续跳600个了，一次没败。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>工具和服务</title>
       <link>http://www.jinhuaiyao.com/tools/</link>
       <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
       
@@ -1793,80 +1867,6 @@
 &lt;li&gt;心光&lt;/li&gt;
 &lt;li&gt;ffmpeng (MacOS)&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>WORDS</title>
-      <link>http://www.jinhuaiyao.com/words/</link>
-      <pubDate>Wed, 23 Feb 2022 11:04:49 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/words/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.10.24 21:28:53&lt;/em&gt;&lt;br&gt;
-等等洗好澡以后我又陪他在被窝里玩闹了好一会儿。“大脏熊”，“大灰狼”，“不要漏光”，好几个自创的游戏，还有背古诗、关于颜色混合的问答。太温馨啦，享受这些快乐的时光。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.10.23 12:27:07&lt;/em&gt;&lt;br&gt;
-天气很舒服，早上继续跑步。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0856.jpeg&#34; width=&#34;50%&#34;/&gt;
-&lt;/figure&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.10.22 16:44:28&lt;/em&gt;&lt;br&gt;
-上周五 Wellness day，从那天早上开始就一直忙着给博客换个更简约的主题，历经各种问题，研究了一点 Tailwind CSS，琢磨了 Lowkey Hugo theme 的结构，借助谷歌 + ChatGPT，结合自己的不断试验，终于把博客弄成现在还算满意的样子。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2023-10-22_18-59-55.png&#34; width=&#34;90%&#34;/&gt;
-&lt;/figure&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.10.22 13:12:06&lt;/em&gt;&lt;br&gt;
-开车的时候听《赖世雄中级英语》。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.10.21 19:39:00&lt;/em&gt;&lt;br&gt;
-Tailwind CSS 用起来很方便。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.10.15 09:18:26&lt;/em&gt;&lt;br&gt;
-上周真得太忙了。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-10-15_09-21-41.png&#34; width=&#34;60%&#34;/&gt;
-&lt;/figure&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.04.25 16:11:25&lt;/em&gt;&lt;br&gt;
-利用 &lt;a href=&#34;http://composingprograms.com&#34;&gt;http://composingprograms.com&lt;/a&gt; 和 OpenAI Translator，学习计算机科学的同时也在提升英语水平。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.04.15 16:41:50&lt;/em&gt;&lt;br&gt;
-中午出太阳了，和老妈、等等一起到楼顶晒被子和衣服。刚刚又上楼去，在夕阳照映下和暖风包围中把被子衣服收下来。突然感觉这很生活。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.04.13 15:21:55&lt;/em&gt;&lt;br&gt;
-用 OpenAI Translator 看英文文档实在太便利了。以前遇到反复难以理解的段落就会心生畏惧，看不下去，现在完全不一样了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.04.09 20:00:00&lt;/em&gt;&lt;br&gt;
-有了这个利器，我决定从头再看《Designing Data-Intensive Applications》。&lt;br&gt;
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/essential_tools.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.03.01 21:35:21&lt;/em&gt;&lt;br&gt;
-听说今天A股涨了不少，看一下基金收益的时候突然想到中行里面还有 2015 年没卖的基金，时光荏苒。打开易方达基金 app 看了下，第一笔定投是在2010年底，有些遥远了。已经定投了这么多年了，感慨一下。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-03-01-1.png&#34; width=&#34;50%&#34;/&gt;
-&lt;/figure&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.02.25 15:10:43&lt;/em&gt;&lt;br&gt;
-这几天开车的时候用微信听书听《好妈妈胜过好老师》，又听到关于阅读这一部分，再次提醒自己，要坚定不移地多陪等等读书。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;2023.02.24 11:40:14&lt;/em&gt;&lt;br&gt;
-跳绳太容易进步了，只要每天都跳。前两天跳200个就气喘吁吁，还中断了好几次，今天就能连续跳600个了，一次没败。&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
     </item>
     
