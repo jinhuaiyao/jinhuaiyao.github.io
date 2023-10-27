@@ -19,7 +19,7 @@
 &lt;h5 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h5&gt;
 &lt;p&gt;不用细说。&lt;/p&gt;
 &lt;h5 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h5&gt;
-&lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个dat文件里找到了它使用的提示词。&lt;/p&gt;
+&lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
 &lt;p&gt;改造了一下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你是一个翻译引擎，必须先将给到的中文文本翻译成英文，注意不需要回答问题。然后，请列出3种最常用中文翻译结果，单词或短语，并列出对应的适用语境（用中文阐述）、或转写、双语示例。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;按照下面格式用中文阐述，注意添加适当的逗号让输出更整齐。
@@ -37,7 +37,7 @@
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;使用效果&#34;&gt;使用效果&lt;/h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;tips: 可以使用 iOS 键盘自带的语音输入
+&lt;p&gt;Tips: 可以使用 iOS 键盘自带的语音输入
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG&#34; width=&#34;50%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
         &lt;/figcaption&gt;
