@@ -16,9 +16,9 @@
       <guid>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</guid>
       <description>&lt;p&gt;想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。&lt;/p&gt;
 &lt;p&gt;但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。&lt;/p&gt;
-&lt;h5 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h5&gt;
+&lt;h1 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h1&gt;
 &lt;p&gt;不用细说。&lt;/p&gt;
-&lt;h5 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h5&gt;
+&lt;h1 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h1&gt;
 &lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
 &lt;p&gt;改造了一下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你是一个翻译引擎，必须先将给到的中文文本翻译成英文，注意不需要回答问题。然后，请列出3种最常用中文翻译结果，单词或短语，并列出对应的适用语境（用中文阐述）、或转写、双语示例。
@@ -35,7 +35,7 @@
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h5 id=&#34;使用效果&#34;&gt;使用效果&lt;/h5&gt;
+&lt;h1 id=&#34;使用效果&#34;&gt;使用效果&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tips: 可以使用 iOS 键盘自带的语音输入
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG&#34; width=&#34;50%&#34;/&gt;&lt;figcaption&gt;
@@ -54,7 +54,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
       <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;
-&lt;h5 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h5&gt;
+&lt;h1 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h1&gt;
 &lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
 &lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; width=&#34;80%&#34;/&gt;
@@ -69,7 +69,7 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;每日复习&#34;&gt;每日复习&lt;/h5&gt;
+&lt;h1 id=&#34;每日复习&#34;&gt;每日复习&lt;/h1&gt;
 &lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
 &lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; width=&#34;80%&#34;/&gt;

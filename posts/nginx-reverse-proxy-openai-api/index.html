@@ -8,7 +8,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.a4d650f09f679f1be4b02d0e926eca802fbba2f8e7ca3815568d459f68dee179.css" integrity="sha256-pNZQ8J9nnxvksC0Okm7KgC+7ovjnyjgVVo1Fn2je4Xk=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -39,6 +39,25 @@
 </header>
         <main id="content">
 <article class="flex flex-col gap-5">
+
+    <div class="w-64 fixed top-24 left-8 hidden lg:inline-block text-xs " >
+        <div class="toc pl-0 list-none">
+    <header>
+        <h1>Nginx 反向代理 OpenAI API</h1>
+        </header>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#config-server">Config server</a></li>
+    <li><a href="#nginx-setup-and-config">Nginx setup and config</a></li>
+    <li><a href="#test-in-local">Test in local</a></li>
+    <li><a href="#usecase">Usecase</a></li>
+  </ul>
+</nav>
+</div>
+
+    </div>
+
+
     <header class="flex flex-col gap-2">
         <h2 class="text-xl leading-snug font-bold text-gray-900">Nginx 反向代理 OpenAI API</h2>
 
@@ -52,10 +71,14 @@
         
         </div>
     </header>
+    </article>
+
+
+
     <section class="content text-base text-gray-800">
     <p>同事问到这个，记录在这里吧。</p>
 <p>国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。</p>
-<h5 id="config-server">Config server</h5>
+<h1 id="config-server">Config server</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@vultr-3:~# lsb_release -a
 </span></span><span class="line"><span class="cl">No LSB modules are available.
 </span></span><span class="line"><span class="cl">Distributor ID:	Ubuntu
@@ -91,7 +114,7 @@
 </span></span><span class="line"><span class="cl">systemctl restart ssh.service
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">ufw allow 10086
-</span></span></code></pre></div><h5 id="nginx-setup-and-config">Nginx setup and config</h5>
+</span></span></code></pre></div><h1 id="nginx-setup-and-config">Nginx setup and config</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh root@xx.xx.xx.xx -p 10086
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">ufw allow 80
@@ -126,7 +149,7 @@
 </span></span><span class="line"><span class="cl">systemctl reload nginx
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">systemctl status nginx
-</span></span></code></pre></div><h5 id="test-in-local">Test in local</h5>
+</span></span></code></pre></div><h1 id="test-in-local">Test in local</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">PROXY_URL=&#34;http://xx.xx.xx.xx/v1/chat/completions&#34;
 </span></span><span class="line"><span class="cl">OPENAI_API_KEY=&#34;xxxx&#34;
 </span></span><span class="line"><span class="cl">
@@ -138,7 +161,7 @@
 </span></span><span class="line"><span class="cl">     &#34;messages&#34;: [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;你好&#34;}],
 </span></span><span class="line"><span class="cl">     &#34;temperature&#34;: 0.7
 </span></span><span class="line"><span class="cl">     }&#39;
-</span></span></code></pre></div><h5 id="usecase">Usecase</h5>
+</span></span></code></pre></div><h1 id="usecase">Usecase</h1>
 <ol>
 <li>OpenAI Translator</li>
 <li>OpenCat</li>
@@ -167,7 +190,10 @@
 
 
     </footer>
-</article>
+
+
+
+
 
         </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
     <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">

@@ -8,7 +8,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/about-logseq/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.a4d650f09f679f1be4b02d0e926eca802fbba2f8e7ca3815568d459f68dee179.css" integrity="sha256-pNZQ8J9nnxvksC0Okm7KgC+7ovjnyjgVVo1Fn2je4Xk=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -39,6 +39,28 @@
 </header>
         <main id="content">
 <article class="flex flex-col gap-5">
+
+    <div class="w-64 fixed top-24 left-8 hidden lg:inline-block text-xs " >
+        <div class="toc pl-0 list-none">
+    <header>
+        <h1>关于 Logseq</h1>
+        </header>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#对我启发最大的两个资源">对我启发最大的两个资源</a></li>
+    <li><a href="#macos-上的快速输入">macOS 上的快速输入</a></li>
+    <li><a href="#ios-上的快速输入">iOS 上的快速输入</a></li>
+    <li><a href="#dayone-迁移到-logseq">Dayone 迁移到 Logseq</a></li>
+    <li><a href="#daily-template">Daily template</a></li>
+    <li><a href="#备份">备份</a></li>
+    <li><a href="#那年今日">那年今日</a></li>
+  </ul>
+</nav>
+</div>
+
+    </div>
+
+
     <header class="flex flex-col gap-2">
         <h2 class="text-xl leading-snug font-bold text-gray-900">关于 Logseq</h2>
 
@@ -52,23 +74,27 @@
         
         </div>
     </header>
+    </article>
+
+
+
     <section class="content text-base text-gray-800">
     <p>这两礼拜每天都在用 Logseq，真是太喜欢了。</p>
 <p>这篇文章的形成也来自于 Logseq。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-sample_1.png" alt="Logseq"></p>
-<h5 id="对我启发最大的两个资源">对我启发最大的两个资源</h5>
+<h1 id="对我启发最大的两个资源">对我启发最大的两个资源</h1>
 <ul>
 <li><a href="https://www.bilibili.com/video/BV1X44y1K7X1?vd_source=326dc31e3febf5f2fd25078a753ea3d0">我如何使用 Logseq 管理我的生活和笔记</a></li>
 <li><a href="https://limboy.me/posts/logseq/">我的 Logseq 使用习惯</a></li>
 </ul>
-<h5 id="macos-上的快速输入">macOS 上的快速输入</h5>
+<h1 id="macos-上的快速输入">macOS 上的快速输入</h1>
 <p>自己做了一个非常简单的 Alfred workflow，把输入的内容附加在当天的 journal md 文件末尾。希望以后官方 app 能够发布更强大更高效的快速输入方式。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">query</span><span class="o">=</span><span class="nv">$1</span>
 </span></span><span class="line"><span class="cl"><span class="nv">D1</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">&#39;+%Y_%m_%d&#39;</span><span class="sb">`</span>
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\n- </span><span class="nv">$query</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals/</span><span class="si">${</span><span class="nv">D1</span><span class="si">}</span><span class="s2">.md&#34;</span>
-</span></span></code></pre></div><h5 id="ios-上的快速输入">iOS 上的快速输入</h5>
+</span></span></code></pre></div><h1 id="ios-上的快速输入">iOS 上的快速输入</h1>
 <p>目前搞不定，等官方吧。</p>
-<h5 id="dayone-迁移到-logseq">Dayone 迁移到 Logseq</h5>
+<h1 id="dayone-迁移到-logseq">Dayone 迁移到 Logseq</h1>
 <p>又花了一点时间把 Dayone 里的几千个记录迁移到 Logseq，慢慢带着加以整理、回顾、形成一些联系。
 使用的是这个脚本， <a href="https://github.com/mhejda/dayone2logseq-md">dayone2markdown</a> 。</p>
 <p>为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。
@@ -76,11 +102,11 @@
 <p><code>/usr/local/opt/gnu-sed/libexec/gnubin/sed -i '1{/^$/d;}' *.md</code></p>
 <p>也用到了 perl 的一个替换命令。</p>
 <p><code>perl -pi -e &quot;s/\t- ####/- ####/g&quot; *.md</code></p>
-<h5 id="daily-template">Daily template</h5>
+<h1 id="daily-template">Daily template</h1>
 <p>自定义好 daily_template_journals:</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-daily-template_1.png" alt="daily-template"></p>
 <p>每天早上打开 Journals，输入 /template 回车，然后选中 daily_template_journals 回车，就可以了。</p>
-<h5 id="备份">备份</h5>
+<h1 id="备份">备份</h1>
 <p>Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。</p>
 <p>一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录。不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次。最后改用了 rsync，只会拷备有变化的。</p>
 <p><code>*/5 * * * * rsync -a &quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&quot; &quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&quot;</code></p>
@@ -98,7 +124,7 @@
 <p><em>-- update on 2022-08-06</em></p>
 <p>今天在 QNAP NAS 里开启了 Time Machine 服务，配置新 MacBook 上的 Time Machine 备份到 NAS 里，这样每个小时都会自动备份，又多了一重保障。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/logseq_backup_to_timemachine_2.png" alt=""></p>
-<h5 id="那年今日">那年今日</h5>
+<h1 id="那年今日">那年今日</h1>
 <p><em>-- added on 2022-07-22</em></p>
 <p>从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。</p>
 <p>本来想用 advanced query，可惜搞不定。只好用一些比较“笨拙”的方法。</p>
@@ -145,7 +171,10 @@
 
 
     </footer>
-</article>
+
+
+
+
 
         </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
     <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">

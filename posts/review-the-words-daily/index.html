@@ -8,7 +8,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/review-the-words-daily/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.a4d650f09f679f1be4b02d0e926eca802fbba2f8e7ca3815568d459f68dee179.css" integrity="sha256-pNZQ8J9nnxvksC0Okm7KgC+7ovjnyjgVVo1Fn2je4Xk=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -39,6 +39,23 @@
 </header>
         <main id="content">
 <article class="flex flex-col gap-5">
+
+    <div class="w-64 fixed top-24 left-8 hidden lg:inline-block text-xs " >
+        <div class="toc pl-0 list-none">
+    <header>
+        <h1>每日复习单词</h1>
+        </header>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#记录单词到文件">记录单词到文件</a></li>
+    <li><a href="#每日复习">每日复习</a></li>
+  </ul>
+</nav>
+</div>
+
+    </div>
+
+
     <header class="flex flex-col gap-2">
         <h2 class="text-xl leading-snug font-bold text-gray-900">每日复习单词</h2>
 
@@ -52,9 +69,13 @@
         
         </div>
     </header>
+    </article>
+
+
+
     <section class="content text-base text-gray-800">
     <p>最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。</p>
-<h5 id="记录单词到文件">记录单词到文件</h5>
+<h1 id="记录单词到文件">记录单词到文件</h1>
 <p>用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。</p>
 <p>设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。</p>
 <figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png" width="80%"/>
@@ -69,7 +90,7 @@
 <figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png" width="80%"/>
 </figure>
 
-<h5 id="每日复习">每日复习</h5>
+<h1 id="每日复习">每日复习</h1>
 <p>思路是将 English.md 文件里以 &lsquo;---&rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。</p>
 <p>利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。</p>
 <figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png" width="80%"/>
@@ -160,7 +181,10 @@
 
 
     </footer>
-</article>
+
+
+
+
 
         </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
     <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">

@@ -15,7 +15,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
       <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;
-&lt;h5 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h5&gt;
+&lt;h1 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h1&gt;
 &lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
 &lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; width=&#34;80%&#34;/&gt;
@@ -30,7 +30,7 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;每日复习&#34;&gt;每日复习&lt;/h5&gt;
+&lt;h1 id=&#34;每日复习&#34;&gt;每日复习&lt;/h1&gt;
 &lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
 &lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; width=&#34;80%&#34;/&gt;
@@ -100,19 +100,19 @@
       <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;
 &lt;p&gt;这篇文章的形成也来自于 Logseq。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-sample_1.png&#34; alt=&#34;Logseq&#34;&gt;&lt;/p&gt;
-&lt;h5 id=&#34;对我启发最大的两个资源&#34;&gt;对我启发最大的两个资源&lt;/h5&gt;
+&lt;h1 id=&#34;对我启发最大的两个资源&#34;&gt;对我启发最大的两个资源&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1X44y1K7X1?vd_source=326dc31e3febf5f2fd25078a753ea3d0&#34;&gt;我如何使用 Logseq 管理我的生活和笔记&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://limboy.me/posts/logseq/&#34;&gt;我的 Logseq 使用习惯&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;macos-上的快速输入&#34;&gt;macOS 上的快速输入&lt;/h5&gt;
+&lt;h1 id=&#34;macos-上的快速输入&#34;&gt;macOS 上的快速输入&lt;/h1&gt;
 &lt;p&gt;自己做了一个非常简单的 Alfred workflow，把输入的内容附加在当天的 journal md 文件末尾。希望以后官方 app 能够发布更强大更高效的快速输入方式。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;query&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;D1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date &lt;span class=&#34;s1&#34;&gt;&amp;#39;+%Y_%m_%d&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;\n- &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$query&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;D1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.md&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;ios-上的快速输入&#34;&gt;iOS 上的快速输入&lt;/h5&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ios-上的快速输入&#34;&gt;iOS 上的快速输入&lt;/h1&gt;
 &lt;p&gt;目前搞不定，等官方吧。&lt;/p&gt;
-&lt;h5 id=&#34;dayone-迁移到-logseq&#34;&gt;Dayone 迁移到 Logseq&lt;/h5&gt;
+&lt;h1 id=&#34;dayone-迁移到-logseq&#34;&gt;Dayone 迁移到 Logseq&lt;/h1&gt;
 &lt;p&gt;又花了一点时间把 Dayone 里的几千个记录迁移到 Logseq，慢慢带着加以整理、回顾、形成一些联系。
 使用的是这个脚本， &lt;a href=&#34;https://github.com/mhejda/dayone2logseq-md&#34;&gt;dayone2markdown&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。
@@ -120,11 +120,11 @@
 &lt;p&gt;&lt;code&gt;/usr/local/opt/gnu-sed/libexec/gnubin/sed -i &#39;1{/^$/d;}&#39; *.md&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;也用到了 perl 的一个替换命令。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;perl -pi -e &amp;quot;s/\t- ####/- ####/g&amp;quot; *.md&lt;/code&gt;&lt;/p&gt;
-&lt;h5 id=&#34;daily-template&#34;&gt;Daily template&lt;/h5&gt;
+&lt;h1 id=&#34;daily-template&#34;&gt;Daily template&lt;/h1&gt;
 &lt;p&gt;自定义好 daily_template_journals:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-daily-template_1.png&#34; alt=&#34;daily-template&#34;&gt;&lt;/p&gt;
 &lt;p&gt;每天早上打开 Journals，输入 /template 回车，然后选中 daily_template_journals 回车，就可以了。&lt;/p&gt;
-&lt;h5 id=&#34;备份&#34;&gt;备份&lt;/h5&gt;
+&lt;h1 id=&#34;备份&#34;&gt;备份&lt;/h1&gt;
 &lt;p&gt;Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。&lt;/p&gt;
 &lt;p&gt;一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录。不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次。最后改用了 rsync，只会拷备有变化的。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;*/5 * * * * rsync -a &amp;quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;quot; &amp;quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;quot;&lt;/code&gt;&lt;/p&gt;
@@ -142,7 +142,7 @@
 &lt;p&gt;&lt;em&gt;-- update on 2022-08-06&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;今天在 QNAP NAS 里开启了 Time Machine 服务，配置新 MacBook 上的 Time Machine 备份到 NAS 里，这样每个小时都会自动备份，又多了一重保障。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/logseq_backup_to_timemachine_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h5 id=&#34;那年今日&#34;&gt;那年今日&lt;/h5&gt;
+&lt;h1 id=&#34;那年今日&#34;&gt;那年今日&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;-- added on 2022-07-22&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。&lt;/p&gt;
 &lt;p&gt;本来想用 advanced query，可惜搞不定。只好用一些比较“笨拙”的方法。&lt;/p&gt;

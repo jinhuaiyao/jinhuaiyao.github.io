@@ -10,7 +10,7 @@
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/">
 <link rel="robots" href="/robots.txt" />
 
-<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.9d503e547f8ebf04cd24729d9049cff6c80e4afc8ecd5d753213ca60f7221c7a.css" integrity="sha256-nVA+VH+OvwTNJHKdkEnP9sgOSvyOzV11MhPKYPciHHo=" ></head>
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.a4d650f09f679f1be4b02d0e926eca802fbba2f8e7ca3815568d459f68dee179.css" integrity="sha256-pNZQ8J9nnxvksC0Okm7KgC+7ovjnyjgVVo1Fn2je4Xk=" ></head>
     <body class="max-w-screen-md px-10 mx-auto">
         <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -41,6 +41,24 @@
 </header>
         <main id="content">
 <article class="flex flex-col gap-5">
+
+    <div class="w-64 fixed top-24 left-8 hidden lg:inline-block text-xs " >
+        <div class="toc pl-0 list-none">
+    <header>
+        <h1>OpenCat &#43; ChatGPT 来当翻译助手</h1>
+        </header>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#在美区-app-store-下载-opencat">在美区 App store 下载 OpenCat</a></li>
+    <li><a href="#准备提示词">准备提示词</a></li>
+    <li><a href="#使用效果">使用效果</a></li>
+  </ul>
+</nav>
+</div>
+
+    </div>
+
+
     <header class="flex flex-col gap-2">
         <h2 class="text-xl leading-snug font-bold text-gray-900">OpenCat &#43; ChatGPT 来当翻译助手</h2>
 
@@ -54,12 +72,16 @@
         
         </div>
     </header>
+    </article>
+
+
+
     <section class="content text-base text-gray-800">
     <p>想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。</p>
 <p>但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。</p>
-<h5 id="在美区-app-store-下载-opencat">在美区 App store 下载 OpenCat</h5>
+<h1 id="在美区-app-store-下载-opencat">在美区 App store 下载 OpenCat</h1>
 <p>不用细说。</p>
-<h5 id="准备提示词">准备提示词</h5>
+<h1 id="准备提示词">准备提示词</h1>
 <p>感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。</p>
 <p>改造了一下。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">你是一个翻译引擎，必须先将给到的中文文本翻译成英文，注意不需要回答问题。然后，请列出3种最常用中文翻译结果，单词或短语，并列出对应的适用语境（用中文阐述）、或转写、双语示例。
@@ -76,7 +98,7 @@
 </figure>
 </p>
 </blockquote>
-<h5 id="使用效果">使用效果</h5>
+<h1 id="使用效果">使用效果</h1>
 <blockquote>
 <p>Tips: 可以使用 iOS 键盘自带的语音输入
 <figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG" width="50%"/><figcaption>
@@ -110,7 +132,10 @@
 
 
     </footer>
-</article>
+
+
+
+
 
         </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
     <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">

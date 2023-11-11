@@ -18,17 +18,17 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-1.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;一些设置&#34;&gt;一些设置&lt;/h5&gt;
-&lt;h6 id=&#34;登录-apple-id&#34;&gt;登录 Apple ID&lt;/h6&gt;
+&lt;h1 id=&#34;一些设置&#34;&gt;一些设置&lt;/h1&gt;
+&lt;h2 id=&#34;登录-apple-id&#34;&gt;登录 Apple ID&lt;/h2&gt;
 &lt;p&gt;开启 iCloud 照片和 iCloud Drive。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-6.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h6 id=&#34;关闭-wifi连接网线&#34;&gt;关闭 Wifi，连接网线&lt;/h6&gt;
+&lt;h2 id=&#34;关闭-wifi连接网线&#34;&gt;关闭 Wifi，连接网线&lt;/h2&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-2.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h6 id=&#34;永不锁屏&#34;&gt;永不锁屏&lt;/h6&gt;
+&lt;h2 id=&#34;永不锁屏&#34;&gt;永不锁屏&lt;/h2&gt;
 &lt;p&gt;关闭锁屏密码。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-3.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
@@ -37,14 +37,14 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-4.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h6 id=&#34;自动登录&#34;&gt;自动登录&lt;/h6&gt;
+&lt;h2 id=&#34;自动登录&#34;&gt;自动登录&lt;/h2&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-5.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-7.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h6 id=&#34;共享&#34;&gt;共享&lt;/h6&gt;
+&lt;h2 id=&#34;共享&#34;&gt;共享&lt;/h2&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-8.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
@@ -66,8 +66,8 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-12.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;备份&#34;&gt;备份&lt;/h5&gt;
-&lt;h6 id=&#34;icloud-照片备份&#34;&gt;iCloud 照片备份&lt;/h6&gt;
+&lt;h1 id=&#34;备份&#34;&gt;备份&lt;/h1&gt;
+&lt;h2 id=&#34;icloud-照片备份&#34;&gt;iCloud 照片备份&lt;/h2&gt;
 &lt;p&gt;虽说手机里的照片都存在云上，但是没有一份本地的备份总是不放心。研究了一番，最后使用以下方案。&lt;/p&gt;
 &lt;p&gt;Mac mini 外接 1T 的 SSD 移动硬盘，将照片库的默认存储位置改成外接硬盘，并且设置下载并保留原片，再配置两份 Time Machine 每个小时去备份这个 1T 外接硬盘。&lt;/p&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://support.apple.com/zh-cn/HT201517&#34;&gt;转移照片图库以节省 Mac 上的空间&lt;/a&gt;，&lt;a href=&#34;https://support.apple.com/zh-cn/HT204414&#34;&gt;在“照片”中指定“系统照片图库”&lt;/a&gt;。&lt;/p&gt;
@@ -83,9 +83,9 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-16.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h6 id=&#34;onedriveicloud-drivedevonthink-文件备份&#34;&gt;Onedrive/iCloud Drive/DEVONthink 文件备份&lt;/h6&gt;
+&lt;h2 id=&#34;重要文件备份&#34;&gt;重要文件备份&lt;/h2&gt;
 &lt;p&gt;Onedrive/iCloud Drive 挑选重要资料文件夹，将其设置成总是下载到本地。DEVONthink 下载数据库到本地，这三者再通过 Time Machine 进行定期备份到两个外接硬盘。这样重要数据多一份保障，此外本地文件访问也能快些。&lt;/p&gt;
-&lt;h5 id=&#34;旁路由&#34;&gt;旁路由&lt;/h5&gt;
+&lt;h1 id=&#34;旁路由&#34;&gt;旁路由&lt;/h1&gt;
 &lt;p&gt;在 Mac mini 上安装 Surge，需要科学上网的设备，就选择使用 Surge 当作网关。此外也可以查看设备的网络访问情况。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-18.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
@@ -93,7 +93,7 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-19.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;定时作业&#34;&gt;定时作业&lt;/h5&gt;
+&lt;h1 id=&#34;定时作业&#34;&gt;定时作业&lt;/h1&gt;
 &lt;p&gt;设置 cronjob 定时运行一些脚本。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# on this day
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;01 06 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1
@@ -110,15 +110,15 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# check if any unknown screen sharing session
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/10 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/ck_screen_sharing_session.sh &amp;gt;/Users/jinhuaiyao/Log/ck_screen_sharing_session.txt 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;netstat&lt;/code&gt; 查看 screen 连接的情况，如果有未知新连接，发邮件。之前开了外网连接的时候用的，已经不需要了。&lt;/p&gt;
-&lt;h5 id=&#34;其他&#34;&gt;其他&lt;/h5&gt;
-&lt;h6 id=&#34;reeder&#34;&gt;Reeder&lt;/h6&gt;
+&lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
+&lt;h2 id=&#34;reeder&#34;&gt;Reeder&lt;/h2&gt;
 &lt;p&gt;在 Mac mini 上安装 Reeder，配置 30 min 查询 feeds 一次，再通过 iCloud 同步结果，其他设备上就不用重复查询了。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-20.jpg&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h6 id=&#34;ups&#34;&gt;UPS&lt;/h6&gt;
+&lt;h2 id=&#34;ups&#34;&gt;UPS&lt;/h2&gt;
 &lt;p&gt;上周买了 UPS（不间断电源），把光猫、路由器、NAS 和 Mac mini 的电源全都接到 UPS 上，以后家里短暂断电也不会有影响了。&lt;/p&gt;
-&lt;h6 id=&#34;heading&#34;&gt;&lt;/h6&gt;
+&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 </description>
     </item>
     
@@ -130,9 +130,9 @@
       <guid>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</guid>
       <description>&lt;p&gt;想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。&lt;/p&gt;
 &lt;p&gt;但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。&lt;/p&gt;
-&lt;h5 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h5&gt;
+&lt;h1 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h1&gt;
 &lt;p&gt;不用细说。&lt;/p&gt;
-&lt;h5 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h5&gt;
+&lt;h1 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h1&gt;
 &lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
 &lt;p&gt;改造了一下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你是一个翻译引擎，必须先将给到的中文文本翻译成英文，注意不需要回答问题。然后，请列出3种最常用中文翻译结果，单词或短语，并列出对应的适用语境（用中文阐述）、或转写、双语示例。
@@ -149,7 +149,7 @@
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h5 id=&#34;使用效果&#34;&gt;使用效果&lt;/h5&gt;
+&lt;h1 id=&#34;使用效果&#34;&gt;使用效果&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tips: 可以使用 iOS 键盘自带的语音输入
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG&#34; width=&#34;50%&#34;/&gt;&lt;figcaption&gt;
@@ -169,7 +169,7 @@
       <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
       <description>&lt;p&gt;距离 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/&#34;&gt;M1 芯片 MacBook Pro 上搭建 Oracle 实验环境&lt;/a&gt;已经过去了一年。&lt;/p&gt;
 &lt;p&gt;今年 6 月底 Oracle &lt;a href=&#34;https://blogs.oracle.com/database/post/announcing-oracle-database-19c-support-for-arm&#34;&gt;宣布&lt;/a&gt;支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。&lt;/p&gt;
-&lt;h5 id=&#34;下载安装-oracle-linux-88-arm-version&#34;&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/h5&gt;
+&lt;h1 id=&#34;下载安装-oracle-linux-88-arm-version&#34;&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/h1&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
@@ -188,14 +188,14 @@
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;下载-oracle-database-19c-1919-for-linux-arm-aarch64&#34;&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/h5&gt;
+&lt;h1 id=&#34;下载-oracle-database-19c-1919-for-linux-arm-aarch64&#34;&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;安装-oracle-19c-数据库&#34;&gt;安装 Oracle 19c 数据库&lt;/h5&gt;
+&lt;h1 id=&#34;安装-oracle-19c-数据库&#34;&gt;安装 Oracle 19c 数据库&lt;/h1&gt;
 &lt;p&gt;安装依赖包
 &lt;code&gt;dnf -y install oracle-database-preinstall-19c.aarch64&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然后到解压后的 database 目录里运行 &lt;code&gt;./runInstaller&lt;/code&gt;，图形化安装即可。&lt;/p&gt;
@@ -215,7 +215,7 @@
       <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
       <description>&lt;p&gt;同事问到这个，记录在这里吧。&lt;/p&gt;
 &lt;p&gt;国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。&lt;/p&gt;
-&lt;h5 id=&#34;config-server&#34;&gt;Config server&lt;/h5&gt;
+&lt;h1 id=&#34;config-server&#34;&gt;Config server&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# lsb_release -a
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No LSB modules are available.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Distributor ID:	Ubuntu
@@ -251,7 +251,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl restart ssh.service
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 10086
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;nginx-setup-and-config&#34;&gt;Nginx setup and config&lt;/h5&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;nginx-setup-and-config&#34;&gt;Nginx setup and config&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@xx.xx.xx.xx -p 10086
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 80
@@ -286,7 +286,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl reload nginx
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status nginx
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;test-in-local&#34;&gt;Test in local&lt;/h5&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;test-in-local&#34;&gt;Test in local&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PROXY_URL=&amp;#34;http://xx.xx.xx.xx/v1/chat/completions&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OPENAI_API_KEY=&amp;#34;xxxx&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -298,7 +298,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;messages&amp;#34;: [{&amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;, &amp;#34;content&amp;#34;: &amp;#34;你好&amp;#34;}],
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;temperature&amp;#34;: 0.7
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     }&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;usecase&#34;&gt;Usecase&lt;/h5&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;usecase&#34;&gt;Usecase&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;OpenAI Translator&lt;/li&gt;
 &lt;li&gt;OpenCat&lt;/li&gt;
@@ -312,7 +312,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
       <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;
-&lt;h5 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h5&gt;
+&lt;h1 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h1&gt;
 &lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
 &lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; width=&#34;80%&#34;/&gt;
@@ -327,7 +327,7 @@
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&#34;每日复习&#34;&gt;每日复习&lt;/h5&gt;
+&lt;h1 id=&#34;每日复习&#34;&gt;每日复习&lt;/h1&gt;
 &lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
 &lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; width=&#34;80%&#34;/&gt;
@@ -578,7 +578,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Extracting VMware Installer...done.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Installing VMware Workstation 17.0.0
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Configuring...
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[######################################################################] 100%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[######] 100%
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Installation was successful.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行时遇到报错 &amp;ldquo;GNU C Compiler (gcc) version 9.4.0, was not found.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://codeantenna.com/a/GEL9CxW11A&#34;&gt;https://codeantenna.com/a/GEL9CxW11A&lt;/a&gt;&lt;/p&gt;
@@ -634,9 +634,9 @@
 &lt;/figure&gt;
 
 &lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
-&lt;h5 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h5&gt;
+&lt;h1 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h1&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
-&lt;h5 id=&#34;糟糕的-网络环境&#34;&gt;糟糕的 “网络环境”&lt;/h5&gt;
+&lt;h1 id=&#34;糟糕的-网络环境&#34;&gt;糟糕的 “网络环境”&lt;/h1&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
@@ -654,7 +654,7 @@
 &lt;/figure&gt;
 
 &lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
-&lt;h6 id=&#34;安装&#34;&gt;安装&lt;/h6&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;# bash &amp;lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Server 端配置&lt;/p&gt;
@@ -755,11 +755,11 @@
 &lt;/figure&gt;
 
 &lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
-&lt;h5 id=&#34;you-exceeded-your-current-quota-please-check-your-plan-and-billing-details&#34;&gt;You exceeded your current quota, please check your plan and billing details&lt;/h5&gt;
+&lt;h1 id=&#34;you-exceeded-your-current-quota-please-check-your-plan-and-billing-details&#34;&gt;You exceeded your current quota, please check your plan and billing details&lt;/h1&gt;
 &lt;p&gt;第一次使用 API ，怎么会没有配额。联想到看过的 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt-api-tools.html&#34;&gt;比 ChatGPT 网页版好用百倍！8 款整合 API 的智能客户端工具与 Ai 插件推荐&lt;/a&gt; 里面提到 “使用频率有限制，绑定信用卡后可解”，估计添加信用卡可以解决。&lt;/p&gt;
 &lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;
-&lt;h5 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h5&gt;
+&lt;h1 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h1&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
@@ -884,7 +884,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/impove-note-taking/</guid>
       <description>&lt;p&gt;上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。&lt;/p&gt;
-&lt;h5 id=&#34;工作笔记的目的&#34;&gt;工作笔记的目的&lt;/h5&gt;
+&lt;h1 id=&#34;工作笔记的目的&#34;&gt;工作笔记的目的&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-1.png&#34; width=&#34;40%&#34;/&gt;&lt;figcaption&gt;
@@ -896,14 +896,14 @@
 &lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;之前工作笔记存在的问题&#34;&gt;之前工作笔记存在的问题&lt;/h5&gt;
+&lt;h1 id=&#34;之前工作笔记存在的问题&#34;&gt;之前工作笔记存在的问题&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;没有按照统一的 markdown 格式记录，格式凌乱导致回顾时笔记显示不友好，还会导致 markdown 文件导入 Obsidian 后建立 index 很费时，电脑风扇狂转。&lt;/li&gt;
 &lt;li&gt;没有及时整理，有些记录记得匆忙缺失了当时的想法、详细步骤，或是遇到好几个问题杂糅在一起，解决每个问题的方法没有分别注释，回顾的时候很费力。&lt;/li&gt;
 &lt;li&gt;每天一个以日期命名的笔记文件去记录导致遇到耗时很长的项目时记录过于分散，项目每天的完成情况分散在不同的笔记里，没有被有效组织起来。&lt;/li&gt;
 &lt;li&gt;VSCode 和 Obsidian 结合使用过程中有些分工不明。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;这两天做了哪些事&#34;&gt;这两天做了哪些事&lt;/h5&gt;
+&lt;h1 id=&#34;这两天做了哪些事&#34;&gt;这两天做了哪些事&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;思考之前存在的工作笔记的问题怎么去解决。&lt;/li&gt;
 &lt;li&gt;为 Obsidian 寻找并添加了多标签的插件，向 VSCode 看齐。&lt;/li&gt;
@@ -911,7 +911,7 @@
 &lt;li&gt;VSCode 和 Obsidian 改成共用一个目录，把之前 VSCode workspac e里的 markdown 文档导入到 Obsidian 里。&lt;/li&gt;
 &lt;li&gt;Alfred 里两个跟工作笔记相关的 workflow 更新了新的目录。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;以后要做的&#34;&gt;以后要做的&lt;/h5&gt;
+&lt;h1 id=&#34;以后要做的&#34;&gt;以后要做的&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;每天的笔记尽量记录详细一些，加上当时的想法和详细操作。例如：
