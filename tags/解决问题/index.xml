@@ -130,8 +130,8 @@
       <guid>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</guid>
       <description>&lt;p&gt;想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。&lt;/p&gt;
 &lt;p&gt;但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。&lt;/p&gt;
-&lt;h1 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h1&gt;
-&lt;p&gt;不用细说。&lt;/p&gt;
+&lt;h1 id=&#34;下载-opencat&#34;&gt;下载 OpenCat&lt;/h1&gt;
+&lt;p&gt;在美区 App store，不用细说。&lt;/p&gt;
 &lt;h1 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h1&gt;
 &lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
 &lt;p&gt;改造了一下。&lt;/p&gt;
@@ -169,7 +169,8 @@
       <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
       <description>&lt;p&gt;距离 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/&#34;&gt;M1 芯片 MacBook Pro 上搭建 Oracle 实验环境&lt;/a&gt;已经过去了一年。&lt;/p&gt;
 &lt;p&gt;今年 6 月底 Oracle &lt;a href=&#34;https://blogs.oracle.com/database/post/announcing-oracle-database-19c-support-for-arm&#34;&gt;宣布&lt;/a&gt;支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。&lt;/p&gt;
-&lt;h1 id=&#34;下载安装-oracle-linux-88-arm-version&#34;&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/h1&gt;
+&lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
+&lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
@@ -188,7 +189,8 @@
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h1 id=&#34;下载-oracle-database-19c-1919-for-linux-arm-aarch64&#34;&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/h1&gt;
+&lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
+&lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
@@ -395,7 +397,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
       <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;
-&lt;h3 id=&#34;配置-apple-watch&#34;&gt;配置 Apple Watch&lt;/h3&gt;
+&lt;h1 id=&#34;配置-apple-watch&#34;&gt;配置 Apple Watch&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;再次开通 eSIM 卡，不需要带手机。&lt;/li&gt;
 &lt;li&gt;顾村公园年卡照片放入手机照片里的“个人收藏”，手表里可以快速打开，进园不用带实体卡。&lt;/li&gt;
@@ -403,7 +405,7 @@
 &lt;li&gt;网易云音乐离线下载歌曲太费劲了，改用 Apple Music，离线批量下载很方便，而且完美搭配“体能训练”。&lt;/li&gt;
 &lt;li&gt;开通手表上的微信支付，跑完步正好去买点早饭，不过需要商家扫我的二维码。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h3&gt;
+&lt;h1 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h1&gt;
 &lt;p&gt;速干衣，跑步水杯，跑步袜。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-1.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
@@ -531,7 +533,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
       <description>&lt;p&gt;记录一下最近解决的几个问题。&lt;/p&gt;
-&lt;h3 id=&#34;icloud-照片备份问题&#34;&gt;iCloud 照片备份问题&lt;/h3&gt;
+&lt;h1 id=&#34;icloud-照片备份问题&#34;&gt;iCloud 照片备份问题&lt;/h1&gt;
 &lt;p&gt;最近改用了一个新的照片备份方案。&lt;/p&gt;
 &lt;p&gt;在原来公司 MacBook 上设置下载保留原片。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png&#34; width=&#34;80%&#34;/&gt;
@@ -541,19 +543,19 @@
 &lt;p&gt;除了备份照片外，iCloud Drive 中的某些文件夹也会被顺便备份。&lt;/p&gt;
 &lt;p&gt;目前，iCloud 照片仅有 430G，远小于电脑硬盘 1T 的容量，因此这个方案可以使用很长一段时间。&lt;/p&gt;
 &lt;p&gt;之前曾将照片备份到 OneDrive 和 NAS 中，现已停用。&lt;/p&gt;
-&lt;h3 id=&#34;桌面移动硬盘声音响&#34;&gt;桌面移动硬盘声音响&lt;/h3&gt;
+&lt;h1 id=&#34;桌面移动硬盘声音响&#34;&gt;桌面移动硬盘声音响&lt;/h1&gt;
 &lt;p&gt;西部数据的桌面移动硬盘运行时声音太响，忍了很久都没有好的解决办法，直到某天看到快递里的防震气泡袋。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;reeder-5-icloud-rss-不能批量删除问题&#34;&gt;Reeder 5 iCloud RSS 不能批量删除问题&lt;/h3&gt;
+&lt;h1 id=&#34;reeder-5-icloud-rss-不能批量删除问题&#34;&gt;Reeder 5 iCloud RSS 不能批量删除问题&lt;/h1&gt;
 &lt;p&gt;之前在 Reeder 中添加了 iCloud Feeds，这样 MacOS 和 iOS 设备上的 RSS 订阅可以通过 iCloud 同步。&lt;/p&gt;
 &lt;p&gt;某天导入了一个包含中文博客 &lt;a href=&#34;https://github.com/timqian/chinese-independent-blogs/blob/master/feed.opml&#34;&gt;opml 文件&lt;/a&gt; 的文件，一下子增加了很多 RSS 订阅。想删除其中一些时，发现 Reeder 没有提供批量删除的选项。&lt;/p&gt;
 &lt;p&gt;一顿研究，决定先清空 iCloud Feeds，并编辑 opml 文件后重新导入。然而在尝试删除账户以清空 iCloud Feeds 时并不起作用；重新添加账户后原来的 Feeds 会再次出现。因此需要找到另外一种方法来彻底清空 iCloud 数据。最后终于找到了可行的方法。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;虚拟机运行导致-mac-发热严重&#34;&gt;虚拟机运行导致 Mac 发热严重&lt;/h3&gt;
+&lt;h1 id=&#34;虚拟机运行导致-mac-发热严重&#34;&gt;虚拟机运行导致 Mac 发热严重&lt;/h1&gt;
 &lt;p&gt;之前文章 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/&#34;&gt;Some Records for RAC Installation on Macbook&lt;/a&gt; 里说到在 Intel 芯片的 Macbook Pro 上装 Oracle RAC 测试环境，使用时候发现笔记本经常发热，风扇嗡嗡响，让人不是很自在。而且笔记本经常会休眠，连接 RAC 之前还得登录一下系统，不方便。&lt;/p&gt;
 &lt;p&gt;最后决定启用 Dell T7820 工作站。&lt;/p&gt;
 &lt;ol&gt;
@@ -636,7 +638,7 @@
 &lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
 &lt;h1 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h1&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
-&lt;h1 id=&#34;糟糕的-网络环境&#34;&gt;糟糕的 “网络环境”&lt;/h1&gt;
+&lt;h1 id=&#34;糟糕的网络环境&#34;&gt;糟糕的“网络环境”&lt;/h1&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
@@ -654,7 +656,7 @@
 &lt;/figure&gt;
 
 &lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;h2 id=&#34;安装-v2ray&#34;&gt;安装 V2Ray&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;# bash &amp;lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Server 端配置&lt;/p&gt;
@@ -755,7 +757,8 @@
 &lt;/figure&gt;
 
 &lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
-&lt;h1 id=&#34;you-exceeded-your-current-quota-please-check-your-plan-and-billing-details&#34;&gt;You exceeded your current quota, please check your plan and billing details&lt;/h1&gt;
+&lt;h2 id=&#34;quota-报错&#34;&gt;Quota 报错&lt;/h2&gt;
+&lt;p&gt;You exceeded your current quota, please check your plan and billing details&lt;/p&gt;
 &lt;p&gt;第一次使用 API ，怎么会没有配额。联想到看过的 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt-api-tools.html&#34;&gt;比 ChatGPT 网页版好用百倍！8 款整合 API 的智能客户端工具与 Ai 插件推荐&lt;/a&gt; 里面提到 “使用频率有限制，绑定信用卡后可解”，估计添加信用卡可以解决。&lt;/p&gt;
 &lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;

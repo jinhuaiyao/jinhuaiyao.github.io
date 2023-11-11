@@ -130,8 +130,8 @@
       <guid>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</guid>
       <description>&lt;p&gt;想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。&lt;/p&gt;
 &lt;p&gt;但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。&lt;/p&gt;
-&lt;h1 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h1&gt;
-&lt;p&gt;不用细说。&lt;/p&gt;
+&lt;h1 id=&#34;下载-opencat&#34;&gt;下载 OpenCat&lt;/h1&gt;
+&lt;p&gt;在美区 App store，不用细说。&lt;/p&gt;
 &lt;h1 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h1&gt;
 &lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
 &lt;p&gt;改造了一下。&lt;/p&gt;
@@ -169,7 +169,8 @@
       <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
       <description>&lt;p&gt;距离 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/&#34;&gt;M1 芯片 MacBook Pro 上搭建 Oracle 实验环境&lt;/a&gt;已经过去了一年。&lt;/p&gt;
 &lt;p&gt;今年 6 月底 Oracle &lt;a href=&#34;https://blogs.oracle.com/database/post/announcing-oracle-database-19c-support-for-arm&#34;&gt;宣布&lt;/a&gt;支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。&lt;/p&gt;
-&lt;h1 id=&#34;下载安装-oracle-linux-88-arm-version&#34;&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/h1&gt;
+&lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
+&lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
@@ -188,7 +189,8 @@
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h1 id=&#34;下载-oracle-database-19c-1919-for-linux-arm-aarch64&#34;&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/h1&gt;
+&lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
+&lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
@@ -517,7 +519,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
       <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;
-&lt;h3 id=&#34;配置-apple-watch&#34;&gt;配置 Apple Watch&lt;/h3&gt;
+&lt;h1 id=&#34;配置-apple-watch&#34;&gt;配置 Apple Watch&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;再次开通 eSIM 卡，不需要带手机。&lt;/li&gt;
 &lt;li&gt;顾村公园年卡照片放入手机照片里的“个人收藏”，手表里可以快速打开，进园不用带实体卡。&lt;/li&gt;
@@ -525,7 +527,7 @@
 &lt;li&gt;网易云音乐离线下载歌曲太费劲了，改用 Apple Music，离线批量下载很方便，而且完美搭配“体能训练”。&lt;/li&gt;
 &lt;li&gt;开通手表上的微信支付，跑完步正好去买点早饭，不过需要商家扫我的二维码。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h3&gt;
+&lt;h1 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h1&gt;
 &lt;p&gt;速干衣，跑步水杯，跑步袜。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-1.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
@@ -653,7 +655,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/the-few-problems-recently-solved/</guid>
       <description>&lt;p&gt;记录一下最近解决的几个问题。&lt;/p&gt;
-&lt;h3 id=&#34;icloud-照片备份问题&#34;&gt;iCloud 照片备份问题&lt;/h3&gt;
+&lt;h1 id=&#34;icloud-照片备份问题&#34;&gt;iCloud 照片备份问题&lt;/h1&gt;
 &lt;p&gt;最近改用了一个新的照片备份方案。&lt;/p&gt;
 &lt;p&gt;在原来公司 MacBook 上设置下载保留原片。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png&#34; width=&#34;80%&#34;/&gt;
@@ -663,19 +665,19 @@
 &lt;p&gt;除了备份照片外，iCloud Drive 中的某些文件夹也会被顺便备份。&lt;/p&gt;
 &lt;p&gt;目前，iCloud 照片仅有 430G，远小于电脑硬盘 1T 的容量，因此这个方案可以使用很长一段时间。&lt;/p&gt;
 &lt;p&gt;之前曾将照片备份到 OneDrive 和 NAS 中，现已停用。&lt;/p&gt;
-&lt;h3 id=&#34;桌面移动硬盘声音响&#34;&gt;桌面移动硬盘声音响&lt;/h3&gt;
+&lt;h1 id=&#34;桌面移动硬盘声音响&#34;&gt;桌面移动硬盘声音响&lt;/h1&gt;
 &lt;p&gt;西部数据的桌面移动硬盘运行时声音太响，忍了很久都没有好的解决办法，直到某天看到快递里的防震气泡袋。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;reeder-5-icloud-rss-不能批量删除问题&#34;&gt;Reeder 5 iCloud RSS 不能批量删除问题&lt;/h3&gt;
+&lt;h1 id=&#34;reeder-5-icloud-rss-不能批量删除问题&#34;&gt;Reeder 5 iCloud RSS 不能批量删除问题&lt;/h1&gt;
 &lt;p&gt;之前在 Reeder 中添加了 iCloud Feeds，这样 MacOS 和 iOS 设备上的 RSS 订阅可以通过 iCloud 同步。&lt;/p&gt;
 &lt;p&gt;某天导入了一个包含中文博客 &lt;a href=&#34;https://github.com/timqian/chinese-independent-blogs/blob/master/feed.opml&#34;&gt;opml 文件&lt;/a&gt; 的文件，一下子增加了很多 RSS 订阅。想删除其中一些时，发现 Reeder 没有提供批量删除的选项。&lt;/p&gt;
 &lt;p&gt;一顿研究，决定先清空 iCloud Feeds，并编辑 opml 文件后重新导入。然而在尝试删除账户以清空 iCloud Feeds 时并不起作用；重新添加账户后原来的 Feeds 会再次出现。因此需要找到另外一种方法来彻底清空 iCloud 数据。最后终于找到了可行的方法。&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;虚拟机运行导致-mac-发热严重&#34;&gt;虚拟机运行导致 Mac 发热严重&lt;/h3&gt;
+&lt;h1 id=&#34;虚拟机运行导致-mac-发热严重&#34;&gt;虚拟机运行导致 Mac 发热严重&lt;/h1&gt;
 &lt;p&gt;之前文章 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/&#34;&gt;Some Records for RAC Installation on Macbook&lt;/a&gt; 里说到在 Intel 芯片的 Macbook Pro 上装 Oracle RAC 测试环境，使用时候发现笔记本经常发热，风扇嗡嗡响，让人不是很自在。而且笔记本经常会休眠，连接 RAC 之前还得登录一下系统，不方便。&lt;/p&gt;
 &lt;p&gt;最后决定启用 Dell T7820 工作站。&lt;/p&gt;
 &lt;ol&gt;
@@ -758,7 +760,7 @@
 &lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
 &lt;h1 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h1&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
-&lt;h1 id=&#34;糟糕的-网络环境&#34;&gt;糟糕的 “网络环境”&lt;/h1&gt;
+&lt;h1 id=&#34;糟糕的网络环境&#34;&gt;糟糕的“网络环境”&lt;/h1&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
@@ -776,7 +778,7 @@
 &lt;/figure&gt;
 
 &lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;h2 id=&#34;安装-v2ray&#34;&gt;安装 V2Ray&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;# bash &amp;lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Server 端配置&lt;/p&gt;
@@ -877,7 +879,8 @@
 &lt;/figure&gt;
 
 &lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
-&lt;h1 id=&#34;you-exceeded-your-current-quota-please-check-your-plan-and-billing-details&#34;&gt;You exceeded your current quota, please check your plan and billing details&lt;/h1&gt;
+&lt;h2 id=&#34;quota-报错&#34;&gt;Quota 报错&lt;/h2&gt;
+&lt;p&gt;You exceeded your current quota, please check your plan and billing details&lt;/p&gt;
 &lt;p&gt;第一次使用 API ，怎么会没有配额。联想到看过的 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt-api-tools.html&#34;&gt;比 ChatGPT 网页版好用百倍！8 款整合 API 的智能客户端工具与 Ai 插件推荐&lt;/a&gt; 里面提到 “使用频率有限制，绑定信用卡后可解”，估计添加信用卡可以解决。&lt;/p&gt;
 &lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;
@@ -1269,7 +1272,8 @@
 &lt;p&gt;这些文字并不是用来分享一些 “成功” 的经验，而只是记录一个相对 “落后” 的孩子在成长过程中的经历以及作为家长的探索和思考。&lt;/p&gt;
 &lt;p&gt;这也是一次很好的机会，可以用来认真回顾过去四年多陪伴孩子的经历，反思自己的行为，写下自己感触最深的体会。&lt;/p&gt;
 &lt;p&gt;这也是一份提醒，以后看到这些文字就会提醒自己仍然做得不好的地方，提醒自己需要继续努力。&lt;/p&gt;
-&lt;h1 id=&#34;家庭教育需要家长不断学习思考实践和总结&#34;&gt;家庭教育需要家长不断学习、思考、实践和总结&lt;/h1&gt;
+&lt;h1 id=&#34;家庭教育中的家长&#34;&gt;家庭教育中的家长&lt;/h1&gt;
+&lt;p&gt;家庭教育需要家长不断学习、思考、实践和总结&lt;/p&gt;
 &lt;p&gt;这一点感触尤为深刻。和孩子在成长过程中会不断学习新技能一样，在家庭教育中家长也需要持续不断学习、思考、实践和总结。&lt;/p&gt;
 &lt;p&gt;因为是新手爸爸，在陪伴孩子成长过程中有很多问题也是第一次遇到，刚开始不知道如何下手的时候主要是回想以前的经验或是观察周围的人是怎么做的，但是后来慢慢发现这些并不足够，因为过去的经验很多已经不再适用，自己固有的观念有些已经跟不上当下的变化了；此外，大多数人的做法也并不一定就是正确的，“真理” 也许掌握在少数人手里。最终还是需要自己去学习、去思考、去实践，做出自己的判断，不能人云亦云。&lt;/p&gt;
 &lt;p&gt;比如我们遇到的一些问题：&lt;/p&gt;
@@ -2083,7 +2087,7 @@
       <guid>http://www.jinhuaiyao.com/posts/2019-review-2020-plan/</guid>
       <description>&lt;p&gt;转眼又一年。&lt;/p&gt;
 &lt;p&gt;前面回看了 DayOne 里过去一年的记录，得出的年度关键词是：“多事之秋”。&lt;/p&gt;
-&lt;h1 id=&#34;以下是零散的2019回顾&#34;&gt;以下是零散的2019回顾&lt;/h1&gt;
+&lt;h1 id=&#34;零散的-2019-回顾&#34;&gt;零散的 2019 回顾&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;买保险的事想了好多年，一拖再拖，三月份终于研究+实施，了却一桩心事。&lt;/li&gt;
 &lt;li&gt;工作上六月底完成了 Oracle 12c 升级，项目一推再推，耗费了大半年。最后意外得到一个 Spot award + 奖金若干。&lt;/li&gt;
@@ -2117,7 +2121,7 @@
 &lt;li&gt;过去的一年也在尝试和自己和解，知道意志力是有限的，所以很多事情没有坚持下来也原谅自己，来年换些方法继续前行。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;h1 id=&#34;2020年&#34;&gt;2020年&lt;/h1&gt;
+&lt;h1 id=&#34;2020-年&#34;&gt;2020 年&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;希望家人平安健康，等等健康快乐成长。&lt;/li&gt;
 &lt;li&gt;我自己要继续保持运动，积极思考，开拓眼界。&lt;/li&gt;
@@ -2133,10 +2137,10 @@
       
       <guid>http://www.jinhuaiyao.com/posts/take-good-care-of-your-stuff/</guid>
       <description>&lt;p&gt;上周看到一条朋友圈，以前大学里的辅导员 iPhone 手机成了&amp;quot;白苹果&amp;quot;，询问有什么办法可以把照片导出来。&lt;/p&gt;
-&lt;h3 id=&#34;备份备份备份&#34;&gt;备份备份备份&lt;/h3&gt;
+&lt;h1 id=&#34;备份备份备份&#34;&gt;备份备份备份&lt;/h1&gt;
 &lt;p&gt;手机没有备份过，估计也没有打开 iCloud 照片备份，这就很难了。如果有备份，就可以随意重装 iOS 系统了。&lt;/p&gt;
 &lt;p&gt;重要的资料，一定要备份备份再备份。不要抱有侥幸心理，不要等到数据丢失的那天，手足无措，懊悔莫及。&lt;/p&gt;
-&lt;h3 id=&#34;好的备份体系&#34;&gt;好的备份体系&lt;/h3&gt;
+&lt;h1 id=&#34;好的备份体系&#34;&gt;好的备份体系&lt;/h1&gt;
 &lt;p&gt;我个人认为一个好的备份体系要做到以下几点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;要分辨出哪些是重要的资料，比如家庭照片，重要的文档等。根据重要程度制定不同的备份策略。&lt;/li&gt;
@@ -2144,9 +2148,9 @@
 &lt;li&gt;最好能够自动化备份。手动备份要牵扯更多的精力，不容易坚持。&lt;/li&gt;
 &lt;li&gt;要保证备份的可用性。万一哪天数据丢失了却发现之前的备份不可用，悲剧。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;我的备份策略&#34;&gt;我的备份策略&lt;/h3&gt;
+&lt;h1 id=&#34;我的备份策略&#34;&gt;我的备份策略&lt;/h1&gt;
 &lt;p&gt;这几天梳理了一下我自己的备份策略，供大家参考：&lt;/p&gt;
-&lt;h4 id=&#34;家用笔记本和工作笔记本-2-台-macbook-&#34;&gt;家用笔记本和工作笔记本（ 2 台 macbook )&lt;/h4&gt;
+&lt;h2 id=&#34;家用笔记本和工作笔记本-2-台-macbook-&#34;&gt;家用笔记本和工作笔记本（ 2 台 macbook )&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;同步 /rjin/MacBackup_RaymondJin 下和目录和文件到 NAS（ by NAS app，自动同步，目前只是用来备份几个 zip 文件）。&lt;/li&gt;
 &lt;li&gt;所有重要文件都放在 OneDrive 里（云同步，自动）。&lt;/li&gt;
@@ -2154,30 +2158,30 @@
 &lt;li&gt;备份整个笔记本到 NAS（ by TimeMachine，自动，每天）。&lt;/li&gt;
 &lt;li&gt;备份整个笔记本到移动硬盘（ by TimeMachine，手动，每月）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;iphone&#34;&gt;iPhone&lt;/h4&gt;
+&lt;h2 id=&#34;iphone&#34;&gt;iPhone&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;备份到 iCloud（手机锁屏充电并且连入wifi时自动备份）。&lt;/li&gt;
 &lt;li&gt;备份到移动硬盘（ by iTunes，手动，每月）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;iphone里的照片和视频&#34;&gt;iPhone里的照片和视频&lt;/h4&gt;
+&lt;h2 id=&#34;iphone里的照片和视频&#34;&gt;iPhone里的照片和视频&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;自动上传到 iCloud（连入 wifi 时)。&lt;/li&gt;
 &lt;li&gt;自动上传到 OneDrive（连入 wifi 时)。&lt;/li&gt;
 &lt;li&gt;自动上传到 Nas ( by NAS app，连入 wifi 时)。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;onedrive里的数据&#34;&gt;OneDrive里的数据&lt;/h4&gt;
+&lt;h2 id=&#34;onedrive里的数据&#34;&gt;OneDrive里的数据&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;拷贝部分重要文件夹到 NAS（手动，每月）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;nas里的数据&#34;&gt;NAS里的数据&lt;/h4&gt;
+&lt;h2 id=&#34;nas里的数据&#34;&gt;NAS里的数据&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;自动同步部分重要文件夹到外置移动硬盘（ by NAS app，自动，每周）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;devonthink&#34;&gt;DEVONthink&lt;/h4&gt;
+&lt;h2 id=&#34;devonthink&#34;&gt;DEVONthink&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Archive DEVONthink Database 到 /rjin/MacBackup_RaymondJin（手动，每周）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;一些重要的纸质资料&#34;&gt;一些重要的纸质资料&lt;/h4&gt;
+&lt;h2 id=&#34;一些重要的纸质资料&#34;&gt;一些重要的纸质资料&lt;/h2&gt;
 &lt;p&gt;手机拍照，整理到 DEVONthink，便于整理和查找。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;最后希望大家花点时间配置一下自己的备份策略，保护好自己重要的资料，然后安心地好好生活好好工作好好学习。&lt;/p&gt;</description>

@@ -154,10 +154,10 @@
       
       <guid>http://www.jinhuaiyao.com/posts/take-good-care-of-your-stuff/</guid>
       <description>&lt;p&gt;上周看到一条朋友圈，以前大学里的辅导员 iPhone 手机成了&amp;quot;白苹果&amp;quot;，询问有什么办法可以把照片导出来。&lt;/p&gt;
-&lt;h3 id=&#34;备份备份备份&#34;&gt;备份备份备份&lt;/h3&gt;
+&lt;h1 id=&#34;备份备份备份&#34;&gt;备份备份备份&lt;/h1&gt;
 &lt;p&gt;手机没有备份过，估计也没有打开 iCloud 照片备份，这就很难了。如果有备份，就可以随意重装 iOS 系统了。&lt;/p&gt;
 &lt;p&gt;重要的资料，一定要备份备份再备份。不要抱有侥幸心理，不要等到数据丢失的那天，手足无措，懊悔莫及。&lt;/p&gt;
-&lt;h3 id=&#34;好的备份体系&#34;&gt;好的备份体系&lt;/h3&gt;
+&lt;h1 id=&#34;好的备份体系&#34;&gt;好的备份体系&lt;/h1&gt;
 &lt;p&gt;我个人认为一个好的备份体系要做到以下几点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;要分辨出哪些是重要的资料，比如家庭照片，重要的文档等。根据重要程度制定不同的备份策略。&lt;/li&gt;
@@ -165,9 +165,9 @@
 &lt;li&gt;最好能够自动化备份。手动备份要牵扯更多的精力，不容易坚持。&lt;/li&gt;
 &lt;li&gt;要保证备份的可用性。万一哪天数据丢失了却发现之前的备份不可用，悲剧。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;我的备份策略&#34;&gt;我的备份策略&lt;/h3&gt;
+&lt;h1 id=&#34;我的备份策略&#34;&gt;我的备份策略&lt;/h1&gt;
 &lt;p&gt;这几天梳理了一下我自己的备份策略，供大家参考：&lt;/p&gt;
-&lt;h4 id=&#34;家用笔记本和工作笔记本-2-台-macbook-&#34;&gt;家用笔记本和工作笔记本（ 2 台 macbook )&lt;/h4&gt;
+&lt;h2 id=&#34;家用笔记本和工作笔记本-2-台-macbook-&#34;&gt;家用笔记本和工作笔记本（ 2 台 macbook )&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;同步 /rjin/MacBackup_RaymondJin 下和目录和文件到 NAS（ by NAS app，自动同步，目前只是用来备份几个 zip 文件）。&lt;/li&gt;
 &lt;li&gt;所有重要文件都放在 OneDrive 里（云同步，自动）。&lt;/li&gt;
@@ -175,30 +175,30 @@
 &lt;li&gt;备份整个笔记本到 NAS（ by TimeMachine，自动，每天）。&lt;/li&gt;
 &lt;li&gt;备份整个笔记本到移动硬盘（ by TimeMachine，手动，每月）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;iphone&#34;&gt;iPhone&lt;/h4&gt;
+&lt;h2 id=&#34;iphone&#34;&gt;iPhone&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;备份到 iCloud（手机锁屏充电并且连入wifi时自动备份）。&lt;/li&gt;
 &lt;li&gt;备份到移动硬盘（ by iTunes，手动，每月）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;iphone里的照片和视频&#34;&gt;iPhone里的照片和视频&lt;/h4&gt;
+&lt;h2 id=&#34;iphone里的照片和视频&#34;&gt;iPhone里的照片和视频&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;自动上传到 iCloud（连入 wifi 时)。&lt;/li&gt;
 &lt;li&gt;自动上传到 OneDrive（连入 wifi 时)。&lt;/li&gt;
 &lt;li&gt;自动上传到 Nas ( by NAS app，连入 wifi 时)。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;onedrive里的数据&#34;&gt;OneDrive里的数据&lt;/h4&gt;
+&lt;h2 id=&#34;onedrive里的数据&#34;&gt;OneDrive里的数据&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;拷贝部分重要文件夹到 NAS（手动，每月）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;nas里的数据&#34;&gt;NAS里的数据&lt;/h4&gt;
+&lt;h2 id=&#34;nas里的数据&#34;&gt;NAS里的数据&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;自动同步部分重要文件夹到外置移动硬盘（ by NAS app，自动，每周）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;devonthink&#34;&gt;DEVONthink&lt;/h4&gt;
+&lt;h2 id=&#34;devonthink&#34;&gt;DEVONthink&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Archive DEVONthink Database 到 /rjin/MacBackup_RaymondJin（手动，每周）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;一些重要的纸质资料&#34;&gt;一些重要的纸质资料&lt;/h4&gt;
+&lt;h2 id=&#34;一些重要的纸质资料&#34;&gt;一些重要的纸质资料&lt;/h2&gt;
 &lt;p&gt;手机拍照，整理到 DEVONthink，便于整理和查找。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;最后希望大家花点时间配置一下自己的备份策略，保护好自己重要的资料，然后安心地好好生活好好工作好好学习。&lt;/p&gt;</description>

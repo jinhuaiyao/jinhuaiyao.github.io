@@ -16,7 +16,8 @@
       <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
       <description>&lt;p&gt;距离 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/&#34;&gt;M1 芯片 MacBook Pro 上搭建 Oracle 实验环境&lt;/a&gt;已经过去了一年。&lt;/p&gt;
 &lt;p&gt;今年 6 月底 Oracle &lt;a href=&#34;https://blogs.oracle.com/database/post/announcing-oracle-database-19c-support-for-arm&#34;&gt;宣布&lt;/a&gt;支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。&lt;/p&gt;
-&lt;h1 id=&#34;下载安装-oracle-linux-88-arm-version&#34;&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/h1&gt;
+&lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
+&lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;
@@ -35,7 +36,8 @@
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h1 id=&#34;下载-oracle-database-19c-1919-for-linux-arm-aarch64&#34;&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/h1&gt;
+&lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
+&lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; width=&#34;80%&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt; &lt;/h4&gt;

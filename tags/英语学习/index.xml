@@ -16,8 +16,8 @@
       <guid>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</guid>
       <description>&lt;p&gt;想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。&lt;/p&gt;
 &lt;p&gt;但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。&lt;/p&gt;
-&lt;h1 id=&#34;在美区-app-store-下载-opencat&#34;&gt;在美区 App store 下载 OpenCat&lt;/h1&gt;
-&lt;p&gt;不用细说。&lt;/p&gt;
+&lt;h1 id=&#34;下载-opencat&#34;&gt;下载 OpenCat&lt;/h1&gt;
+&lt;p&gt;在美区 App store，不用细说。&lt;/p&gt;
 &lt;h1 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h1&gt;
 &lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
 &lt;p&gt;改造了一下。&lt;/p&gt;
