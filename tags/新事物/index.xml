@@ -7,7 +7,120 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Mon, 16 Oct 2023 22:13:21 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 09:39:55 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 Mac mini 搭建家用服务器</title>
+      <link>http://www.jinhuaiyao.com/posts/home-server-with-mac-mini/</link>
+      <pubDate>Sat, 11 Nov 2023 09:39:55 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/home-server-with-mac-mini/</guid>
+      <description>&lt;p&gt;因为家里众多设备都是在苹果生态里，也有备份 Onedrive 文件和 iCloud 照片的需求，此外也想使用 Surge 接管家里的科学上网，于是 5 月份购买了 Mac mini，那会儿新工作确定了，有闲情去折腾新东西了。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-1.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h5 id=&#34;一些设置&#34;&gt;一些设置&lt;/h5&gt;
+&lt;h6 id=&#34;登录-apple-id&#34;&gt;登录 Apple ID&lt;/h6&gt;
+&lt;p&gt;开启 iCloud 照片和 iCloud Drive。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-6.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h6 id=&#34;关闭-wifi连接网线&#34;&gt;关闭 Wifi，连接网线&lt;/h6&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-2.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h6 id=&#34;永不锁屏&#34;&gt;永不锁屏&lt;/h6&gt;
+&lt;p&gt;关闭锁屏密码。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-3.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;防止自动睡眠，断电后自动重启。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-4.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h6 id=&#34;自动登录&#34;&gt;自动登录&lt;/h6&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-5.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-7.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h6 id=&#34;共享&#34;&gt;共享&lt;/h6&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-8.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;文件共享&lt;/p&gt;
+&lt;p&gt;其他设备可以通过网络访问共享文件夹。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-9.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;内容缓存&lt;/p&gt;
+&lt;p&gt;“内容缓存可加快通过互联网分发的 Apple 软件的下载速度。内容缓存可将软件的本地副本储存在 Mac 上，因此所连接的客户端能够加快下载速度”。参考&lt;a href=&#34;https://support.apple.com/zh-cn/HT204675&#34;&gt;官方文章&lt;/a&gt;。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-10.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;远程管理和远程登录&lt;/p&gt;
+&lt;p&gt;在其他的 Mac 上访问 Mac mini 以及使用远程桌面。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-11.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-12.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h5 id=&#34;备份&#34;&gt;备份&lt;/h5&gt;
+&lt;h6 id=&#34;icloud-照片备份&#34;&gt;iCloud 照片备份&lt;/h6&gt;
+&lt;p&gt;虽说手机里的照片都存在云上，但是没有一份本地的备份总是不放心。研究了一番，最后使用以下方案。&lt;/p&gt;
+&lt;p&gt;Mac mini 外接 1T 的 SSD 移动硬盘，将照片库的默认存储位置改成外接硬盘，并且设置下载并保留原片，再配置两份 Time Machine 每个小时去备份这个 1T 外接硬盘。&lt;/p&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://support.apple.com/zh-cn/HT201517&#34;&gt;转移照片图库以节省 Mac 上的空间&lt;/a&gt;，&lt;a href=&#34;https://support.apple.com/zh-cn/HT204414&#34;&gt;在“照片”中指定“系统照片图库”&lt;/a&gt;。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-13.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-14.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-15.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-16.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h6 id=&#34;onedriveicloud-drivedevonthink-文件备份&#34;&gt;Onedrive/iCloud Drive/DEVONthink 文件备份&lt;/h6&gt;
+&lt;p&gt;Onedrive/iCloud Drive 挑选重要资料文件夹，将其设置成总是下载到本地。DEVONthink 下载数据库到本地，这三者再通过 Time Machine 进行定期备份到两个外接硬盘。这样重要数据多一份保障，此外本地文件访问也能快些。&lt;/p&gt;
+&lt;h5 id=&#34;旁路由&#34;&gt;旁路由&lt;/h5&gt;
+&lt;p&gt;在 Mac mini 上安装 Surge，需要科学上网的设备，就选择使用 Surge 当作网关。此外也可以查看设备的网络访问情况。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-18.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-19.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h5 id=&#34;定时作业&#34;&gt;定时作业&lt;/h5&gt;
+&lt;p&gt;设置 cronjob 定时运行一些脚本。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# on this day
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;01 06 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个之前&lt;a href=&#34;https://www.jinhuaiyao.com/posts/about-logseq/#%E9%82%A3%E5%B9%B4%E4%BB%8A%E6%97%A5&#34;&gt;写过&lt;/a&gt;，本来运行在 MacBook 上，现在移到 Mac mini 了。&lt;/p&gt;
+&lt;p&gt;-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sync logseq from icloud to onedrive
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * /usr/bin/rsync -a &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;#34; &amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Logseq&amp;#34; &amp;gt; /Users/jinhuaiyao/Log/Logseq.bak.log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;每 5 分钟把 Logseq 文件从 iCloud Drive 里从同步到 Onedrive，今天再看这个，已经不需要了。&lt;/p&gt;
+&lt;p&gt;-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# get home IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/get_home_ip.sh &amp;gt;/Users/jinhuaiyao/Log/get_home_ip.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;curl cip.cc&lt;/code&gt; 去查看当前 IP，和上一次查询结果对比，如果不一样就输出到 iCloud Drive 里的一个文件。之前开了外网连接的时候用的，现在基本没有这个需求了。&lt;/p&gt;
+&lt;p&gt;-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# check if unknow screen sharing session
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/10 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/ck_screen_sharing_session.sh &amp;gt;/Users/jinhuaiyao/Log/ck_screen_sharing_session.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;netstat&lt;/code&gt; 查看 screen 连接的情况，如果有未知新连接，发邮件。之前开了外网连接的时候用的，已经不需要了。&lt;/p&gt;
+&lt;h5 id=&#34;其他&#34;&gt;其他&lt;/h5&gt;
+&lt;h6 id=&#34;reeder&#34;&gt;Reeder&lt;/h6&gt;
+&lt;p&gt;在 Mac mini 上安装 Reeder，配置 30 min 查询 feeds 一次，再通过 iCloud 同步结果，其他设备上就不用重复查询了。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-20.jpg&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;h6 id=&#34;ups&#34;&gt;UPS&lt;/h6&gt;
+&lt;p&gt;上周买了 UPS（不间断电源），把光猫、路由器、NAS 和 Mac mini 的电源全都接到 UPS 上，以后家里短暂断电也不会有影响了。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Nginx 反向代理 OpenAI API</title>
       <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
