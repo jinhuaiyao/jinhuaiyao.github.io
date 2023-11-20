@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用 mkdocs 搭建个人 wiki</title>
+<meta name="description" content="总觉得之前的笔记有点乱，打算在这些笔记的基础上再整理一下，构建自己的个人 wiki，正好也可以充分利用一下 mac mini。
+网上搜索了一圈，最后决定用 mkdocs 框架，一是它基于 markdown 格式，比较方便，二是颜值也很在线。
+在 mac mini 上安装 nginx jinhuaiyao@huaiyaos-mac-mini ~ % brew install nginx .">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/personal-wiki-setup/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.be97847030be33d3d8f6e5c0b00b8f95a550553df3deb4b86f6a0ec90d919834.css" integrity="sha256-vpeEcDC+M9PY9uXAsAuPlaVQVT3z3rS4b2oOyQ2RmDQ=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+  
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="http://www.jinhuaiyao.com/">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+        <div class="toc pl-0 list-none">
+    <header>
+        <h1>用 mkdocs 搭建个人 wiki</h1>
+        </header>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#在-mac-mini-上安装-nginx">在 mac mini 上安装 nginx</a></li>
+    <li><a href="#安装-mkdocs">安装 mkdocs</a></li>
+    <li><a href="#安装-mkdocs-material-主题">安装 mkdocs-material 主题</a></li>
+    <li><a href="#运行-mkdocs">运行 mkdocs</a></li>
+    <li><a href="#mac-mini-上配置-nginx">mac mini 上配置 nginx</a></li>
+    <li><a href="#添加图片">添加图片</a></li>
+    <li><a href="#中文搜索">中文搜索</a></li>
+    <li><a href="#更改字体">更改字体</a></li>
+    <li><a href="#配置-markdown">配置 markdown</a></li>
+    <li><a href="#ios-端更新文档">iOS 端更新文档</a>
+      <ul>
+        <li><a href="#移动主文件夹到-icloud-obsidian">移动主文件夹到 iCloud Obsidian</a></li>
+        <li><a href="#配置-build-自动化">配置 build 自动化</a></li>
+      </ul>
+    </li>
+    <li><a href="#把那年今日显示于-wiki">把“那年今日”显示于 wiki</a></li>
+  </ul>
+</nav>
+</div>
+
+        
+    </div>
+
+
+    <header class="flex flex-col gap-2">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">用 mkdocs 搭建个人 wiki</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2023-11-20 20:24:19 &#43;0800 CST" title="2023-11-20 20:24:19 &#43;0800 CST">
+    2023/11/20
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <p>总觉得之前的笔记有点乱，打算在这些笔记的基础上再整理一下，构建自己的个人 wiki，正好也可以充分利用一下 mac mini。</p>
+<p>网上搜索了一圈，最后决定用 mkdocs 框架，一是它基于 markdown 格式，比较方便，二是颜值也很在线。</p>
+<h1 id="在-mac-mini-上安装-nginx">在 mac mini 上安装 nginx</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % brew install nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">runed 0 symbolic links and 5 directories from /opt/homebrew
+</span></span><span class="line"><span class="cl">==&gt; Caveats
+</span></span><span class="line"><span class="cl">==&gt; nginx
+</span></span><span class="line"><span class="cl">Docroot is: /opt/homebrew/var/www
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+</span></span><span class="line"><span class="cl">nginx can run without sudo.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To start nginx now and restart at login:
+</span></span><span class="line"><span class="cl">  brew services start nginx
+</span></span><span class="line"><span class="cl">Or, if you don&#39;t want/need a background service you can just run:
+</span></span><span class="line"><span class="cl">  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini servers % which nginx
+</span></span><span class="line"><span class="cl">/opt/homebrew/bin/nginx
+</span></span></code></pre></div><p>网页验证一下</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png" width="80%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+
+<h1 id="安装-mkdocs">安装 mkdocs</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyaos-mbp ~ % which pip3
+</span></span><span class="line"><span class="cl">/Library/Frameworks/Python.framework/Versions/3.10/bin/pip3
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyaos-mbp ~ % pip3 install mkdocs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyaos-mbp OneDrive % pwd
+</span></span><span class="line"><span class="cl">/Users/jinhuaiyao/OneDrive
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyaos-mbp OneDrive % mkdocs new my_wiki
+</span></span><span class="line"><span class="cl">INFO    -  Creating project directory: my_wiki
+</span></span><span class="line"><span class="cl">INFO    -  Writing config file: my_wiki/mkdocs.yml
+</span></span><span class="line"><span class="cl">INFO    -  Writing initial docs: my_wiki/docs/index.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># open vscode to edit
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyaos-mbp my_wiki % code .
+</span></span></code></pre></div><h1 id="安装-mkdocs-material-主题">安装 mkdocs-material 主题</h1>
+<p>参考<br>
+<a href="https://squidfunk.github.io/mkdocs-material/getting-started/">https://squidfunk.github.io/mkdocs-material/getting-started/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install mkdocs-material
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># files are under
+</span></span><span class="line"><span class="cl">/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/material
+</span></span></code></pre></div><h1 id="运行-mkdocs">运行 mkdocs</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdocs serve
+</span></span></code></pre></div><p>网页验证一下<br>
+http://127.0.0.1:8000/</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdocs build
+</span></span></code></pre></div><p>会在 mkdocs/site g下生成网页文件。</p>
+<h1 id="mac-mini-上配置-nginx">mac mini 上配置 nginx</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /opt/homebrew/etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">    listen       80;
+</span></span><span class="line"><span class="cl">    server_name  10.0.0.100;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location / {
+</span></span><span class="line"><span class="cl">        root  /Users/jinhuaiyao/Documents/mkdocs/site;
+</span></span><span class="line"><span class="cl">        index  index.html index.htm;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nginx -t
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/usr/bin/rsync -a &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/site&#34; 10.0.0.100:/Users/jinhuaiyao/Documents/mkdocs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">brew services restart nginx
+</span></span></code></pre></div><p>效果如下。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-1.png" width="80%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+
+<h1 id="添加图片">添加图片</h1>
+<p>在docs 目录下新建 images 文件夹。</p>
+<p>图片路径需要使用相对路径。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">![](../images/Pasted%20image%2020231114195357.png)
+</span></span></code></pre></div><h1 id="中文搜索">中文搜索</h1>
+<p>默认没办法搜索中文，<code>pip3 install jieba</code>，然后添加以下后配置文件 mkdocs.yml。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">plugins:
+</span></span><span class="line"><span class="cl">  - search:
+</span></span><span class="line"><span class="cl">      separator: &#39;[\s\u200b\-]&#39;
+</span></span></code></pre></div><h1 id="更改字体">更改字体</h1>
+<p>配置文件 mkdocs.yml。</p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/">https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">theme:
+</span></span><span class="line"><span class="cl">  name: material
+</span></span><span class="line"><span class="cl">  font:
+</span></span><span class="line"><span class="cl">    text: Ubuntu
+</span></span><span class="line"><span class="cl">    code: Ubuntu
+</span></span></code></pre></div><h1 id="配置-markdown">配置 markdown</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">markdown_extensions:
+</span></span><span class="line"><span class="cl">  - meta 
+</span></span><span class="line"><span class="cl">  - toc:
+</span></span><span class="line"><span class="cl">      toc_depth: 3
+</span></span><span class="line"><span class="cl">      baselevel: 1
+</span></span></code></pre></div><h1 id="ios-端更新文档">iOS 端更新文档</h1>
+<p>macOS 上一切就绪后，想着手机端能不能也更新文件然后自动 mkdocs build 呢。一番研究，最后搞定。</p>
+<h2 id="移动主文件夹到-icloud-obsidian">移动主文件夹到 iCloud Obsidian</h2>
+<p>把 mkdocs 和 mkdocs.yml 拷备到 iCloud Obsidian 里，然后 iOS 上打开 mkdocs 作为新的 vault，这样就可以在手机上编辑文档了，文档更新可以通过 iCloud 同步。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-2.png" width="80%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-3.png" width="30%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+
+<h2 id="配置-build-自动化">配置 build 自动化</h2>
+<p>在 mac mini 上同样安装 mkdocs。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs-material
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">export PATH=&#39;/Users/jinhuaiyao/Library/Python/3.9/bin&#39;:$PATH
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini Documents % pwd
+</span></span><span class="line"><span class="cl">/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdocs serve 
+</span></span><span class="line"><span class="cl">mkdocs build
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/usr/bin/rsync -a &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/site&#34; /Users/jinhuaiyao/Documents/mkdocs
+</span></span></code></pre></div><p>添加以下 cron job。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># check if new file and mkdocs build
+</span></span><span class="line"><span class="cl">*/5 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/build_wiki_page.sh &gt;/Users/jinhuaiyao/Log/build_wiki_page.txt 2&gt;&amp;1
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/build_wiki_page.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">rc</span><span class="o">=</span><span class="sb">`</span>find docs -type f -mmin -6 <span class="p">|</span>wc -l<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$rc</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">/Users/jinhuaiyao/Library/Python/3.9/bin/mkdocs build<span class="p">;</span>
+</span></span><span class="line"><span class="cl">/usr/bin/rsync -a <span class="s2">&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/site&#34;</span> /Users/jinhuaiyao/Documents/mkdocs
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>以上脚本会每 5 分钟 检查 iCloud Obsidian docs 目录过去 6 分钟是否有变化，如果有，则 mkdocs build 一次，再把 site 文件夹同步到 nginx 的显示目录，这样刷新网页就可以看到更新后的网页了。</p>
+<h1 id="把那年今日显示于-wiki">把“那年今日”显示于 wiki</h1>
+<p>mac mini 添加 cron job。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># on this day to wiki
+</span></span><span class="line"><span class="cl">01 05 * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/wiki_on_this_day.sh &gt;/Users/jinhuaiyao/Log/wiki_on_this_day.txt 2&gt;&amp;1
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/wiki_on_this_day.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd  &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&#34;
+</span></span><span class="line"><span class="cl">DT=`date +%m_%d`;
+</span></span><span class="line"><span class="cl">target_dir=&#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/docs/on_this_day/&#34;
+</span></span><span class="line"><span class="cl">mdfile=&#34;${target_dir}/${DT}.md&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">echo &gt; &#34;$mdfile&#34;
+</span></span><span class="line"><span class="cl">echo &#34;#$DT&#34; |sed &#39;s/_/\//g&#39; &gt;&gt;&#34;$mdfile&#34;
+</span></span><span class="line"><span class="cl">ls |grep &#34;_$DT&#34; |sort |while read file
+</span></span><span class="line"><span class="cl">do
+</span></span><span class="line"><span class="cl">echo &#34;   &#34; &gt;&gt; &#34;$mdfile&#34;
+</span></span><span class="line"><span class="cl">echo $file |sed &#39;s/.md//g&#39;|sed &#39;s/_/-/g&#39; |sed &#39;s/^/# /g&#39; |sed &#39;s/$/   /g&#39;  &gt;&gt; &#34;$mdfile&#34;
+</span></span><span class="line"><span class="cl">echo &#34;   &#34; &gt;&gt; &#34;$mdfile&#34;
+</span></span><span class="line"><span class="cl">cat  &#34;$file&#34; |sed &#39;s/#//g&#39; |grep -v done123 |grep -v &#34;collapsed::&#34; |sed &#34;s/- //g&#34; | \
+</span></span><span class="line"><span class="cl">sed &#39;s/^ */  /g&#39;|sed &#39;s/$/   /g&#39; |sed &#39;s/--------------/--/&#39; |sed &#34;s#\[\[#g&#34; |sed &#39;s#\]\]#g&#39; &gt;&gt; &#34;$mdfile&#34;
+</span></span><span class="line"><span class="cl">done
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat  &#34;$mdfile&#34; | grep &#39;../assets/&#39; |awk  -F&#39;/&#39; &#39;{print $NF}&#39; |sed &#39;s/)//g&#39; | while read img_file
+</span></span><span class="line"><span class="cl">do 
+</span></span><span class="line"><span class="cl">cp &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/assets/dayone/${img_file}&#34; &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/docs/images&#34; &gt;/dev/null 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">cp &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/assets/${img_file}&#34; &#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/docs/images&#34; &gt;/dev/null 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">done
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat &#34;$mdfile&#34; |sed &#34;s#assets/dayone#images#g&#34; | sed &#34;s#../assets/#../images/#g&#34;&gt; &#34;$mdfile&#34;.tmp
+</span></span><span class="line"><span class="cl">mv &#34;$mdfile&#34;.tmp  &#34;$mdfile&#34;
+</span></span></code></pre></div><p>效果如下。每天早晨起来可以打开网页快速回顾一下。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png" width="80%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png" width="30%"/><figcaption>
+            <h4> </h4>
+        </figcaption>
+</figure>
+
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+
+    </footer>
+
+
+
+
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2023  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
