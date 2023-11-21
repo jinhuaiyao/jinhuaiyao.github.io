@@ -116,7 +116,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini servers % which nginx
 </span></span><span class="line"><span class="cl">/opt/homebrew/bin/nginx
-</span></span></code></pre></div><p>网页验证一下</p>
+</span></span></code></pre></div><p>网页验证一下。</p>
 <figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png" width="80%"/><figcaption>
             <h4> </h4>
         </figcaption>
@@ -148,8 +148,7 @@
 </span></span><span class="line"><span class="cl">/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/material
 </span></span></code></pre></div><h1 id="运行-mkdocs">运行 mkdocs</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdocs serve
-</span></span></code></pre></div><p>网页验证一下<br>
-http://127.0.0.1:8000/</p>
+</span></span></code></pre></div><p>网页验证一下，http://127.0.0.1:8000/</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdocs build
 </span></span></code></pre></div><p>会在 mkdocs/site 下生成网页文件。</p>
 <h1 id="mac-mini-上配置-nginx">mac mini 上配置 nginx</h1>
@@ -181,7 +180,7 @@ http://127.0.0.1:8000/</p>
 <p>图片路径需要使用相对路径。例如：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">![](../images/Pasted%20image%2020231114195357.png)
 </span></span></code></pre></div><h1 id="中文搜索">中文搜索</h1>
-<p>默认没办法搜索中文，<code>pip3 install jieba</code>，然后添加以下后配置文件 mkdocs.yml。</p>
+<p>默认没办法搜索中文，<code>pip3 install jieba</code>，然后添加以下到配置文件 mkdocs.yml。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">plugins:
 </span></span><span class="line"><span class="cl">  - search:
 </span></span><span class="line"><span class="cl">      separator: &#39;[\s\u200b\-]&#39;
