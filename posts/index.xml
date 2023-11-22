@@ -14,7 +14,7 @@
       <pubDate>Mon, 20 Nov 2023 20:24:19 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/posts/personal-wiki-setup/</guid>
-      <description>&lt;p&gt;总觉得之前的笔记有点乱，打算在这些笔记的基础上再整理一下，构建自己的个人 wiki，正好也可以充分利用一下 mac mini。&lt;/p&gt;
+      <description>&lt;p&gt;总觉得之前的笔记有点乱，且不方便回顾。于是打算在这些笔记的基础上再梳理一下，构建自己的个人 wiki。此外也可以充分利用一下 mac mini。&lt;/p&gt;
 &lt;p&gt;网上搜索了一圈，最后决定用 mkdocs 框架，一是它基于 markdown 格式，比较方便，二是颜值也很在线。&lt;/p&gt;
 &lt;h1 id=&#34;在-mac-mini-上安装-nginx&#34;&gt;在 mac mini 上安装 nginx&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % brew install nginx
