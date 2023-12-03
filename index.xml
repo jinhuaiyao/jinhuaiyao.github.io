@@ -1840,6 +1840,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.wangpc.cc/aigc/cloudflare-openai-api/&#34;&gt;通过 Cloudfare 创建代理无阻访问 OpenAI&lt;/a&gt; - 2023.07&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/Loyalsoldier/surge-rules&#34;&gt;Surge rules&lt;/a&gt; - 2023.10&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://support.apple.com/en-us/101928&#34;&gt;Ergonomics&lt;/a&gt; - 2023.11&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tidbits.com/2015/06/21/11-stupid-backup-strategies/&#34;&gt;11 Stupid Backup Strategies&lt;/a&gt; - 2023.12&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;课程&#34;&gt;课程&lt;/h5&gt;
 &lt;ul&gt;
@@ -2139,7 +2140,6 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ChatGPT (iOS)&lt;/li&gt;
 &lt;li&gt;Days Matter Air (iOS)&lt;/li&gt;
-&lt;li&gt;flomo&lt;/li&gt;
 &lt;li&gt;Nike Training&lt;/li&gt;
 &lt;li&gt;Poe (iOS)&lt;/li&gt;
 &lt;li&gt;少数派&lt;/li&gt;
@@ -2194,7 +2194,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;Just My Socks&lt;/li&gt;
 &lt;li&gt;1Password&lt;/li&gt;
 &lt;li&gt;相照 (iOS)&lt;/li&gt;
-&lt;li&gt;网易云音乐 (iOS)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;网易云音乐 (iOS)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;微信读书&lt;/li&gt;
 &lt;li&gt;扇贝单词 (iOS)&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Cubox&lt;/del&gt;&lt;/li&gt;
@@ -2224,6 +2224,8 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;万兴 PDF (MacOS)&lt;/li&gt;
 &lt;li&gt;心光&lt;/li&gt;
 &lt;li&gt;ffmpeng (MacOS)&lt;/li&gt;
+&lt;li&gt;flomo&lt;/li&gt;
+&lt;li&gt;CleanMyMac X (MacOS)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
