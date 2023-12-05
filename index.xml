@@ -1941,7 +1941,7 @@
       <guid>http://www.jinhuaiyao.com/posts/backup-backup-backup/</guid>
       <description>&lt;p&gt;昨天有个朋友家用 NAS 升级系统后资料不能访问了，数据没有其他备份，很难办。&lt;/p&gt;
 &lt;p&gt;这里再次强调一下重要资料备份的重要性，不要等到数据丢失了才追悔莫及。&lt;/p&gt;
-&lt;p&gt;看这篇旧文章，&lt;a href=&#34;https://www.jinhuaiyao.com/2019/03/take-good-care-of-your-stuff/&#34;&gt;好好珍惜自己的资料&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;看这篇旧文章，&lt;a href=&#34;https://www.jinhuaiyao.com/posts/take-good-care-of-your-stuff/&#34;&gt;好好珍惜自己的资料&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;目前我的备份设备是家用 4 盘位 NAS，硬盘 1 和 2 是去年年底新更换的 4T 硬盘，硬盘 3 和 4 是 2015 年买的。NAS 外挂一块 2T 移动硬盘做为备份盘。&lt;/p&gt;
 &lt;p&gt;备份策略如下：&lt;/p&gt;
 &lt;ul&gt;
@@ -2226,6 +2226,8 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;ffmpeng (MacOS)&lt;/li&gt;
 &lt;li&gt;flomo&lt;/li&gt;
 &lt;li&gt;CleanMyMac X (MacOS)&lt;/li&gt;
+&lt;li&gt;Bartender (MacOS)&lt;/li&gt;
+&lt;li&gt;Starfall&lt;/li&gt;
 &lt;li&gt;Pok Pok&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -2773,7 +2775,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;h2 id=&#34;一些重要的纸质资料&#34;&gt;一些重要的纸质资料&lt;/h2&gt;
 &lt;p&gt;手机拍照，整理到 DEVONthink，便于整理和查找。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;最后希望大家花点时间配置一下自己的备份策略，保护好自己重要的资料，然后安心地好好生活好好工作好好学习。&lt;/p&gt;</description>
+&lt;p&gt;花点时间配置一下自己的备份策略，保护好自己重要的资料，然后安心地好好生活好好工作好好学习。&lt;/p&gt;</description>
     </item>
     
     <item>
