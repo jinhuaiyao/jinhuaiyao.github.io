@@ -89,12 +89,10 @@
       <description>&lt;p&gt;上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。&lt;/p&gt;
 &lt;h1 id=&#34;工作笔记的目的&#34;&gt;工作笔记的目的&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-1.png&#34; width=&#34;40%&#34;/&gt;&lt;figcaption&gt;
-            &lt;h4&gt; &lt;/h4&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/li&gt;
+&lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
 &lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/li&gt;

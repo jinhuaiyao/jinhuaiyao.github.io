@@ -118,11 +118,7 @@
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini servers % which nginx
 </span></span><span class="line"><span class="cl">/opt/homebrew/bin/nginx
 </span></span></code></pre></div><p>网页验证一下。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png" width="80%"/><figcaption>
-            <h4> </h4>
-        </figcaption>
-</figure>
-
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png" alt=""></p>
 <h1 id="安装-mkdocs">安装 mkdocs</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
 </span></span><span class="line"><span class="cl">
@@ -171,11 +167,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">brew services restart nginx
 </span></span></code></pre></div><p>效果如下。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-1.png" width="80%"/><figcaption>
-            <h4> </h4>
-        </figcaption>
-</figure>
-
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-1.png" alt=""></p>
 <h1 id="添加图片">添加图片</h1>
 <p>在docs 目录下新建 images 文件夹。</p>
 <p>图片路径需要使用相对路径。例如：</p>
@@ -203,16 +195,7 @@
 <p>macOS 上一切就绪后，想着手机端能不能也更新文件然后自动 mkdocs build 呢。一番研究，最后搞定。</p>
 <h2 id="移动主文件夹到-icloud-obsidian">移动主文件夹到 iCloud Obsidian</h2>
 <p>把 mkdocs 和 mkdocs.yml 拷备到 iCloud Obsidian 里，然后 iOS 上打开 mkdocs 作为新的 vault，这样就可以在手机上编辑文档了，文档更新可以通过 iCloud 同步。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-2.png" width="80%"/><figcaption>
-            <h4> </h4>
-        </figcaption>
-</figure>
-
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-3.png" width="30%"/><figcaption>
-            <h4> </h4>
-        </figcaption>
-</figure>
-
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-2.png" alt=""></p>
 <h2 id="配置-build-自动化">配置 build 自动化</h2>
 <p>在 mac mini 上同样安装 mkdocs。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs
@@ -272,16 +255,8 @@
 </span></span><span class="line"><span class="cl">cat &#34;$mdfile&#34; |sed &#34;s#assets/dayone#images#g&#34; | sed &#34;s#../assets/#../images/#g&#34;&gt; &#34;$mdfile&#34;.tmp
 </span></span><span class="line"><span class="cl">mv &#34;$mdfile&#34;.tmp  &#34;$mdfile&#34;
 </span></span></code></pre></div><p>效果如下。每天早晨起来可以打开网页快速回顾一下。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png" width="80%"/><figcaption>
-            <h4> </h4>
-        </figcaption>
-</figure>
-
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png" width="30%"/><figcaption>
-            <h4> </h4>
-        </figcaption>
-</figure>
-
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png" alt=""></p>
 <h1 id="20231125-更新">2023/11/25 更新</h1>
 <p>已将文件夹从 iCloud Drive 转移到 Dropbox，iCloud Drive 同步真是一言难尽。Dropbox 手机端可以直接更新 markdown 文件，很赞。</p>
 
