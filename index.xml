@@ -1824,6 +1824,10 @@
       
       <guid>http://www.jinhuaiyao.com/words/</guid>
       <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2023.12.10 21:36:05&lt;/em&gt; &lt;br&gt;
+刚刚和老婆说今年没记账都不知道一年花了多少钱，她也有同感，一致决定明年 1 号开始继续记账。接下来几天要思考一下如何优化一下流程，使得记账更轻松。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;2023.12.10 19:47:37&lt;/em&gt; &lt;br&gt;
 好一阵子没看象棋比赛，今天看了象甲季后赛，恭喜老王带队夺冠！&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2050,7 +2054,6 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;h5 id=&#34;付费服务和产品&#34;&gt;付费服务和产品&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;Microsoft 365&lt;/li&gt;
-&lt;li&gt;OneDrive&lt;/li&gt;
 &lt;li&gt;iCloud&lt;/li&gt;
 &lt;li&gt;百度网盘&lt;/li&gt;
 &lt;li&gt;阿里云盘&lt;/li&gt;
@@ -2062,7 +2065,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;财新&lt;/li&gt;
 &lt;li&gt;盒马&lt;/li&gt;
 &lt;li&gt;Apple Music&lt;/li&gt;
-&lt;li&gt;Vista 看天下&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Vista 看天下&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;HostDare VPS&lt;/li&gt;
 &lt;li&gt;Just My Socks&lt;/li&gt;
 &lt;li&gt;1Password&lt;/li&gt;
@@ -2093,16 +2096,17 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;&lt;del&gt;Readwise&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;Endel&lt;/li&gt;
 &lt;li&gt;V2er (iOS)&lt;/li&gt;
-&lt;li&gt;Infuse&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Infuse&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;万兴 PDF (MacOS)&lt;/li&gt;
 &lt;li&gt;心光&lt;/li&gt;
 &lt;li&gt;ffmpeng (MacOS)&lt;/li&gt;
-&lt;li&gt;GPT-4&lt;/li&gt;
-&lt;li&gt;flomo&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;GPT-4&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;flomo&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;CleanMyMac X (MacOS)&lt;/li&gt;
 &lt;li&gt;Bartender (MacOS)&lt;/li&gt;
 &lt;li&gt;Starfall&lt;/li&gt;
 &lt;li&gt;Pok Pok&lt;/li&gt;
+&lt;li&gt;MoneyWiz&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
