@@ -9,6 +9,25 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>我的日记变迁</title>
+      <link>http://www.jinhuaiyao.com/posts/the-changes-in-my-diary/</link>
+      <pubDate>Sat, 16 Dec 2023 10:09:15 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/the-changes-in-my-diary/</guid>
+      <description>&lt;p&gt;最早是在初中，日记写在 A4 纸上，装到透明袋子里。&lt;/p&gt;
+&lt;p&gt;高中和大学的时候，日记是写在笔记本上，断断续续的。&lt;/p&gt;
+&lt;p&gt;毕业后开始工作时，日记写在 A4 纸上，每天只言片语，记得是用夹子夹住的一沓纸。&lt;/p&gt;
+&lt;p&gt;后来陆陆续续用了好几个笔记本（每个也没有写满），也会把碎碎念写到新浪博客上。&lt;/p&gt;
+&lt;p&gt;2016 年年底的时候开始用 OneNote 写晨间日记，使用模板生成日记的框架。&lt;/p&gt;
+&lt;p&gt;2019 年 9 月开始用 Day One 写晨间日记。&lt;/p&gt;
+&lt;p&gt;2022 年 6 月换用 Logseq 写晨间日记，并且把以前 OneNote、Day One 里的记录都迁移到 Logseq 里，以 markdown 文本的形式存放。&lt;/p&gt;
+&lt;p&gt;目前（2023 年底），正在尝试使用大型语言模型工具整理以往的日记和记录，希望能更好地了解自己。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;没有记录，记忆往往并不可靠。对我而言，日记用来回顾过去都忙了什么、在想什么，当时的快乐、难过、困惑是什么，并与现在进行比较，看看有哪些变化，最终能更好地了解自己。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>个人资料分级及备份</title>
       <link>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup/</link>
       <pubDate>Wed, 06 Dec 2023 07:12:57 +0800</pubDate>
