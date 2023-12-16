@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 16 Dec 2023 10:09:15 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Dec 2023 11:50:35 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于记账</title>
+      <link>http://www.jinhuaiyao.com/posts/about-bookkeeping/</link>
+      <pubDate>Sat, 16 Dec 2023 11:50:35 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/about-bookkeeping/</guid>
+      <description>&lt;p&gt;今年没有记账，不清楚一年总共花了多少钱。和老婆一致决定明年开始继续记账。我负责优化一下操作流程，使得记账更轻松。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;只记开销和收入，不对账。这一条最重要，以前定期对账消耗大量的时间和精力，最终还导致记账的停止。&lt;/p&gt;
+&lt;p&gt;继续使用同一个 MoneyWiz 账号同步记账记录。&lt;/p&gt;
+&lt;p&gt;每个人只保留两个记账账户：开销和收入。&lt;/p&gt;
+&lt;p&gt;记账时选择分类不要过于纠结。&lt;/p&gt;
+&lt;p&gt;10 块钱以下的消费可以不用记录。&lt;/p&gt;
+&lt;p&gt;优化一下分类与子类。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-bookkeeping.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;投资记录与资产更新每两个月统计到 excel。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>我的日记变迁</title>
       <link>http://www.jinhuaiyao.com/posts/the-changes-in-my-diary/</link>
