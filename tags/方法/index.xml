@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Huaiyao Jin</title>
+    <link>http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/</link>
+    <description>Recent content on jinhuaiyao.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2017 - {year}</copyright>
+    <lastBuildDate>Sat, 16 Dec 2023 11:50:35 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于记账</title>
+      <link>http://www.jinhuaiyao.com/posts/about-bookkeeping/</link>
+      <pubDate>Sat, 16 Dec 2023 11:50:35 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/about-bookkeeping/</guid>
+      <description>&lt;p&gt;今年没有记账，不清楚一年总共花了多少钱。和老婆一致决定明年开始继续记账。我负责优化一下操作流程，使得记账更轻松。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;只记开销和收入，不对账。这一条最重要，以前定期对账消耗大量的时间和精力，最终还导致记账的停止。&lt;/p&gt;
+&lt;p&gt;继续使用同一个 MoneyWiz 账号同步记账记录。&lt;/p&gt;
+&lt;p&gt;每个人只保留两个记账账户：开销和收入。&lt;/p&gt;
+&lt;p&gt;记账时选择分类不要过于纠结。&lt;/p&gt;
+&lt;p&gt;10 块钱以下的消费可以不用记录。&lt;/p&gt;
+&lt;p&gt;优化一下分类与子类。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-bookkeeping.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;投资记录与资产更新每两个月统计到 excel。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>我的日记变迁</title>
+      <link>http://www.jinhuaiyao.com/posts/the-changes-in-my-diary/</link>
+      <pubDate>Sat, 16 Dec 2023 10:09:15 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/the-changes-in-my-diary/</guid>
+      <description>&lt;p&gt;最早是在初中，日记写在 A4 纸上，装到透明袋子里。&lt;/p&gt;
+&lt;p&gt;高中和大学的时候，日记是写在笔记本上，断断续续的。&lt;/p&gt;
+&lt;p&gt;毕业后开始工作时，日记写在 A4 纸上，每天只言片语，记得是用夹子夹住的一沓纸。&lt;/p&gt;
+&lt;p&gt;后来陆陆续续用了好几个笔记本（每个也没有写满），也会把碎碎念写到新浪博客上。&lt;/p&gt;
+&lt;p&gt;2016 年年底的时候开始用 OneNote 写晨间日记，使用模板生成日记的框架。&lt;/p&gt;
+&lt;p&gt;2019 年 9 月开始用 Day One 写晨间日记。&lt;/p&gt;
+&lt;p&gt;2022 年 6 月换用 Logseq 写晨间日记，并且把以前 OneNote、Day One 里的记录都迁移到 Logseq 里，以 markdown 文本的形式存放。&lt;/p&gt;
+&lt;p&gt;目前（2023 年底），正在尝试使用大型语言模型工具整理以往的日记和记录，希望能更好地了解自己。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;没有记录，记忆往往并不可靠。对我而言，日记用来回顾过去都忙了什么、在想什么，当时的快乐、难过、困惑是什么，并与现在进行比较，看看有哪些变化，最终能更好地了解自己。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>个人资料分级及备份</title>
+      <link>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup/</link>
+      <pubDate>Wed, 06 Dec 2023 07:12:57 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup/</guid>
+      <description>&lt;p&gt;&lt;em&gt;“自己产生的，独有的数据，才是值得备份的。网上下载来的，往往没那么重要。” —— ze ran&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;以前写过一些:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/take-good-care-of-your-stuff/&#34;&gt;好好珍惜自己的资料&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.jinhuaiyao.com/posts/backup-backup-backup/&#34;&gt;备份备份再备份&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;更新一下 2023 版，目前重要资料的备份除了微信聊天记录，其他的都是自动进行的，不需要人工干预。&lt;/p&gt;
+&lt;h1 id=&#34;个人照片和视频&#34;&gt;个人照片和视频&lt;/h1&gt;
+&lt;p&gt;存于 iCloud， 下载并保留原片到 Mac mini 的外接移动硬盘，Mac mini 及移动硬盘通过 Time Machine 备份，Time Machine 配置两块移动硬盘，每小时轮流备份。&lt;/p&gt;
+&lt;h1 id=&#34;个人文档资料&#34;&gt;个人文档资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;日记&lt;/li&gt;
+&lt;li&gt;博客文章&lt;/li&gt;
+&lt;li&gt;个人 Wiki（记录和总结，阅读笔记）&lt;/li&gt;
+&lt;li&gt;曾经的工作笔记&lt;/li&gt;
+&lt;li&gt;微信聊天记录&lt;/li&gt;
+&lt;li&gt;账号和密码&lt;/li&gt;
+&lt;li&gt;其他个人资料（例如投资统计，体检报告，证件电子版，备份文件）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;日记，博客文章，个人 Wiki，曾经的工作笔记，存于 Dropbox，通过 Mac mini 的 Time Machine 备份。&lt;/p&gt;
+&lt;p&gt;微信聊天记录，每周通过客户端手动备份到 Mac mini，再通过 Time Machine 进行备份。&lt;/p&gt;
+&lt;p&gt;账号和密码存于 1Password，1Password 主密码有备份，其他账号密码都交给 1Password 了。&lt;/p&gt;
+&lt;p&gt;其他个人资料主要存于 DEVONthink，通过 iCloud 同步到 Mac mini，再通过  Time Machine 进行备份。部分大文件存于 OneDrive，通过 Mac mini 的 Time Machine 备份。&lt;/p&gt;
+&lt;h1 id=&#34;其他的收集&#34;&gt;其他的收集&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;收集的软件和工具&lt;/li&gt;
+&lt;li&gt;收集的学习资料（英语，数据库，编程；文档，图书，音频，视频）&lt;/li&gt;
+&lt;li&gt;收集的文档、图书&lt;/li&gt;
+&lt;li&gt;收集的文章及标注&lt;/li&gt;
+&lt;li&gt;收集的剧集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中相对重要的学习资料会存于 DEVONthink，通过 Time Machine 备份。不重要的收集（比如剧集）存于百度盘，NAS 里也会放一份，读取速度相对比较快。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>用 mkdocs 搭建个人 wiki</title>
+      <link>http://www.jinhuaiyao.com/posts/personal-wiki-setup/</link>
+      <pubDate>Mon, 20 Nov 2023 20:24:19 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/personal-wiki-setup/</guid>
+      <description>&lt;p&gt;总觉得之前的笔记有点乱，且不方便回顾。于是打算在这些笔记的基础上再梳理一下，构建自己的个人 wiki。此外也可以充分利用一下 mac mini。&lt;/p&gt;
+&lt;p&gt;网上搜索了一圈，最后决定用 mkdocs 框架，一是它基于 markdown 格式，比较方便，二是颜值也很在线。&lt;/p&gt;
+&lt;h1 id=&#34;在-mac-mini-上安装-nginx&#34;&gt;在 mac mini 上安装 nginx&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % brew install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;runed 0 symbolic links and 5 directories from /opt/homebrew
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;==&amp;gt; Caveats
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;==&amp;gt; nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Docroot is: /opt/homebrew/var/www
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx can run without sudo.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;To start nginx now and restart at login:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  brew services start nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Or, if you don&amp;#39;t want/need a background service you can just run:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini servers % which nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/homebrew/bin/nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;网页验证一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装-mkdocs&#34;&gt;安装 mkdocs&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyaos-mbp ~ % which pip3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Library/Frameworks/Python.framework/Versions/3.10/bin/pip3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyaos-mbp ~ % pip3 install mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyaos-mbp OneDrive % pwd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Users/jinhuaiyao/OneDrive
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyaos-mbp OneDrive % mkdocs new my_wiki
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO    -  Creating project directory: my_wiki
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO    -  Writing config file: my_wiki/mkdocs.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INFO    -  Writing initial docs: my_wiki/docs/index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# open vscode to edit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyaos-mbp my_wiki % code .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;安装-mkdocs-material-主题&#34;&gt;安装 mkdocs-material 主题&lt;/h1&gt;
+&lt;p&gt;参考&lt;br&gt;
+&lt;a href=&#34;https://squidfunk.github.io/mkdocs-material/getting-started/&#34;&gt;https://squidfunk.github.io/mkdocs-material/getting-started/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip3 install mkdocs-material
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# files are under
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/material
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;运行-mkdocs&#34;&gt;运行 mkdocs&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdocs serve
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;网页验证一下，http://127.0.0.1:8000/&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdocs build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;会在 mkdocs/site 下生成网页文件。&lt;/p&gt;
+&lt;h1 id=&#34;mac-mini-上配置-nginx&#34;&gt;mac mini 上配置 nginx&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /opt/homebrew/etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen       80;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    server_name  10.0.0.100;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        root  /Users/jinhuaiyao/Documents/mkdocs/site;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        index  index.html index.htm;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx -t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/rsync -a &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/site&amp;#34; 10.0.0.100:/Users/jinhuaiyao/Documents/mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew services restart nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;添加图片&#34;&gt;添加图片&lt;/h1&gt;
+&lt;p&gt;在docs 目录下新建 images 文件夹。&lt;/p&gt;
+&lt;p&gt;图片路径需要使用相对路径。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![](../images/Pasted%20image%2020231114195357.png)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;中文搜索&#34;&gt;中文搜索&lt;/h1&gt;
+&lt;p&gt;默认没办法搜索中文，&lt;code&gt;pip3 install jieba&lt;/code&gt;，然后添加以下到配置文件 mkdocs.yml。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plugins:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - search:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      separator: &amp;#39;[\s\u200b\-]&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;更改字体&#34;&gt;更改字体&lt;/h1&gt;
+&lt;p&gt;配置文件 mkdocs.yml。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/&#34;&gt;https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;theme:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  name: material
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    text: Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    code: Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;配置-markdown&#34;&gt;配置 markdown&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;markdown_extensions:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - meta 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - toc:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      toc_depth: 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      baselevel: 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ios-端更新文档&#34;&gt;iOS 端更新文档&lt;/h1&gt;
+&lt;p&gt;macOS 上一切就绪后，想着手机端能不能也更新文件然后自动 mkdocs build 呢。一番研究，最后搞定。&lt;/p&gt;
+&lt;h2 id=&#34;移动主文件夹到-icloud-obsidian&#34;&gt;移动主文件夹到 iCloud Obsidian&lt;/h2&gt;
+&lt;p&gt;把 mkdocs 和 mkdocs.yml 拷备到 iCloud Obsidian 里，然后 iOS 上打开 mkdocs 作为新的 vault，这样就可以在手机上编辑文档了，文档更新可以通过 iCloud 同步。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置-build-自动化&#34;&gt;配置 build 自动化&lt;/h2&gt;
+&lt;p&gt;在 mac mini 上同样安装 mkdocs。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs-material
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;export PATH=&amp;#39;/Users/jinhuaiyao/Library/Python/3.9/bin&amp;#39;:$PATH
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini Documents % pwd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdocs serve 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdocs build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/rsync -a &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/site&amp;#34; /Users/jinhuaiyao/Documents/mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加以下 cron job。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# check if new file and mkdocs build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/build_wiki_page.sh &amp;gt;/Users/jinhuaiyao/Log/build_wiki_page.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/build_wiki_page.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;rc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;find docs -type f -mmin -6 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wc -l&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rc&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Users/jinhuaiyao/Library/Python/3.9/bin/mkdocs build&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/rsync -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/site&amp;#34;&lt;/span&gt; /Users/jinhuaiyao/Documents/mkdocs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上脚本会每 5 分钟 检查 iCloud Obsidian docs 目录过去 6 分钟是否有变化，如果有，则 mkdocs build 一次，再把 site 文件夹同步到 nginx 的显示目录，这样刷新网页就可以看到更新后的网页了。&lt;/p&gt;
+&lt;h1 id=&#34;把那年今日显示于-wiki&#34;&gt;把“那年今日”显示于 wiki&lt;/h1&gt;
+&lt;p&gt;mac mini 添加 cron job。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# on this day to wiki
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;01 05 * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/wiki_on_this_day.sh &amp;gt;/Users/jinhuaiyao/Log/wiki_on_this_day.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/wiki_on_this_day.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd  &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DT=`date +%m_%d`;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;target_dir=&amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/docs/on_this_day/&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mdfile=&amp;#34;${target_dir}/${DT}.md&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;gt; &amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;#$DT&amp;#34; |sed &amp;#39;s/_/\//g&amp;#39; &amp;gt;&amp;gt;&amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls |grep &amp;#34;_$DT&amp;#34; |sort |while read file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;do
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;   &amp;#34; &amp;gt;&amp;gt; &amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo $file |sed &amp;#39;s/.md//g&amp;#39;|sed &amp;#39;s/_/-/g&amp;#39; |sed &amp;#39;s/^/# /g&amp;#39; |sed &amp;#39;s/$/   /g&amp;#39;  &amp;gt;&amp;gt; &amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;   &amp;#34; &amp;gt;&amp;gt; &amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat  &amp;#34;$file&amp;#34; |sed &amp;#39;s/#//g&amp;#39; |grep -v done123 |grep -v &amp;#34;collapsed::&amp;#34; |sed &amp;#34;s/- //g&amp;#34; | \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed &amp;#39;s/^ */  /g&amp;#39;|sed &amp;#39;s/$/   /g&amp;#39; |sed &amp;#39;s/--------------/--/&amp;#39; |sed &amp;#34;s#\[\[#g&amp;#34; |sed &amp;#39;s#\]\]#g&amp;#39; &amp;gt;&amp;gt; &amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat  &amp;#34;$mdfile&amp;#34; | grep &amp;#39;../assets/&amp;#39; |awk  -F&amp;#39;/&amp;#39; &amp;#39;{print $NF}&amp;#39; |sed &amp;#39;s/)//g&amp;#39; | while read img_file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;do 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/assets/dayone/${img_file}&amp;#34; &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/docs/images&amp;#34; &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/assets/${img_file}&amp;#34; &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~md~obsidian/Documents/docs/images&amp;#34; &amp;gt;/dev/null 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;#34;$mdfile&amp;#34; |sed &amp;#34;s#assets/dayone#images#g&amp;#34; | sed &amp;#34;s#../assets/#../images/#g&amp;#34;&amp;gt; &amp;#34;$mdfile&amp;#34;.tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv &amp;#34;$mdfile&amp;#34;.tmp  &amp;#34;$mdfile&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。每天早晨起来可以打开网页快速回顾一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;20231125-更新&#34;&gt;2023/11/25 更新&lt;/h1&gt;
+&lt;p&gt;已将文件夹从 iCloud Drive 转移到 Dropbox，iCloud Drive 同步真是一言难尽。Dropbox 手机端可以直接更新 markdown 文件，很赞。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenCat &#43; ChatGPT 来当翻译助手</title>
+      <link>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</link>
+      <pubDate>Mon, 23 Oct 2023 12:49:26 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/opencat-and-chatgpt/</guid>
+      <description>&lt;p&gt;想在手机上用 OpenAI Translator，随时快速、准确地把想到的中文句子通过 ChatGPT 翻译成英文。&lt;/p&gt;
+&lt;p&gt;但是 OpenAI Translator 没有手机客户端，想办法利用其他工具实现类似的功能。一番探索，最后使用 OpenCat 完美解决问题。记录一下。&lt;/p&gt;
+&lt;h1 id=&#34;下载-opencat&#34;&gt;下载 OpenCat&lt;/h1&gt;
+&lt;p&gt;在美区 App store，不用细说。&lt;/p&gt;
+&lt;h1 id=&#34;准备提示词&#34;&gt;准备提示词&lt;/h1&gt;
+&lt;p&gt;感觉 OpenAI Translator 的提示词应该用得很好，所以把它的源代码下载下来，最后在一个 dat 文件里找到了它使用的提示词。&lt;/p&gt;
+&lt;p&gt;改造了一下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你是一个翻译引擎，必须先将给到的中文文本翻译成英文，注意不需要回答问题。然后，请列出3种最常用中文翻译结果，单词或短语，并列出对应的适用语境（用中文阐述）、或转写、双语示例。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;按照下面格式用中文阐述，注意添加适当的逗号让输出更整齐。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;序号&amp;gt; .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;单词或短语&amp;gt; ，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;适用语境（用中文阐述）&amp;gt;，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;例句&amp;gt;(例句翻译)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;修改主题
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0859.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;使用效果&#34;&gt;使用效果&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tips: 可以使用 iOS 键盘自带的语音输入
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UPDATE - M1 芯片 MacBook Pro 上搭建 Oracle 实验环境</title>
+      <link>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</link>
+      <pubDate>Sun, 22 Oct 2023 15:17:30 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook-new/</guid>
+      <description>&lt;p&gt;距离 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/&#34;&gt;M1 芯片 MacBook Pro 上搭建 Oracle 实验环境&lt;/a&gt;已经过去了一年。&lt;/p&gt;
+&lt;p&gt;今年 6 月底 Oracle &lt;a href=&#34;https://blogs.oracle.com/database/post/announcing-oracle-database-19c-support-for-arm&#34;&gt;宣布&lt;/a&gt;支持 Arm 架构上 Oracle 数据库。7 月 9 号我在自己的 M1 芯片的 MacBook 上虚拟机里成功安装了 Oracle 数据库，补记一下。&lt;/p&gt;
+&lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
+&lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://yum.oracle.com/oracle-linux-isos.html&#34;&gt;https://yum.oracle.com/oracle-linux-isos.html&lt;/a&gt;，下载&lt;code&gt;OracleLinux-R8-U8-Server-aarch64-dvd.iso&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在 VMware Fusion 里安装即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
+&lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装-oracle-19c-数据库&#34;&gt;安装 Oracle 19c 数据库&lt;/h1&gt;
+&lt;p&gt;安装依赖包
+&lt;code&gt;dnf -y install oracle-database-preinstall-19c.aarch64&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后到解压后的 database 目录里运行 &lt;code&gt;./runInstaller&lt;/code&gt;，图形化安装即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nginx 反向代理 OpenAI API</title>
+      <link>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</link>
+      <pubDate>Mon, 16 Oct 2023 22:13:21 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/</guid>
+      <description>&lt;p&gt;同事问到这个，记录在这里吧。&lt;/p&gt;
+&lt;p&gt;国内不能直接访问 openai 的 api，于是想有没有中转的方法，网上一搜果然有，在自己的 vps 里实现一下。&lt;/p&gt;
+&lt;h1 id=&#34;config-server&#34;&gt;Config server&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# lsb_release -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No LSB modules are available.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Distributor ID:	Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Description:	Ubuntu 20.04.6 LTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Release:	20.04
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codename:	focal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr-3:~# apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-copy-id root@xx.xx.xx.xx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@xx.xx.xx.xx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /etc/ssh/sshd_config /etc/ssh/sshd_config.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Port 10086
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UsePAM yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;X11Forwarding yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PrintMotd no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AcceptEnv LANG LC_*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subsystem sftp	/usr/lib/openssh/sftp-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl restart ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 10086
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;nginx-setup-and-config&#34;&gt;Nginx setup and config&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@xx.xx.xx.xx -p 10086
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://xx.xx.xx.xx  -- will get &amp;#34;Welcome to nginx!&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/nginx/nginx.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add below to under &amp;#34;http {&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;listen       80;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_name xx.xx.xx.xx;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location /v1 {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_pass  https://api.openai.com/v1;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_ssl_server_name on;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_set_header Host api.openai.com;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    chunked_transfer_encoding off;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_buffering off;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_cache off;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl reload nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;test-in-local&#34;&gt;Test in local&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PROXY_URL=&amp;#34;http://xx.xx.xx.xx/v1/chat/completions&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OPENAI_API_KEY=&amp;#34;xxxx&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -s -k $PROXY_URL \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -H &amp;#34;Content-Type: application/json&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -H &amp;#34;Authorization: Bearer $OPENAI_API_KEY&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -d &amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;model&amp;#34;: &amp;#34;gpt-3.5-turbo&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;messages&amp;#34;: [{&amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;, &amp;#34;content&amp;#34;: &amp;#34;你好&amp;#34;}],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &amp;#34;temperature&amp;#34;: 0.7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     }&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;usecase&#34;&gt;Usecase&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;OpenAI Translator&lt;/li&gt;
+&lt;li&gt;OpenCat&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>每日复习单词</title>
+      <link>http://www.jinhuaiyao.com/posts/review-the-words-daily/</link>
+      <pubDate>Sat, 27 May 2023 15:51:04 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/review-the-words-daily/</guid>
+      <description>&lt;p&gt;最近工作上时常会记录一些单词、短语或句子，想着找到有效的办法去提醒自己复习。记录一下。&lt;/p&gt;
+&lt;h1 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h1&gt;
+&lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
+&lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;每日复习&#34;&gt;每日复习&lt;/h1&gt;
+&lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
+&lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我自己写了发送到 Things3 的部分，整个脚本如下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm output_file_*.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/MyNotes/English.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;OUTPUT_NUM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -r LINE&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$LINE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; --- &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;%s\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_file_&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;OUTPUT_NUM&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;OUTPUT_NUM++&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LINE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 处理文件结尾的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;%s\n&amp;#39;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BUFFER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_file_&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;OUTPUT_NUM&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls output_file_*.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat &lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -1&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;expl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat &lt;span class=&#34;nv&#34;&gt;$file&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed -n &lt;span class=&#34;s1&#34;&gt;&amp;#39;2,$&amp;#39;&lt;/span&gt;p&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  open &lt;span class=&#34;s2&#34;&gt;&amp;#34;things:///add?title=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;amp;notes=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;expl&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;amp;when=today&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果某些单词不用再复习了，就再其前面加上 # 号，&lt;code&gt;${word:0:1} != &#39;#&#39;&lt;/code&gt; 会去过滤。&lt;/p&gt;
+&lt;p&gt;最后把脚本加到 cron job 即可。&lt;/p&gt;
+&lt;p&gt;最后效果如下，直接变成当天的待办事项，相当“暴力”。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>跑步准备</title>
+      <link>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</link>
+      <pubDate>Thu, 20 Apr 2023 08:14:37 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/the-preparation-for-running/</guid>
+      <description>&lt;p&gt;最近终于开启了今年的跑步，记录一下为跑步而做的一些准备。&lt;/p&gt;
+&lt;h1 id=&#34;配置-apple-watch&#34;&gt;配置 Apple Watch&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;再次开通 eSIM 卡，不需要带手机。&lt;/li&gt;
+&lt;li&gt;顾村公园年卡照片放入手机照片里的“个人收藏”，手表里可以快速打开，进园不用带实体卡。&lt;/li&gt;
+&lt;li&gt;手表上 Keep app 心率显示还是有问题，改用自带的“体能训练” app，特别好用，去年竟然没想过去用一下。&lt;/li&gt;
+&lt;li&gt;网易云音乐离线下载歌曲太费劲了，改用 Apple Music，离线批量下载很方便，而且完美搭配“体能训练”。&lt;/li&gt;
+&lt;li&gt;开通手表上的微信支付，跑完步正好去买点早饭，不过需要商家扫我的二维码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h1&gt;
+&lt;p&gt;速干衣，跑步水杯，跑步袜。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个水杯一直拿着太轻便了，去年用的水杯太大，得放在路边，结果今年第一次跑步就被环卫工人收走了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;早上6点多起来，简单洗漱，拉伸一下，穿上跑鞋，戴上 AirPods 和 Apple watch，水杯加点水，迅速下楼。&lt;/p&gt;
+&lt;p&gt;整个跑步体验比去年的好多了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 Cloudflare WARP 解锁 ChatGPT</title>
+      <link>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</link>
+      <pubDate>Tue, 11 Apr 2023 10:24:16 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/unlocking-chatgpt-with-cloudflare-warp/</guid>
+      <description>&lt;p&gt;使用 Vultr VPS 科学上网以后，Chatgpt API 使用没有问题，但是网页访问 chat.openai.com 仍然是 Access denied。&lt;/p&gt;
+&lt;p&gt;简单使用的话也未必一定要访问网页版，可以用 &lt;a href=&#34;https://poe.com/&#34;&gt;Poe&lt;/a&gt; 或者 &lt;a href=&#34;https://opencat.app/&#34;&gt;OpenCat&lt;/a&gt;。只是我想试用一下 ChatGPT Plus 才能用的 GPT-4，不得不访问网页版。&lt;/p&gt;
+&lt;p&gt;做了一番尝试：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置远程桌面到 VPS，在 VPS 上用浏览器访问 chat.openai.com，Access denied。&lt;/li&gt;
+&lt;li&gt;尝试在 Vultr 上创建其他地区的 VPS，试了四五个地区，仍然 Access denied。&lt;/li&gt;
+&lt;li&gt;只好谷歌一番，原来在最新的限制下，使用 ChatGPT 还得需要“原生 IP”，所谓“原生 IP ”就是指该网站的 IP 地址和其机房的 IP 地址是一致的。或者还有其他什么限制。&lt;/li&gt;
+&lt;li&gt;试试使用原生 IP，网上大致有两个解决方案：有的 VPS 厂商能提供美国原生 IP；使用 Cloudflare Warp 。
+方案一花了一些时间去搜索，最后还是放弃了，一是这些服务商名气不大，我之前也没有用过；二是万一 IP 被封了也比较麻烦；三是已经在 Vultr 付费了，不想再另起炉灶。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;于是实施一下方案二。
+参考 &lt;a href=&#34;https://pkg.cloudflareclient.com/install&#34;&gt;https://pkg.cloudflareclient.com/install&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 20.04 LTS 下&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo &amp;quot;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&amp;quot; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://developers.cloudflare.com/warp-client/get-started/linux/&#34;&gt;https://developers.cloudflare.com/warp-client/get-started/linux/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install cloudflare-warp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;systemctl status warp-svc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli register&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli set-mode proxy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli connect&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli enable-always-on&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;warp-cli warp-stats&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vi /usr/local/etc/v2ray/config.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;inbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;port&amp;#34;: 10086, 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;settings&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;#34;clients&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;id&amp;#34;: &amp;#34;09096d21-dd57-48ee-9111-38421e6a6b90&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;outbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;tag&amp;#34;: &amp;#34;warp&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;socks&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;settings&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;#34;servers&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;port&amp;#34;: 40000,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;users&amp;#34;: []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;routing&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;rules&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;domain&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;openai.com&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;ai.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;outboundTag&amp;#34;: &amp;#34;warp&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;systemctl stop v2ray&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;systemctl start v2ray&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl ipinfo.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;hostname&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx.vultrusercontent.com&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;city&amp;#34;: &amp;#34;Piscataway&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;region&amp;#34;: &amp;#34;New Jersey&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;country&amp;#34;: &amp;#34;US&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;loc&amp;#34;: &amp;#34;40.4993,-74.3990&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;org&amp;#34;: &amp;#34;AS20473 The Constant Company, LLC&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;postal&amp;#34;: &amp;#34;08854&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;timezone&amp;#34;: &amp;#34;America/New_York&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;readme&amp;#34;: &amp;#34;https://ipinfo.io/missingauth&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl -x &amp;#34;socks5://127.0.0.1:40000&amp;#34; ipinfo.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;104.28.215.142&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;city&amp;#34;: &amp;#34;Willowbrook&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;region&amp;#34;: &amp;#34;New York&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;country&amp;#34;: &amp;#34;US&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;loc&amp;#34;: &amp;#34;40.6032,-74.1385&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;org&amp;#34;: &amp;#34;AS13335 Cloudflare, Inc.&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;postal&amp;#34;: &amp;#34;10314&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;timezone&amp;#34;: &amp;#34;America/New_York&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;readme&amp;#34;: &amp;#34;https://ipinfo.io/missingauth&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在电脑上重启一下 V2rayU ，就可以正常访问 &lt;a href=&#34;https://chat.openai.com/auth/login&#34;&gt;https://chat.openai.com/auth/login&lt;/a&gt; 了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>期盼已久的截图翻译</title>
+      <link>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</link>
+      <pubDate>Sun, 09 Apr 2023 08:29:07 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/tool-to-get-ocr-translation-by-screenshot/</guid>
+      <description>&lt;p&gt;昨日傍晚时分终于用上了期盼已久的截图翻译工具。&lt;/p&gt;
+&lt;p&gt;之前看 《Designing Data-Intensive Applications》的时候，有些段落理解不到位，用 Google Translator 翻译成中文，需要把在 PDF 文件里把需要的段落复制到 Google Translator，点击翻译然后得到结果，感觉很不方便。想着有没有什么工具可以直接能把截图上的英文翻译成中文，当时找了一下，无果，只能记在 to do list 里。&lt;/p&gt;
+&lt;p&gt;随着 ChatGPT 的到来，发现已经有工具能够 exactly 实现我的诉求了。&lt;/p&gt;
+&lt;p&gt;就是 &lt;a href=&#34;https://www.iplaysoft.com/openai-translator.html&#34;&gt;OpenAI Translator - 最强开源 AI 划词翻译工具&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
+&lt;h1 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h1&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
+&lt;h1 id=&#34;糟糕的网络环境&#34;&gt;糟糕的“网络环境”&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;又联想到经常遇到的无法使用 ChatGPT 网页版。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;于是上午开始研究独立的 VPS，以及科学上网工具。&lt;/p&gt;
+&lt;p&gt;一番研究后决定选用 Vultr，注册账号然后支付宝充值 50 刀，因为优惠（&lt;a href=&#34;https://www.vultryhw.cn/rules-for-free-credit-in-vultrmatch/&#34;&gt;Vultr充多少送多少活动&lt;/a&gt;）总共得到 100 刀，可以用上一年了。&lt;/p&gt;
+&lt;p&gt;选用 Los Angeles 6$/month 套餐，Ubuntu 20.04 LTS 系统，很快得到一个主机和 IP。(外加一句，后面我又创建了 3 台不同地区的主机做测试，Vultr 是按照使用时间收费而不是主机数量，这一点就特别好，即使 IP 有问题，创建个新的主机就好，不用额外付费。)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
+&lt;h2 id=&#34;安装-v2ray&#34;&gt;安装 V2Ray&lt;/h2&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# bash &amp;lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Server 端配置&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;用 &lt;a href=&#34;https://www.uuidgenerator.net/&#34;&gt;https://www.uuidgenerator.net/&lt;/a&gt; 随机生成一个 UUID 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VPS 上 &lt;code&gt;vi /usr/local/etc/v2ray/config.json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;inbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;port&amp;#34;: 10086, // 服务器监听端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;settings&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &amp;#34;clients&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &amp;#34;id&amp;#34;: &amp;#34;09096d21-dd57-48ee-9111-38421e6a6b90&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;outbounds&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;配置一下防火墙&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 10086
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;启动 v2ray&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# systemctl enable v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# systemctl start v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# systemctl status v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;VPS 安全设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# adduser rjin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;visudo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin	ALL=(ALL)	NOPASSWD:ALL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctl + o
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctl + x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@JinHuaiyaos-MacBook-Pro ~ % ssh-copy-id rjin@xxx.xxx.xxx.xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitRootLogin no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:~# cat /etc/ssh/sshd_config |grep -v &amp;#39;^#&amp;#39; |grep -v &amp;#39;^$&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitRootLogin no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Include /etc/ssh/sshd_config.d/*.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxAuthTries 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxSessions 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitEmptyPasswords no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UsePAM yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;X11Forwarding yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PrintMotd no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AcceptEnv LANG LC_*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subsystem sftp	/usr/lib/openssh/sftp-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:/etc/ssh/sshd_config.d# more 50-cloud-init.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@vultr:/etc/ssh/sshd_config.d# mv 50-cloud-init.conf 50-cloud-init.conf.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl start ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status ssh.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Client 端配置&lt;/p&gt;
+&lt;p&gt;Mac 上 V2rayU 添加节点：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
+&lt;h2 id=&#34;quota-报错&#34;&gt;Quota 报错&lt;/h2&gt;
+&lt;p&gt;You exceeded your current quota, please check your plan and billing details&lt;/p&gt;
+&lt;p&gt;第一次使用 API ，怎么会没有配额。联想到看过的 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt-api-tools.html&#34;&gt;比 ChatGPT 网页版好用百倍！8 款整合 API 的智能客户端工具与 Ai 插件推荐&lt;/a&gt; 里面提到 “使用频率有限制，绑定信用卡后可解”，估计添加信用卡可以解决。&lt;/p&gt;
+&lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;
+&lt;h1 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 Macbook 上安装 RAC 的一些记录</title>
+      <link>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</link>
+      <pubDate>Thu, 02 Feb 2023 16:19:18 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/</guid>
+      <description>&lt;p&gt;这阵子比较闲了，想着好好利用一下以前的工作笔记本。&lt;/p&gt;
+&lt;p&gt;Intel 芯片的 Macbook Pro，离职以后公司免费送给我们的福利之一。&lt;/p&gt;
+&lt;p&gt;决定在上面装个 Oracle RAC 测试环境。之前 2013 年的 MacBook Pro 已经在爱回收上卖掉了，上面的测试环境也就没有了。&lt;/p&gt;
+&lt;p&gt;以下是一些零散的记录，写在这里以后找起来也容易。&lt;/p&gt;
+&lt;h1 id=&#34;yum-install-package-很慢&#34;&gt;yum install package 很慢&lt;/h1&gt;
+&lt;p&gt;研究一番，最后发现是电信网络的问题，改用手机热点，虚拟机 IP 也跟着变化，重新 ssh，之后 yum install 就很快了。&lt;/p&gt;
+&lt;h1 id=&#34;public-ip-网络配置&#34;&gt;Public IP 网络配置&lt;/h1&gt;
+&lt;p&gt;之前都是自定义一个虚拟的网段，这次在 VMWare 里改用成和家庭网络网段一样，10.0.0.x，一个好处是 db server 可以直接访问外网，另外家庭网络里其他笔记本可以直接 ssh 到 db server（以前需要先 ssh 到笔记本上然后再 ssh 到 db server），算是一个改进。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.218 pve01dbs005
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.219 pve01dbs006
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Private
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;192.168.1.2 pve01dbs005p1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;192.168.1.3 pve01dbs006p1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Virtual
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.221 pve01dbs005v1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.222 pve01dbs006v1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#scan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.223 pve01dbs-scan
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;avahi-daemonservice&#34;&gt;avahi-daemon.service&lt;/h1&gt;
+&lt;p&gt;Oracle Linux 7.7 上安装 RAC，需要 disable 这个服务。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status avahi-daemon.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop avahi-daemon.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl disable avahi-daemon.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;vmware-里共享硬盘的配置&#34;&gt;VMWare 里共享硬盘的配置&lt;/h1&gt;
+&lt;p&gt;两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# BEGIN SHARED STORAGE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# -  Here we NEW SCSI BUS. Set it to &amp;#34;Virtual&amp;#34; and disk.locking = &amp;#34;false&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;disk.EnableUUID = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskLib.dataCacheMaxSize = &amp;#34;0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskLib.dataCacheMaxReadAheadSize = &amp;#34;0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskLib.dataCacheMinReadAheadSize = &amp;#34;0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskLib.dataCachePageSize = &amp;#34;4096&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskLib.maxUnsyncedWrites = &amp;#34;0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;disk.locking = &amp;#34;false&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   Create HBA (just as if you had a SAN storage), LSILOGIC or BUSLOGIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1.sharedBus = &amp;#34;virtual&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1.virtualDev = &amp;#34;lsilogic&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   Creating virtual SCSI disks on that HBA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:0.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:0.fileName = &amp;#34;asm01.vmdk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:0.redo = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:0.mode = &amp;#34;independent-persistent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:0.deviceType = &amp;#34;disk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:1.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:1.fileName = &amp;#34;asm02.vmdk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:1.redo = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:1.mode = &amp;#34;independent-persistent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:1.deviceType = &amp;#34;disk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:2.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:2.fileName = &amp;#34;asm03.vmdk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:2.redo = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:2.mode = &amp;#34;independent-persistent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1:2.deviceType = &amp;#34;disk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi1.pciSlotNumber = &amp;#34;37&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:1.fileName = &amp;#34;vote01.vmdk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:1.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:1.mode = &amp;#34;independent-persistent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:1.deviceType = &amp;#34;disk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:2.fileName = &amp;#34;vote02.vmdk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:2.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:2.mode = &amp;#34;independent-persistent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:2.deviceType = &amp;#34;disk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:3.fileName = &amp;#34;vote03.vmdk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:3.present = &amp;#34;TRUE&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:3.mode = &amp;#34;independent-persistent&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:3.deviceType = &amp;#34;disk&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:3.redo = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:1.redo = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scsi0:2.redo = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# END SHARED STORAGE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ocr&#34;&gt;OCR&lt;/h1&gt;
+&lt;p&gt;忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;State    Type    Rebal  Sector  Logical_Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_MB  Usable_file_MB  Offline_disks  Voting_files  Name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MOUNTED  NORMAL  N         512             512   4096  4194304     15360    14420             5120            4650              0             Y  VOTE_DG/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;安装-grid-时节点一-rootsh-报错&#34;&gt;安装 Grid 时节点一 root.sh 报错&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:14:56 CLSRSC-594: Executing installation step 18 of 19: &amp;#39;ConfigNode&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; PRCR-1013 : Failed to start resource ora.ons
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PRCR-1064 : Failed to start resource ora.ons on node pve01dbs005
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CRS-2674: Start of &amp;#39;ora.ons&amp;#39; on &amp;#39;pve01dbs005&amp;#39; failed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:15:44 Oracle Clusterware infrastructure error in CLSECHO (OS PID 7018): ADR home path /u01/app/grid/diag/crs/pve01dbs005v1/crs does not exist; ADR initialization will try to create it
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; CLSRSC-180: An error occurred while executing the command &amp;#39;srvctl start nodeapps -n pve01dbs005&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:15:44 CLSRSC-287: FirstNode configuration failed
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;搜索了一下，有篇 metelink 文章正好解决这个问题，PRCR-1013 : Failed to start resource ora.ons  - 12.2 : Grid Infrastructure Installation Fails with Error “PRCR-1013 : Failed to start resource ora.ons” (Doc ID 2380526.1)&lt;/p&gt;
+&lt;p&gt;解决方法是：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@pve01dbs005 ~]# service NetworkManager status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@pve01dbs005 ~]# service NetworkManager stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@pve01dbs005 ~]# chkconfig NetworkManager off
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后重新运行 root.sh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@pve01dbs005 ~]# /u01/app/19.3.0/grid/root.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Performing root user operation.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The following environment variables are set as:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ORACLE_OWNER= grid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ORACLE_HOME=  /u01/app/19.3.0/grid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter the full pathname of the local bin directory: [/usr/local/bin]:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The contents of &amp;#34;dbhome&amp;#34; have not changed. No need to overwrite.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The contents of &amp;#34;oraenv&amp;#34; have not changed. No need to overwrite.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The contents of &amp;#34;coraenv&amp;#34; have not changed. No need to overwrite.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Entries will be added to the /etc/oratab file as needed by
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Database Configuration Assistant when a database is created
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Finished running generic part of root script.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Now product-specific root actions will be performed.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Relinking oracle with rac_on option
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Using configuration parameter file: /u01/app/19.3.0/grid/crs/install/crsconfig_params
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The log of current session can be found at:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  /u01/app/grid/crsdata/pve01dbs005/crsconfig/rootcrs_pve01dbs005_2023-01-31_04-25-49PM.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:54 CLSRSC-594: Executing installation step 1 of 19: &amp;#39;SetupTFA&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:54 CLSRSC-594: Executing installation step 2 of 19: &amp;#39;ValidateEnv&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:54 CLSRSC-363: User ignored prerequisites during installation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:54 CLSRSC-594: Executing installation step 3 of 19: &amp;#39;CheckFirstNode&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:54 CLSRSC-4002: Successfully installed Oracle Trace File Analyzer (TFA) Collector.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:55 CLSRSC-594: Executing installation step 4 of 19: &amp;#39;GenSiteGUIDs&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:56 CLSRSC-594: Executing installation step 5 of 19: &amp;#39;SetupOSD&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:56 CLSRSC-594: Executing installation step 6 of 19: &amp;#39;CheckCRSConfig&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:57 CLSRSC-594: Executing installation step 7 of 19: &amp;#39;SetupLocalGPNP&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:25:57 CLSRSC-594: Executing installation step 8 of 19: &amp;#39;CreateRootCert&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:02 CLSRSC-594: Executing installation step 9 of 19: &amp;#39;ConfigOLR&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:02 CLSRSC-594: Executing installation step 10 of 19: &amp;#39;ConfigCHMOS&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:02 CLSRSC-594: Executing installation step 11 of 19: &amp;#39;CreateOHASD&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:03 CLSRSC-594: Executing installation step 12 of 19: &amp;#39;ConfigOHASD&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:05 CLSRSC-594: Executing installation step 13 of 19: &amp;#39;InstallAFD&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:05 CLSRSC-594: Executing installation step 14 of 19: &amp;#39;InstallACFS&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:06 CLSRSC-594: Executing installation step 15 of 19: &amp;#39;InstallKA&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:09 CLSRSC-594: Executing installation step 16 of 19: &amp;#39;InitConfig&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:26:45 CLSRSC-594: Executing installation step 17 of 19: &amp;#39;StartCluster&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:28:12 CLSRSC-343: Successfully started Oracle Clusterware stack
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:28:12 CLSRSC-594: Executing installation step 18 of 19: &amp;#39;ConfigNode&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:28:58 CLSRSC-594: Executing installation step 19 of 19: &amp;#39;PostConfig&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023/01/31 16:29:19 CLSRSC-325: Configure Oracle Grid Infrastructure for a Cluster ... succeeded
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;193-rdbms安装和-12c-不同&#34;&gt;19.3 rdbms安装和 12c 不同&lt;/h1&gt;
+&lt;p&gt;和 Grid 安装方式类似，需要把 zip 文件 unzip 到预设的目录，然后运行 runInstaller。以前是随便 unzip 到一个目录，安装时候选择 ORACLE_HOME。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>减重 20 斤</title>
+      <link>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</link>
+      <pubDate>Fri, 19 Aug 2022 19:05:40 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</guid>
+      <description>&lt;p&gt;5 月 3 号到 8 月 18 号，3 个半月，减重 20 斤。时隔 7 年，终于成功了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;回顾一下这 3 个半月。&lt;/p&gt;
+&lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;今年 4，5 月份 site migration 那段时间工作很忙碌，白天坐着不想动，很容易感觉疲惫，精神状态不好，睡眠质量也不好，再加上小区封控，不能出门，整个人浑浑噩噩了很久。觉得必须要做出一些改变了。&lt;/li&gt;
+&lt;li&gt;恰好在整理资料时看到以前的体重记录，从 2014 年 11 月的 85KG 到 2015 年 7 月的 75KG，竟然完全没印象了。既然曾经成功过，觉得如今努力一下或许也能成功吧。&lt;/li&gt;
+&lt;li&gt;疫情期间都是居家工作，有大把的时间可以运动；外出吃饭也少很多，少了很多诱惑。&lt;/li&gt;
+&lt;li&gt;天时地利人和，下决心这一次要减掉 20 斤，回到 2015 年的体重。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;效果&#34;&gt;效果&lt;/h1&gt;
+&lt;p&gt;减重以后：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人更有精神了，体能更充沛，走路、打球都很有劲，打球打了一个多小时还有体力去运球突破。&lt;/li&gt;
+&lt;li&gt;经常的运动使得睡眠质量变好了。&lt;/li&gt;
+&lt;li&gt;脸上的肉少了，脸看起来小了。&lt;/li&gt;
+&lt;li&gt;肚子上的多余的肉变少了，腰围小了，有些裤子穿上以后自己便要脱落。&lt;/li&gt;
+&lt;li&gt;也更有自信了，毕竟减掉 20 斤肉也不是一件容易的事。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;减重的方法倒是没什么特别的，大家都知道。&lt;/p&gt;
+&lt;h1 id=&#34;多动&#34;&gt;多动&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;先是在家跳绳。跳绳这项运动只要是坚持就会进步很快，刚开始跳两百个就气喘吁吁，跳了几天以后跳一千个也不是很累了。&lt;/li&gt;
+&lt;li&gt;小区里散步。恰逢封控降级，可以在小区里走走。早晚下楼散步大概一小时，边走边听微信听书里的音频，听了一遍&lt;a href=&#34;https://at.qq.com/album-share/index?albumId=3103005712&amp;amp;senderVid=37432009&amp;amp;code=061euo0w3neX3Z2L2s0w3MivWp2euo0t&amp;amp;state=ok_userinfo&#34;&gt;《好妈妈胜过好老师》&lt;/a&gt;，&lt;a href=&#34;https://at.qq.com/album-share/index?albumId=3103005735&amp;amp;senderVid=37432009&#34;&gt;《最美的教育最简单》&lt;/a&gt;还没有听完。&lt;/li&gt;
+&lt;li&gt;彻底解封以后开始早上去跑步。刚跑的时候走一段跑一段，跑不动了就走走，没有负担。刚开始边跑步边听微信听书，后来看了&lt;a href=&#34;https://weread.qq.com/book-detail?type=1&amp;amp;senderVid=37432009&amp;amp;v=5aa32dc0718048ef5aab966k6bb4288042d316bb61e34a1&#34;&gt;《当我谈跑步时，我谈些什么》&lt;/a&gt;，开始听 Eric Clapton 的 &lt;a href=&#34;https://open.spotify.com/album/3lIVRVNgrOxfmjUAY2yfwW?si=NWzxLux8T4Of2AkyvkPwrg&#34;&gt;Reptile&lt;/a&gt; ，的确适合跑步时听，伴着悠扬的音乐，边跑边思绪纷飞。&lt;/li&gt;
+&lt;li&gt;有个小技巧，把跑步需要的物品和准备工作列个清单，早上起来以后对照着快速准备一下，迅速出门。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看了下 Keep 里 7 月份的记录，跑得还算多的。(跑跑走走，忽略配速。)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;刻意走楼梯，多走路，多出力干点家务。尽可能地多消耗能量。&lt;/li&gt;
+&lt;li&gt;每周打球。每次打完球都和同事一起吃一顿麦当劳的汉堡 + 薯条 + 可乐，很爽，也不必有心理负担。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;少吃&#34;&gt;少吃&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;米饭减半。三餐尽量不要让自己有饱腹感。当然，偶尔也会吃得很多，感觉很饱，下次注意就好。&lt;/li&gt;
+&lt;li&gt;吃得少了，觉得好吃的东西吃几口尝尝美味就够了。吃得少感觉也不是很饿，感慨之前是吃得太多了。&lt;/li&gt;
+&lt;li&gt;尽量不吃甜食。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;隔几天记录一下体重。记录变化，可以看到成果，增加正向反馈。&lt;/li&gt;
+&lt;li&gt;减重不能着急，刚开始就想好了要坚持几个月再看成果。慢即是快。&lt;/li&gt;
+&lt;li&gt;最重要的是养成健康的生活习惯。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;最近买了哑铃，要练练力量了，现在看起来特别瘦，后面要增肌才行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>改进一下工作笔记</title>
+      <link>http://www.jinhuaiyao.com/posts/impove-note-taking/</link>
+      <pubDate>Fri, 09 Jul 2021 09:07:55 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/impove-note-taking/</guid>
+      <description>&lt;p&gt;上礼拜忙完了系统上线，终于可以轻松一点，有大块的时间把 to do list 里重要的事情清一清。首先就是要改进一下工作笔记。&lt;/p&gt;
+&lt;h1 id=&#34;工作笔记的目的&#34;&gt;工作笔记的目的&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;之前工作笔记存在的问题&#34;&gt;之前工作笔记存在的问题&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;没有按照统一的 markdown 格式记录，格式凌乱导致回顾时笔记显示不友好，还会导致 markdown 文件导入 Obsidian 后建立 index 很费时，电脑风扇狂转。&lt;/li&gt;
+&lt;li&gt;没有及时整理，有些记录记得匆忙缺失了当时的想法、详细步骤，或是遇到好几个问题杂糅在一起，解决每个问题的方法没有分别注释，回顾的时候很费力。&lt;/li&gt;
+&lt;li&gt;每天一个以日期命名的笔记文件去记录导致遇到耗时很长的项目时记录过于分散，项目每天的完成情况分散在不同的笔记里，没有被有效组织起来。&lt;/li&gt;
+&lt;li&gt;VSCode 和 Obsidian 结合使用过程中有些分工不明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;这两天做了哪些事&#34;&gt;这两天做了哪些事&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;思考之前存在的工作笔记的问题怎么去解决。&lt;/li&gt;
+&lt;li&gt;为 Obsidian 寻找并添加了多标签的插件，向 VSCode 看齐。&lt;/li&gt;
+&lt;li&gt;更改 Obsidian 的显示字体，之前是 Monaca，现在改用 Menlo，和 VSCode 统一了。&lt;/li&gt;
+&lt;li&gt;VSCode 和 Obsidian 改成共用一个目录，把之前 VSCode workspac e里的 markdown 文档导入到 Obsidian 里。&lt;/li&gt;
+&lt;li&gt;Alfred 里两个跟工作笔记相关的 workflow 更新了新的目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;以后要做的&#34;&gt;以后要做的&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;每天的笔记尽量记录详细一些，加上当时的想法和详细操作。例如：
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;log和command贴在笔记里需要用 ``` 标记成 code，这样显示不会凌乱，Obsidian 索引的时候也不会费时。例如：
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;笔记仍然按照时间线去记录，每天一个以日期命名的笔记文件。dailynote 的主要作用仍然是当天的“工作台”，记录处理各个任务时的步骤、解决问题的思路和方法，其中小部分值得提取出来再加工的可以单独新建一个笔记文档，用 Obsidian 里的 &lt;code&gt;[[ ]]&lt;/code&gt; 去关联。例如：
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VSCode 作为主力编辑器，Obsidian 用来回顾及组织笔记之间的关联。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;及时回顾、整理当天的记录。整理过的 daily note 重命名。
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>好好珍惜自己的资料</title>
+      <link>http://www.jinhuaiyao.com/posts/take-good-care-of-your-stuff/</link>
+      <pubDate>Sat, 30 Mar 2019 18:04:16 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/take-good-care-of-your-stuff/</guid>
+      <description>&lt;p&gt;上周看到一条朋友圈，以前大学里的辅导员 iPhone 手机成了&amp;quot;白苹果&amp;quot;，询问有什么办法可以把照片导出来。&lt;/p&gt;
+&lt;h1 id=&#34;备份备份备份&#34;&gt;备份备份备份&lt;/h1&gt;
+&lt;p&gt;手机没有备份过，估计也没有打开 iCloud 照片备份，这就很难了。如果有备份，就可以随意重装 iOS 系统了。&lt;/p&gt;
+&lt;p&gt;重要的资料，一定要备份备份再备份。不要抱有侥幸心理，不要等到数据丢失的那天，手足无措，懊悔莫及。&lt;/p&gt;
+&lt;h1 id=&#34;好的备份体系&#34;&gt;好的备份体系&lt;/h1&gt;
+&lt;p&gt;我个人认为一个好的备份体系要做到以下几点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要分辨出哪些是重要的资料，比如家庭照片，重要的文档等。根据重要程度制定不同的备份策略。&lt;/li&gt;
+&lt;li&gt;做到多重备份。假如你只是定期把手机数据备份到移动硬盘里，突然有一天硬盘坏了，悲剧。&lt;/li&gt;
+&lt;li&gt;最好能够自动化备份。手动备份要牵扯更多的精力，不容易坚持。&lt;/li&gt;
+&lt;li&gt;要保证备份的可用性。万一哪天数据丢失了却发现之前的备份不可用，悲剧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;我的备份策略&#34;&gt;我的备份策略&lt;/h1&gt;
+&lt;p&gt;这几天梳理了一下我自己的备份策略，供大家参考：&lt;/p&gt;
+&lt;h2 id=&#34;家用笔记本和工作笔记本-2-台-macbook-&#34;&gt;家用笔记本和工作笔记本（ 2 台 macbook )&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;同步 /rjin/MacBackup_RaymondJin 下和目录和文件到 NAS（ by NAS app，自动同步，目前只是用来备份几个 zip 文件）。&lt;/li&gt;
+&lt;li&gt;所有重要文件都放在 OneDrive 里（云同步，自动）。&lt;/li&gt;
+&lt;li&gt;工作笔记/记录放在 OneDrive/OneNote/DEVONthink 里（前两个是在云上）。&lt;/li&gt;
+&lt;li&gt;备份整个笔记本到 NAS（ by TimeMachine，自动，每天）。&lt;/li&gt;
+&lt;li&gt;备份整个笔记本到移动硬盘（ by TimeMachine，手动，每月）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;iphone&#34;&gt;iPhone&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;备份到 iCloud（手机锁屏充电并且连入wifi时自动备份）。&lt;/li&gt;
+&lt;li&gt;备份到移动硬盘（ by iTunes，手动，每月）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;iphone里的照片和视频&#34;&gt;iPhone里的照片和视频&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;自动上传到 iCloud（连入 wifi 时)。&lt;/li&gt;
+&lt;li&gt;自动上传到 OneDrive（连入 wifi 时)。&lt;/li&gt;
+&lt;li&gt;自动上传到 Nas ( by NAS app，连入 wifi 时)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;onedrive里的数据&#34;&gt;OneDrive里的数据&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;拷贝部分重要文件夹到 NAS（手动，每月）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nas里的数据&#34;&gt;NAS里的数据&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;自动同步部分重要文件夹到外置移动硬盘（ by NAS app，自动，每周）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;devonthink&#34;&gt;DEVONthink&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Archive DEVONthink Database 到 /rjin/MacBackup_RaymondJin（手动，每周）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一些重要的纸质资料&#34;&gt;一些重要的纸质资料&lt;/h2&gt;
+&lt;p&gt;手机拍照，整理到 DEVONthink，便于整理和查找。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;花点时间配置一下自己的备份策略，保护好自己重要的资料，然后安心地好好生活好好工作好好学习。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
