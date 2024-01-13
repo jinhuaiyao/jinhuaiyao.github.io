@@ -7,7 +7,119 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 14:20:43 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jan 2024 17:30:41 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于 Memos</title>
+      <link>http://www.jinhuaiyao.com/posts/about-memos/</link>
+      <pubDate>Sat, 13 Jan 2024 17:30:41 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/about-memos/</guid>
+      <description>&lt;p&gt;最近决定正式弃用 flomo 和心光 app，总是有些介意数据在别人的服务器上。&lt;/p&gt;
+&lt;p&gt;也正是这个原因，之前在这两个 app 上记录并不多，并且记录的也只是一些自我提醒和日常事件，不涉及特别隐私的内容。&lt;/p&gt;
+&lt;p&gt;用来替换它们的是 Memos，很早就从“i小声读书”公众号看到过，一直没有下决心试用。&lt;/p&gt;
+&lt;p&gt;Memos 开源可自托管，所有数据存放在本地，用起来像是一个迷你微博。使用之后最近这几天记录得更多了，也会上传小朋友的照片。&lt;/p&gt;
+&lt;h1 id=&#34;安装与配置&#34;&gt;安装与配置&lt;/h1&gt;
+&lt;h2 id=&#34;docker-安装&#34;&gt;docker 安装&lt;/h2&gt;
+&lt;p&gt;在 Mac mini 上安装 Docker Desktop，后来感觉有些笨重，改成 Orbstack。&lt;/p&gt;
+&lt;p&gt;安装 Memos，参考 &lt;a href=&#34;https://www.usememos.com/docs/install/self-hosting&#34;&gt;https://www.usememos.com/docs/install/self-hosting&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --init \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --name memos \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --publish 5230:5230 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --restart always \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --volume ~/.memos/:/var/opt/memos \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ghcr.io/usememos/memos:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;自定义样式&#34;&gt;自定义样式&lt;/h2&gt;
+&lt;p&gt;自定义霞鹜文楷字体，参考 &lt;a href=&#34;https://ysicing.me/tools/memos-diy-style/&#34;&gt;https://ysicing.me/tools/memos-diy-style/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自定义样式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;body{font-family: &amp;#34;LXGW WenKai Screen&amp;#34;, sans-serif !important;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自定义脚本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;function changeFont() {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  const link = document.createElement(&amp;#34;link&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  link.rel = &amp;#34;stylesheet&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  link.type = &amp;#34;text/css&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  link.href = &amp;#34;https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  document.head.append(link);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;changeFont()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113175203.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;h2 id=&#34;macos-客户端&#34;&gt;MacOS 客户端&lt;/h2&gt;
+&lt;p&gt;MacOS 没有专门的 app，也不太习惯 Moe Memos，搜索了一下，最后用 nativefier 把网页打包成 app。&lt;/p&gt;
+&lt;p&gt;参考：&lt;br&gt;
+&lt;a href=&#34;https://sspai.com/post/57865&#34;&gt;https://sspai.com/post/57865&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/nativefier/nativefier&#34;&gt;https://github.com/nativefier/nativefier&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo npm install nativefier -g
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nativefier &amp;#34;http://10.0.0.100:5230&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;用 Alfred 给它设置快捷键，愉快地使用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;h2 id=&#34;ios-客户端&#34;&gt;iOS 客户端&lt;/h2&gt;
+&lt;p&gt;直接用网页版，Safari 里添加网页到主屏幕。&lt;/p&gt;
+&lt;p&gt;但是 Memos 服务是运行在内网，在外面如何访问 memos 是个问题。&lt;/p&gt;
+&lt;p&gt;折腾了好一会儿，还是没有把握将 Mac mini 暴露在公网上，搜索了一阵，最后在 Mac mini、Macbook、iPhone 上安装 Tailscale，把这些设备组成一个虚拟局域网，安全易用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/021B9348-8B3B-4758-96FE-32219F117265_1_102_o.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;运行 Tailscale 后手机网页访问 Mac mini IP 加端口即可：&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos.jpeg&#34; width=&#34;40%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;h1 id=&#34;导入旧数据&#34;&gt;导入旧数据&lt;/h1&gt;
+&lt;p&gt;把之前在心光、Noto、Pendo 里零散的记录清洗一下，然后导入 Memos。&lt;/p&gt;
+&lt;p&gt;使用 &lt;a href=&#34;https://github.com/JakeLaoyu/memos-import-from-flomo&#34;&gt;https://github.com/JakeLaoyu/memos-import-from-flomo&lt;/a&gt; 会丢失记录的原始时间。&lt;/p&gt;
+&lt;p&gt;研究了一番，最后使用直接导入 sqlite 数据库的方法。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % sqlite3 memos_prod.db
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sqlite&amp;gt; .schema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CREATE TABLE memo (
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  id INTEGER PRIMARY KEY AUTOINCREMENT,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  creator_id INTEGER NOT NULL,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  created_ts BIGINT NOT NULL DEFAULT (strftime(&amp;#39;%s&amp;#39;, &amp;#39;now&amp;#39;)),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  updated_ts BIGINT NOT NULL DEFAULT (strftime(&amp;#39;%s&amp;#39;, &amp;#39;now&amp;#39;)),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  row_status TEXT NOT NULL CHECK (row_status IN (&amp;#39;NORMAL&amp;#39;, &amp;#39;ARCHIVED&amp;#39;)) DEFAULT &amp;#39;NORMAL&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  content TEXT NOT NULL DEFAULT &amp;#39;&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  visibility TEXT NOT NULL CHECK (visibility IN (&amp;#39;PUBLIC&amp;#39;, &amp;#39;PROTECTED&amp;#39;, &amp;#39;PRIVATE&amp;#39;)) DEFAULT &amp;#39;PRIVATE&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % cat a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023-11-24 07:59:42 | 这是一个测试1。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2023-11-23 17:53:15 | 这是一个测试2。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % n=10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat a | while read line
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;do
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;time=`echo $line |awk -F&amp;#39;|&amp;#39; &amp;#39;{print $1}&amp;#39;`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;content=`echo $line |awk -F&amp;#39;|&amp;#39; &amp;#39;{print $2}&amp;#39;`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;time_n=`sqlite3 memos_prod.db &amp;#34;select strftime(&amp;#39;%s&amp;#39;,&amp;#39;$time&amp;#39;) - 28800;&amp;#34;`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;INSERT INTO memo VALUES($n,1,$time_n,$time_n,&amp;#39;NORMAL&amp;#39;,&amp;#39;$content&amp;#39;,&amp;#39;PRIVATE&amp;#39;);&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;n=$((n+1))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;done&amp;gt;aaa.sql
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % cat aaa.sql
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INSERT INTO memo VALUES(10,1,1700783982,1700783982,&amp;#39;NORMAL&amp;#39;,&amp;#39; 这是一个测试1。&amp;#39;,&amp;#39;PRIVATE&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INSERT INTO memo VALUES(11,1,1700733195,1700733195,&amp;#39;NORMAL&amp;#39;,&amp;#39; 这是一个测试2。&amp;#39;,&amp;#39;PRIVATE&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % sqlite3 memos_prod.db &amp;lt; aaa.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启 memos docker 后刷新网页就可以看到导入的数据了。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;h1 id=&#34;数据备份&#34;&gt;数据备份&lt;/h1&gt;
+&lt;p&gt;Mac mini 增加一个 cronjob。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup memos
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10 5,10,15,20 * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/backup_memos.sh &amp;gt;/Users/jinhuaiyao/Log/backup_memos.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % cat /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/backup_memos.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DATE=`date +%Y%m%d-%H%M%d`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/tar -cvzf &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/com~apple~CloudDocs/Me/backup_memos/memos_prod.db.${DATE}.tar.gz&amp;#34; /Users/jinhuaiyao/.memos/memos_prod.db
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;h1 id=&#34;记录回顾&#34;&gt;记录回顾&lt;/h1&gt;
+&lt;p&gt;随机记录推送到 iOS，使用 Memos api + python + bark 实现。待续&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Test acfs/ggs vip/xag in my local VM</title>
       <link>http://www.jinhuaiyao.com/posts/test-acfs-ggs-vip-xag/</link>

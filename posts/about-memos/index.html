@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 Memos</title>
+<meta name="description" content="最近决定正式弃用 flomo 和心光 app，总是有些介意数据在别人的服务器上。
+也正是这个原因，之前在这两个 app 上记录并不多，并且记录的也只是一些自我提醒和日常事件，不涉及特别隐私的内容。
+用来替换它们的是 Memos，很早就从“i小声读书”公众号看到过，一直没有下决心试用。
+Memos 开源可自托管，所有数据存放在本地，用起来像是一个迷你微博。使用之后最近这几天记录得更多了，也会上传小朋友的照片。
+安装与配置 docker 安装 在 Mac mini 上安装 Docker Desktop，后来感觉有些笨重，改成 Orbstack。">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/about-memos/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.1059c5abbc3bffb85449cebfb6a3581c19421727be44a621fa3f7eedcd0730cb.css" integrity="sha256-EFnFq7w7/7hUSc6/tqNYHBlCFye+RKYh+j9+7c0HMMs=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+  
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="http://www.jinhuaiyao.com/">
+        <img srcset="/img/profile-picture_hu141d85d9bc1e471d962271e648f69e4d_967044_2000x2000_fill_q75_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="2087" height="2215" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-sm  gap-3 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">首页</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+        <div class="toc pl-0 list-none">
+    <header>
+        <h1>关于 Memos</h1>
+        </header>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装与配置">安装与配置</a>
+      <ul>
+        <li><a href="#docker-安装">docker 安装</a></li>
+        <li><a href="#自定义样式">自定义样式</a></li>
+        <li><a href="#macos-客户端">MacOS 客户端</a></li>
+        <li><a href="#ios-客户端">iOS 客户端</a></li>
+      </ul>
+    </li>
+    <li><a href="#导入旧数据">导入旧数据</a></li>
+    <li><a href="#数据备份">数据备份</a></li>
+    <li><a href="#记录回顾">记录回顾</a></li>
+  </ul>
+</nav>
+</div>
+
+        
+    </div>
+
+
+    <header class="flex flex-col gap-1 mb-5">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">关于 Memos</h2>
+
+        <div class="text-xs font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2024-01-13 17:30:41 &#43;0800 CST" title="2024-01-13 17:30:41 &#43;0800 CST">
+    2024/01/13
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <p>最近决定正式弃用 flomo 和心光 app，总是有些介意数据在别人的服务器上。</p>
+<p>也正是这个原因，之前在这两个 app 上记录并不多，并且记录的也只是一些自我提醒和日常事件，不涉及特别隐私的内容。</p>
+<p>用来替换它们的是 Memos，很早就从“i小声读书”公众号看到过，一直没有下决心试用。</p>
+<p>Memos 开源可自托管，所有数据存放在本地，用起来像是一个迷你微博。使用之后最近这几天记录得更多了，也会上传小朋友的照片。</p>
+<h1 id="安装与配置">安装与配置</h1>
+<h2 id="docker-安装">docker 安装</h2>
+<p>在 Mac mini 上安装 Docker Desktop，后来感觉有些笨重，改成 Orbstack。</p>
+<p>安装 Memos，参考 <a href="https://www.usememos.com/docs/install/self-hosting">https://www.usememos.com/docs/install/self-hosting</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -d \
+</span></span><span class="line"><span class="cl">  --init \
+</span></span><span class="line"><span class="cl">  --name memos \
+</span></span><span class="line"><span class="cl">  --publish 5230:5230 \
+</span></span><span class="line"><span class="cl">  --restart always \
+</span></span><span class="line"><span class="cl">  --volume ~/.memos/:/var/opt/memos \
+</span></span><span class="line"><span class="cl">  ghcr.io/usememos/memos:latest
+</span></span></code></pre></div><h2 id="自定义样式">自定义样式</h2>
+<p>自定义霞鹜文楷字体，参考 <a href="https://ysicing.me/tools/memos-diy-style/">https://ysicing.me/tools/memos-diy-style/</a></p>
+<p>自定义样式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">body{font-family: &#34;LXGW WenKai Screen&#34;, sans-serif !important;}
+</span></span></code></pre></div><p>自定义脚本：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">function changeFont() {
+</span></span><span class="line"><span class="cl">  const link = document.createElement(&#34;link&#34;);
+</span></span><span class="line"><span class="cl">  link.rel = &#34;stylesheet&#34;;
+</span></span><span class="line"><span class="cl">  link.type = &#34;text/css&#34;;
+</span></span><span class="line"><span class="cl">  link.href = &#34;https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css&#34;;
+</span></span><span class="line"><span class="cl">  document.head.append(link);
+</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl">changeFont()
+</span></span></code></pre></div><p>效果图：</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113175203.png" alt="image.png"></p>
+<p>&ndash;</p>
+<h2 id="macos-客户端">MacOS 客户端</h2>
+<p>MacOS 没有专门的 app，也不太习惯 Moe Memos，搜索了一下，最后用 nativefier 把网页打包成 app。</p>
+<p>参考：<br>
+<a href="https://sspai.com/post/57865">https://sspai.com/post/57865</a><br>
+<a href="https://github.com/nativefier/nativefier">https://github.com/nativefier/nativefier</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo npm install nativefier -g
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nativefier &#34;http://10.0.0.100:5230&#34;
+</span></span></code></pre></div><p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054.png" alt="image.png"></p>
+<p>用 Alfred 给它设置快捷键，愉快地使用。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126.png" alt="image.png"></p>
+<p>&ndash;</p>
+<h2 id="ios-客户端">iOS 客户端</h2>
+<p>直接用网页版，Safari 里添加网页到主屏幕。</p>
+<p>但是 Memos 服务是运行在内网，在外面如何访问 memos 是个问题。</p>
+<p>折腾了好一会儿，还是没有把握将 Mac mini 暴露在公网上，搜索了一阵，最后在 Mac mini、Macbook、iPhone 上安装 Tailscale，把这些设备组成一个虚拟局域网，安全易用。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/021B9348-8B3B-4758-96FE-32219F117265_1_102_o.jpeg" alt=""></p>
+<p>运行 Tailscale 后手机网页访问 Mac mini IP 加端口即可：</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos.jpeg" width="40%"/>
+</figure>
+
+<p>&ndash;</p>
+<h1 id="导入旧数据">导入旧数据</h1>
+<p>把之前在心光、Noto、Pendo 里零散的记录清洗一下，然后导入 Memos。</p>
+<p>使用 <a href="https://github.com/JakeLaoyu/memos-import-from-flomo">https://github.com/JakeLaoyu/memos-import-from-flomo</a> 会丢失记录的原始时间。</p>
+<p>研究了一番，最后使用直接导入 sqlite 数据库的方法。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % sqlite3 memos_prod.db
+</span></span><span class="line"><span class="cl">sqlite&gt; .schema
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">CREATE TABLE memo (
+</span></span><span class="line"><span class="cl">  id INTEGER PRIMARY KEY AUTOINCREMENT,
+</span></span><span class="line"><span class="cl">  creator_id INTEGER NOT NULL,
+</span></span><span class="line"><span class="cl">  created_ts BIGINT NOT NULL DEFAULT (strftime(&#39;%s&#39;, &#39;now&#39;)),
+</span></span><span class="line"><span class="cl">  updated_ts BIGINT NOT NULL DEFAULT (strftime(&#39;%s&#39;, &#39;now&#39;)),
+</span></span><span class="line"><span class="cl">  row_status TEXT NOT NULL CHECK (row_status IN (&#39;NORMAL&#39;, &#39;ARCHIVED&#39;)) DEFAULT &#39;NORMAL&#39;,
+</span></span><span class="line"><span class="cl">  content TEXT NOT NULL DEFAULT &#39;&#39;,
+</span></span><span class="line"><span class="cl">  visibility TEXT NOT NULL CHECK (visibility IN (&#39;PUBLIC&#39;, &#39;PROTECTED&#39;, &#39;PRIVATE&#39;)) DEFAULT &#39;PRIVATE&#39;
+</span></span><span class="line"><span class="cl">);
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % cat a
+</span></span><span class="line"><span class="cl">2023-11-24 07:59:42 | 这是一个测试1。
+</span></span><span class="line"><span class="cl">2023-11-23 17:53:15 | 这是一个测试2。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % n=10
+</span></span><span class="line"><span class="cl">cat a | while read line
+</span></span><span class="line"><span class="cl">do
+</span></span><span class="line"><span class="cl">time=`echo $line |awk -F&#39;|&#39; &#39;{print $1}&#39;`
+</span></span><span class="line"><span class="cl">content=`echo $line |awk -F&#39;|&#39; &#39;{print $2}&#39;`
+</span></span><span class="line"><span class="cl">time_n=`sqlite3 memos_prod.db &#34;select strftime(&#39;%s&#39;,&#39;$time&#39;) - 28800;&#34;`
+</span></span><span class="line"><span class="cl">echo &#34;INSERT INTO memo VALUES($n,1,$time_n,$time_n,&#39;NORMAL&#39;,&#39;$content&#39;,&#39;PRIVATE&#39;);&#34;
+</span></span><span class="line"><span class="cl">n=$((n+1))
+</span></span><span class="line"><span class="cl">done&gt;aaa.sql
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % cat aaa.sql
+</span></span><span class="line"><span class="cl">INSERT INTO memo VALUES(10,1,1700783982,1700783982,&#39;NORMAL&#39;,&#39; 这是一个测试1。&#39;,&#39;PRIVATE&#39;);
+</span></span><span class="line"><span class="cl">INSERT INTO memo VALUES(11,1,1700733195,1700733195,&#39;NORMAL&#39;,&#39; 这是一个测试2。&#39;,&#39;PRIVATE&#39;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % sqlite3 memos_prod.db &lt; aaa.sql
+</span></span></code></pre></div><p>重启 memos docker 后刷新网页就可以看到导入的数据了。</p>
+<p>&ndash;</p>
+<h1 id="数据备份">数据备份</h1>
+<p>Mac mini 增加一个 cronjob。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># backup memos
+</span></span><span class="line"><span class="cl">10 5,10,15,20 * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/backup_memos.sh &gt;/Users/jinhuaiyao/Log/backup_memos.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % cat /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/backup_memos.sh
+</span></span><span class="line"><span class="cl">DATE=`date +%Y%m%d-%H%M%d`
+</span></span><span class="line"><span class="cl">/usr/bin/tar -cvzf &#34;/Users/jinhuaiyao/Library/Mobile Documents/com~apple~CloudDocs/Me/backup_memos/memos_prod.db.${DATE}.tar.gz&#34; /Users/jinhuaiyao/.memos/memos_prod.db
+</span></span></code></pre></div><p>&ndash;</p>
+<h1 id="记录回顾">记录回顾</h1>
+<p>随机记录推送到 iOS，使用 Memos api + python + bark 实现。待续&hellip;</p>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+
+    </footer>
+
+
+
+
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2024  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
