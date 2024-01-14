@@ -62,7 +62,12 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
     </li>
     <li><a href="#导入旧数据">导入旧数据</a></li>
     <li><a href="#数据备份">数据备份</a></li>
-    <li><a href="#记录回顾">记录回顾</a></li>
+    <li><a href="#记录回顾">记录回顾</a>
+      <ul>
+        <li><a href="#推送消息到-ios">推送消息到 iOS</a></li>
+        <li><a href="#memos-api-获取数据">Memos api 获取数据</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -191,7 +196,136 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 </span></span><span class="line"><span class="cl">/usr/bin/tar -cvzf &#34;/Users/jinhuaiyao/Library/Mobile Documents/com~apple~CloudDocs/Me/backup_memos/memos_prod.db.${DATE}.tar.gz&#34; /Users/jinhuaiyao/.memos/memos_prod.db
 </span></span></code></pre></div><p>&ndash;</p>
 <h1 id="记录回顾">记录回顾</h1>
-<p>随机记录推送到 iOS，使用 Memos api + python + bark 实现。待续&hellip;</p>
+<p>随机记录推送到 iOS，使用 Memos api + python + bark 实现。</p>
+<p>有些记录还是需要时不时地去回顾，比如一些重要的事，一些生活和工作中的提醒。</p>
+<p>Memos 提供 api 去获取数据，最不济还可以直接查询数据库，所以数据获取没有问题。</p>
+<h2 id="推送消息到-ios">推送消息到 iOS</h2>
+<p>很久之前在少数派看到一篇讲 bark 这个消息推送服务的文章，当时还下载了 iOS app，不过那会儿不知道如何利用，这次就用上了。</p>
+<p>在买的 VPS 上先安装 docker，再安装 bark 服务端，参考 <a href="https://bark.day.app/">https://bark.day.app/</a>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">root</span><span class="o">@</span><span class="n">hostdare</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">~</span><span class="c1"># lsb_release -a
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">No</span><span class="w"> </span><span class="n">LSB</span><span class="w"> </span><span class="n">modules</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Distributor</span><span class="w"> </span><span class="n">ID</span><span class="p">:</span><span class="w">	</span><span class="n">Ubuntu</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Description</span><span class="p">:</span><span class="w">	</span><span class="n">Ubuntu</span><span class="w"> </span><span class="mi">20</span><span class="p">.</span><span class="mi">04</span><span class="p">.</span><span class="mi">6</span><span class="w"> </span><span class="n">LTS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">Release</span><span class="p">:</span><span class="w">	</span><span class="mi">20</span><span class="p">.</span><span class="mi">04</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Codename</span><span class="p">:</span><span class="w">	</span><span class="n">focal</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="k">update</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span><span class="w"> </span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="w"> </span><span class="n">curl</span><span class="w"> </span><span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">curl</span><span class="w"> </span><span class="o">-</span><span class="n">fsSL</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="p">.</span><span class="n">docker</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span><span class="n">gpg</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="k">key</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">-</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sudo</span><span class="w"> </span><span class="k">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span><span class="w"> </span><span class="s2">&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="k">update</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sudo</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="n">docker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">docker</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">-</span><span class="n">dt</span><span class="w"> </span><span class="o">--</span><span class="n">name</span><span class="w"> </span><span class="n">bark</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="mi">10086</span><span class="p">:</span><span class="mi">8080</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="o">`</span><span class="n">pwd</span><span class="o">`/</span><span class="n">bark</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span><span class="w"> </span><span class="n">finab</span><span class="o">/</span><span class="n">bark</span><span class="o">-</span><span class="n">server</span><span class="w">
+</span></span></span></code></pre></div><p>测试一下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -X &#34;POST&#34; &#34;http://xx.xx.xx.xx:10086/3dVxxxxxxxxxxxeM&#34; \
+</span></span><span class="line"><span class="cl">     -H &#39;Content-Type: application/json; charset=utf-8&#39; \
+</span></span><span class="line"><span class="cl">     -d $&#39;{
+</span></span><span class="line"><span class="cl">  &#34;body&#34;: &#34;这是一个测试&#34;,
+</span></span><span class="line"><span class="cl">  &#34;title&#34;: &#34;Test Title&#34;,
+</span></span><span class="line"><span class="cl">  &#34;badge&#34;: 1,
+</span></span><span class="line"><span class="cl">  &#34;category&#34;: &#34;myNotificationCategory&#34;,
+</span></span><span class="line"><span class="cl">  &#34;icon&#34;: &#34;https://www.usememos.com/logo-rounded.png&#34;,
+</span></span><span class="line"><span class="cl">  &#34;group&#34;: &#34;test&#34;
+</span></span><span class="line"><span class="cl">}&#39;
+</span></span></code></pre></div><p>iPhone 上收到推送。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240114083757.png" width="40%"/>
+</figure>
+
+<h2 id="memos-api-获取数据">Memos api 获取数据</h2>
+<p>参考 <a href="https://github.com/usememos/memos/blob/main/docs/api/v1.md">https://github.com/usememos/memos/blob/main/docs/api/v1.md</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl &#34;http://10.0.0.100:5230/api/v1/memo?creatorId=1&amp;tag=important&amp;limit=1&amp;offset=0&#34; \
+</span></span><span class="line"><span class="cl">   -H &#34;Accept: application/json&#34; \
+</span></span><span class="line"><span class="cl">   -H &#34;Authorization: Bearer Your-Access-Tokens&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[
+</span></span><span class="line"><span class="cl">  {
+</span></span><span class="line"><span class="cl">    &#34;id&#34;: 2369,
+</span></span><span class="line"><span class="cl">    &#34;rowStatus&#34;: &#34;NORMAL&#34;,
+</span></span><span class="line"><span class="cl">    &#34;creatorId&#34;: 1,
+</span></span><span class="line"><span class="cl">    &#34;createdTs&#34;: 1705132608,
+</span></span><span class="line"><span class="cl">    &#34;updatedTs&#34;: 1705132628,
+</span></span><span class="line"><span class="cl">    &#34;displayTs&#34;: 1705132608,
+</span></span><span class="line"><span class="cl">    &#34;content&#34;: &#34;#important CCCCCCCCCC&#34;,
+</span></span><span class="line"><span class="cl">    &#34;visibility&#34;: &#34;PRIVATE&#34;,
+</span></span><span class="line"><span class="cl">    &#34;pinned&#34;: false,
+</span></span><span class="line"><span class="cl">    &#34;creatorName&#34;: &#34;huaiyao&#34;,
+</span></span><span class="line"><span class="cl">    &#34;creatorUsername&#34;: &#34;jinhuaiyao&#34;,
+</span></span><span class="line"><span class="cl">    &#34;resourceList&#34;: [],
+</span></span><span class="line"><span class="cl">    &#34;relationList&#34;: []
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl &#34;http://10.0.0.100:5230/api/v1/tag?creatorId=1&#34; \
+</span></span><span class="line"><span class="cl">   -H &#34;Accept: application/json&#34; \
+</span></span><span class="line"><span class="cl">   -H &#34;Authorization: Bearer Your-Access-Tokens&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[
+</span></span><span class="line"><span class="cl">  &#34;important&#34;,
+</span></span><span class="line"><span class="cl">  &#34;折腾&#34;,
+</span></span><span class="line"><span class="cl">  &#34;提醒&#34;,
+</span></span><span class="line"><span class="cl">  &#34;等等&#34;
+</span></span><span class="line"><span class="cl">]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import json, datetime, subprocess, random
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl_command = &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">curl -s &#34;http://10.0.0.100:5230/api/v1/memo?creatorId=1&amp;tag=important&#34; \
+</span></span><span class="line"><span class="cl">   -H &#34;Accept: application/json&#34; \
+</span></span><span class="line"><span class="cl">   -H &#34;Authorization: Bearer Your-Access-Tokens&#34;
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">result = subprocess.run(curl_command, shell=True, stdout=subprocess.PIPE)
+</span></span><span class="line"><span class="cl">json_data = result.stdout.decode(&#39;utf-8&#39;)
+</span></span><span class="line"><span class="cl">parsed_json = json.loads(json_data)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">total_rows = len(parsed_json)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#print(total_rows)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">random_number = random.randint(0, total_rows - 1)
+</span></span><span class="line"><span class="cl">content = parsed_json[random_number][&#39;content&#39;] if parsed_json else None
+</span></span><span class="line"><span class="cl">createdTs = parsed_json[random_number][&#39;createdTs&#39;] if parsed_json else None
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">dt_object = datetime.datetime.fromtimestamp(createdTs)
+</span></span><span class="line"><span class="cl">formatted_time = dt_object.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(formatted_time + &#39; - &#39; + content)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">combined_content = f&#34;{formatted_time} - {content}&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl_command_1 = f&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">curl -s -X &#34;POST&#34; &#34;http://xx.xx.xx.xx:10086/3dVxxxxxxxxxxxeM&#34; \
+</span></span><span class="line"><span class="cl">     -H &#39;Content-Type: application/json; charset=utf-8&#39; \
+</span></span><span class="line"><span class="cl">     -d $&#39;{{
+</span></span><span class="line"><span class="cl">  &#34;body&#34;: &#34;{combined_content}&#34;,
+</span></span><span class="line"><span class="cl">  &#34;title&#34;: &#34;Memos records&#34;,
+</span></span><span class="line"><span class="cl">  &#34;badge&#34;: 1,
+</span></span><span class="line"><span class="cl">  &#34;category&#34;: &#34;memos&#34;,
+</span></span><span class="line"><span class="cl">  &#34;icon&#34;: &#34;https://www.usememos.com/logo-rounded.png&#34;,
+</span></span><span class="line"><span class="cl">  &#34;group&#34;: &#34;test&#34;
+</span></span><span class="line"><span class="cl">}}&#39;
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">subprocess.run(curl_command_1, shell=True, stdout=subprocess.PIPE)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % python3 test.py
+</span></span><span class="line"><span class="cl">2024-01-13 15:56:31 - #important 这是一个测试A。
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % python3 test.py
+</span></span><span class="line"><span class="cl">2024-01-13 15:56:48 - #important 这是一个测试C。
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % python3 test.py
+</span></span><span class="line"><span class="cl">2024-01-13 15:56:48 - #important 这是一个测试C。
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % python3 test.py
+</span></span><span class="line"><span class="cl">2024-01-13 15:56:31 - #important 这是一个测试A。
+</span></span></code></pre></div><figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240114114033.png" width="40%"/>
+</figure>
+
+<p>Mac mini 上添加一个 cronjob 即可。</p>
 
     </section>
     
