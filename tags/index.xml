@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 14:20:43 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jan 2024 17:30:41 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新事物</title>
+      <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
+      <pubDate>Sat, 13 Jan 2024 17:30:41 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解决问题</title>
+      <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 13 Jan 2024 17:30:41 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Oracle</title>
       <link>http://www.jinhuaiyao.com/tags/oracle/</link>
@@ -41,24 +59,6 @@
       <pubDate>Wed, 06 Dec 2023 07:12:57 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/tags/%E5%A4%87%E4%BB%BD/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>新事物</title>
-      <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
-      <pubDate>Mon, 20 Nov 2023 20:24:19 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>解决问题</title>
-      <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 20 Nov 2023 20:24:19 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
       <description></description>
     </item>
     
