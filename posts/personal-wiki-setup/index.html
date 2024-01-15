@@ -66,7 +66,8 @@
       </ul>
     </li>
     <li><a href="#把那年今日显示于-wiki">把“那年今日”显示于 wiki</a></li>
-    <li><a href="#20231125-更新">2023/11/25 更新</a></li>
+    <li><a href="#改用-dropbox">改用 Dropbox</a></li>
+    <li><a href="#改用霞鹜文楷字体">改用霞鹜文楷字体</a></li>
   </ul>
 </nav>
 </div>
@@ -257,8 +258,22 @@
 </span></span></code></pre></div><p>效果如下。每天早晨起来可以打开网页快速回顾一下。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png" alt=""></p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png" alt=""></p>
-<h1 id="20231125-更新">2023/11/25 更新</h1>
+<h1 id="改用-dropbox">改用 Dropbox</h1>
+<p><em>2023/11/25 更新：</em></p>
 <p>已将文件夹从 iCloud Drive 转移到 Dropbox，iCloud Drive 同步真是一言难尽。Dropbox 手机端可以直接更新 markdown 文件，很赞。</p>
+<h1 id="改用霞鹜文楷字体">改用霞鹜文楷字体</h1>
+<p><em>2024/01/15 更新：</em></p>
+<p>参考 <a href="https://wcowin.work/blog/websitebeauty/mkdocsfont/#mkdocs">https://wcowin.work/blog/websitebeauty/mkdocsfont/#mkdocs</a></p>
+<p>mkdocs.yml 添加</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">extra_css:
+</span></span><span class="line"><span class="cl">  - stylesheets/extra.css
+</span></span><span class="line"><span class="cl">  - https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css
+</span></span></code></pre></div><p>新建 docs/stylesheets/extra.css</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">body {
+</span></span><span class="line"><span class="cl">  font-family: &#34;LXGW WenKai Screen&#34;, sans-serif;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>效果图：</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240115190216.png" alt=""></p>
 
     </section>
     

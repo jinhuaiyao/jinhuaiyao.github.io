@@ -255,8 +255,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。每天早晨起来可以打开网页快速回顾一下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;20231125-更新&#34;&gt;2023/11/25 更新&lt;/h1&gt;
+&lt;h1 id=&#34;改用-dropbox&#34;&gt;改用 Dropbox&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;2023/11/25 更新：&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;已将文件夹从 iCloud Drive 转移到 Dropbox，iCloud Drive 同步真是一言难尽。Dropbox 手机端可以直接更新 markdown 文件，很赞。&lt;/p&gt;
+&lt;h1 id=&#34;改用霞鹜文楷字体&#34;&gt;改用霞鹜文楷字体&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;2024/01/15 更新：&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://wcowin.work/blog/websitebeauty/mkdocsfont/#mkdocs&#34;&gt;https://wcowin.work/blog/websitebeauty/mkdocsfont/#mkdocs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;mkdocs.yml 添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;extra_css:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - stylesheets/extra.css
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;新建 docs/stylesheets/extra.css&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;body {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: &amp;#34;LXGW WenKai Screen&amp;#34;, sans-serif;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240115190216.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     

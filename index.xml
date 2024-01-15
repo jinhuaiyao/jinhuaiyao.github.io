@@ -1773,8 +1773,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。每天早晨起来可以打开网页快速回顾一下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;20231125-更新&#34;&gt;2023/11/25 更新&lt;/h1&gt;
+&lt;h1 id=&#34;改用-dropbox&#34;&gt;改用 Dropbox&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;2023/11/25 更新：&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;已将文件夹从 iCloud Drive 转移到 Dropbox，iCloud Drive 同步真是一言难尽。Dropbox 手机端可以直接更新 markdown 文件，很赞。&lt;/p&gt;
+&lt;h1 id=&#34;改用霞鹜文楷字体&#34;&gt;改用霞鹜文楷字体&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;2024/01/15 更新：&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://wcowin.work/blog/websitebeauty/mkdocsfont/#mkdocs&#34;&gt;https://wcowin.work/blog/websitebeauty/mkdocsfont/#mkdocs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;mkdocs.yml 添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;extra_css:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - stylesheets/extra.css
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;新建 docs/stylesheets/extra.css&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;body {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: &amp;#34;LXGW WenKai Screen&amp;#34;, sans-serif;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240115190216.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3604,7 +3618,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;ChatGPT (iOS)&lt;/li&gt;
 &lt;li&gt;Days Matter Air (iOS)&lt;/li&gt;
 &lt;li&gt;Nike Training&lt;/li&gt;
-&lt;li&gt;Poe (iOS)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Poe (iOS)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;少数派&lt;/li&gt;
 &lt;li&gt;Snapseed (iOS)&lt;/li&gt;
 &lt;li&gt;Spark&lt;/li&gt;
@@ -3614,7 +3628,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;Youtube&lt;/li&gt;
 &lt;li&gt;WhatsApp (iOS)&lt;/li&gt;
 &lt;li&gt;微信&lt;/li&gt;
-&lt;li&gt;文言一心 (iOS)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;文言一心 (iOS)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;熊猫吃短信 (iOS)&lt;/li&gt;
 &lt;li&gt;有知有行 (iOS)&lt;/li&gt;
 &lt;li&gt;腾讯会议&lt;/li&gt;
@@ -3629,13 +3643,16 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;OpenCat (MacOS)&lt;/li&gt;
 &lt;li&gt;PicGo (MacOS)&lt;/li&gt;
 &lt;li&gt;PyCharm CE (MacOS)&lt;/li&gt;
-&lt;li&gt;Tencent Lemon (MacOS)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Tencent Lemon (MacOS)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;TinyPNG4Mac (MacOS)&lt;/li&gt;
 &lt;li&gt;V2rayU (MacOS)&lt;/li&gt;
 &lt;li&gt;Visual Studio Code (MacOS)&lt;/li&gt;
 &lt;li&gt;Xnip (MacOS)&lt;/li&gt;
 &lt;li&gt;Dropbox&lt;/li&gt;
-&lt;li&gt;flomo&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;flomo&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Memos&lt;/li&gt;
+&lt;li&gt;Tailscale&lt;/li&gt;
+&lt;li&gt;多邻国&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;付费服务和产品&#34;&gt;付费服务和产品&lt;/h5&gt;
 &lt;ul&gt;
@@ -3658,7 +3675,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;相照 (iOS)&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;网易云音乐 (iOS)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;微信读书&lt;/li&gt;
-&lt;li&gt;扇贝单词 (iOS)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;扇贝单词 (iOS)&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Cubox&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;MoneyWiz&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;阿里云 OSS&lt;/li&gt;
@@ -3684,7 +3701,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;V2er (iOS)&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Infuse&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;万兴 PDF (MacOS)&lt;/li&gt;
-&lt;li&gt;心光&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;心光&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;ffmpeng (MacOS)&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;GPT-4&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;CleanMyMac X (MacOS)&lt;/li&gt;
@@ -3692,6 +3709,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;Starfall&lt;/li&gt;
 &lt;li&gt;Pok Pok&lt;/li&gt;
 &lt;li&gt;MoneyWiz&lt;/li&gt;
+&lt;li&gt;AutoSleep&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
