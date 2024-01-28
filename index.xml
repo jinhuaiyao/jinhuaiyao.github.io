@@ -1772,7 +1772,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv &amp;#34;$mdfile&amp;#34;.tmp  &amp;#34;$mdfile&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。每天早晨起来可以打开网页快速回顾一下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
 &lt;h1 id=&#34;改用-dropbox&#34;&gt;改用 Dropbox&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;2023/11/25 更新：&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;已将文件夹从 iCloud Drive 转移到 Dropbox，iCloud Drive 同步真是一言难尽。Dropbox 手机端可以直接更新 markdown 文件，很赞。&lt;/p&gt;
