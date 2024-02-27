@@ -3249,6 +3249,34 @@
     </item>
     
     <item>
+      <title>关于我</title>
+      <link>http://www.jinhuaiyao.com/_index_old/</link>
+      <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/_index_old/</guid>
+      <description>&lt;p&gt;我叫金怀耀 (Huaiyao Jin)，1987 年出生于江苏连云港，在一个小山村里度过了快乐的童年。&lt;/p&gt;
+&lt;p&gt;2005 - 2009 年在上海大学读本科，应用化学专业。本科毕业后从数据仓库运维做起，开始接触并学习数据库和脚本编程。&lt;/p&gt;
+&lt;p&gt;2011 年开始转做 &lt;a href=&#34;http://www.jinhuaiyao.com/tags/dba&#34;&gt;DBA&lt;/a&gt; (数据库管理员)，先后就职于上海诚归计算机，博朗软件，{华钦软件，eBay，Stubhub}，如今在 PayPal 做 DBA。&lt;/p&gt;
+&lt;p&gt;工作上用的最多编程语言是 &lt;a href=&#34;http://www.jinhuaiyao.com/tags/shell&#34;&gt;Shell&lt;/a&gt;，工作中用它写过大大小小的运维脚本，日常偶尔处理文本也会使用。&lt;/p&gt;
+&lt;p&gt;最近几年断断续续学习过 &lt;a href=&#34;tags/python/&#34;&gt;Python&lt;/a&gt;，写过一些简单的脚本。&lt;/p&gt;
+&lt;p&gt;数据库方面最擅长的是 &lt;a href=&#34;http://www.jinhuaiyao.com/tags/oracle&#34;&gt;Oracle&lt;/a&gt;，前领导帮忙申请了一笔经费让我去考 &lt;a href=&#34;https://www.credly.com/badges/8b821ac6-41b8-41ca-ac32-3e6b88702572&#34;&gt;OCM&lt;/a&gt;，算是这么多年 Oracle DBA 的一个见证。2022.08 开始系统学习 MySQL，以前学的知识太零散了。2023.03 获得 &lt;a href=&#34;https://catalog-education.oracle.com/pls/certview/sharebadge?id=1143C2DDF13DB8AC4F43375149F556F25E0A96D8994662C0D3A405E7E7016101&#34;&gt;MySQL 8.0 OCP&lt;/a&gt; 认证。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;2021 年重拾小时候喜欢的中国象棋，后来天天象棋业 6-1 以后便无心继续钻研，不过看&lt;a href=&#34;https://space.bilibili.com/291377718/&#34;&gt;四郎讲棋&lt;/a&gt;真是一种享受。&lt;/p&gt;
+&lt;p&gt;喜欢打篮球，疫情解封之后每周和同事打一场篮球，快乐。&lt;/p&gt;
+&lt;p&gt;平时也喜欢研究一些新的&lt;a href=&#34;http://www.jinhuaiyao.com/tools&#34;&gt;工具和服务&lt;/a&gt;，探索&lt;a href=&#34;http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/&#34;&gt;新事物&lt;/a&gt;，喜欢&lt;a href=&#34;http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/&#34;&gt;解决问题&lt;/a&gt;，让生活变得更加惬意、美好。&lt;/p&gt;
+&lt;p&gt;有空时会把自己的思考和实践记录在&lt;a href=&#34;http://www.jinhuaiyao.com/posts&#34;&gt;博客&lt;/a&gt;里，也会收录一些有用的&lt;a href=&#34;http://www.jinhuaiyao.com/links&#34;&gt;链接&lt;/a&gt;。关于这些记录有问题可以通过&lt;a href=&#34;mailto:jinhuaiyao@outlook.com&#34;&gt;邮件&lt;/a&gt;联系我。也欢迎通过 &lt;a href=&#34;https://www.jinhuaiyao.com/index.xml&#34;&gt;RSS&lt;/a&gt; 订阅我的博客。&lt;/p&gt;
+&lt;p&gt;不发朋友圈，不用微博，博客里也会放一些&lt;a href=&#34;http://www.jinhuaiyao.com/words&#34;&gt;只言片语&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;很久之前还会尝试视频创作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://v.youku.com/v_show/id_XMjU0NDAwODA4.html&#34;&gt;上海大学理学院化学系09届毕业纪念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://v.youku.com/v_show/id_XMTcyODMyNTc3Ng==.html&#34;&gt;ForYaya&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「我努力学习，为了当一个普通人」「我是一个普通人，踏踏实实做自己，不为钱发愁，有稳定的生活，健健康康，多陪陪家人，就很好」&lt;/strong&gt; —— 《少年发声》&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>链接</title>
       <link>http://www.jinhuaiyao.com/links/</link>
       <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
@@ -3291,7 +3319,7 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;《&lt;a href=&#34;https://weread.qq.com/web/bookDetail/ddc32d0071a24ee0ddc02ea&#34;&gt;学会如何学习&lt;/a&gt;》&lt;br&gt;
-2023.01.02 - 2023.04.06 &lt;br&gt;
+2023.01.02 - 2023.04.06  &lt;br&gt;
 断了很久终于找一段时间读完了，接下来就是把记录的一些方法运用、吸收一下。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
