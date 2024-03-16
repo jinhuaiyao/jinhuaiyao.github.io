@@ -9,6 +9,64 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>UPDATE - 个人资料分级及备份</title>
+      <link>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup-2024/</link>
+      <pubDate>Sat, 16 Mar 2024 16:59:35 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup-2024/</guid>
+      <description>&lt;p&gt;2023 版：&lt;a href=&#34;https://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup/&#34;&gt;个人资料分级及备份&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最近闲来又整理了一下资料，顺便更新一下备份流程。&lt;/p&gt;
+&lt;p&gt;启用新的 OneDrive 账号来支持更新后备份流程，1T 空间专门用来云备份所用重要资料，不再使用 iCloud Drive 存放备份。&lt;/p&gt;
+&lt;h1 id=&#34;照片和视频&#34;&gt;照片和视频&lt;/h1&gt;
+&lt;p&gt;存于 iCloud，下载并保留原片到 Mac mini 的外接 SSD 移动硬盘，移动硬盘通过 Time Machine 备份，Time Machine 配置两块移动硬盘，每小时轮流备份。&lt;/p&gt;
+&lt;h1 id=&#34;文档资料---1&#34;&gt;文档资料 - 1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;日常使用的资料&lt;/li&gt;
+&lt;li&gt;正在学习的资料&lt;/li&gt;
+&lt;li&gt;配置文件&lt;/li&gt;
+&lt;li&gt;日记&lt;/li&gt;
+&lt;li&gt;博客&lt;/li&gt;
+&lt;li&gt;个人 Wiki（记录和总结，阅读笔记）&lt;/li&gt;
+&lt;li&gt;曾经的工作笔记&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上存于 Dropbox，通过 Mac mini 的 Time Machine 备份，同时每天定时 rsync 到 Onedrive。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240316204251.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup dropbox daily
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_daily ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_config ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_learning ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude &amp;#39;logseq&amp;#39; my_logseq ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_notes ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude &amp;#39;public&amp;#39; my_website  ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude &amp;#39;site&amp;#39; my_wiki  ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;文档资料---2&#34;&gt;文档资料 - 2&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;微信聊天记录&lt;/li&gt;
+&lt;li&gt;账号和密码&lt;/li&gt;
+&lt;li&gt;其他个人资料（例如工作合同、保险资料、投资统计、体检报告、证件电子版等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;微信聊天记录，每周通过客户端手动备份到 Mac mini，再通过 Time Machine 进行备份。&lt;/p&gt;
+&lt;p&gt;账号和密码存于 1Password，1Password 主密码有备份，其他账号密码都交给 1Password 了。&lt;/p&gt;
+&lt;p&gt;其他个人资料存于 DEVONthink，通过 WebDAV 同步到 Mac mini 上的 DEVONthink，再通过 Time Machine 进行备份，同时每天定时 rsync 到 Onedrive。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup devonthink daily
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Databases
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude Files.noindex Personal.dtBase2 ~/OneDrive/Backup/backup_devonthink
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;其他的收集&#34;&gt;其他的收集&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;收集的软件和工具&lt;/li&gt;
+&lt;li&gt;收集的学习资料（英语，数据库，编程；文档，图书，音频，视频）&lt;/li&gt;
+&lt;li&gt;收集的文章及标注&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上资料存于 OneDrive，并且通过 Time Machine 进行备份，同时每天 rsync OneDrive 里所有文件到 NAS。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sync onedrive to nas
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/rsync -avz -e &amp;#34;ssh -p 11236&amp;#34; /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal 10.0.3.76:/share/CACHEDEV2_DATA/Backups_OneDrive &amp;gt; /Users/jinhuaiyao/Log/onedrive_sync_to_nas.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样，最重要的资料 Mac mini 里有一份，Time Machine 里有两份，OneDrive 里有一份，NAS 里有一份，应该是不会再丢数据了。&lt;/p&gt;
+&lt;p&gt;此外，日常主力使用的 MacBook 每周六还会手动连接到移动硬盘进行 Time Machine 备份，有“备”无患。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>关于 Memos</title>
       <link>http://www.jinhuaiyao.com/posts/about-memos/</link>
       <pubDate>Sat, 13 Jan 2024 17:30:41 +0800</pubDate>
@@ -3249,34 +3307,6 @@
     </item>
     
     <item>
-      <title>关于我</title>
-      <link>http://www.jinhuaiyao.com/_index_old/</link>
-      <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/_index_old/</guid>
-      <description>&lt;p&gt;我叫金怀耀 (Huaiyao Jin)，1987 年出生于江苏连云港，在一个小山村里度过了快乐的童年。&lt;/p&gt;
-&lt;p&gt;2005 - 2009 年在上海大学读本科，应用化学专业。本科毕业后从数据仓库运维做起，开始接触并学习数据库和脚本编程。&lt;/p&gt;
-&lt;p&gt;2011 年开始转做 &lt;a href=&#34;http://www.jinhuaiyao.com/tags/dba&#34;&gt;DBA&lt;/a&gt; (数据库管理员)，先后就职于上海诚归计算机，博朗软件，{华钦软件，eBay，Stubhub}，如今在 PayPal 做 DBA。&lt;/p&gt;
-&lt;p&gt;工作上用的最多编程语言是 &lt;a href=&#34;http://www.jinhuaiyao.com/tags/shell&#34;&gt;Shell&lt;/a&gt;，工作中用它写过大大小小的运维脚本，日常偶尔处理文本也会使用。&lt;/p&gt;
-&lt;p&gt;最近几年断断续续学习过 &lt;a href=&#34;tags/python/&#34;&gt;Python&lt;/a&gt;，写过一些简单的脚本。&lt;/p&gt;
-&lt;p&gt;数据库方面最擅长的是 &lt;a href=&#34;http://www.jinhuaiyao.com/tags/oracle&#34;&gt;Oracle&lt;/a&gt;，前领导帮忙申请了一笔经费让我去考 &lt;a href=&#34;https://www.credly.com/badges/8b821ac6-41b8-41ca-ac32-3e6b88702572&#34;&gt;OCM&lt;/a&gt;，算是这么多年 Oracle DBA 的一个见证。2022.08 开始系统学习 MySQL，以前学的知识太零散了。2023.03 获得 &lt;a href=&#34;https://catalog-education.oracle.com/pls/certview/sharebadge?id=1143C2DDF13DB8AC4F43375149F556F25E0A96D8994662C0D3A405E7E7016101&#34;&gt;MySQL 8.0 OCP&lt;/a&gt; 认证。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;2021 年重拾小时候喜欢的中国象棋，后来天天象棋业 6-1 以后便无心继续钻研，不过看&lt;a href=&#34;https://space.bilibili.com/291377718/&#34;&gt;四郎讲棋&lt;/a&gt;真是一种享受。&lt;/p&gt;
-&lt;p&gt;喜欢打篮球，疫情解封之后每周和同事打一场篮球，快乐。&lt;/p&gt;
-&lt;p&gt;平时也喜欢研究一些新的&lt;a href=&#34;http://www.jinhuaiyao.com/tools&#34;&gt;工具和服务&lt;/a&gt;，探索&lt;a href=&#34;http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/&#34;&gt;新事物&lt;/a&gt;，喜欢&lt;a href=&#34;http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/&#34;&gt;解决问题&lt;/a&gt;，让生活变得更加惬意、美好。&lt;/p&gt;
-&lt;p&gt;有空时会把自己的思考和实践记录在&lt;a href=&#34;http://www.jinhuaiyao.com/posts&#34;&gt;博客&lt;/a&gt;里，也会收录一些有用的&lt;a href=&#34;http://www.jinhuaiyao.com/links&#34;&gt;链接&lt;/a&gt;。关于这些记录有问题可以通过&lt;a href=&#34;mailto:jinhuaiyao@outlook.com&#34;&gt;邮件&lt;/a&gt;联系我。也欢迎通过 &lt;a href=&#34;https://www.jinhuaiyao.com/index.xml&#34;&gt;RSS&lt;/a&gt; 订阅我的博客。&lt;/p&gt;
-&lt;p&gt;不发朋友圈，不用微博，博客里也会放一些&lt;a href=&#34;http://www.jinhuaiyao.com/words&#34;&gt;只言片语&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;很久之前还会尝试视频创作。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://v.youku.com/v_show/id_XMjU0NDAwODA4.html&#34;&gt;上海大学理学院化学系09届毕业纪念&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://v.youku.com/v_show/id_XMTcyODMyNTc3Ng==.html&#34;&gt;ForYaya&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;「我努力学习，为了当一个普通人」「我是一个普通人，踏踏实实做自己，不为钱发愁，有稳定的生活，健健康康，多陪陪家人，就很好」&lt;/strong&gt; —— 《少年发声》&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>链接</title>
       <link>http://www.jinhuaiyao.com/links/</link>
       <pubDate>Thu, 02 Jun 2022 11:04:49 +0800</pubDate>
@@ -3444,6 +3474,10 @@
       
       <guid>http://www.jinhuaiyao.com/words/</guid>
       <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;2024.03.16 21:11:16&lt;/em&gt;&lt;br&gt;
+今晚喝了一瓶“娃哈哈”，味道和小时候的一样，上次喝可能是 10 岁的时候？有点恍惚。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;2024.01.27 21:45:11&lt;/em&gt;&lt;br&gt;
 断断续续从昨晚到现在，搞定了 Twikoo 博客评论系统的配置并且实现了自己想要的显示样式，舒服！&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3619,7 +3653,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://apps.apple.com/us/app/noto-elegant-note/id1459055246&#34;&gt;Noto&lt;/a&gt;&lt;/strong&gt;  &lt;br&gt;
 &amp;ndash; &lt;a href=&#34;https://www.macstories.net/reviews/noto-review-beautifully-modern-and-versatile-note-taking/&#34;&gt;Noto Review: Beautifully Modern and Versatile Note-Taking&lt;/a&gt;&lt;br&gt;
 &amp;ndash; 简约，流畅，易用。目前只用来替换 Pendo 去做去记录日常的一些事情，Pendo 在 macOS 上的同步问题太让人心烦了，而 Noto 在 iOS 和 macOS 上的同步几乎是瞬间完成的。&lt;br&gt;
-&amp;ndash; 2023.10，已弃用，改用“心光” app。&lt;/p&gt;
+&amp;ndash; 2023.10，已弃用。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://lunar.fyi/&#34;&gt;Lunar&lt;/a&gt;&lt;/strong&gt;  &lt;br&gt;
@@ -3629,7 +3663,8 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://poe.com/&#34;&gt;Poe&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
 &amp;ndash; &amp;ldquo;Poe - Fast, Helpful AI Chat.&amp;rdquo;&lt;br&gt;
-&amp;ndash; 可以免费无限使用 ChatGPT。&lt;/p&gt;
+&amp;ndash; 可以免费无限使用 ChatGPT。
+&amp;ndash; 有了 GPT4 后已弃用。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;OpenAI Translator&lt;/a&gt; ★★★★★&lt;/strong&gt;&lt;br&gt;
@@ -3666,7 +3701,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;免费服务和产品&#34;&gt;免费服务和产品&lt;/h5&gt;
 &lt;ul&gt;
-&lt;li&gt;ChatGPT (iOS)&lt;/li&gt;
+&lt;li&gt;OpenAI Translator (MacOS)&lt;/li&gt;
 &lt;li&gt;Days Matter Air (iOS)&lt;/li&gt;
 &lt;li&gt;Nike Training&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Poe (iOS)&lt;/del&gt;&lt;/li&gt;
@@ -3696,7 +3731,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;iTerm (MacOS)&lt;/li&gt;
 &lt;li&gt;Jiggler (MacOS)&lt;/li&gt;
 &lt;li&gt;Obsidian (MacOS)&lt;/li&gt;
-&lt;li&gt;OpenCat (MacOS)&lt;/li&gt;
+&lt;li&gt;OpenCat&lt;/li&gt;
 &lt;li&gt;PicGo (MacOS)&lt;/li&gt;
 &lt;li&gt;PyCharm CE (MacOS)&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;Tencent Lemon (MacOS)&lt;/del&gt;&lt;/li&gt;
@@ -3704,7 +3739,6 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;V2rayU (MacOS)&lt;/li&gt;
 &lt;li&gt;Visual Studio Code (MacOS)&lt;/li&gt;
 &lt;li&gt;Xnip (MacOS)&lt;/li&gt;
-&lt;li&gt;Dropbox&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;flomo&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;Memos&lt;/li&gt;
 &lt;li&gt;Tailscale&lt;/li&gt;
@@ -3717,6 +3751,7 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;DAMA (iOS)&lt;/li&gt;
 &lt;li&gt;LocalSend&lt;/li&gt;
 &lt;li&gt;ffmpeng (MacOS)&lt;/li&gt;
+&lt;li&gt;rewind (MacOS)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;付费服务和产品&#34;&gt;付费服务和产品&lt;/h5&gt;
 &lt;ul&gt;
@@ -3763,13 +3798,15 @@ Tailwind CSS 用起来很方便。&lt;/p&gt;
 &lt;li&gt;&lt;del&gt;Infuse&lt;/del&gt;&lt;/li&gt;
 &lt;li&gt;万兴 PDF (MacOS)&lt;/li&gt;
 &lt;li&gt;&lt;del&gt;心光&lt;/del&gt;&lt;/li&gt;
-&lt;li&gt;GPT-4&lt;/li&gt;
+&lt;li&gt;GPT4&lt;/li&gt;
 &lt;li&gt;CleanMyMac X (MacOS)&lt;/li&gt;
 &lt;li&gt;Bartender (MacOS)&lt;/li&gt;
 &lt;li&gt;Starfall&lt;/li&gt;
 &lt;li&gt;Pok Pok&lt;/li&gt;
 &lt;li&gt;MoneyWiz&lt;/li&gt;
 &lt;li&gt;AutoSleep&lt;/li&gt;
+&lt;li&gt;都都思维 (iPadOS)&lt;/li&gt;
+&lt;li&gt;Dropbox&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

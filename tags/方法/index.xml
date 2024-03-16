@@ -7,7 +7,65 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 16 Dec 2023 11:50:35 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Mar 2024 16:59:35 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UPDATE - 个人资料分级及备份</title>
+      <link>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup-2024/</link>
+      <pubDate>Sat, 16 Mar 2024 16:59:35 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup-2024/</guid>
+      <description>&lt;p&gt;2023 版：&lt;a href=&#34;https://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup/&#34;&gt;个人资料分级及备份&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最近闲来又整理了一下资料，顺便更新一下备份流程。&lt;/p&gt;
+&lt;p&gt;启用新的 OneDrive 账号来支持更新后备份流程，1T 空间专门用来云备份所用重要资料，不再使用 iCloud Drive 存放备份。&lt;/p&gt;
+&lt;h1 id=&#34;照片和视频&#34;&gt;照片和视频&lt;/h1&gt;
+&lt;p&gt;存于 iCloud，下载并保留原片到 Mac mini 的外接 SSD 移动硬盘，移动硬盘通过 Time Machine 备份，Time Machine 配置两块移动硬盘，每小时轮流备份。&lt;/p&gt;
+&lt;h1 id=&#34;文档资料---1&#34;&gt;文档资料 - 1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;日常使用的资料&lt;/li&gt;
+&lt;li&gt;正在学习的资料&lt;/li&gt;
+&lt;li&gt;配置文件&lt;/li&gt;
+&lt;li&gt;日记&lt;/li&gt;
+&lt;li&gt;博客&lt;/li&gt;
+&lt;li&gt;个人 Wiki（记录和总结，阅读笔记）&lt;/li&gt;
+&lt;li&gt;曾经的工作笔记&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上存于 Dropbox，通过 Mac mini 的 Time Machine 备份，同时每天定时 rsync 到 Onedrive。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240316204251.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup dropbox daily
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_daily ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_config ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_learning ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude &amp;#39;logseq&amp;#39; my_logseq ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_notes ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude &amp;#39;public&amp;#39; my_website  ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude &amp;#39;site&amp;#39; my_wiki  ~/OneDrive/Backup/backup_dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;文档资料---2&#34;&gt;文档资料 - 2&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;微信聊天记录&lt;/li&gt;
+&lt;li&gt;账号和密码&lt;/li&gt;
+&lt;li&gt;其他个人资料（例如工作合同、保险资料、投资统计、体检报告、证件电子版等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;微信聊天记录，每周通过客户端手动备份到 Mac mini，再通过 Time Machine 进行备份。&lt;/p&gt;
+&lt;p&gt;账号和密码存于 1Password，1Password 主密码有备份，其他账号密码都交给 1Password 了。&lt;/p&gt;
+&lt;p&gt;其他个人资料存于 DEVONthink，通过 WebDAV 同步到 Mac mini 上的 DEVONthink，再通过 Time Machine 进行备份，同时每天定时 rsync 到 Onedrive。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup devonthink daily
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Databases
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av --exclude Files.noindex Personal.dtBase2 ~/OneDrive/Backup/backup_devonthink
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;其他的收集&#34;&gt;其他的收集&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;收集的软件和工具&lt;/li&gt;
+&lt;li&gt;收集的学习资料（英语，数据库，编程；文档，图书，音频，视频）&lt;/li&gt;
+&lt;li&gt;收集的文章及标注&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上资料存于 OneDrive，并且通过 Time Machine 进行备份，同时每天 rsync OneDrive 里所有文件到 NAS。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sync onedrive to nas
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/rsync -avz -e &amp;#34;ssh -p 11236&amp;#34; /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal 10.0.3.76:/share/CACHEDEV2_DATA/Backups_OneDrive &amp;gt; /Users/jinhuaiyao/Log/onedrive_sync_to_nas.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样，最重要的资料 Mac mini 里有一份，Time Machine 里有两份，OneDrive 里有一份，NAS 里有一份，应该是不会再丢数据了。&lt;/p&gt;
+&lt;p&gt;此外，日常主力使用的 MacBook 每周六还会手动连接到移动硬盘进行 Time Machine 备份，有“备”无患。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>关于记账</title>
       <link>http://www.jinhuaiyao.com/posts/about-bookkeeping/</link>
