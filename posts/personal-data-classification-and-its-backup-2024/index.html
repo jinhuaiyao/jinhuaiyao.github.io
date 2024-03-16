@@ -7,7 +7,7 @@
 <meta name="description" content="2023 版：个人资料分级及备份
 最近闲来又整理了一下资料，顺便更新一下备份流程。
 启用新的 OneDrive 账号来支持更新后备份流程，1T 空间专门用来云备份所用重要资料，不再使用 iCloud Drive 存放备份。
-照片和视频 存于 iCloud，下载并保留原片到 Mac mini 的外接 SSD 移动硬盘，移动硬盘通过 Time Machine 备份，Time Machine 配置两块移动硬盘，每小时轮流备份。">
+个人照片和视频 存于 iCloud，下载并保留原片到 Mac mini 的外接 SSD 移动硬盘，移动硬盘通过 Time Machine 备份，Time Machine 配置两块移动硬盘，每小时轮流备份。">
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup-2024/">
 <link rel="robots" href="/robots.txt" />
 
@@ -69,9 +69,9 @@
     <p>2023 版：<a href="https://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup/">个人资料分级及备份</a></p>
 <p>最近闲来又整理了一下资料，顺便更新一下备份流程。</p>
 <p>启用新的 OneDrive 账号来支持更新后备份流程，1T 空间专门用来云备份所用重要资料，不再使用 iCloud Drive 存放备份。</p>
-<h1 id="照片和视频">照片和视频</h1>
+<h1 id="个人照片和视频">个人照片和视频</h1>
 <p>存于 iCloud，下载并保留原片到 Mac mini 的外接 SSD 移动硬盘，移动硬盘通过 Time Machine 备份，Time Machine 配置两块移动硬盘，每小时轮流备份。</p>
-<h1 id="文档资料---1">文档资料 - 1</h1>
+<h1 id="个人资料---1">个人资料 - 1</h1>
 <ul>
 <li>日常使用的资料</li>
 <li>正在学习的资料</li>
@@ -92,7 +92,7 @@
 </span></span><span class="line"><span class="cl">rsync -av my_notes ~/OneDrive/Backup/backup_dropbox
 </span></span><span class="line"><span class="cl">rsync -av --exclude &#39;public&#39; my_website  ~/OneDrive/Backup/backup_dropbox
 </span></span><span class="line"><span class="cl">rsync -av --exclude &#39;site&#39; my_wiki  ~/OneDrive/Backup/backup_dropbox
-</span></span></code></pre></div><h1 id="文档资料---2">文档资料 - 2</h1>
+</span></span></code></pre></div><h1 id="个人资料---2">个人资料 - 2</h1>
 <ul>
 <li>微信聊天记录</li>
 <li>账号和密码</li>
@@ -104,6 +104,28 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># backup devonthink daily
 </span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/Databases
 </span></span><span class="line"><span class="cl">rsync -av --exclude Files.noindex Personal.dtBase2 ~/OneDrive/Backup/backup_devonthink
+</span></span></code></pre></div><h1 id="个人资料---3">个人资料 - 3</h1>
+<ul>
+<li>Memos</li>
+</ul>
+<p>Memos 如今运行在 vps 里的 docker，每天定时 scp 到 Onedrive。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># on vps</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl">docker stop memos
+</span></span><span class="line"><span class="cl">sleep <span class="m">5</span>
+</span></span><span class="line"><span class="cl">cp ~/.memos/memos_prod.db /home/xxx/.memos
+</span></span><span class="line"><span class="cl">chown xxx:xxx /home/xxx/.memos/memos_prod.db
+</span></span><span class="line"><span class="cl">docker start memos
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">1</span> <span class="m">17</span> * * * /root/memos_backup.sh &gt; /root/memos_backup.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># on mac mini</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IP</span><span class="o">=</span><span class="s2">&#34;xx.xx.xx.xx&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DATE</span><span class="o">=</span><span class="sb">`</span>date +%Y%m%d-%H%M%d<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">scp -P <span class="m">11232</span> xxx@<span class="si">${</span><span class="nv">IP</span><span class="si">}</span>:/home/xxx/.memos/memos_prod.db /Users/jinhuaiyao/OneDrive/Backup/backup_memos/memos_prod.db.<span class="si">${</span><span class="nv">DATE</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">10</span> <span class="m">1</span> * * * /bin/bash /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/backup_memos.sh &gt;/Users/jinhuaiyao/Log/backup_memos.txt 2&gt;<span class="p">&amp;</span><span class="m">1</span>
 </span></span></code></pre></div><h1 id="其他的收集">其他的收集</h1>
 <ul>
 <li>收集的软件和工具</li>
