@@ -123,7 +123,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># on mac mini</span>
 </span></span><span class="line"><span class="cl"><span class="nv">IP</span><span class="o">=</span><span class="s2">&#34;xx.xx.xx.xx&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">DATE</span><span class="o">=</span><span class="sb">`</span>date +%Y%m%d-%H%M%d<span class="sb">`</span>
-</span></span><span class="line"><span class="cl">scp -P <span class="m">11232</span> xxx@<span class="si">${</span><span class="nv">IP</span><span class="si">}</span>:/home/xxx/.memos/memos_prod.db /Users/jinhuaiyao/OneDrive/Backup/backup_memos/memos_prod.db.<span class="si">${</span><span class="nv">DATE</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">scp -P <span class="m">10086</span> xxx@<span class="si">${</span><span class="nv">IP</span><span class="si">}</span>:/home/xxx/.memos/memos_prod.db /Users/jinhuaiyao/OneDrive/Backup/backup_memos/memos_prod.db.<span class="si">${</span><span class="nv">DATE</span><span class="si">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="m">10</span> <span class="m">1</span> * * * /bin/bash /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/backup_memos.sh &gt;/Users/jinhuaiyao/Log/backup_memos.txt 2&gt;<span class="p">&amp;</span><span class="m">1</span>
 </span></span></code></pre></div><h1 id="其他的收集">其他的收集</h1>
@@ -134,7 +134,7 @@
 </ul>
 <p>以上资料存于 OneDrive，并且通过 Time Machine 进行备份，同时每天 rsync OneDrive 里所有文件到 NAS。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># sync onedrive to nas
-</span></span><span class="line"><span class="cl">/usr/bin/rsync -avz -e &#34;ssh -p 11236&#34; /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal 10.0.3.76:/share/CACHEDEV2_DATA/Backups_OneDrive &gt; /Users/jinhuaiyao/Log/onedrive_sync_to_nas.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">/usr/bin/rsync -avz -e &#34;ssh -p 10086&#34; /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal 10.0.3.76:/share/CACHEDEV2_DATA/Backups_OneDrive &gt; /Users/jinhuaiyao/Log/onedrive_sync_to_nas.txt 2&gt;&amp;1
 </span></span></code></pre></div><p>这样，最重要的资料 Mac mini 里有一份，Time Machine 里有两份，OneDrive 里有一份，NAS 里有一份，应该是不会再丢数据了。</p>
 <p>此外，日常主力使用的 MacBook 每周六还会手动连接到移动硬盘进行 Time Machine 备份，有“备”无患。</p>
 
