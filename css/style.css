@@ -1,39 +1,5 @@
-body.light-theme,
-:root {
-    /* light theme color */
-    --color-main: #222;
-    --color-background: #fff;
-    --color-text-bg: #eaeaea;
-    --color-text-hover: #eeeef1;
-    --color-memos-id: #536471;
-    --color-img-border: #cfd9de;
-    --color-tag: #2563eb;
-    --color-tag-hover: #54a3ff;
-    --color-fg-muted: #576061;
-    --color-border-default: #d0d7de;
-    --color-border-muted: #d8dee4;
-    --color-post-preview: #fff;
-    --color-memos-pre-bg: #f3f4f6;;
 
-    /* variables for js, must be the same as these in @custom-media queries */
-    --phoneWidth: (max-width: 684px);
-    --tabletWidth: (max-width: 900px);
-}
 
-body.dark-theme {
-    /* dark theme colors */
-    --color-main: #adbac7;
-    --color-background: #1c2128;
-    --color-text-bg: #22272e;
-    --color-text-hover: #272c32;
-    --color-memos-id: #71767b;
-    --color-img-border: #292a2d;
-    --color-tag: #539bf5;
-    --color-link: #539bf5;
-    --color-border-muted: #2d333b;
-    --color-post-preview: #4a4b50;
-    --color-memos-pre-bg: #2d333b;
-}
 
 @media (prefers-color-scheme: light) {
     body:not(.dark-theme) {
@@ -70,9 +36,7 @@ body.dark-theme {
         --color-memos-pre-bg: #2d333b;
     }
 }
-blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
-    margin: 0;
-}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
         Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei",
@@ -92,39 +56,8 @@ header {
     align-items: center;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    margin: 0;
-}
 
-.title {
-    font-size: 1.5rem;
-}
-
-.pages a {
-    color: var(--color-main);
-    text-decoration: none;
-    margin-left: 1rem;
-}
-
-.pages a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    margin-bottom: 16px;
-    font-weight: 600;
-    line-height: 1.25;
-    margin: .67em 0;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    font-weight: 600;
-    padding-bottom: .3em;
-    font-size: 2em;
-    border-bottom: 1px solid var(--color-border-muted);
-}
+ 
 
 blockquote {
     margin: 1em 0;
