@@ -254,7 +254,7 @@
 .load-btn {
     color: var(--color-main);
     background-color: var(--color-text-bg);
-    margin-left: 50px;
+    margin-left: 0px;
     border-radius: 8px;
     padding: 10px;
     border: none;
