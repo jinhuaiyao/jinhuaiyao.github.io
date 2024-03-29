@@ -296,3 +296,126 @@ function updateHTMl(data) {
 }
 // Memos End
 
+
+
+// 解析豆瓣 Start
+// 文章内显示豆瓣条目 https://immmmm.com/post-show-douban-item/
+// 解析豆瓣必须要API，请找朋友要权限，或自己按 https://github.com/eallion/douban-api-rs 这个架设 API，非常简单，资源消耗很少
+// 已内置样式，修改 API 即可使用
+function fetchDB() {
+    var dbAPI = "https://api.example.com/";  // 修改为自己的 API
+    var dbA = document.querySelectorAll(".timeline a[href*='douban.com/subject/']:not([rel='noreferrer'])") || '';
+    if (dbA) {
+        for (var i = 0; i < dbA.length; i++) {
+            _this = dbA[i]
+            var dbHref = _this.href
+            var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+            var db_type = dbHref.replace(db_reg, "$1");
+            var db_id = dbHref.replace(db_reg, "$2").toString();
+            if (db_type == 'movie') {
+                var this_item = 'movie' + db_id;
+                var url = dbAPI + "movies/" + db_id;
+                if (localStorage.getItem(this_item) == null || localStorage.getItem(this_item) == 'undefined') {
+                    fetch(url).then(res => res.json()).then(data => {
+                        let fetch_item = 'movies' + data.sid;
+                        let fetch_href = "https://movie.douban.com/subject/" + data.sid + "/"
+                        localStorage.setItem(fetch_item, JSON.stringify(data));
+                        movieShow(fetch_href, fetch_item)
+                    });
+                } else {
+                    movieShow(dbHref, this_item)
+                }
+            } else if (db_type == 'book') {
+                var this_item = 'book' + db_id;
+                var url = dbAPI + "v2/book/id/" + db_id;
+                if (localStorage.getItem(this_item) == null || localStorage.getItem(this_item) == 'undefined') {
+                    fetch(url).then(res => res.json()).then(data => {
+                        let fetch_item = 'book' + data.id;
+                        let fetch_href = "https://book.douban.com/subject/" + data.id + "/"
+                        localStorage.setItem(fetch_item, JSON.stringify(data));
+                        bookShow(fetch_href, fetch_item)
+                    });
+                } else {
+                    bookShow(dbHref, this_item)
+                }
+            }
+        }// for end
+    }
+}
+
+function movieShow(fetch_href, fetch_item) {
+    var storage = localStorage.getItem(fetch_item);
+    var data = JSON.parse(storage);
+    var db_star = Math.ceil(data.rating);
+    var db_html = "<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' rel='noreferrer' href='" + fetch_href + "'>《" + data.name + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.director + " / 类型：" + data.genre + " / " + data.year + "</time><section class='post-preview--excerpt'>" + data.intro.replace(/\s*/g, "") + "</section></div></div><img referrer-policy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.img + "></div>"
+    var db_div = document.createElement("div");
+    var qs_href = ".timeline a[href='" + fetch_href + "']"
+    var qs_dom = document.querySelector(qs_href)
+    qs_dom.parentNode.replaceChild(db_div, qs_dom);
+    db_div.innerHTML = db_html
+}
+
+function bookShow(fetch_href, fetch_item) {
+    var storage = localStorage.getItem(fetch_item);
+    var data = JSON.parse(storage);
+    var db_star = Math.ceil(data.rating.average);
+    var db_html = "<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' rel='noreferrer' href='" + fetch_href + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating.average + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section class='post-preview--excerpt'>" + data.summary.replace(/\s*/g, "") + "</section></div></div><img referrer-policy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.images.medium + "></div>"
+    var db_div = document.createElement("div");
+    var qs_href = ".timeline a[href='" + fetch_href + "']"
+    var qs_dom = document.querySelector(qs_href)
+    qs_dom.parentNode.replaceChild(db_div, qs_dom);
+    db_div.innerHTML = db_html
+}
+// 解析豆瓣 End
+
+// Images lightbox
+window.ViewImage && ViewImage.init('.container img');
+
+// Memos Total Start
+// Get Memos total count
+function getTotal() {
+    var totalUrl = memos + "/api/v1/memo/stats?creatorId=" + memo.creatorId
+    fetch(totalUrl).then(res => res.json()).then(resdata => {
+        if (resdata) {
+            var allnums = resdata.length
+            var memosCount = document.getElementById('total');
+            memosCount.innerHTML = allnums;
+        }
+    }).catch(err => {
+        // Do something for an error here
+    });
+};
+window.onload = getTotal();
+// Memos Total End
+
+// Toggle Darkmode
+const localTheme = window.localStorage && window.localStorage.getItem("theme");
+const themeToggle = document.querySelector(".theme-toggle");
+
+if (localTheme) {
+    document.body.classList.remove("light-theme", "dark-theme");
+    document.body.classList.add(localTheme);
+}
+
+themeToggle.addEventListener("click", () => {
+    const themeUndefined = !new RegExp("(dark|light)-theme").test(document.body.className);
+    const isOSDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (themeUndefined) {
+        if (isOSDark) {
+            document.body.classList.add("light-theme");
+        } else {
+            document.body.classList.add("dark-theme");
+        }
+    } else {
+        document.body.classList.toggle("light-theme");
+        document.body.classList.toggle("dark-theme");
+    }
+
+    window.localStorage &&
+        window.localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark-theme") ? "dark-theme" : "light-theme",
+        );
+});
+// Darkmode End
