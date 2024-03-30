@@ -292,7 +292,7 @@ function updateHTMl(data) {
     resultAll = memoBefore + memoResult + memoAfter
     memoDom.insertAdjacentHTML('beforeend', resultAll);
 
-    document.querySelector('button.button-load').textContent = 'Load More...';
+    document.querySelector('button.button-load').textContent = 'Load more...';
 }
 // Memos End
 
