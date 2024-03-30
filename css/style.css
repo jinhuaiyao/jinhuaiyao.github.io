@@ -231,7 +231,7 @@
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 202px;
+    height: 100%;
 }
 
 .timeline img, .resimg img {
