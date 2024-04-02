@@ -225,7 +225,7 @@
 }
 
 .resimg {
-    width: 100%;
+    max-width: 80%
     overflow: hidden;
     border-radius: 0.25rem;
     --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
@@ -233,7 +233,7 @@
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 160px;
+    height: auto;
 }
 
 .timeline img, .resimg img {
