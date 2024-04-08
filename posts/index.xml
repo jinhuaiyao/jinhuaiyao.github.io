@@ -7,7 +7,93 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 16 Mar 2024 16:59:35 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Apr 2024 18:45:09 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn EnglishPod</title>
+      <link>http://www.jinhuaiyao.com/posts/learn-englishpod/</link>
+      <pubDate>Mon, 08 Apr 2024 18:45:09 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/learn-englishpod/</guid>
+      <description>&lt;p&gt;今年工作上迫切需要提升一下英语口语，研究一番，决定学习 EnglishPod，简单介绍一下目前的实践，抛砖引玉。&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;h1 id=&#34;选择&#34;&gt;选择&lt;/h1&gt;
+&lt;p&gt;最开始在 ESLPOD 和 EnglishPod 之间决定学习 EnglishPod 的原因是听了它的第一段的对话 &amp;ldquo;Difficult Customer&amp;rdquo;，觉得内容挺有意思的。后来愈发觉得它很接地气，每节课都在强调 &amp;ldquo;give you real English&amp;rdquo;，也正是我需要的。&lt;/p&gt;
+&lt;h1 id=&#34;下载&#34;&gt;下载&lt;/h1&gt;
+&lt;p&gt;从 &lt;a href=&#34;https://archive.org/details/englishpod_all&#34;&gt;https://archive.org/details/englishpod_all&lt;/a&gt; 下载所有对话和文本。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;主持人对话本文&#34;&gt;主持人对话本文&lt;/h1&gt;
+&lt;p&gt;用 Buzz 把 englishpod_xxx_pb.mp3 转录一下，得到主持人对话本文。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;微信读书标注&#34;&gt;微信读书标注&lt;/h1&gt;
+&lt;p&gt;Buzz 转录出来的文本导出成 SRT 格式，需要导入到微信读书里可以划线、标注或者查词翻译。&lt;/p&gt;
+&lt;p&gt;首先需要把 SRT 文本里的时间戳部分清洗掉，借助 ChatGPT：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@macbook EnglishPod % head -20  englishpod_0012pb.srt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;00:00:00,000 --&amp;gt; 00:00:06,000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Hello everyone and welcome back to EnglishPod. My name is Marco. I&lt;span class=&#34;s1&#34;&gt;&amp;#39;m Erika.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;00:00:06,000 --&amp;gt; 00:00:09,000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;And today we have a great intermediate lesson for you.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;00:00:09,000 --&amp;gt; 00:00:14,000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;That&amp;#39;&lt;/span&gt;s right. We&lt;span class=&#34;s1&#34;&gt;&amp;#39;ve got some excellent real English for you all about cleaning the house.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;00:00:14,000 --&amp;gt; 00:00:18,000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Cleaning the house. That&amp;#39;&lt;/span&gt;s a real life situation. So we&lt;span class=&#34;s1&#34;&gt;&amp;#39;re going to give you real English.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;5
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;00:00:18,000 --&amp;gt; 00:00:23,000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Exactly. So in today&amp;#39;&lt;/span&gt;s lesson we&lt;span class=&#34;s1&#34;&gt;&amp;#39;re going to look at language about cleaning the house.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;###
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;jinhuaiyao@macbook EnglishPod % cat srt.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;# This script removes numeric identifiers and timestamp lines from an .srt file,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;# preserving the subtitle text and the empty lines that separate different blocks.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;awk &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+$/ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; next&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Skip numeric identifier lines.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/--&amp;gt;/ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; next&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Skip timestamp lines.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; print&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Print all other lines (subtitle text and empty lines).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#34;$1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;###
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;./srt.sh englishpod_0012pb.srt &amp;gt; englishpod_0012pb.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;jinhuaiyao@macbook EnglishPod % head englishpod_0012pb.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Hello everyone and welcome back to EnglishPod. My name is Marco. I&amp;#39;&lt;/span&gt;m Erika.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;And today we have a great intermediate lesson &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; you.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;That&lt;span class=&#34;s1&#34;&gt;&amp;#39;s right. We&amp;#39;&lt;/span&gt;ve got some excellent real English &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; you all about cleaning the house.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning the house. That&lt;span class=&#34;s1&#34;&gt;&amp;#39;s a real life situation. So we&amp;#39;&lt;/span&gt;re going to give you real English.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Exactly. So in today&lt;span class=&#34;s1&#34;&gt;&amp;#39;s lesson we&amp;#39;&lt;/span&gt;re going to look at language about cleaning the house.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后将 txt 文本导入微信读书。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;我的学习步骤&#34;&gt;我的学习步骤&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;不看文本听一遍 englishpod_xxx_pb.mp3，留意一下听得模糊的地方。&lt;/li&gt;
+&lt;li&gt;在微信读书上朗读一遍主持人对话文本，并划线，想象一下主持人的发音。&lt;/li&gt;
+&lt;li&gt;对着主持人对话文本再听一遍 englishpod_xxx_pb.mp3，注意一下主持人的发音。&lt;/li&gt;
+&lt;li&gt;复习微信读书里的划线并导出到 Obsidian，以后再浏览。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-6.PNG&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>UPDATE - 个人资料分级及备份</title>
       <link>http://www.jinhuaiyao.com/posts/personal-data-classification-and-its-backup-2024/</link>
