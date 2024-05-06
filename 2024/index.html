@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+    <style>
+        #heatmap {
+            width: 1200px;
+            height: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="heatmap"></div>
+<script type="text/javascript">
+    var chartDom = document.getElementById('heatmap');
+    var myChart = echarts.init(chartDom);
+
+  
+    var option = {
+        tooltip: {
+            position: 'top',
+            formatter: function (params) {
+                return '' + params.value[0] + '<br>' + params.value[1];
+            }
+        },
+        calendar: {
+            top: 'middle',
+            left: 'center',
+            orient: 'horizontal',
+            cellSize: [20, 20],
+            range: new Date().getFullYear(),
+            itemStyle: {
+                borderWidth: 1,
+                borderColor: '#ccc'
+            }
+        },
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            data: []
+        }]
+    };
+    myChart.setOption(option);
+
+    fetch('data.txt')
+    .then(response => response.text())
+    .then(text => {
+        const data = text.split('\n').map(line => {
+            const parts = line.split(',');
+            if (parts.length === 2) {  // 确保每行确实分割出两个部分
+                return [parts[0].trim(), +parts[1].trim()];  // 转换第二部分为数字
+            }
+            return null;  // 如果数据格式不正确，返回 null
+        }).filter(item => item !== null);  // 过滤掉任何不正确的行
+
+        myChart.setOption({
+            series: [{
+                data: data
+            }]
+        });
+    })
+    .catch(error => console.error('Error loading the data:', error));
+
+</script>
+</body>
+</html>
