@@ -79,7 +79,6 @@
     </main>
 
 
-
     <script type="text/javascript">
         function createHeatmap(containerId, dataUrl) {
             var chartDom = document.getElementById(containerId);
@@ -88,7 +87,7 @@
                 tooltip: {
                     position: 'top',
                     formatter: function (params) {
-                        return '' + params.value[0] + '<br>' + params.value[2];
+                        return params.value[0] + ': ' + params.value[2];
                     }
                 },
                 calendar: {
@@ -109,14 +108,14 @@
                 }]
             };
             myChart.setOption(option);
-
+    
             fetch(dataUrl)
             .then(response => response.text())
             .then(text => {
                 const data = text.split('\n').map(line => {
                     const parts = line.split(',');
                     if (parts.length === 3) {
-                        return [parts[0].trim(), +parts[2].trim()];
+                        return [parts[0].trim(), 1, parts[2].trim()]; // 使用 1 作为占位数值
                     }
                     return null;
                 }).filter(item => item !== null);
@@ -130,6 +129,8 @@
                 console.error('There has been a problem with your fetch operation:', error);
             });
         }
+
+    
 
         createHeatmap('heatmap1', 'https://utils.jinhuaiyao.com/exercise.txt');
         createHeatmap('heatmap2', 'https://utils.jinhuaiyao.com/running.txt');
