@@ -88,7 +88,7 @@
                 tooltip: {
                     position: 'top',
                     formatter: function (params) {
-                        return '' + params.value[0] + '<br>' + params.value[1];
+                        return '' + params.value[0] + '<br>' + params.value[2];
                     }
                 },
                 calendar: {
@@ -115,8 +115,8 @@
             .then(text => {
                 const data = text.split('\n').map(line => {
                     const parts = line.split(',');
-                    if (parts.length === 2) {
-                        return [parts[0].trim(), +parts[1].trim()];
+                    if (parts.length === 3) {
+                        return [parts[0].trim(), +parts[2].trim()];
                     }
                     return null;
                 }).filter(item => item !== null);
