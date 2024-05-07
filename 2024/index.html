@@ -22,7 +22,7 @@
             width: 900px; /* Adjust width for each heatmap */
             height: 300px; /* Adjust height for each heatmap */
             float: left; /* Allows side-by-side arrangement */
-            margin: 0px 5px 5px 5px; /* Top margin reduced to 0 */
+            margin: -10px 5px 5px 5px; /* Top margin reduced to 0 */
         }
         /* Clear floats after the heatmaps */
         .clear {
@@ -31,6 +31,8 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
 </head>
+
+
 <body class="max-w-screen-md px-10 mx-auto">
     <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
         <div class="flex-none w-20 h-20 rounded-full overflow-hidden">
@@ -50,6 +52,9 @@
             </nav>
         </div>
     </header>
+
+
+
     <main id="content">
         <article class="flex flex-col gap-5">
             <header class="flex flex-col gap-1 mb-5">
@@ -72,6 +77,9 @@
             <div class="clear"></div>
         </article>
     </main>
+
+
+
     <script type="text/javascript">
         function createHeatmap(containerId, dataUrl) {
             var chartDom = document.getElementById(containerId);
