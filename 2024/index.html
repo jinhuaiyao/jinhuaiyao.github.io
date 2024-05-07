@@ -62,16 +62,16 @@
                 <div class="text-xs font-semibold text-gray-500 flex gap-3">
                 </div>
             </header>
-            <div class="heatmap-description">Heatmap 1 Description</div>
+            <div class="heatmap-description">运动</div>
             <div id="heatmap1" class="heatmap"></div>
             
-            <div class="heatmap-description">Heatmap 2 Description</div>
+            <div class="heatmap-description">跑步</div>
             <div id="heatmap2" class="heatmap"></div>
             
-            <div class="heatmap-description">Heatmap 3 Description</div>
+            <div class="heatmap-description">背单词</div>
             <div id="heatmap3" class="heatmap"></div>
             
-            <div class="heatmap-description">Heatmap 4 Description</div>
+            <div class="heatmap-description">EnglishPod</div>
             <div id="heatmap4" class="heatmap"></div>
             
             <div class="clear"></div>
@@ -96,7 +96,7 @@
                     left: 'center',
                     orient: 'horizontal',
                     cellSize: [15, 15],
-                    range: '2024',  // 明确设置为2024年
+                    range: '2024',  
                     itemStyle: {
                         borderWidth: 1,
                         borderColor: '#ccc'
@@ -131,10 +131,10 @@
             });
         }
 
-        createHeatmap('heatmap1', 'https://utils.jinhuaiyao.com/data1.txt');
-        createHeatmap('heatmap2', 'https://utils.jinhuaiyao.com/data2.txt');
-        createHeatmap('heatmap3', 'https://utils.jinhuaiyao.com/data3.txt');
-        createHeatmap('heatmap4', 'https://utils.jinhuaiyao.com/data4.txt');
+        createHeatmap('heatmap1', 'https://utils.jinhuaiyao.com/exercise.txt');
+        createHeatmap('heatmap2', 'https://utils.jinhuaiyao.com/running.txt');
+        createHeatmap('heatmap3', 'https://utils.jinhuaiyao.com/vocabulary.txt');
+        createHeatmap('heatmap4', 'https://utils.jinhuaiyao.com/englishpod.txt');
     </script>
 </body>
 </html>
