@@ -42,7 +42,7 @@
 
 
 #main {
-    padding-top: 0px;
+    padding-top: 40px;
 }
 
 .theme-toggle {
@@ -209,6 +209,7 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 
 .images-wrapper {
     margin-top: 0.5rem;
@@ -403,9 +404,6 @@
 
 @media (max-width: 683px) {
 
-    body {
-        padding: 45px 50px 45px 20px;
-    }
 
     .menu,
     .title {
