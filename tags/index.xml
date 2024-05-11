@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Mon, 08 Apr 2024 18:45:09 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 11:12:12 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新事物</title>
+      <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
+      <pubDate>Sat, 11 May 2024 11:12:12 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解决问题</title>
+      <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 11 May 2024 11:12:12 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>方法</title>
       <link>http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/</link>
@@ -32,24 +50,6 @@
       <pubDate>Sat, 16 Mar 2024 16:59:35 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/tags/%E5%A4%87%E4%BB%BD/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>新事物</title>
-      <link>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</link>
-      <pubDate>Sat, 13 Jan 2024 17:30:41 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>解决问题</title>
-      <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Sat, 13 Jan 2024 17:30:41 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
       <description></description>
     </item>
     

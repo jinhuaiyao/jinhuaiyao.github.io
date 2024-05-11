@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://www.jinhuaiyao.com/posts/</loc>
+    <lastmod>2024-05-11T11:12:12+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/posts/habit-tracker-in-blog/</loc>
+    <lastmod>2024-05-11T11:12:12+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</loc>
+    <lastmod>2024-05-11T11:12:12+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/tags/</loc>
+    <lastmod>2024-05-11T11:12:12+08:00</lastmod>
+  </url><url>
+    <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2024-05-11T11:12:12+08:00</lastmod>
+  </url><url>
     <loc>http://www.jinhuaiyao.com/posts/learn-englishpod/</loc>
     <lastmod>2024-04-08T18:45:09+08:00</lastmod>
   </url><url>
-    <loc>http://www.jinhuaiyao.com/posts/</loc>
-    <lastmod>2024-04-08T18:45:09+08:00</lastmod>
-  </url><url>
     <loc>http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2024-04-08T18:45:09+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/</loc>
     <lastmod>2024-04-08T18:45:09+08:00</lastmod>
   </url><url>
     <loc>http://www.jinhuaiyao.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
@@ -24,12 +33,6 @@
     <lastmod>2024-03-16T16:59:35+08:00</lastmod>
   </url><url>
     <loc>http://www.jinhuaiyao.com/posts/about-memos/</loc>
-    <lastmod>2024-01-13T17:30:41+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/</loc>
-    <lastmod>2024-01-13T17:30:41+08:00</lastmod>
-  </url><url>
-    <loc>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-01-13T17:30:41+08:00</lastmod>
   </url><url>
     <loc>http://www.jinhuaiyao.com/tags/oracle/</loc>

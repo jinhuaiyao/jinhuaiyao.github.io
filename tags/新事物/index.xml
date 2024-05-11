@@ -7,7 +7,125 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 13 Jan 2024 17:30:41 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 11:12:12 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客添加习惯打卡记录</title>
+      <link>http://www.jinhuaiyao.com/posts/habit-tracker-in-blog/</link>
+      <pubDate>Sat, 11 May 2024 11:12:12 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/habit-tracker-in-blog/</guid>
+      <description>&lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
+&lt;p&gt;看到少数派上介绍 &lt;a href=&#34;https://sspai.com/post/88456&#34;&gt;HabitKit&lt;/a&gt;，发现它的呈现方式有点像 github 代码提交的热力图，挺好看。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/HabitKit.jpg&#34; width=&#34;30%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;加上之前也浏览过椒盐豆豉的文章 &lt;a href=&#34;https://blog.douchi.space/hugo-blog-heatmap/#gsc.tab=0&#34;&gt;如何给 Hugo 博客添加热力图&lt;/a&gt;，想着能不能在自己的博客上也用类似的形式来记录一下平常的运动、学习，也是一种激励。&lt;/p&gt;
+&lt;h1 id=&#34;实现&#34;&gt;实现&lt;/h1&gt;
+&lt;p&gt;了解到可以用 echart 的 js 后，和 ChatGPT 4 展开了数轮的对话，历经众多问题，终于得到了我想到的样子。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-05-11_11-42-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;主要代码如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        function createHeatmap(containerId, dataUrl) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            var chartDom = document.getElementById(containerId);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            var myChart = echarts.init(chartDom);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            var option = {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                tooltip: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    position: &amp;#39;top&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    formatter: function (params) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        return params.value[0] + &amp;#39; - &amp;#39; + params.value[2];
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                calendar: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    top: &amp;#39;middle&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    left: &amp;#39;center&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    orient: &amp;#39;horizontal&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    cellSize: [15, 15],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    range: &amp;#39;2024&amp;#39;,  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    itemStyle: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        borderWidth: 1,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        borderColor: &amp;#39;#ccc&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                series: [{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    type: &amp;#39;heatmap&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    coordinateSystem: &amp;#39;calendar&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    data: []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                }]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            };
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            myChart.setOption(option);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            fetch(dataUrl)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            .then(response =&amp;gt; response.text())
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            .then(text =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                const data = text.split(&amp;#39;\n&amp;#39;).map(line =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    const parts = line.split(&amp;#39;|&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    if (parts.length === 3) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        return [parts[0].trim(), 1, parts[2].trim()]; // 使用 1 作为占位数值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    return null;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                }).filter(item =&amp;gt; item !== null);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                myChart.setOption({
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    series: [{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        data: data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    }]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                });
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            })
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            .catch(error =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                console.error(&amp;#39;There has been a problem with your fetch operation:&amp;#39;, error);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            });
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        createHeatmap(&amp;#39;heatmap1&amp;#39;, &amp;#39;https://utils.jinhuaiyao.com/exercise.txt&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        createHeatmap(&amp;#39;heatmap2&amp;#39;, &amp;#39;https://utils.jinhuaiyao.com/running.txt&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        createHeatmap(&amp;#39;heatmap3&amp;#39;, &amp;#39;https://utils.jinhuaiyao.com/reading.txt&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        createHeatmap(&amp;#39;heatmap4&amp;#39;, &amp;#39;https://utils.jinhuaiyao.com/vocabulary.txt&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        createHeatmap(&amp;#39;heatmap5&amp;#39;, &amp;#39;https://utils.jinhuaiyao.com/englishpod.txt&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;/script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;数据源&#34;&gt;数据源&lt;/h1&gt;
+&lt;p&gt;数据源要以特定的格式写到文本文件里，写了一个简单的 cron job，每天晚上 12 点把 Logseq 里当天的的运动、学习记录抓取出来放到 VPS 上。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/.tmp/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DT=`date +%Y_%m_%d`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for file in `ls *.txt`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;do
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp $file /Users/jinhuaiyao/OneDrive/Backup/backup_heatmap/${file}.${DT}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;done
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Dropbox/my_logseq/journals
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &amp;#39;\[\[今日运动\]\]&amp;#39; 2024* |sed &amp;#39;s/-/|/g&amp;#39; |sed &amp;#39;s/.md://g&amp;#39; | sed &amp;#39;s/_/-/g&amp;#39; |sed &amp;#39;s/\[\[今日运动\]\]/1/g&amp;#39; &amp;gt; /Users/jinhuaiyao/.tmp/exercise.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &amp;#39;\[\[跑步\]\]&amp;#39; 2024* |grep -v &amp;#39;\-  km&amp;#39; |sed &amp;#39;s/-/|/g&amp;#39; |sed &amp;#39;s/.md://g&amp;#39; | sed &amp;#39;s/_/-/g&amp;#39; |sed &amp;#39;s/\[\[跑步\]\]/1/g&amp;#39; &amp;gt; /Users/jinhuaiyao/.tmp/running.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &amp;#39;\[\[今日阅读\]\]&amp;#39; 2024* |grep -v &amp;#39;\-  km&amp;#39; |sed &amp;#39;s/-/|/g&amp;#39; |sed &amp;#39;s/.md://g&amp;#39; | sed &amp;#39;s/_/-/g&amp;#39; |sed &amp;#39;s/\[\[今日阅读\]\]/1/g&amp;#39; &amp;gt; /Users/jinhuaiyao/.tmp/reading.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &amp;#39;\[\[英语学习\]\]&amp;#39; 2024* |grep 背单词 |sed &amp;#39;s/EnglishPod//g&amp;#39; |sed &amp;#39;s/，//g&amp;#39;|sed &amp;#39;s/-/|/g&amp;#39; |sed &amp;#39;s/.md://g&amp;#39; | sed &amp;#39;s/_/-/g&amp;#39; |sed &amp;#39;s/\[\[英语学习\]\]/1/g&amp;#39; |sed &amp;#39;s/背单词//g&amp;#39; &amp;gt; /Users/jinhuaiyao/.tmp/vocabulary.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &amp;#39;\[\[英语学习\]\]&amp;#39; 2024* |grep  EnglishPod|sed &amp;#39;s/背单词//g&amp;#39; |sed &amp;#39;s/，//g&amp;#39;|sed &amp;#39;s/-/|/g&amp;#39; |sed &amp;#39;s/.md://g&amp;#39; | sed &amp;#39;s/_/-/g&amp;#39; |sed &amp;#39;s/\[\[英语学习\]\]/1/g&amp;#39; &amp;gt; /Users/jinhuaiyao/.tmp/englishpod.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/.tmp/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -P xx *.txt xx@xx.xx.xx.xx:/home/xx/www/webpage
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .tmp % ls -ltr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 40
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 jinhuaiyao  staff  1221 May 10 23:59 exercise.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 jinhuaiyao  staff   184 May 10 23:59 running.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 jinhuaiyao  staff  3479 May 10 23:59 reading.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 jinhuaiyao  staff   938 May 10 23:59 vocabulary.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--  1 jinhuaiyao  staff   957 May 10 23:59 englishpod.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .tmp % tail -5 englishpod.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-04-27| 1 | EnglishPod
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-04-28| 1 | EnglishPod 15
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-05-07| 1 | EnglishPod 16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-05-08| 1 | EnglishPod 17
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-05-09| 1 | EnglishPod 17
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;最终效果见 &lt;a href=&#34;https://www.jinhuaiyao.com/2024/&#34;&gt;https://www.jinhuaiyao.com/2024/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>关于 Memos</title>
       <link>http://www.jinhuaiyao.com/posts/about-memos/</link>

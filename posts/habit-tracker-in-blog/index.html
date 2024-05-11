@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>博客添加习惯打卡记录</title>
+<meta name="description" content="缘起 看到少数派上介绍 HabitKit，发现它的呈现方式有点像 github 代码提交的热力图，挺好看。
+加上之前也浏览过椒盐豆豉的文章 如何给 Hugo 博客添加热力图，想着能不能在自己的博客上也用类似的形式来记录一下平常的运动、学习，也是一种激励。
+实现 了解到可以用 echart 的 js 后，和 ChatGPT 4 展开了数轮的对话，历经众多问题，终于得到了我想到的样子。">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/habit-tracker-in-blog/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.b53b00a22b1a9e8e6bd55e92f6f256218405f9c40d851ef7cbb923e321887d48.css" integrity="sha256-tTsAoisano5r1V6S9vJWIYQF+cQNhR73y7kj4yGIfUg=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+    <a href="http://www.jinhuaiyao.com/">
+        <img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/profile-picture.jpg" width="80" height="80" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-sm  gap-3 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">首页</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+    </div>
+
+
+    <header class="flex flex-col gap-1 mb-5">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">博客添加习惯打卡记录</h2>
+
+        <div class="text-xs font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2024-05-11 11:12:12 &#43;0800 CST" title="2024-05-11 11:12:12 &#43;0800 CST">
+    2024/05/11
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <h1 id="缘起">缘起</h1>
+<p>看到少数派上介绍 <a href="https://sspai.com/post/88456">HabitKit</a>，发现它的呈现方式有点像 github 代码提交的热力图，挺好看。</p>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/HabitKit.jpg" width="30%"/>
+</figure>
+
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>加上之前也浏览过椒盐豆豉的文章 <a href="https://blog.douchi.space/hugo-blog-heatmap/#gsc.tab=0">如何给 Hugo 博客添加热力图</a>，想着能不能在自己的博客上也用类似的形式来记录一下平常的运动、学习，也是一种激励。</p>
+<h1 id="实现">实现</h1>
+<p>了解到可以用 echart 的 js 后，和 ChatGPT 4 展开了数轮的对话，历经众多问题，终于得到了我想到的样子。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-05-11_11-42-24.png" alt=""></p>
+<p>主要代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    &lt;script type=&#34;text/javascript&#34;&gt;
+</span></span><span class="line"><span class="cl">        function createHeatmap(containerId, dataUrl) {
+</span></span><span class="line"><span class="cl">            var chartDom = document.getElementById(containerId);
+</span></span><span class="line"><span class="cl">            var myChart = echarts.init(chartDom);
+</span></span><span class="line"><span class="cl">            var option = {
+</span></span><span class="line"><span class="cl">                tooltip: {
+</span></span><span class="line"><span class="cl">                    position: &#39;top&#39;,
+</span></span><span class="line"><span class="cl">                    formatter: function (params) {
+</span></span><span class="line"><span class="cl">                        return params.value[0] + &#39; - &#39; + params.value[2];
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                },
+</span></span><span class="line"><span class="cl">                calendar: {
+</span></span><span class="line"><span class="cl">                    top: &#39;middle&#39;,
+</span></span><span class="line"><span class="cl">                    left: &#39;center&#39;,
+</span></span><span class="line"><span class="cl">                    orient: &#39;horizontal&#39;,
+</span></span><span class="line"><span class="cl">                    cellSize: [15, 15],
+</span></span><span class="line"><span class="cl">                    range: &#39;2024&#39;,  
+</span></span><span class="line"><span class="cl">                    itemStyle: {
+</span></span><span class="line"><span class="cl">                        borderWidth: 1,
+</span></span><span class="line"><span class="cl">                        borderColor: &#39;#ccc&#39;
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                },
+</span></span><span class="line"><span class="cl">                series: [{
+</span></span><span class="line"><span class="cl">                    type: &#39;heatmap&#39;,
+</span></span><span class="line"><span class="cl">                    coordinateSystem: &#39;calendar&#39;,
+</span></span><span class="line"><span class="cl">                    data: []
+</span></span><span class="line"><span class="cl">                }]
+</span></span><span class="line"><span class="cl">            };
+</span></span><span class="line"><span class="cl">            myChart.setOption(option);
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">            fetch(dataUrl)
+</span></span><span class="line"><span class="cl">            .then(response =&gt; response.text())
+</span></span><span class="line"><span class="cl">            .then(text =&gt; {
+</span></span><span class="line"><span class="cl">                const data = text.split(&#39;\n&#39;).map(line =&gt; {
+</span></span><span class="line"><span class="cl">                    const parts = line.split(&#39;|&#39;);
+</span></span><span class="line"><span class="cl">                    if (parts.length === 3) {
+</span></span><span class="line"><span class="cl">                        return [parts[0].trim(), 1, parts[2].trim()]; // 使用 1 作为占位数值
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                    return null;
+</span></span><span class="line"><span class="cl">                }).filter(item =&gt; item !== null);
+</span></span><span class="line"><span class="cl">                myChart.setOption({
+</span></span><span class="line"><span class="cl">                    series: [{
+</span></span><span class="line"><span class="cl">                        data: data
+</span></span><span class="line"><span class="cl">                    }]
+</span></span><span class="line"><span class="cl">                });
+</span></span><span class="line"><span class="cl">            })
+</span></span><span class="line"><span class="cl">            .catch(error =&gt; {
+</span></span><span class="line"><span class="cl">                console.error(&#39;There has been a problem with your fetch operation:&#39;, error);
+</span></span><span class="line"><span class="cl">            });
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        createHeatmap(&#39;heatmap1&#39;, &#39;https://utils.jinhuaiyao.com/exercise.txt&#39;);
+</span></span><span class="line"><span class="cl">        createHeatmap(&#39;heatmap2&#39;, &#39;https://utils.jinhuaiyao.com/running.txt&#39;);
+</span></span><span class="line"><span class="cl">        createHeatmap(&#39;heatmap3&#39;, &#39;https://utils.jinhuaiyao.com/reading.txt&#39;);
+</span></span><span class="line"><span class="cl">        createHeatmap(&#39;heatmap4&#39;, &#39;https://utils.jinhuaiyao.com/vocabulary.txt&#39;);
+</span></span><span class="line"><span class="cl">        createHeatmap(&#39;heatmap5&#39;, &#39;https://utils.jinhuaiyao.com/englishpod.txt&#39;);
+</span></span><span class="line"><span class="cl">    &lt;/script&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span></code></pre></div><h1 id="数据源">数据源</h1>
+<p>数据源要以特定的格式写到文本文件里，写了一个简单的 cron job，每天晚上 12 点把 Logseq 里当天的的运动、学习记录抓取出来放到 VPS 上。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /Users/jinhuaiyao/.tmp/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DT=`date +%Y_%m_%d`
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">for file in `ls *.txt`
+</span></span><span class="line"><span class="cl">do
+</span></span><span class="line"><span class="cl">cp $file /Users/jinhuaiyao/OneDrive/Backup/backup_heatmap/${file}.${DT}
+</span></span><span class="line"><span class="cl">done
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/Dropbox/my_logseq/journals
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grep &#39;\[\[今日运动\]\]&#39; 2024* |sed &#39;s/-/|/g&#39; |sed &#39;s/.md://g&#39; | sed &#39;s/_/-/g&#39; |sed &#39;s/\[\[今日运动\]\]/1/g&#39; &gt; /Users/jinhuaiyao/.tmp/exercise.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grep &#39;\[\[跑步\]\]&#39; 2024* |grep -v &#39;\-  km&#39; |sed &#39;s/-/|/g&#39; |sed &#39;s/.md://g&#39; | sed &#39;s/_/-/g&#39; |sed &#39;s/\[\[跑步\]\]/1/g&#39; &gt; /Users/jinhuaiyao/.tmp/running.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grep &#39;\[\[今日阅读\]\]&#39; 2024* |grep -v &#39;\-  km&#39; |sed &#39;s/-/|/g&#39; |sed &#39;s/.md://g&#39; | sed &#39;s/_/-/g&#39; |sed &#39;s/\[\[今日阅读\]\]/1/g&#39; &gt; /Users/jinhuaiyao/.tmp/reading.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grep &#39;\[\[英语学习\]\]&#39; 2024* |grep 背单词 |sed &#39;s/EnglishPod//g&#39; |sed &#39;s/，//g&#39;|sed &#39;s/-/|/g&#39; |sed &#39;s/.md://g&#39; | sed &#39;s/_/-/g&#39; |sed &#39;s/\[\[英语学习\]\]/1/g&#39; |sed &#39;s/背单词//g&#39; &gt; /Users/jinhuaiyao/.tmp/vocabulary.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grep &#39;\[\[英语学习\]\]&#39; 2024* |grep  EnglishPod|sed &#39;s/背单词//g&#39; |sed &#39;s/，//g&#39;|sed &#39;s/-/|/g&#39; |sed &#39;s/.md://g&#39; | sed &#39;s/_/-/g&#39; |sed &#39;s/\[\[英语学习\]\]/1/g&#39; &gt; /Users/jinhuaiyao/.tmp/englishpod.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/.tmp/
+</span></span><span class="line"><span class="cl">scp -P xx *.txt xx@xx.xx.xx.xx:/home/xx/www/webpage
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % ls -ltr
+</span></span><span class="line"><span class="cl">total 40
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 jinhuaiyao  staff  1221 May 10 23:59 exercise.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 jinhuaiyao  staff   184 May 10 23:59 running.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 jinhuaiyao  staff  3479 May 10 23:59 reading.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 jinhuaiyao  staff   938 May 10 23:59 vocabulary.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 jinhuaiyao  staff   957 May 10 23:59 englishpod.txt
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % tail -5 englishpod.txt
+</span></span><span class="line"><span class="cl">2024-04-27| 1 | EnglishPod
+</span></span><span class="line"><span class="cl">2024-04-28| 1 | EnglishPod 15
+</span></span><span class="line"><span class="cl">2024-05-07| 1 | EnglishPod 16
+</span></span><span class="line"><span class="cl">2024-05-08| 1 | EnglishPod 17
+</span></span><span class="line"><span class="cl">2024-05-09| 1 | EnglishPod 17
+</span></span></code></pre></div><p>&ndash;</p>
+<p>最终效果见 <a href="https://www.jinhuaiyao.com/2024/">https://www.jinhuaiyao.com/2024/</a></p>
+
+    </section>
+
+    
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" alt="新事物" >
+                        新事物
+                    </a>
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" alt="解决问题" >
+                        解决问题
+                    </a>
+            
+        </div>
+
+
+
+    <hr>
+    <br> 
+    <footer>
+        
+
+<div id="tcomment"></div>
+<script src="https://cdn.staticfile.org/twikoo/1.6.31/twikoo.all.min.js"></script>
+<script>
+twikoo.init({
+  envId: 'https://utils.jinhuaiyao.com/twikoo', 
+  el: '#tcomment'
+})
+</script>
+
+
+    </footer>
+
+
+
+
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2024  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
