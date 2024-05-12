@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 替换这个URL为你的文本文件的实际URL
     const url = 'https://utils.jinhuaiyao.com/english.txt';
 
+
     fetch(url)
     .then(response => response.text())
     .then(text => {
@@ -30,14 +31,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 lineDiv.appendChild(lineHeader);
                 lineDiv.appendChild(toggleSpan);
 
-                // 将随机选定的行显示在randomDiv中，其他行显示在allLinesDiv中
                 if (index === randomIndex) {
-                    randomDiv.appendChild(document.createTextNode(lineNumber + '. ' + chinesePart + ' | ' + englishPart));
+                    // 特别显示随机选定的行，不带 "XXXX"
+                    randomDiv.appendChild(document.createTextNode(chinesePart + ' | ' + englishPart));
                 } else {
+                    // 将所有行显示在 allLinesDiv 中，包括随机行
                     allLinesDiv.appendChild(lineDiv);
                 }
             }
         });
+
+        // 添加随机行的切换功能，现在在 allLinesDiv 中显示
+        const lineDiv = document.createElement('div');
+        const randomLineHeader = document.createTextNode(randomIndex + 1 + '. ' + lines[randomIndex].split('|')[0].trim() + ' | ');
+        const randomToggleSpan = document.createElement('span');
+        randomToggleSpan.textContent = 'XXXX';
+        randomToggleSpan.style.cursor = 'pointer';
+        randomToggleSpan.onclick = function() {
+            this.textContent = this.textContent === 'XXXX' ? lines[randomIndex].split('|')[1].trim() : 'XXXX';
+        };
+        lineDiv.appendChild(randomLineHeader);
+        lineDiv.appendChild(randomToggleSpan);
+        allLinesDiv.appendChild(lineDiv);
     })
     .catch(error => {
         console.error('Error loading the text file:', error);
