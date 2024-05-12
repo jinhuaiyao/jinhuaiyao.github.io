@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contentDiv = document.getElementById('content');
 
     // 替换这个URL为你的文本文件的实际URL
-    const url = 'https://example.com/path/to/english.txt';
+    const url = 'https://utils.jinhuaiyao.com/english.txt';
 
     fetch(url)
     .then(response => response.text())
