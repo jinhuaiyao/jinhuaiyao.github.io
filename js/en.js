@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(url)
     .then(response => response.text())
     .then(text => {
-        const lines = text.split('\n');
+        const lines = text.split('\n').map(line => line.trim()).filter(line => line);
         const randomIndex = Math.floor(Math.random() * lines.length); // 随机选择一行
 
         lines.forEach((line, index) => {
@@ -34,11 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     // 特别显示随机选定的行，不带 "XXXX"，加粗显示
                     randomDiv.appendChild(document.createTextNode(chinesePart + ' | ' + englishPart));
                 }
-
-                // 在列表中显示所有行，包括随机行，但在列表中不加粗
+                
+                // 显示所有行，保证顺序正确
                 allLinesDiv.appendChild(lineDiv);
             }
         });
+
+        // 排序显示内容，确保顺序性
+        Array.from(allLinesDiv.children)
+            .sort((a, b) => parseInt(a.textContent) - parseInt(b.textContent))
+            .forEach(node => allLinesDiv.appendChild(node));
     })
     .catch(error => {
         console.error('Error loading the text file:', error);
