@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 替换这个URL为你的文本文件的实际URL
     const url = 'https://utils.jinhuaiyao.com/english.txt';
 
-    
+
     fetch(url)
     .then(response => response.text())
     .then(text => {
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const lineNumber = index + 1; // 序号从1开始
                 const lineDiv = document.createElement('div');
-                const lineHeader = document.createTextNode(lineNumber + '. ' + chinesePart + ' | ');
+                const lineHeader = document.createTextNode(lineNumber + '. ' + chinesePart + ' | - ');
                 const toggleSpan = document.createElement('span');
-                toggleSpan.textContent = 'XXXX';
+                toggleSpan.textContent = '- ';
                 toggleSpan.style.cursor = 'pointer';  // 使其看起来可以点击
                 toggleSpan.onclick = function() {
-                    this.textContent = this.textContent === 'XXXX' ? englishPart : 'XXXX';
+                    this.textContent = this.textContent === '- ' ? englishPart : '- ';
                 };
 
                 lineDiv.appendChild(lineHeader);
