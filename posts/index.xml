@@ -324,7 +324,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;changeFont()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113175203.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h2 id=&#34;macos-客户端&#34;&gt;MacOS 客户端&lt;/h2&gt;
 &lt;p&gt;MacOS 没有专门的 app，也不太习惯 Moe Memos，搜索了一下，最后用 nativefier 把网页打包成 app。&lt;/p&gt;
 &lt;p&gt;参考：&lt;br&gt;
@@ -333,20 +332,18 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo npm install nativefier -g
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nativefier &amp;#34;http://10.0.0.100:5230&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054-1.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;用 Alfred 给它设置快捷键，愉快地使用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126-1.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ios-客户端&#34;&gt;iOS 客户端&lt;/h2&gt;
 &lt;p&gt;直接用网页版，Safari 里添加网页到主屏幕。&lt;/p&gt;
 &lt;p&gt;但是 Memos 服务是运行在内网，在外面如何访问 memos 是个问题。&lt;/p&gt;
 &lt;p&gt;折腾了好一会儿，还是没有把握将 Mac mini 暴露在公网上，搜索了一阵，最后在 Mac mini、Macbook、iPhone 上安装 Tailscale，把这些设备组成一个虚拟局域网，安全易用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/021B9348-8B3B-4758-96FE-32219F117265_1_102_o.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;运行 Tailscale 后手机网页访问 Mac mini IP 加端口即可：&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos.jpeg&#34; width=&#34;40%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos-1.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h1 id=&#34;导入旧数据&#34;&gt;导入旧数据&lt;/h1&gt;
 &lt;p&gt;把之前在心光、Noto、Pendo 里零散的记录清洗一下，然后导入 Memos。&lt;/p&gt;
 &lt;p&gt;使用 &lt;a href=&#34;https://github.com/JakeLaoyu/memos-import-from-flomo&#34;&gt;https://github.com/JakeLaoyu/memos-import-from-flomo&lt;/a&gt; 会丢失记录的原始时间。&lt;/p&gt;
@@ -385,7 +382,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % sqlite3 memos_prod.db &amp;lt; aaa.sql
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启 memos docker 后刷新网页就可以看到导入的数据了。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h1 id=&#34;数据备份&#34;&gt;数据备份&lt;/h1&gt;
 &lt;p&gt;Mac mini 增加一个 cronjob。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup memos
@@ -394,8 +390,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .memos % cat /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/backup_memos.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DATE=`date +%Y%m%d-%H%M%d`
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/tar -cvzf &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/com~apple~CloudDocs/Me/backup_memos/memos_prod.db.${DATE}.tar.gz&amp;#34; /Users/jinhuaiyao/.memos/memos_prod.db
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;h1 id=&#34;记录回顾&#34;&gt;记录回顾&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;记录回顾&#34;&gt;记录回顾&lt;/h1&gt;
 &lt;p&gt;随机记录推送到 iOS，使用 Memos api + python + bark 实现。&lt;/p&gt;
 &lt;p&gt;有些记录还是需要时不时地去回顾，比如一些重要的事，一些生活和工作中的提醒。&lt;/p&gt;
 &lt;p&gt;Memos 提供 api 去获取数据，最不济还可以直接查询数据库，所以数据获取没有问题。&lt;/p&gt;
@@ -1813,7 +1808,6 @@
       
       <guid>http://www.jinhuaiyao.com/posts/about-bookkeeping/</guid>
       <description>&lt;p&gt;今年没有记账，不清楚一年总共花了多少钱。和老婆一致决定明年开始继续记账。我负责优化一下操作流程，使得记账更轻松。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;只记开销和收入，不对账。这一条最重要，以前定期对账消耗大量的时间和精力，最终还导致记账的停止。&lt;/p&gt;
 &lt;p&gt;继续使用同一个 MoneyWiz 账号同步记账记录。&lt;/p&gt;
 &lt;p&gt;每个人只保留两个记账账户：开销和收入。&lt;/p&gt;
@@ -1839,7 +1833,6 @@
 &lt;p&gt;2019 年 9 月开始用 Day One 写晨间日记。&lt;/p&gt;
 &lt;p&gt;2022 年 6 月换用 Logseq 写晨间日记，并且把以前 OneNote、Day One 里的记录都迁移到 Logseq 里，以 markdown 文本的形式存放。&lt;/p&gt;
 &lt;p&gt;目前（2023 年底），正在尝试使用大型语言模型工具整理以往的日记和记录，希望能更好地了解自己。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;没有记录，记忆往往并不可靠。对我而言，日记用来回顾过去都忙了什么、在想什么，当时的快乐、难过、困惑是什么，并与现在进行比较，看看有哪些变化，最终能更好地了解自己。&lt;/p&gt;
 </description>
     </item>
@@ -2128,15 +2121,12 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# on this day
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;01 06 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个之前&lt;a href=&#34;https://www.jinhuaiyao.com/posts/about-logseq/#%E9%82%A3%E5%B9%B4%E4%BB%8A%E6%97%A5&#34;&gt;写过&lt;/a&gt;，本来运行在 MacBook 上，现在移到 Mac mini 了。&lt;/p&gt;
-&lt;p&gt;-&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sync logseq from icloud to onedrive
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * /usr/bin/rsync -a &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;#34; &amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Logseq&amp;#34; &amp;gt; /Users/jinhuaiyao/Log/Logseq.bak.log 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;每 5 分钟把 Logseq 文件从 iCloud Drive 里从同步到 Onedrive。&lt;/p&gt;
-&lt;p&gt;-&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# get home IP
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/get_home_ip.sh &amp;gt;/Users/jinhuaiyao/Log/get_home_ip.txt 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;curl cip.cc&lt;/code&gt; 去查看当前 IP，和上一次查询结果对比，如果不一样就输出到 iCloud Drive 里的一个文件。之前开了外网连接的时候用的，现在基本没有这个需求了，不过可以用来记录 IP 的变化。&lt;/p&gt;
-&lt;p&gt;-&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# check if any unknown screen sharing session
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/10 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/ck_screen_sharing_session.sh &amp;gt;/Users/jinhuaiyao/Log/ck_screen_sharing_session.txt 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;netstat&lt;/code&gt; 查看 screen 连接的情况，如果有未知新连接，发邮件。之前开了外网连接的时候用的，已经不需要了。&lt;/p&gt;
@@ -2379,8 +2369,7 @@
       <pubDate>Thu, 20 Apr 2023 08:26:39 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/posts/python-cheat-sheet/</guid>
-      <description>&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;doctest&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;doctest&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;divide_exact&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
@@ -2415,16 +2404,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;items&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Test&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;的用法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;的用法&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;该代码中的&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;表示一个字符串&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;的反向字符串&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;也就是说&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;它会将&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;中的字符从后往前倒序排列&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;得到一个新的字符串&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;例如&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;如果&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;是&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;那么&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;就是&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;olleh&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;赋值方式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;赋值方式&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;值交换&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;4.5&lt;/span&gt;
@@ -2433,8 +2420,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;4.5&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;类的写法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;类的写法&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;用法&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Car&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
@@ -2448,8 +2434,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_desc_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;long_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;long_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;文件内容写到列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;文件内容写到列表&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;zfill&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;字符串右对齐&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;前面填充0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;用法&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;if birthday in pi_str&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -2470,8 +2455,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;birthday&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; - yes&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;birthday&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json的用法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json的用法&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;用法&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ensure_ascii&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;json&lt;/span&gt;
@@ -2538,21 +2522,28 @@
 &lt;p&gt;于是实施一下方案二。
 参考 &lt;a href=&#34;https://pkg.cloudflareclient.com/install&#34;&gt;https://pkg.cloudflareclient.com/install&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ubuntu 20.04 LTS 下&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;echo &amp;quot;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&amp;quot; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;参考 &lt;a href=&#34;https://developers.cloudflare.com/warp-client/get-started/linux/&#34;&gt;https://developers.cloudflare.com/warp-client/get-started/linux/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install cloudflare-warp&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;systemctl status warp-svc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli register&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli set-mode proxy&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli connect&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli enable-always-on&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli warp-stats&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vi /usr/local/etc/v2ray/config.json&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&amp;#34; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考 &lt;a href=&#34;https://developers.cloudflare.com/warp-client/get-started/linux/&#34;&gt;https://developers.cloudflare.com/warp-client/get-started/linux/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install cloudflare-warp`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status warp-svc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli register
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli set-mode proxy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli connect
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli enable-always-on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli warp-stats
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /usr/local/etc/v2ray/config.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;inbounds&amp;#34;: [
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;port&amp;#34;: 10086, 
@@ -2597,10 +2588,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;systemctl stop v2ray&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;systemctl start v2ray&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl ipinfo.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl start v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl ipinfo.io
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;hostname&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx.vultrusercontent.com&amp;#34;,
@@ -2846,7 +2839,6 @@
 &lt;h1 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。&lt;/p&gt;
-&lt;hr&gt;
 &lt;p&gt;最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。&lt;/p&gt;</description>
     </item>
     
@@ -3192,7 +3184,6 @@
 &lt;ul&gt;
 &lt;li&gt;买了一年的 Starfall 订阅，又买了 2kids 识字和数学的会员，让等等在 iPad 上多玩一些有意思的益智游戏。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h1 id=&#34;2023-年&#34;&gt;2023 年&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;要换一份心怡的工作，新的开始。&lt;/li&gt;
@@ -3213,7 +3204,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/about-family-education/</guid>
       <description>&lt;p&gt;这是一篇小朋友幼儿园要求写的文章，花了几段时间终于写好了，也算是一段时间的总结吧。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;我是一名在外企工作的 IT 工程师，有一个正在上幼儿园中班的儿子。不用 996、相对温和的工作环境让我有充分的时间和心力去陪伴孩子以及学习、思考和实践一些家庭教育的理念和方法。&lt;/p&gt;
 &lt;h1 id=&#34;这篇文章的目的&#34;&gt;这篇文章的目的&lt;/h1&gt;
 &lt;p&gt;这些文字并不是用来分享一些 “成功” 的经验，而只是记录一个相对 “落后” 的孩子在成长过程中的经历以及作为家长的探索和思考。&lt;/p&gt;
@@ -3335,7 +3326,6 @@
 &lt;li&gt;减重不能着急，刚开始就想好了要坚持几个月再看成果。慢即是快。&lt;/li&gt;
 &lt;li&gt;最重要的是养成健康的生活习惯。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;最近买了哑铃，要练练力量了，现在看起来特别瘦，后面要增肌才行。&lt;/p&gt;</description>
     </item>
     
@@ -3346,7 +3336,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</guid>
       <description>&lt;p&gt;由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;先是尝试在 Parallels Desktop 上加载之前下载的 Linux iso 镜像文件，根本不能用。原来基于 Intel x86 架构的 Linux 不能装在基于 ARM 架构的 M1 芯片的笔记本上。&lt;/p&gt;
 &lt;p&gt;尝试下载最新的基于 ARM 架构的 Oracle Linux，&lt;a href=&#34;https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso&#34;&gt;https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso&lt;/a&gt; ，安装没问题。装好以后抱有侥幸心理装一下 Oracle 12c，runInstaller 直接报错。&lt;/p&gt;
 &lt;p&gt;一顿谷歌，搜索了很多文章，总结一下有几种可行方案。&lt;/p&gt;
@@ -3359,22 +3349,22 @@
 这个看起来不错，开心去尝试。结果安装 Redhat Linux 就用了非常之久，性能问题太严重了。放弃。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;以上探索过程花了几个小时，我已经基本上放弃在笔记本上安装 Oracle 实验环境的打算了。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;于是只好转换思路，不在本地安装虚拟机，能 ssh 到远程的 db server 上也可以。&lt;/p&gt;
 &lt;p&gt;首先想到的是自己在 “搬瓦工” 上买的两个 VPS，平时只用来 “科学上网”，正好利用一下。找到原来的账号密码 ssh 上去一看，只有 1G 内存，放弃。&lt;/p&gt;
 &lt;p&gt;尝试注册 Oracle Cloud，有文章说它可以提供永久免费的主机。注册搞了半天，最后通不过，应该是信用卡的问题。放弃。&lt;/p&gt;
 &lt;p&gt;尝试 AWS，注册成功，看一下 4G 内存的云机器，不便宜，放弃。&lt;/p&gt;
 &lt;p&gt;又看了下阿里云，4G 内存的主机每个月也要六七十块钱，偶尔用一下，不是很划算，放弃。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;最后，竟然在最后，才想到自己改造成家用服务器的 2013 年买的 MacBook Pro。只要在上面安装 VMware，然后直接加载以前保存的虚拟机文件就可以飞速得到一个 Oracle 实验环境。&lt;/p&gt;
 &lt;p&gt;剩下的问题就是如何访问 Home Server (旧 MacBook Pro) 上的虚拟机，特别是不在家的时候该如何访问。&lt;/p&gt;
 &lt;p&gt;基本思路就是先 ssh 到 Home Server，然后再 ssh 到虚拟机里的 Linux，这样就可以运行 sqlplus 了。&lt;/p&gt;
 &lt;p&gt;在家里、同一个网段下访问很方便。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ssh -t -l &amp;lt;username&amp;gt; 10.0.0.6 ssh -o StrictHostKeyChecking=no oracle@192.168.156.121&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;外网访问的话有两个问题要解决，一是如何访问家里局域网里的 Home Server，二是安全问题。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -t -l &amp;lt;username&amp;gt; 10.0.0.6 ssh -o StrictHostKeyChecking=no oracle@192.168.156.121
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;外网访问的话有两个问题要解决，一是如何访问家里局域网里的 Home Server，二是安全问题。&lt;/p&gt;
 &lt;p&gt;因为我有公网 IP，在路由器上简单做个端口映射就好。没有公网 IP 的话需要去研究一下内网穿透方案。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ssh -t -l &amp;lt;username&amp;gt; -p &amp;lt;port&amp;gt; &amp;lt;public ip or dns name&amp;gt; ssh -o StrictHostKeyChecking=no oracle@192.168.156.121&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;因为我的 IP 是暴露在公网上，所以安全问题尤为重要。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -t -l &amp;lt;username&amp;gt; -p &amp;lt;port&amp;gt; &amp;lt;public ip or dns name&amp;gt; ssh -o StrictHostKeyChecking=no oracle@192.168.156.121
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为我的 IP 是暴露在公网上，所以安全问题尤为重要。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;路由器端开启了防火墙，只开放了两个必要的端口，一个是 sceen sharing，还有一个是 ssh，都端口映射到非默认端口。&lt;/li&gt;
 &lt;li&gt;先把 M1 笔记本上的 public key 复制到 Home Server 上的 &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。&lt;/li&gt;
@@ -3395,8 +3385,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在另外的机器上测试 ssh，会得到下面的报错。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜  ~/.ssh &amp;gt; ssh -t -l &amp;lt;username&amp;gt; -p &amp;lt;port&amp;gt; &amp;lt;public ip or dns name&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xxx@xxxx: Permission denied (publickey).
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;
-先这样吧，不折腾了。&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;  &lt;/p&gt;
+&lt;p&gt;先这样吧，不折腾了。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -3425,28 +3416,28 @@
 使用的是这个脚本， &lt;a href=&#34;https://github.com/mhejda/dayone2logseq-md&#34;&gt;dayone2markdown&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;为了后续的一些文本批处理，还在 mac 上安装了 gnu sed。
 比如如果 md 文件第一行是空行的话就把它删除。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;/usr/local/opt/gnu-sed/libexec/gnubin/sed -i &#39;1{/^$/d;}&#39; *.md&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;也用到了 perl 的一个替换命令。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;perl -pi -e &amp;quot;s/\t- ####/- ####/g&amp;quot; *.md&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&#34;daily-template&#34;&gt;Daily template&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/opt/gnu-sed/libexec/gnubin/sed -i &amp;#39;1{/^$/d;}&amp;#39; *.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也用到了 perl 的一个替换命令。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;perl -pi -e &amp;#34;s/\t- ####/- ####/g&amp;#34; *.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;daily-template&#34;&gt;Daily template&lt;/h1&gt;
 &lt;p&gt;自定义好 daily_template_journals:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-daily-template_1.png&#34; alt=&#34;daily-template&#34;&gt;&lt;/p&gt;
 &lt;p&gt;每天早上打开 Journals，输入 /template 回车，然后选中 daily_template_journals 回车，就可以了。&lt;/p&gt;
 &lt;h1 id=&#34;备份&#34;&gt;备份&lt;/h1&gt;
 &lt;p&gt;Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。&lt;/p&gt;
 &lt;p&gt;一开始是想用 GoodSync 来同步所有文件到 OneDrive，发现订阅快到期了，于是用 macOS 上的 cron job 去 cp 整个目录。不过发现这样不太好，所有的文件都会在 OneDrive 里重新上传一次。最后改用了 rsync，只会拷备有变化的。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;*/5 * * * * rsync -a &amp;quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;quot; &amp;quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;quot;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;-- update on 2022-07-03&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * rsync -a &amp;#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;#34; &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;-- update on 2022-07-03&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;今天发现 cron job 并没有运行成功，文件没有同步到 OneDrive。先给 cron job 加一段输出用来调试一下。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;*/5 * * * * /usr/bin/rsync -a &amp;quot;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;quot; &amp;quot;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;quot; &amp;gt; /Users/huajin/Log/Logseq.bak.log 2&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;看一下 Logseq.bak.log，有众多的 Operation not permitted 报错。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * /usr/bin/rsync -a &amp;#34;/Users/huajin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;#34; &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak&amp;#34; &amp;gt; /Users/huajin/Log/Logseq.bak.log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看一下 Logseq.bak.log，有众多的 Operation not permitted 报错。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-25&amp;#34;: Operation not permitted (1)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-26&amp;#34;: Operation not permitted (1)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-29&amp;#34;: Operation not permitted (1)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync: failed to set times on &amp;#34;/Users/huajin/Library/CloudStorage/OneDrive-Personal/Logseq_bak/logseq/bak/journals/2005-08-30&amp;#34;: Operation not permitted (1)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;谷歌一下，找到了&lt;a href=&#34;https://apple.stackexchange.com/questions/378553/crontab-operation-not-permitted&#34;&gt;解决方法&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;简单的讲就是给&lt;code&gt;/usr/sbin/cron&lt;/code&gt; 赋予 &lt;code&gt;Full Disk Access&lt;/code&gt; 权限。&lt;/p&gt;
+&lt;p&gt;简单的讲就是给 /usr/sbin/cron 赋予 Full Disk Access 权限。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;-- update on 2022-08-06&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;今天在 QNAP NAS 里开启了 Time Machine 服务，配置新 MacBook 上的 Time Machine 备份到 NAS 里，这样每个小时都会自动备份，又多了一重保障。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/logseq_backup_to_timemachine_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
@@ -3455,8 +3446,8 @@
 &lt;p&gt;从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。&lt;/p&gt;
 &lt;p&gt;本来想用 advanced query，可惜搞不定。只好用一些比较“笨拙”的方法。&lt;/p&gt;
 &lt;p&gt;在&lt;del&gt;旧 macbook 改造以后的 server&lt;/del&gt; 新 MacBook Pro 上加一个 cron job。 &lt;em&gt;-- update on 2022-08-06&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;5 5 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;-- updated shell script on 2023-05-18&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5 5 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;-- updated shell script on 2023-05-18&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/journals&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date +%m_%d&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; ../pages/On_This_Day.md&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -3490,42 +3481,34 @@
       
       <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
       <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;于是想着能不能有个工具，可以把 pdf 里的大纲提取出来，并且能够标记完成度，这样能有信心一点一点去学习，逐渐拨开层层迷雾。&lt;/p&gt;
 &lt;p&gt;一顿谷歌，发现没有现成的工具可以一步到位实现需求。不过搜索过程中发现了 OmniOutliner，试用了一下，发现它界面精美，可以展示大纲并且可以标记，完美符合我的需求。&lt;/p&gt;
 &lt;p&gt;剩下的问题就是如何把 pdf 文档里的大纲导出然后导入 OmniOutliner 了。&lt;/p&gt;
 &lt;p&gt;又是一番搜索，找到了 &lt;a href=&#34;https://mupdf.com&#34;&gt;mupdf&lt;/a&gt;，这个工具可以导出 pdf 大纲。&lt;/p&gt;
-&lt;p&gt;虚拟机 Windows 里运行
-&lt;code&gt;c:\mupdf-1.20.0-windows&amp;gt;mutool.exe show SQLServer.pdf outline &amp;gt;b.txt&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;虚拟机 Windows 里运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\mupdf-1.20.0-windows&amp;gt;mutool.exe show SQLServer.pdf outline &amp;gt;b.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mac 里处理一下多余的字符&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;去掉右面的 #page=xxx&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vi b.txt&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,$s/#page.*$//g&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;code&gt;:set list&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi b.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/#page.*$//g
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:set list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
 &lt;p&gt;去除左面多余 |tab 和 -tab 以及所有的双引号&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,$s/|^I//g&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;code&gt;:1,$s/-^I//g&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;code&gt;:1,$s/&amp;quot;//g&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;code&gt;:set nolist&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/|^I//g
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/-^I//g
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/&amp;#34;//g
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:set nolist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
 &lt;p&gt;搞定!&lt;/p&gt;
 &lt;p&gt;导入 OmniOutliner，看成果图，完美。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement_9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -3561,7 +3544,7 @@
       <guid>http://www.jinhuaiyao.com/posts/creation-begins-with-imitation/</guid>
       <description>&lt;p&gt;最近除了学习象棋就是学习 Python，象棋不谈也罢，Python的学习是通过学习 flask 框架进行的。&lt;/p&gt;
 &lt;p&gt;这里推荐一下 &lt;a href=&#34;https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world&#34;&gt;https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;可以按照教程一步一步从无到有、从简单到复杂地搭建一个网站并且实现很多功能。&lt;/p&gt;
 &lt;p&gt;可以一行一行照着教程敲代码，熟悉 Python 的使用方法，同时训练自己的专注能力（代码很容易就会有缺漏，运行的时候就会获得一堆报错，笑）。&lt;/p&gt;
 &lt;p&gt;可以在某些地方做一些更改，看看更改之后有什么效果。&lt;/p&gt;
@@ -3571,15 +3554,15 @@
 &lt;p&gt;学习过程中会遇到很多一时难以理解的地方，也会有些报错需要排查，可以借此来挑战一下自己。&lt;/p&gt;
 &lt;p&gt;学到第10章就已经有了许多网站一样的功能。&lt;/p&gt;
 &lt;h1 id=&#34;有登录登出&#34;&gt;有登录登出&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有发贴&#34;&gt;有发贴&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有关注取关&#34;&gt;有关注取关&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有编辑个人信息&#34;&gt;有编辑个人信息&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有密码重置&#34;&gt;有密码重置&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -3626,22 +3609,22 @@
 &lt;li&gt;Switch 健身环大冒险，等等也跟着我们一起运动， 这是等等每天最期待的环节，玩之前让他收拾客厅不要太积极哦。&lt;/li&gt;
 &lt;li&gt;体重，保持平稳。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan-1.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;积累&#34;&gt;积累&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;记账一年，清楚地知道这一年花了多少钱，赚了多少钱。&lt;/li&gt;
 &lt;li&gt;晨间日记一整年。&lt;/li&gt;
 &lt;li&gt;等等的每日一照，一整年。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan-2.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;坚持每个月基金定投，虽然今年的总收益是负的（笑）。每个月月底 Excel 里统计一下总资产，有知有行 app 里记录一下转入转出和总资产，可以清楚地知道这一年投入了多少钱，年收益率是多少。今年基金收益比较惨淡，不过已经看淡了，咱也算是经历过十年”风浪“的基金定投选手。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan-3.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;阅读方面，看了 16 本书，大多是小说，不提也罢。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan-4.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;写了七篇公众号文章，少得可怜。&lt;/li&gt;
 &lt;/ul&gt;
@@ -3658,7 +3641,6 @@
 &lt;li&gt;象棋，10 月开始有点迷失方向，那就下象棋吧，花了很多时间看直播、视频、教程以及在天天象棋 app 上下棋。&lt;/li&gt;
 &lt;li&gt;新的保险，给等等增加了一个重疾险，意外险，我自己加了一个重疾险，家人都加了意外险。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h1 id=&#34;2022年&#34;&gt;2022年&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;多做家务。不能太懒惰。&lt;/li&gt;
@@ -3668,7 +3650,6 @@
 &lt;li&gt;体重减到 80kg。&lt;/li&gt;
 &lt;li&gt;看完《数据密集型应用系统设计》。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;无比期待 2022 年。&lt;/p&gt;</description>
     </item>
     
@@ -3683,11 +3664,17 @@
 &lt;ul&gt;
 &lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_1.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
 &lt;ul&gt;
-&lt;li&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;之前工作笔记存在的问题&#34;&gt;之前工作笔记存在的问题&lt;/h1&gt;
 &lt;ul&gt;
@@ -3708,23 +3695,23 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;每天的笔记尽量记录详细一些，加上当时的想法和详细操作。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;log和command贴在笔记里需要用 ``` 标记成 code，这样显示不会凌乱，Obsidian 索引的时候也不会费时。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;笔记仍然按照时间线去记录，每天一个以日期命名的笔记文件。dailynote 的主要作用仍然是当天的“工作台”，记录处理各个任务时的步骤、解决问题的思路和方法，其中小部分值得提取出来再加工的可以单独新建一个笔记文档，用 Obsidian 里的 &lt;code&gt;[[ ]]&lt;/code&gt; 去关联。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;VSCode 作为主力编辑器，Obsidian 用来回顾及组织笔记之间的关联。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;及时回顾、整理当天的记录。整理过的 daily note 重命名。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -3847,7 +3834,6 @@
 &lt;li&gt;怀疑是不是 db server 有什么问题, 尝试联系一下 INFRA team。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;到这里就穷途末路了。研究了一个多小时了，感觉很疲惫，休息一下，和同事聊了一会儿，他随口说了一句，实在不行就重装 rdbms。柳暗花明，换个角度，直接绕开已有报错，不用重装，新装 /opt/oracle/database/12cR201_new，这次 dbca 不再报错，先去完成任务。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;DBA 工作和其他工作一样也有很多琐事、重复的事，做着做着可能就麻木了，但是偶尔有一次需要绞尽脑汁地寻求解决问题的方法并且最后解决了问题，就会让人感到由衷的快乐，这些断断续续的快乐就能支持我们再前行一会儿、再精进一点。&lt;/p&gt;</description>
     </item>
     
@@ -3877,7 +3863,7 @@
 &lt;li&gt;今年运动少了许多，整个一年打篮球约有5次，跑步10次左右，主要做做室内运动。以前用 ihabit 打卡，现在记录到 DayOne 里。&lt;/li&gt;
 &lt;li&gt;DayOne 里等等的每日一照，记录整一年；晨间日记记录一年，偶尔有间断。DayOne 也新增几个日记本，打算把众多的记录整合到一起。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan-1.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;记账，10 月份开始用 MoneyWiz 记账，真是太好用太有成就感了。&lt;/li&gt;
 &lt;/ul&gt;
@@ -3893,14 +3879,14 @@
 &lt;li&gt;做了个肠镜，了却一桩心事。&lt;/li&gt;
 &lt;li&gt;体重，基本保持。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan-2.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;投资&#34;&gt;投资&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;3 月初下决心把分散在各个地方的投资情况梳理了一下，做到心中有数。&lt;/li&gt;
 &lt;li&gt;基金定投新增加了富国天惠成长混合（感谢 Peter 推荐）。&lt;/li&gt;
 &lt;li&gt;中欧恒利三年，三年的封闭期，今年赎回时总的收益率才 10.5%，教训。以后新发的基金坚决不买，除非基金经理是张坤或谢治宇。&lt;/li&gt;
 &lt;li&gt;今年陆续给好几个小伙伴安利基金定投，就像 2011 年陈梁给我安利一样，希望他们能坚持几年有个好收益。基金今年一年收益率大幅跑赢沪深300。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan-3.jpeg&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_3.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;清理&#34;&gt;清理&lt;/h2&gt;
 &lt;ul&gt;
@@ -3929,7 +3915,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;iOS 14，桌面和小组件达到目前最舒适的状态。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan-4.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;手机 SIM 卡设置了密码，丢手机的话 SIM 卡多了一层保护。&lt;/p&gt;
@@ -3955,15 +3941,13 @@
 &lt;li&gt;Allbirds，同事推荐的鞋，1 月份在美国出差的时候买了两双，穿着太舒服了。&lt;/li&gt;
 &lt;li&gt;席梦思床垫，老婆睡眠质量持续不好，下决心换个好一点的床垫，席梦思是不错。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h1 id=&#34;2021年&#34;&gt;2021年&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;多花时间陪伴家人。关注自己和家人的身体健康，也要学习如何更好陪小朋友玩耍。&lt;/li&gt;
 &lt;li&gt;工作上要跳出舒适区，学习新技术。&lt;/li&gt;
 &lt;li&gt;继续控制体重，保持运动。&lt;/li&gt;
 &lt;li&gt;尝试记录时间开销。不知道时间都花到哪里去了；很多时候连前一天做了什么都想不起来，非常难受，要去解决。&lt;/li&gt;
-&lt;li&gt;明年一年不玩 dota。今年下半年玩 dota 有点多，每次连续玩几个小时，玩完了感觉很空虚，疲惫。
-&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;明年一年不玩 dota。今年下半年玩 dota 有点多，每次连续玩几个小时，玩完了感觉很空虚，疲惫。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;最后祝大家新年快乐！&lt;/p&gt;</description>
     </item>
@@ -4003,9 +3987,9 @@
 &lt;li&gt;上班开车路上漫听 BBC Global News，一年。&lt;/li&gt;
 &lt;li&gt;通过观察思考加实践，篮球技艺又提高了一点。&lt;/li&gt;
 &lt;li&gt;投资方面，定投的主动基金跑赢了沪深300，还是很开心的。且慢里的指数基金经过一年半不到的时间也有 15.5% 的收益。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2019-review-2020-plan-1.jpeg&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2019-review-2020-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;维持了一年的体重，减重有点难，2020 年再出发。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2019-review-2020-plan-2.jpeg&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2019-review-2020-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;2019 年看书很少，只有可怜的 6 本，其中还包括 2 本小说。在珠海参加年会的时候因为太闲了，几乎都在酒店待着，开始看《微习惯》，看了马上实践。以前给自己订下目标，总是太大，要耗费太多的意志力，最后几乎总是以失败告终。但是如果我们刚开始的时候建立一些微小到甚至不需要耗费意志力、不可能失败的习惯，比如每天一个俯卧撑，看两页书。这样就没有压力，不需要思想斗争，五分钟就可以完成，不会有机会体验没有完成目标导致的愧疚和失败感。这样有一个好的开始，更容易形成惯性，一点一点进步。&lt;/li&gt;
 &lt;li&gt;过去的一年也在尝试和自己和解，知道意志力是有限的，所以很多事情没有坚持下来也原谅自己，来年换些方法继续前行。&lt;/li&gt;
 &lt;/ul&gt;
@@ -4091,8 +4075,8 @@
 &lt;li&gt;5 月 4 号，收获小朋友一枚！2018 年最大的收获。&lt;/li&gt;
 &lt;li&gt;5 - 12 月，陪伴小朋友成长。打怪升级，披荆斩棘。每次小家伙咧着嘴对着我笑，都觉得心快融化了。小孩子长得好快的，不经意的几个月就像大孩子了，抱久了都有些吃力。&lt;/li&gt;
 &lt;li&gt;7 月份老婆带着孩子回娘家，自己在家各种整理、打扫，各种跑步、快走，各种看书、写字。7 月份体重今年最低，阅读量今年最高。有图为证。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2018-review-2019-plan-1.jpeg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2018-review-2019-plan-2.jpeg&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2018-review-2019-plan_1.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2018-review-2019-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;11、12 月份有些懈怠，不怎么运动了，饮食也不控制了，体重就渐渐增加了，抵抗力也下降了，身体时常不适。&lt;/li&gt;
 &lt;li&gt;理财方面，1 月份赎回了两只基金，将近 7w，现在回头看算是很明智的。2018 这一年的收益是 -19.15%（天天基金 only ），对比沪深300 的 -26.34%，还算可以的，亏钱了仍然很淡定。希望过两年基金能翻倍可以补偿家人今年的大力支持。&lt;/li&gt;
 &lt;li&gt;胆红素问题搞定。&lt;/li&gt;
@@ -4198,7 +4182,6 @@ Let go of attachment to doing, having more.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我大致翻译一下，希望大家有所启发。&lt;/p&gt;
 &lt;p&gt;（“对你而言什么是重要的事”，）我或是其他极简主义的作者的回答并不是那么得重要。真正重要的是，能够试着问自己并探索对于这个问题的回答。甚至也不需要一些非常确切的答案，对我们大多数人而言，即便只是对于这个问题的探索都是一次深刻的转变，它能够让我们改变自己过去做事的方式，让我们对那些能让生活更加生动起来的事物更明确、更好奇、更有兴趣。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;另外，这两天第一次遇到家里小朋友发热、呕吐、皮肤过敏，非常得无助，几乎没有相关的知识储备导致我们手足无措，小朋友那么难受我们非常得心疼。这也让我更加深刻地意识到家人的健康、陪伴小朋友健康地成长是目前对我而言非常重要的事，明确了我要在这方面花更多时间和精力。&lt;/p&gt;</description>
     </item>
     
@@ -4335,7 +4318,6 @@ Let go of attachment to doing, having more.&lt;/p&gt;
 &lt;li&gt;持续断舍离。阳台和书橱很清爽；整理了手机相册，删除了几百张相片、截图。正在整理手机上各种零散知识收藏。&lt;/li&gt;
 &lt;li&gt;上半年致力于构建 Oracle 知识体系，可惜没有继续下去。下半年数据库方面的学习少了很多，只限于每天把工作内容总结到 OneNote。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;h1 id=&#34;2018年要努力去做的&#34;&gt;2018年要努力去做的&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;学习如何更好地照顾宝宝，多陪老婆，多和家人朋友沟通。&lt;/li&gt;

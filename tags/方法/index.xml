@@ -179,7 +179,6 @@
       
       <guid>http://www.jinhuaiyao.com/posts/about-bookkeeping/</guid>
       <description>&lt;p&gt;今年没有记账，不清楚一年总共花了多少钱。和老婆一致决定明年开始继续记账。我负责优化一下操作流程，使得记账更轻松。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;只记开销和收入，不对账。这一条最重要，以前定期对账消耗大量的时间和精力，最终还导致记账的停止。&lt;/p&gt;
 &lt;p&gt;继续使用同一个 MoneyWiz 账号同步记账记录。&lt;/p&gt;
 &lt;p&gt;每个人只保留两个记账账户：开销和收入。&lt;/p&gt;
@@ -205,7 +204,6 @@
 &lt;p&gt;2019 年 9 月开始用 Day One 写晨间日记。&lt;/p&gt;
 &lt;p&gt;2022 年 6 月换用 Logseq 写晨间日记，并且把以前 OneNote、Day One 里的记录都迁移到 Logseq 里，以 markdown 文本的形式存放。&lt;/p&gt;
 &lt;p&gt;目前（2023 年底），正在尝试使用大型语言模型工具整理以往的日记和记录，希望能更好地了解自己。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;没有记录，记忆往往并不可靠。对我而言，日记用来回顾过去都忙了什么、在想什么，当时的快乐、难过、困惑是什么，并与现在进行比较，看看有哪些变化，最终能更好地了解自己。&lt;/p&gt;
 </description>
     </item>
@@ -706,21 +704,28 @@
 &lt;p&gt;于是实施一下方案二。
 参考 &lt;a href=&#34;https://pkg.cloudflareclient.com/install&#34;&gt;https://pkg.cloudflareclient.com/install&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ubuntu 20.04 LTS 下&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;echo &amp;quot;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&amp;quot; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;参考 &lt;a href=&#34;https://developers.cloudflare.com/warp-client/get-started/linux/&#34;&gt;https://developers.cloudflare.com/warp-client/get-started/linux/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install cloudflare-warp&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;systemctl status warp-svc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli register&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli set-mode proxy&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli connect&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli enable-always-on&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;warp-cli warp-stats&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vi /usr/local/etc/v2ray/config.json&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&amp;#34; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考 &lt;a href=&#34;https://developers.cloudflare.com/warp-client/get-started/linux/&#34;&gt;https://developers.cloudflare.com/warp-client/get-started/linux/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install cloudflare-warp`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status warp-svc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli register
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli set-mode proxy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli connect
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli enable-always-on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warp-cli warp-stats
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /usr/local/etc/v2ray/config.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;inbounds&amp;#34;: [
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;port&amp;#34;: 10086, 
@@ -765,10 +770,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;systemctl stop v2ray&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;systemctl start v2ray&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl ipinfo.io
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl stop v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl start v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rjin@vultr:~$ curl ipinfo.io
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ip&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;hostname&amp;#34;: &amp;#34;xxx.xxx.xxx.xxx.vultrusercontent.com&amp;#34;,
@@ -926,7 +933,6 @@
 &lt;h1 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。&lt;/p&gt;
-&lt;hr&gt;
 &lt;p&gt;最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。&lt;/p&gt;</description>
     </item>
     
@@ -1157,7 +1163,6 @@
 &lt;li&gt;减重不能着急，刚开始就想好了要坚持几个月再看成果。慢即是快。&lt;/li&gt;
 &lt;li&gt;最重要的是养成健康的生活习惯。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;最近买了哑铃，要练练力量了，现在看起来特别瘦，后面要增肌才行。&lt;/p&gt;</description>
     </item>
     
@@ -1172,11 +1177,17 @@
 &lt;ul&gt;
 &lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_1.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
 &lt;ul&gt;
-&lt;li&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;之前工作笔记存在的问题&#34;&gt;之前工作笔记存在的问题&lt;/h1&gt;
 &lt;ul&gt;
@@ -1197,23 +1208,23 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;每天的笔记尽量记录详细一些，加上当时的想法和详细操作。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;log和command贴在笔记里需要用 ``` 标记成 code，这样显示不会凌乱，Obsidian 索引的时候也不会费时。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;笔记仍然按照时间线去记录，每天一个以日期命名的笔记文件。dailynote 的主要作用仍然是当天的“工作台”，记录处理各个任务时的步骤、解决问题的思路和方法，其中小部分值得提取出来再加工的可以单独新建一个笔记文档，用 Obsidian 里的 &lt;code&gt;[[ ]]&lt;/code&gt; 去关联。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;VSCode 作为主力编辑器，Obsidian 用来回顾及组织笔记之间的关联。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;及时回顾、整理当天的记录。整理过的 daily note 重命名。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

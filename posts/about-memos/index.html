@@ -101,7 +101,6 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 </span></span><span class="line"><span class="cl">changeFont()
 </span></span></code></pre></div><p>效果图：</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113175203.png" alt="image.png"></p>
-<p>&ndash;</p>
 <h2 id="macos-客户端">MacOS 客户端</h2>
 <p>MacOS 没有专门的 app，也不太习惯 Moe Memos，搜索了一下，最后用 nativefier 把网页打包成 app。</p>
 <p>参考：<br>
@@ -110,20 +109,18 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo npm install nativefier -g
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">nativefier &#34;http://10.0.0.100:5230&#34;
-</span></span></code></pre></div><p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054.png" alt="image.png"></p>
+</span></span></code></pre></div><p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054-1.png" alt="image.png"></p>
 <p>用 Alfred 给它设置快捷键，愉快地使用。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126.png" alt="image.png"></p>
-<p>&ndash;</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126-1.png" alt="image.png"></p>
 <h2 id="ios-客户端">iOS 客户端</h2>
 <p>直接用网页版，Safari 里添加网页到主屏幕。</p>
 <p>但是 Memos 服务是运行在内网，在外面如何访问 memos 是个问题。</p>
 <p>折腾了好一会儿，还是没有把握将 Mac mini 暴露在公网上，搜索了一阵，最后在 Mac mini、Macbook、iPhone 上安装 Tailscale，把这些设备组成一个虚拟局域网，安全易用。</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/021B9348-8B3B-4758-96FE-32219F117265_1_102_o.jpeg" alt=""></p>
 <p>运行 Tailscale 后手机网页访问 Mac mini IP 加端口即可：</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos.jpeg" width="40%"/>
+<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos-1.png" width="40%"/>
 </figure>
 
-<p>&ndash;</p>
 <h1 id="导入旧数据">导入旧数据</h1>
 <p>把之前在心光、Noto、Pendo 里零散的记录清洗一下，然后导入 Memos。</p>
 <p>使用 <a href="https://github.com/JakeLaoyu/memos-import-from-flomo">https://github.com/JakeLaoyu/memos-import-from-flomo</a> 会丢失记录的原始时间。</p>
@@ -162,7 +159,6 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % sqlite3 memos_prod.db &lt; aaa.sql
 </span></span></code></pre></div><p>重启 memos docker 后刷新网页就可以看到导入的数据了。</p>
-<p>&ndash;</p>
 <h1 id="数据备份">数据备份</h1>
 <p>Mac mini 增加一个 cronjob。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># backup memos
@@ -171,8 +167,7 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .memos % cat /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/backup_memos.sh
 </span></span><span class="line"><span class="cl">DATE=`date +%Y%m%d-%H%M%d`
 </span></span><span class="line"><span class="cl">/usr/bin/tar -cvzf &#34;/Users/jinhuaiyao/Library/Mobile Documents/com~apple~CloudDocs/Me/backup_memos/memos_prod.db.${DATE}.tar.gz&#34; /Users/jinhuaiyao/.memos/memos_prod.db
-</span></span></code></pre></div><p>&ndash;</p>
-<h1 id="记录回顾">记录回顾</h1>
+</span></span></code></pre></div><h1 id="记录回顾">记录回顾</h1>
 <p>随机记录推送到 iOS，使用 Memos api + python + bark 实现。</p>
 <p>有些记录还是需要时不时地去回顾，比如一些重要的事，一些生活和工作中的提醒。</p>
 <p>Memos 提供 api 去获取数据，最不济还可以直接查询数据库，所以数据获取没有问题。</p>
@@ -308,8 +303,9 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 
 
 
+
     
-        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-xs font-medium">
             
                     <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" alt="新事物" >
                         新事物
@@ -323,7 +319,6 @@ Memos 开源可自托管，所有数据存放在本地，用起来像是一个�
 
 
 
-   
 
     <footer>
         

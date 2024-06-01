@@ -1383,7 +1383,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/</guid>
       <description>&lt;p&gt;由于公司笔记本的隐私问题前阵子购买了自用的 M1 Max 芯片的 MacBook Pro，64G 内存，心想着好好利用一下，装个虚拟机，然后运行 Oracle，结果很悲催。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;先是尝试在 Parallels Desktop 上加载之前下载的 Linux iso 镜像文件，根本不能用。原来基于 Intel x86 架构的 Linux 不能装在基于 ARM 架构的 M1 芯片的笔记本上。&lt;/p&gt;
 &lt;p&gt;尝试下载最新的基于 ARM 架构的 Oracle Linux，&lt;a href=&#34;https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso&#34;&gt;https://download.oracle.com/otn-pub/otn_software/linux/OracleLinux-R9-U0-aarch64-dvd.iso&lt;/a&gt; ，安装没问题。装好以后抱有侥幸心理装一下 Oracle 12c，runInstaller 直接报错。&lt;/p&gt;
 &lt;p&gt;一顿谷歌，搜索了很多文章，总结一下有几种可行方案。&lt;/p&gt;
@@ -1396,22 +1396,22 @@
 这个看起来不错，开心去尝试。结果安装 Redhat Linux 就用了非常之久，性能问题太严重了。放弃。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;以上探索过程花了几个小时，我已经基本上放弃在笔记本上安装 Oracle 实验环境的打算了。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;于是只好转换思路，不在本地安装虚拟机，能 ssh 到远程的 db server 上也可以。&lt;/p&gt;
 &lt;p&gt;首先想到的是自己在 “搬瓦工” 上买的两个 VPS，平时只用来 “科学上网”，正好利用一下。找到原来的账号密码 ssh 上去一看，只有 1G 内存，放弃。&lt;/p&gt;
 &lt;p&gt;尝试注册 Oracle Cloud，有文章说它可以提供永久免费的主机。注册搞了半天，最后通不过，应该是信用卡的问题。放弃。&lt;/p&gt;
 &lt;p&gt;尝试 AWS，注册成功，看一下 4G 内存的云机器，不便宜，放弃。&lt;/p&gt;
 &lt;p&gt;又看了下阿里云，4G 内存的主机每个月也要六七十块钱，偶尔用一下，不是很划算，放弃。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;
 &lt;p&gt;最后，竟然在最后，才想到自己改造成家用服务器的 2013 年买的 MacBook Pro。只要在上面安装 VMware，然后直接加载以前保存的虚拟机文件就可以飞速得到一个 Oracle 实验环境。&lt;/p&gt;
 &lt;p&gt;剩下的问题就是如何访问 Home Server (旧 MacBook Pro) 上的虚拟机，特别是不在家的时候该如何访问。&lt;/p&gt;
 &lt;p&gt;基本思路就是先 ssh 到 Home Server，然后再 ssh 到虚拟机里的 Linux，这样就可以运行 sqlplus 了。&lt;/p&gt;
 &lt;p&gt;在家里、同一个网段下访问很方便。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ssh -t -l &amp;lt;username&amp;gt; 10.0.0.6 ssh -o StrictHostKeyChecking=no oracle@192.168.156.121&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;外网访问的话有两个问题要解决，一是如何访问家里局域网里的 Home Server，二是安全问题。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -t -l &amp;lt;username&amp;gt; 10.0.0.6 ssh -o StrictHostKeyChecking=no oracle@192.168.156.121
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;外网访问的话有两个问题要解决，一是如何访问家里局域网里的 Home Server，二是安全问题。&lt;/p&gt;
 &lt;p&gt;因为我有公网 IP，在路由器上简单做个端口映射就好。没有公网 IP 的话需要去研究一下内网穿透方案。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ssh -t -l &amp;lt;username&amp;gt; -p &amp;lt;port&amp;gt; &amp;lt;public ip or dns name&amp;gt; ssh -o StrictHostKeyChecking=no oracle@192.168.156.121&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;因为我的 IP 是暴露在公网上，所以安全问题尤为重要。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -t -l &amp;lt;username&amp;gt; -p &amp;lt;port&amp;gt; &amp;lt;public ip or dns name&amp;gt; ssh -o StrictHostKeyChecking=no oracle@192.168.156.121
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为我的 IP 是暴露在公网上，所以安全问题尤为重要。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;路由器端开启了防火墙，只开放了两个必要的端口，一个是 sceen sharing，还有一个是 ssh，都端口映射到非默认端口。&lt;/li&gt;
 &lt;li&gt;先把 M1 笔记本上的 public key 复制到 Home Server 上的 &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;，然后关闭 Home Server 的密码登录，只允许使用 public key 登录。这样安全性会更高。&lt;/li&gt;
@@ -1432,8 +1432,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在另外的机器上测试 ssh，会得到下面的报错。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜  ~/.ssh &amp;gt; ssh -t -l &amp;lt;username&amp;gt; -p &amp;lt;port&amp;gt; &amp;lt;public ip or dns name&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xxx@xxxx: Permission denied (publickey).
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;ndash;
-先这样吧，不折腾了。&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;  &lt;/p&gt;
+&lt;p&gt;先这样吧，不折腾了。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -1524,7 +1525,6 @@
 &lt;li&gt;怀疑是不是 db server 有什么问题, 尝试联系一下 INFRA team。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;到这里就穷途末路了。研究了一个多小时了，感觉很疲惫，休息一下，和同事聊了一会儿，他随口说了一句，实在不行就重装 rdbms。柳暗花明，换个角度，直接绕开已有报错，不用重装，新装 /opt/oracle/database/12cR201_new，这次 dbca 不再报错，先去完成任务。&lt;/p&gt;
-&lt;p&gt;&amp;ndash;&lt;/p&gt;
 &lt;p&gt;DBA 工作和其他工作一样也有很多琐事、重复的事，做着做着可能就麻木了，但是偶尔有一次需要绞尽脑汁地寻求解决问题的方法并且最后解决了问题，就会让人感到由衷的快乐，这些断断续续的快乐就能支持我们再前行一会儿、再精进一点。&lt;/p&gt;</description>
     </item>
     

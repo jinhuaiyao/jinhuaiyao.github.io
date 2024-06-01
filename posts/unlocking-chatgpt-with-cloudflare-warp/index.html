@@ -76,21 +76,28 @@
 <p>于是实施一下方案二。
 参考 <a href="https://pkg.cloudflareclient.com/install">https://pkg.cloudflareclient.com/install</a></p>
 <p>Ubuntu 20.04 LTS 下</p>
-<p><code>curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg</code></p>
-<p><code>echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&quot; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list</code></p>
-<p><code>sudo apt update</code></p>
-<p>&ndash;</p>
-<p>参考 <a href="https://developers.cloudflare.com/warp-client/get-started/linux/">https://developers.cloudflare.com/warp-client/get-started/linux/</a></p>
-<p><code>sudo apt install cloudflare-warp</code></p>
-<p><code>systemctl status warp-svc</code></p>
-<p><code>warp-cli register</code></p>
-<p><code>warp-cli set-mode proxy</code></p>
-<p><code>warp-cli connect</code></p>
-<p><code>warp-cli enable-always-on</code></p>
-<p><code>warp-cli warp-stats</code></p>
-<p>&ndash;</p>
-<p><code>vi /usr/local/etc/v2ray/config.json</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">echo &#34;deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main&#34; | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span></code></pre></div><p>参考 <a href="https://developers.cloudflare.com/warp-client/get-started/linux/">https://developers.cloudflare.com/warp-client/get-started/linux/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install cloudflare-warp`
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">systemctl status warp-svc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">warp-cli register
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">warp-cli set-mode proxy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">warp-cli connect
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">warp-cli enable-always-on
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">warp-cli warp-stats
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /usr/local/etc/v2ray/config.json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">    &#34;inbounds&#34;: [
 </span></span><span class="line"><span class="cl">        {
 </span></span><span class="line"><span class="cl">            &#34;port&#34;: 10086, 
@@ -135,10 +142,12 @@
 </span></span><span class="line"><span class="cl">    ]
 </span></span><span class="line"><span class="cl">}
 </span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><p><code>systemctl stop v2ray</code></p>
-<p><code>systemctl start v2ray</code></p>
-<p>&ndash;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rjin@vultr:~$ curl ipinfo.io
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">systemctl stop v2ray
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">systemctl start v2ray
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rjin@vultr:~$ curl ipinfo.io
 </span></span><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">&#34;ip&#34;: &#34;xxx.xxx.xxx.xxx&#34;,
 </span></span><span class="line"><span class="cl">&#34;hostname&#34;: &#34;xxx.xxx.xxx.xxx.vultrusercontent.com&#34;,
@@ -167,8 +176,9 @@
 
 
 
+
     
-        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-xs font-medium">
             
                     <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/%E6%96%B0%E4%BA%8B%E7%89%A9/" alt="新事物" >
                         新事物
@@ -186,7 +196,6 @@
 
 
 
-   
 
     <footer>
         

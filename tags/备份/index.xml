@@ -181,15 +181,12 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# on this day
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;01 06 * * * /bin/bash  /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/on_this_day.sh &amp;gt; /Users/jinhuaiyao/Log/on_this_day.log 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个之前&lt;a href=&#34;https://www.jinhuaiyao.com/posts/about-logseq/#%E9%82%A3%E5%B9%B4%E4%BB%8A%E6%97%A5&#34;&gt;写过&lt;/a&gt;，本来运行在 MacBook 上，现在移到 Mac mini 了。&lt;/p&gt;
-&lt;p&gt;-&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sync logseq from icloud to onedrive
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * /usr/bin/rsync -a &amp;#34;/Users/jinhuaiyao/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/&amp;#34; &amp;#34;/Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Logseq&amp;#34; &amp;gt; /Users/jinhuaiyao/Log/Logseq.bak.log 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;每 5 分钟把 Logseq 文件从 iCloud Drive 里从同步到 Onedrive。&lt;/p&gt;
-&lt;p&gt;-&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# get home IP
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/get_home_ip.sh &amp;gt;/Users/jinhuaiyao/Log/get_home_ip.txt 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;curl cip.cc&lt;/code&gt; 去查看当前 IP，和上一次查询结果对比，如果不一样就输出到 iCloud Drive 里的一个文件。之前开了外网连接的时候用的，现在基本没有这个需求了，不过可以用来记录 IP 的变化。&lt;/p&gt;
-&lt;p&gt;-&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# check if any unknown screen sharing session
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/10 * * * * /bin/bash /Users/jinhuaiyao/Library/CloudStorage/OneDrive-Personal/Config/Mac_Script/ck_screen_sharing_session.sh &amp;gt;/Users/jinhuaiyao/Log/ck_screen_sharing_session.txt 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;netstat&lt;/code&gt; 查看 screen 连接的情况，如果有未知新连接，发邮件。之前开了外网连接的时候用的，已经不需要了。&lt;/p&gt;
