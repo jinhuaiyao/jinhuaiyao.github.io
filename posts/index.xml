@@ -7,7 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 11 May 2024 11:12:12 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jul 2024 16:10:42 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的 VPS 上运行了什么</title>
+      <link>http://www.jinhuaiyao.com/posts/what-is-running-on-my-vps/</link>
+      <pubDate>Wed, 17 Jul 2024 16:10:42 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/what-is-running-on-my-vps/</guid>
+      <description>&lt;p&gt;上个月终于等到搬瓦工的 The Plan，2 核 CPU，2 GB 内存，40 GB SSD 硬盘，每个月 1000GB 流量。利用起来！&lt;/p&gt;
+&lt;p&gt;陆陆续续把旧的 VPS 上的服务迁移到新的 VPS，最近又新加了一些服务。总结记录一下。&lt;/p&gt;
+&lt;h1 id=&#34;nginx&#34;&gt;Nginx&lt;/h1&gt;
+&lt;p&gt;不用科学上网也能使用 openai api。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/&#34;&gt;https://www.jinhuaiyao.com/posts/nginx-reverse-proxy-openai-api/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bark&#34;&gt;Bark&lt;/h1&gt;
+&lt;p&gt;Bark is an iOS App which allows you to push custom notifications to your iPhone.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Finb/Bark&#34;&gt;https://github.com/Finb/Bark&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;需要的时候就可以调用 bark api 给 iPhone 推送消息。&lt;/p&gt;
+&lt;h1 id=&#34;memos&#34;&gt;Memos&lt;/h1&gt;
+&lt;p&gt;An open source, lightweight note-taking service. Easily capture and share your great thoughts.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/usememos/memos&#34;&gt;https://github.com/usememos/memos&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;记录日常的一些想法，事件，用于备忘。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/about-memos/&#34;&gt;https://www.jinhuaiyao.com/posts/about-memos/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;另外， &lt;a href=&#34;https://www.jinhuaiyao.com/memos/&#34;&gt;https://www.jinhuaiyao.com/memos/&lt;/a&gt; 也调用了 memos 的 api 去展示一些只言片语。&lt;/p&gt;
+&lt;h1 id=&#34;kasm&#34;&gt;Kasm&lt;/h1&gt;
+&lt;p&gt;Stream your workspace directly to your web browser on any device and from any location.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kasmweb.com/&#34;&gt;https://kasmweb.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主要为了在公司电脑上也可以使用 gpt4 网页版，在本地浏览器里访问 Ubuntu 云主机里的浏览器。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240717165049.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;planka&#34;&gt;Planka&lt;/h1&gt;
+&lt;p&gt;The realtime kanban board for workgroups built with React and Redux.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/plankanban/planka&#34;&gt;https://github.com/plankanban/planka&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工作上的很多 task 放到 things 里展示还是很不直观，在以前的公司里使用过 Trello，现在使用 planka 可以实现类似的效果，数据还在自己手上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240717165840.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;file-store&#34;&gt;File store&lt;/h1&gt;
+&lt;p&gt;提供 &lt;a href=&#34;https://www.jinhuaiyao.com/2024/&#34;&gt;https://www.jinhuaiyao.com/2024/&lt;/a&gt; 的数据源，定期从本地 Mac mini 上 scp 最新的 txt 文件到 VPS 上。&lt;/p&gt;
+&lt;h1 id=&#34;aliyun-oss-image-backup&#34;&gt;Aliyun oss image backup&lt;/h1&gt;
+&lt;p&gt;挂载 aliyun oss 到 VPS，参考 &lt;a href=&#34;https://imateor.com/archives/225.html&#34;&gt;https://imateor.com/archives/225.html&lt;/a&gt; ，然后配置 cron job 定期 rsync oss 里的图片到 Mac mini 用于备份。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>博客添加习惯打卡记录</title>
       <link>http://www.jinhuaiyao.com/posts/habit-tracker-in-blog/</link>
