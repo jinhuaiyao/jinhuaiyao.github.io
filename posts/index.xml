@@ -7,7 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Wed, 17 Jul 2024 16:10:42 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jul 2024 10:22:40 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于博客</title>
+      <link>http://www.jinhuaiyao.com/posts/about-my-blog/</link>
+      <pubDate>Tue, 23 Jul 2024 10:22:40 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/about-my-blog/</guid>
+      <description>&lt;p&gt;断断续续更新了两年的博客，阶段总结一下，备忘。&lt;/p&gt;
+&lt;h1 id=&#34;框架&#34;&gt;框架&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;主题&#34;&gt;主题&lt;/h1&gt;
+&lt;p&gt;源自 &lt;a href=&#34;https://github.com/nixentric/Lowkey-Hugo-Theme&#34;&gt;https://github.com/nixentric/Lowkey-Hugo-Theme&lt;/a&gt;，自己定制了一下。&lt;/p&gt;
+&lt;h1 id=&#34;组成&#34;&gt;组成&lt;/h1&gt;
+&lt;p&gt;博客文章 - &lt;a href=&#34;https://www.jinhuaiyao.com/posts&#34;&gt;https://www.jinhuaiyao.com/posts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只言片语 - &lt;a href=&#34;https://www.jinhuaiyao.com/memos&#34;&gt;https://www.jinhuaiyao.com/memos&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工具和服务 - &lt;a href=&#34;https://www.jinhuaiyao.com/tools&#34;&gt;https://www.jinhuaiyao.com/tools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一些链接 - &lt;a href=&#34;https://www.jinhuaiyao.com/links&#34;&gt;https://www.jinhuaiyao.com/links&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;英语表达 - &lt;a href=&#34;https://www.jinhuaiyao.com/english&#34;&gt;https://www.jinhuaiyao.com/english&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2024 打卡记录 - &lt;a href=&#34;https://www.jinhuaiyao.com/2024&#34;&gt;https://www.jinhuaiyao.com/2024&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;标签 - &lt;a href=&#34;https://www.jinhuaiyao.com/tags&#34;&gt;https://www.jinhuaiyao.com/tags&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;RSS - &lt;a href=&#34;https://www.jinhuaiyao.com/index.xml&#34;&gt;https://www.jinhuaiyao.com/index.xml&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;图床&#34;&gt;图床&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.aliyun.com/product/oss&#34;&gt;阿里云 OSS&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;方法&#34;&gt;方法&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/memos&#34;&gt;https://www.jinhuaiyao.com/memos&lt;/a&gt; - 使用了 &lt;a href=&#34;https://github.com/usememos/memos/tree/main/server/router/api/v1&#34;&gt;memos api&lt;/a&gt; + &lt;a href=&#34;https://github.com/eallion/memos.top&#34;&gt;JS&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/english&#34;&gt;https://www.jinhuaiyao.com/english&lt;/a&gt; - 数据源来自本地同步到 VPS 上的 txt 文件，JS 来自 GPT-4。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/2024&#34;&gt;https://www.jinhuaiyao.com/2024&lt;/a&gt; - 数据源来自本地同步到 VPS 上的 txt 文件，JS 来自 GPT-4。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>我的 VPS 上运行了什么</title>
       <link>http://www.jinhuaiyao.com/posts/what-is-running-on-my-vps/</link>
