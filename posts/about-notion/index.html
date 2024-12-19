@@ -397,10 +397,126 @@
 </figure>
 </h2>
 <p>又比如一些重要的提醒循环显示在手机桌面。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0069.PNG" width="40%"/>
+<h2 id="hahahugoshortcode-s12-hbhb"><figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0069.PNG" width="40%"/>
 </figure>
-
-
+</h2>
+<h2 id="memos-特定-tag-的记录定期同步到-2024-打卡记录2024">Memos 特定 tag 的记录定期同步到 <a href="/2024">2024 打卡记录</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># upload heatmap data - 05/07/2024
+</span></span><span class="line"><span class="cl">55 23 * * * /bin/bash /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/upload_heatmap_data.sh &gt;/Users/jinhuaiyao/Log/upload_heatmap_data.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % cat /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/upload_heatmap_data.sh
+</span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/.tmp/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DT=`date +%Y_%m_%d`
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">for file in `ls *.txt`
+</span></span><span class="line"><span class="cl">do
+</span></span><span class="line"><span class="cl">cp $file /Users/jinhuaiyao/OneDrive/Backup/backup_heatmap/${file}.${DT}
+</span></span><span class="line"><span class="cl">done
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bash workout.sh
+</span></span><span class="line"><span class="cl">bash running.sh
+</span></span><span class="line"><span class="cl">bash reading.sh
+</span></span><span class="line"><span class="cl">bash vocabulary.sh
+</span></span><span class="line"><span class="cl">bash englishpod.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/.tmp/
+</span></span><span class="line"><span class="cl">scp -P 10086 *.txt xx@xx.xx.xx.xx:/home/xx/www/webpage
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % cat workout.sh
+</span></span><span class="line"><span class="cl">/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 workout.py &gt; workout.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">awk -F&#39; &#39; &#39;{print $1 &#34; |1| &#34; substr($0, index($0,$3))}&#39; workout.1  &gt; workout.2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">awk -F&#39;|&#39; &#39;
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    key = $1 FS $2;
+</span></span><span class="line"><span class="cl">    if (key in data) {
+</span></span><span class="line"><span class="cl">        data[key] = data[key] &#34;, &#34; $3;
+</span></span><span class="line"><span class="cl">    } else {
+</span></span><span class="line"><span class="cl">        data[key] = $3;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">END {
+</span></span><span class="line"><span class="cl">    for (key in data) {
+</span></span><span class="line"><span class="cl">        print key &#34; |&#34; data[key];
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}&#39;  workout.2 |sort &gt;workout.3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat workout.txt.base workout.3  &gt; workout.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % cat workout.py
+</span></span><span class="line"><span class="cl">import requests
+</span></span><span class="line"><span class="cl">import json
+</span></span><span class="line"><span class="cl">import pytz
+</span></span><span class="line"><span class="cl">from datetime import datetime
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># API 令牌
+</span></span><span class="line"><span class="cl">NOTION_TOKEN = &#34;ntn_xxxx&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 数据库ID
+</span></span><span class="line"><span class="cl">DATABASE_ID = &#34;4bd4xxxx&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 请求头
+</span></span><span class="line"><span class="cl">headers = {
+</span></span><span class="line"><span class="cl">    &#34;Authorization&#34;: f&#34;Bearer {NOTION_TOKEN}&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Content-Type&#34;: &#34;application/json&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Notion-Version&#34;: &#34;2022-06-28&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 定义过滤条件，筛选带有 &#34;Workout&#34; 标签的项目
+</span></span><span class="line"><span class="cl">filter_payload = {
+</span></span><span class="line"><span class="cl">    &#34;filter&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;property&#34;: &#34;Tags&#34;,  # 属性名称，假设为 &#34;Tags&#34;
+</span></span><span class="line"><span class="cl">        &#34;multi_select&#34;: {
+</span></span><span class="line"><span class="cl">            &#34;contains&#34;: &#34;Workout&#34;  # 标签内容
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查询数据库的API URL
+</span></span><span class="line"><span class="cl">url = f&#34;https://api.notion.com/v1/databases/{DATABASE_ID}/query&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 发送带有过滤器的请求
+</span></span><span class="line"><span class="cl">response = requests.post(url, headers=headers, json=filter_payload)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 解析并打印响应结果
+</span></span><span class="line"><span class="cl">data = response.json()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 提取并解码内容
+</span></span><span class="line"><span class="cl">for result in data[&#34;results&#34;]:
+</span></span><span class="line"><span class="cl">    # 假设 Content 在 properties 里面，获取 title 属性中的内容
+</span></span><span class="line"><span class="cl">    title_content = result[&#34;properties&#34;][&#34;Content&#34;][&#34;title&#34;][0][&#34;text&#34;][&#34;content&#34;]
+</span></span><span class="line"><span class="cl">    time_content = result[&#34;properties&#34;][&#34;Time&#34;][&#34;created_time&#34;]
+</span></span><span class="line"><span class="cl">    utc_format = &#34;%Y-%m-%dT%H:%M:%S.%fZ&#34;
+</span></span><span class="line"><span class="cl">    utc_time = datetime.strptime(time_content, utc_format)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		# 设置时区：UTC 和 东八区
+</span></span><span class="line"><span class="cl">    utc = pytz.timezone(&#39;UTC&#39;)
+</span></span><span class="line"><span class="cl">    cn_tz = pytz.timezone(&#39;Asia/Shanghai&#39;)
+</span></span><span class="line"><span class="cl">    utc_time = utc.localize(utc_time)
+</span></span><span class="line"><span class="cl">    cn_time = utc_time.astimezone(cn_tz)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # 打印解码后的标题内容
+</span></span><span class="line"><span class="cl">    print(f&#34;{cn_time}: {title_content}&#34;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % tail workout.txt
+</span></span><span class="line"><span class="cl">2024-09-23 |1 | 跑步5km
+</span></span><span class="line"><span class="cl">2024-10-02 |1 | 跑步5km
+</span></span><span class="line"><span class="cl">2024-10-03 |1 | 跑步5.7km
+</span></span><span class="line"><span class="cl">2024-10-05 |1 | 跑步6.1km
+</span></span><span class="line"><span class="cl">2024-10-13 |1 | 顾村公园快走
+</span></span><span class="line"><span class="cl">2024-10-20 |1 | 陪等等散步
+</span></span><span class="line"><span class="cl">2024-11-02 |1 | 跳绳
+</span></span><span class="line"><span class="cl">2024-11-09 |1 | 和等等踢球
+</span></span><span class="line"><span class="cl">2024-11-11 |1 | 跳绳300个
+</span></span><span class="line"><span class="cl">2024-11-30 |1 | 跳绳600
+</span></span></code></pre></div>
     </section>
 
 
