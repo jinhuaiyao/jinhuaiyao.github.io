@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>关于 Notion</title>
-<meta name="description" content="为什么用 Notion 最开始想尝试的是 Notion AI，想着把所有记录都放到 Notion 里，能不能通过 AI 发掘一些自己没有意识的地方，去更好地了解自己，结果效果很一般。
+<meta name="description" content="为什么用 Notion 最开始想尝试的是 Notion AI，想着把所有记录都放到 Notion 里，能不能通过 AI 发掘一些自己没有意识到的地方，去更好地了解自己，结果效果很一般。
 使用三个月后的感受 今年9月初开始正式使用，目前感觉 Notion 有以下一些优点。
 开箱即用，除了科学上网以外不需要太多的折腾。 数据库功能强大、易用。 界面简洁美观。 手机端方便好用，数据同步快速。 API 使用方便。 记录的内容及我自己的一些使用方法 日常所见所想 把日常的记录、待办事项都放到这个 Memos 的数据库里，用时间线去罗列。可以通过数据库的各种属性去展示和筛选。">
 <link rel="canonical" href="http://www.jinhuaiyao.com/posts/about-notion/">
@@ -66,7 +66,7 @@
 
     <section class="content text-base text-gray-800 mt-3">
     <h1 id="为什么用-notion">为什么用 Notion</h1>
-<p>最开始想尝试的是 Notion AI，想着把所有记录都放到 Notion 里，能不能通过 AI 发掘一些自己没有意识的地方，去更好地了解自己，结果效果很一般。</p>
+<p>最开始想尝试的是 Notion AI，想着把所有记录都放到 Notion 里，能不能通过 AI 发掘一些自己没有意识到的地方，去更好地了解自己，结果效果很一般。</p>
 <h1 id="使用三个月后的感受">使用三个月后的感受</h1>
 <p>今年9月初开始正式使用，目前感觉 Notion 有以下一些优点。</p>
 <ul>
@@ -131,9 +131,9 @@
 <h2 id="hahahugoshortcode-s8-hbhb"><figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-21-34.png" width="60%"/>
 </figure>
 </h2>
-<p>完成某一项待办事项的时候点击 Button，可以把当前日期附加到 Records 这一列当中，当作历史记录。同时会根据 Interval 和 Unit 计算下一次待办事项的日期，更新 NextTime 列。例如：</p>
+<p>完成某一项待办事项的时候点击 Button，可以把当前日期附加到 Records 这一列当中，当作历史记录。同时会根据 Interval 和 Unit 计算下一次待办事项的日期，更新 NextTime 列。例如现在点一下 Button，结果如下：</p>
 <p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-26-22.png" alt=""></p>
-<p>mac mini 上设置一个 cronjob 每天去检查 NextTime 列的日期，如果某条事项的日期是当天的话就更新 Text 列为当天的时间。当 Text 列被编辑，又会自动调用 Notion 的自动化去发出一个提醒到 Inbox 里，手机上也会有消息推送。</p>
+<p>Mac mini 上设置一个 cronjob 每天去检查 NextTime 列的日期，如果某条事项的日期是当天的话就更新 Text 列为当天的时间。当 Text 列被编辑，又会自动调用 Notion 的自动化去发出一个提醒到 Inbox 里，手机上也会有消息推送。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Notion update for nexttime - 12/19/2024
 </span></span><span class="line"><span class="cl">30 05 * * * /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/notion_update_for_nexttime.py &gt;&gt; /Users/jinhuaiyao/Log/notion_update_for_nexttime.txt 2&gt;&amp;1
 </span></span><span class="line"><span class="cl">
@@ -400,10 +400,10 @@
 <h2 id="hahahugoshortcode-s12-hbhb"><figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0069.PNG" width="40%"/>
 </figure>
 </h2>
-<h2 id="memos-特定-tag-的记录定期同步到-2024-打卡记录2024">Memos 特定 tag 的记录定期同步到 <a href="/2024">2024 打卡记录</a></h2>
+<h2 id="数据同步到-2024-打卡记录2024">数据同步到 <a href="/2024">2024 打卡记录</a></h2>
+<p>Memos 数据库里特定 tag 的记录定期更新到打卡记录。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># upload heatmap data - 05/07/2024
 </span></span><span class="line"><span class="cl">55 23 * * * /bin/bash /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/upload_heatmap_data.sh &gt;/Users/jinhuaiyao/Log/upload_heatmap_data.txt 2&gt;&amp;1
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % cat /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/upload_heatmap_data.sh
 </span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/.tmp/
@@ -423,7 +423,6 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/.tmp/
 </span></span><span class="line"><span class="cl">scp -P 10086 *.txt xx@xx.xx.xx.xx:/home/xx/www/webpage
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % cat workout.sh
 </span></span><span class="line"><span class="cl">/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 workout.py &gt; workout.1
@@ -446,8 +445,6 @@
 </span></span><span class="line"><span class="cl">}&#39;  workout.2 |sort &gt;workout.3
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cat workout.txt.base workout.3  &gt; workout.txt
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % cat workout.py
 </span></span><span class="line"><span class="cl">import requests
@@ -503,7 +500,6 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    # 打印解码后的标题内容
 </span></span><span class="line"><span class="cl">    print(f&#34;{cn_time}: {title_content}&#34;)
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini .tmp % tail workout.txt
 </span></span><span class="line"><span class="cl">2024-09-23 |1 | 跑步5km

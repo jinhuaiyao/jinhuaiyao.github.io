@@ -15,7 +15,7 @@
       
       <guid>http://www.jinhuaiyao.com/posts/about-notion/</guid>
       <description>&lt;h1 id=&#34;为什么用-notion&#34;&gt;为什么用 Notion&lt;/h1&gt;
-&lt;p&gt;最开始想尝试的是 Notion AI，想着把所有记录都放到 Notion 里，能不能通过 AI 发掘一些自己没有意识的地方，去更好地了解自己，结果效果很一般。&lt;/p&gt;
+&lt;p&gt;最开始想尝试的是 Notion AI，想着把所有记录都放到 Notion 里，能不能通过 AI 发掘一些自己没有意识到的地方，去更好地了解自己，结果效果很一般。&lt;/p&gt;
 &lt;h1 id=&#34;使用三个月后的感受&#34;&gt;使用三个月后的感受&lt;/h1&gt;
 &lt;p&gt;今年9月初开始正式使用，目前感觉 Notion 有以下一些优点。&lt;/p&gt;
 &lt;ul&gt;
@@ -80,9 +80,9 @@
 &lt;h2 id=&#34;hahahugoshortcode-s8-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-21-34.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
-&lt;p&gt;完成某一项待办事项的时候点击 Button，可以把当前日期附加到 Records 这一列当中，当作历史记录。同时会根据 Interval 和 Unit 计算下一次待办事项的日期，更新 NextTime 列。例如：&lt;/p&gt;
+&lt;p&gt;完成某一项待办事项的时候点击 Button，可以把当前日期附加到 Records 这一列当中，当作历史记录。同时会根据 Interval 和 Unit 计算下一次待办事项的日期，更新 NextTime 列。例如现在点一下 Button，结果如下：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-26-22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;mac mini 上设置一个 cronjob 每天去检查 NextTime 列的日期，如果某条事项的日期是当天的话就更新 Text 列为当天的时间。当 Text 列被编辑，又会自动调用 Notion 的自动化去发出一个提醒到 Inbox 里，手机上也会有消息推送。&lt;/p&gt;
+&lt;p&gt;Mac mini 上设置一个 cronjob 每天去检查 NextTime 列的日期，如果某条事项的日期是当天的话就更新 Text 列为当天的时间。当 Text 列被编辑，又会自动调用 Notion 的自动化去发出一个提醒到 Inbox 里，手机上也会有消息推送。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Notion update for nexttime - 12/19/2024
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 05 * * * /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/notion_update_for_nexttime.py &amp;gt;&amp;gt; /Users/jinhuaiyao/Log/notion_update_for_nexttime.txt 2&amp;gt;&amp;amp;1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -349,10 +349,10 @@
 &lt;h2 id=&#34;hahahugoshortcode-s12-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0069.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h2 id=&#34;memos-特定-tag-的记录定期同步到-2024-打卡记录2024&#34;&gt;Memos 特定 tag 的记录定期同步到 &lt;a href=&#34;http://www.jinhuaiyao.com/2024&#34;&gt;2024 打卡记录&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;数据同步到-2024-打卡记录2024&#34;&gt;数据同步到 &lt;a href=&#34;http://www.jinhuaiyao.com/2024&#34;&gt;2024 打卡记录&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Memos 数据库里特定 tag 的记录定期更新到打卡记录。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# upload heatmap data - 05/07/2024
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;55 23 * * * /bin/bash /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/upload_heatmap_data.sh &amp;gt;/Users/jinhuaiyao/Log/upload_heatmap_data.txt 2&amp;gt;&amp;amp;1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .tmp % cat /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/upload_heatmap_data.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/.tmp/
@@ -372,7 +372,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/.tmp/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp -P 10086 *.txt xx@xx.xx.xx.xx:/home/xx/www/webpage
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .tmp % cat workout.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Library/Frameworks/Python.framework/Versions/3.12/bin/python3 workout.py &amp;gt; workout.1
@@ -395,8 +394,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&amp;#39;  workout.2 |sort &amp;gt;workout.3
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat workout.txt.base workout.3  &amp;gt; workout.txt
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .tmp % cat workout.py
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import requests
@@ -452,7 +449,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # 打印解码后的标题内容
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    print(f&amp;#34;{cn_time}: {title_content}&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini .tmp % tail workout.txt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-09-23 |1 | 跑步5km
