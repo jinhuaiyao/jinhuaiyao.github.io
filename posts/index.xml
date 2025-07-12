@@ -7,7 +7,85 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Tue, 31 Dec 2024 07:27:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Jul 2025 19:59:20 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>家庭 NAS &#43; 私有云，我的家用服务器装了什么</title>
+      <link>http://www.jinhuaiyao.com/posts/what-is-installed-on-my-home-server/</link>
+      <pubDate>Sat, 12 Jul 2025 19:59:20 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/what-is-installed-on-my-home-server/</guid>
+      <description>&lt;p&gt;今年 2 月中旬服役了快 10 年的威联通 NAS 突然没响应，折腾半天已然无力回天。&lt;/p&gt;
+&lt;p&gt;研究一阵子后决定把以前公司淘汰下来的 Dell 工作站 T7820 改造成家用服务器。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这次改造的目标是所有个人重要数据都不依赖 OneDrive、Dropbox 等公共网盘进行存储&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;底层系统选择相对比较熟悉的 Ubuntu，安装了 Ubuntu 24.04.2 LTS Server 版本。&lt;/p&gt;
+&lt;p&gt;存储是一块 1T 固态硬盘、两块 8T 机械硬盘和一个 8T 桌面移动硬盘。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~$ df -h |egrep &amp;#39;home|media&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/nvme0n1p3  838G  103G  693G  13% /home
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sda1       7.3T  2.4T  4.6T  34% /media/jinhuaiyao/data2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sdb1       7.3T  2.2T  4.7T  32% /media/jinhuaiyao/data1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sdc1       7.3T  2.4T  4.6T  35% /media/jinhuaiyao/backup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;装了什么：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nginx + WebDAV&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用于 DEVONthink 和 Zotero 的同步。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@jinhuaiyao-t7820:/home/jinhuaiyao/webdav# ls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;devonthink.dtCloud  index.html  zotero
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200458.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200532.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Samba&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用于局域网的设备访问服务器里的资料。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200625.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Docker 里安装了以下几个服务。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200706.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Glance&lt;/p&gt;
+&lt;p&gt;自托管的信息仪表盘，上面这个界面就是来自于 Glance。&lt;/p&gt;
+&lt;p&gt;Gitea&lt;/p&gt;
+&lt;p&gt;轻量级的、开源的 Git 代码仓库托管平台，用来管理我的代码和配置文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200746.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Immich + MT-Photos&lt;/p&gt;
+&lt;p&gt;开源自托管照片应用，存放我和家人的照片、视频。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200817.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200843.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Memos&lt;/p&gt;
+&lt;p&gt;轻量级的、开源的、自托管 “碎片记录”，用来临时存放一些信息。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200935.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Portainer&lt;/p&gt;
+&lt;p&gt;一个开源的 Docker 图形化管理面板。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201015.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;NginxProxyManager&lt;/p&gt;
+&lt;p&gt;反向代理和 HTTPS 管理工具。使用它让我的内网也能使用 https。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201045.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nextcloud&lt;/p&gt;
+&lt;p&gt;开源、自托管的私有云存储平台，我用来替代 OneDrive、Dropbox。尽可能地把所有个人数据都存放在这里。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201110.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;数据存放在 /media/jinhuaiyao/data1 这个磁盘上。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data1/nextcloud$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;admin  appdata_ochyim22b4zf  audit.log  fts-index.done  index.html  nextcloud.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data1/nextcloud$ df -h .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Filesystem      Size  Used Avail Use% Mounted on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sdb1       7.3T  2.2T  4.7T  32% /media/jinhuaiyao/data1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Glances&lt;/p&gt;
+&lt;p&gt;系统性能监控工具，用来监控 Ubuntu 服务器的状态。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201143.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;QEMU-KVM&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用它安装了两台虚拟机，Ubuntu 桌面版和 Windows 10。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~$ virsh list --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Id   Name           State
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1    nextcloud-vm   running
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 23   win10          running
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201229.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 桌面版上安装 Nextcloud 的客户端，数据同步存放在 /media/jinhuaiyao/data2 这个磁盘上，可作为一份数据备份。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/Nextcloud$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Backup  Config  DengDeng  Learning  Personal  Reading  Tools  TV  Videos  Zotero
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201306.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Windows 10 一般只是临时用一下，使用 macOS 上的 “Windows App” 远程连接。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;目前，这些应用和服务已经基本覆盖了我的使用需求。关于数据备份和内网访问，我会在后续单独写文章详细展开一下。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>2024 回顾 &#43; 2025 期待</title>
       <link>http://www.jinhuaiyao.com/posts/2024-review-2025-plan/</link>
