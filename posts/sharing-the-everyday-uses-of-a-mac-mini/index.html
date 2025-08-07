@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一台 Mac mini 的日常用途分享</title>
+<meta name="description" content="分享一点我的 Mac mini 的日常使用。
+网络设置
+Mac mini 用网线连接路由器，手动设置 ip。
+家庭网络默认网段是 10.0.0.0/24，设置 Proxy 网段为 10.0.3.0/24，并且默认网关指向 Mac mini 的 ip - 10.">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/sharing-the-everyday-uses-of-a-mac-mini/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.40602969775ec83f8e99714fa2300cc28ba60bb57dba65fa9406f626a931d492.css" integrity="sha256-QGApaXdeyD+OmXFPojAMwoumC7V9umX6lAb2Jqkx1JI=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+    <a href="http://www.jinhuaiyao.com/">
+        <img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/profile-picture.jpg" width="80" height="80" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-sm  gap-3 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">首页</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+    </div>
+
+
+    <header class="flex flex-col gap-1 mb-5">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">一台 Mac mini 的日常用途分享</h2>
+
+        <div class="text-xs font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2025-08-08 07:15:55 &#43;0800 CST" title="2025-08-08 07:15:55 &#43;0800 CST">
+    2025/08/08
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <p>分享一点我的 Mac mini 的日常使用。</p>
+<p><strong>网络设置</strong></p>
+<p>Mac mini 用网线连接路由器，手动设置 ip。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-08-04.jpg" alt=""></p>
+<p>家庭网络默认网段是 10.0.0.0/24，设置 Proxy 网段为 10.0.3.0/24，并且默认网关指向 Mac mini 的 ip - 10.0.3.100。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_20-58-53.png" alt=""></p>
+<p>开启 Surge 增强模式，启用 ip 转发功能。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-12-12.jpg" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % sysctl net.inet.ip.forwarding
+</span></span><span class="line"><span class="cl">net.inet.ip.forwarding: 1
+</span></span></code></pre></div><p>这样，所有连接到 Proxy 网络的设备，其流量都会通过 Mac mini 转发。</p>
+<p>同时开启 Surge Ponte，可以在外通过安装了 Surge 的手机或电脑，远程访问家庭网络。</p>
+<p><strong>共享功能</strong></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-07-28.jpg" alt=""></p>
+<p>开启共享功能后，可以通过远程桌面连接到 Mac mini，支持 SSH 登录，也可以通过网络挂载 Mac mini 的文件夹。</p>
+<p><strong>照片 &amp; 时间机器</strong></p>
+<p>Mac mini 外接 1T 的 SSD 移动硬盘，并将照片图库的默认存储位置迁移到该外接硬盘，同时设置为下载并保留原片，确保所有原始照片完整保存在本地。</p>
+<p>再连接一块 4T 的 HDD 移动硬盘，配置 Time Machine 每小时备份照片库，作为照片和视频的本地备份。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-40.jpg" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-53.jpg" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-24-55.jpg" alt=""></p>
+<p><strong>定时作业</strong></p>
+<p>通过 cronjob 去定时完成一些备份、数据传输、监控功能。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@huaiyaos-mac-mini ~ % crontab -l
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># backup crontab weekly - 02/04/2024
+</span></span><span class="line"><span class="cl">5 2 * * 0 /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_crontab.sh &gt;/Users/jinhuaiyao/Log/backup_crontab.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（备份 Mac mini 上的 cronjob 条目）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># backup memos weekly - 03/10/2024
+</span></span><span class="line"><span class="cl">10 1 * * 0 /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_memos.sh &gt;/Users/jinhuaiyao/Log/backup_memos.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（备份云服务器上的 memos 数据）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># upload heatmap data - 05/07/2024
+</span></span><span class="line"><span class="cl">55 23 * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/upload_heatmap_data.sh &gt;/Users/jinhuaiyao/Log/upload_heatmap_data.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（调用 notion api 获取特定的数据，上传到云服务器）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># backup planka kanban weekly - 07/11/2024
+</span></span><span class="line"><span class="cl">30 1 * * 0 /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_planka.sh &gt;/Users/jinhuaiyao/Log/backup_planka.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（备份云服务器上的 planka 数据）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># check if any unknown screen sharing session - 11/30/2024
+</span></span><span class="line"><span class="cl">*/5 * * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/ck_screen_sharing_session.sh &gt;/Users/jinhuaiyao/Log/ck_screen_sharing_session.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（监控 Mac mini 的远程登录用户，遇到未知用户登录则通过 Bark 通知）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># notion update for nexttime - 12/19/2024
+</span></span><span class="line"><span class="cl">30 09 * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/notion_update_for_nexttime.sh &gt; /Users/jinhuaiyao/Log/notion_update_for_nexttime.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（调用 notion api，根据 todo 条目的间隔和上次完成日期去获得下一次出现的日期）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># sync gitea - 04/13/2025
+</span></span><span class="line"><span class="cl">1 1 * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/sync-gitea.sh  &gt;/Users/jinhuaiyao/Log/gitea.txt 2&gt;&amp;1
+</span></span><span class="line"><span class="cl">（备份 gitea 里的脚本到本地）
+</span></span></code></pre></div><p><strong>Nextcloud</strong></p>
+<p>安装 Nextcloud 客户端，保留最重要的个人资料到本地，并通过 Time Machine 定期备份。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-09-55.jpg" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-38-06.jpg" alt=""></p>
+<p><strong>Reeder</strong></p>
+<p>配置每小时抓取一次 feeds，通过 iCloud 同步，这样其他设备上就不用重复抓取了。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-11-17.jpg" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_4699.PNG" alt=""></p>
+<p><strong>微信备份</strong></p>
+<p>每周手动同步一次手机微信到 Mac mini，作为备份。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-46-05.jpg" alt=""></p>
+
+    </section>
+
+
+
+
+    
+
+
+    <footer>
+        
+
+
+    </footer>
+
+
+
+
+
+        </main>
+        <br><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2025  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>

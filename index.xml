@@ -9,6 +9,78 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>一台 Mac mini 的日常用途分享</title>
+      <link>http://www.jinhuaiyao.com/posts/sharing-the-everyday-uses-of-a-mac-mini/</link>
+      <pubDate>Fri, 08 Aug 2025 07:15:55 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/sharing-the-everyday-uses-of-a-mac-mini/</guid>
+      <description>&lt;p&gt;分享一点我的 Mac mini 的日常使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;网络设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mac mini 用网线连接路由器，手动设置 ip。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-08-04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;家庭网络默认网段是 10.0.0.0/24，设置 Proxy 网段为 10.0.3.0/24，并且默认网关指向 Mac mini 的 ip - 10.0.3.100。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_20-58-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;开启 Surge 增强模式，启用 ip 转发功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-12-12.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % sysctl net.inet.ip.forwarding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;net.inet.ip.forwarding: 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样，所有连接到 Proxy 网络的设备，其流量都会通过 Mac mini 转发。&lt;/p&gt;
+&lt;p&gt;同时开启 Surge Ponte，可以在外通过安装了 Surge 的手机或电脑，远程访问家庭网络。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;共享功能&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-07-28.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;开启共享功能后，可以通过远程桌面连接到 Mac mini，支持 SSH 登录，也可以通过网络挂载 Mac mini 的文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;照片 &amp;amp; 时间机器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mac mini 外接 1T 的 SSD 移动硬盘，并将照片图库的默认存储位置迁移到该外接硬盘，同时设置为下载并保留原片，确保所有原始照片完整保存在本地。&lt;/p&gt;
+&lt;p&gt;再连接一块 4T 的 HDD 移动硬盘，配置 Time Machine 每小时备份照片库，作为照片和视频的本地备份。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-40.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-53.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-24-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定时作业&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过 cronjob 去定时完成一些备份、数据传输、监控功能。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % crontab -l
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup crontab weekly - 02/04/2024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5 2 * * 0 /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_crontab.sh &amp;gt;/Users/jinhuaiyao/Log/backup_crontab.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（备份 Mac mini 上的 cronjob 条目）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup memos weekly - 03/10/2024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10 1 * * 0 /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_memos.sh &amp;gt;/Users/jinhuaiyao/Log/backup_memos.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（备份云服务器上的 memos 数据）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# upload heatmap data - 05/07/2024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;55 23 * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/upload_heatmap_data.sh &amp;gt;/Users/jinhuaiyao/Log/upload_heatmap_data.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（调用 notion api 获取特定的数据，上传到云服务器）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup planka kanban weekly - 07/11/2024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 1 * * 0 /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_planka.sh &amp;gt;/Users/jinhuaiyao/Log/backup_planka.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（备份云服务器上的 planka 数据）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# check if any unknown screen sharing session - 11/30/2024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*/5 * * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/ck_screen_sharing_session.sh &amp;gt;/Users/jinhuaiyao/Log/ck_screen_sharing_session.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（监控 Mac mini 的远程登录用户，遇到未知用户登录则通过 Bark 通知）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# notion update for nexttime - 12/19/2024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 09 * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/notion_update_for_nexttime.sh &amp;gt; /Users/jinhuaiyao/Log/notion_update_for_nexttime.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（调用 notion api，根据 todo 条目的间隔和上次完成日期去获得下一次出现的日期）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# sync gitea - 04/13/2025
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1 1 * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/sync-gitea.sh  &amp;gt;/Users/jinhuaiyao/Log/gitea.txt 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（备份 gitea 里的脚本到本地）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Nextcloud&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安装 Nextcloud 客户端，保留最重要的个人资料到本地，并通过 Time Machine 定期备份。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-09-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-38-06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reeder&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;配置每小时抓取一次 feeds，通过 iCloud 同步，这样其他设备上就不用重复抓取了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-11-17.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_4699.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微信备份&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每周手动同步一次手机微信到 Mac mini，作为备份。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-46-05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>解决了一些已知问题 VOL.001 | 还得动起来</title>
       <link>http://www.jinhuaiyao.com/posts/solved-some-known-issues-vol.001/</link>
       <pubDate>Thu, 17 Jul 2025 07:34:17 +0800</pubDate>
