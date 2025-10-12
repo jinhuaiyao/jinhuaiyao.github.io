@@ -9,6 +9,44 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>解决了一些已知问题 VOL.002 | 异国工作</title>
+      <link>http://www.jinhuaiyao.com/posts/solved-some-known-issues-vol.002/</link>
+      <pubDate>Sun, 12 Oct 2025 20:34:17 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/solved-some-known-issues-vol.002/</guid>
+      <description>&lt;p&gt;因工作变动需要 relocate 到新加坡，最近解决了一些已知问题：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;访问国内家庭局域网&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Surge 里之前的策略和规则绝大部分都不适用了。&lt;/p&gt;
+&lt;p&gt;研究了一圈，最后其实就是使用 Surge Ponte，简简单单添加一条策略就行：家里在局域网段的访问通过家里的 Mac mini。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-12_11-25-02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-12_10-46-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;另外，有一些必须要中国 IP 才能访问的资源，单独加一条规则即可，通过家里网络中转一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-12_10-47-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Apple Watch跑步定位的问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本来以为 Apple Watch 跑步定位轨迹一定要 eSIM，其实只要 GPS 就行。到了新加坡关闭了国内的 eSIM 服务一样可以定位跑步轨迹。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_6425.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Apple Pay绑定OCBC借记卡&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;拿到实体卡当天就尝试在 Apple Pay 里添加，一直报错。打电话给客服，说是要等 12 小时，结果还是不行。&lt;/p&gt;
+&lt;p&gt;最后还是在 xhs 上找到了解决方案：把 iPhone 地区改成新加坡，语言改成英语，重启一下即可成功添加。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>闲话 | 基金定投的第 15 年</title>
+      <link>http://www.jinhuaiyao.com/posts/the-15th-year-of-fund-regular-investment/</link>
+      <pubDate>Sun, 07 Sep 2025 20:35:49 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/the-15th-year-of-fund-regular-investment/</guid>
+      <description>&lt;p&gt;从 2010 年 12 月 13 日的第一笔基金定投，到现在快 15 年整了。&lt;/p&gt;
+&lt;p&gt;这 15 年里每个月都会买入基金，没有断过，也算是一种坚持了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/640.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;前 8 年都是买的都是基金经理打理的基金，2018 年开始买入指数基金。&lt;/p&gt;
+&lt;p&gt;回头看去，最省心还是一篮子指数基金计划，比如 E大的长赢指数和有知有行的长钱账户。不用操心基金的买入和卖出，只要长期持有即可，对于绝大部分的普通投资者非常友好。&lt;/p&gt;
+&lt;p&gt;推荐一下有知有行的&lt;a href=&#34;https://book.douban.com/subject/36295222/&#34;&gt;《投资第1课》&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>一台 Mac mini 的日常用途分享</title>
       <link>http://www.jinhuaiyao.com/posts/sharing-the-everyday-uses-of-a-mac-mini/</link>
       <pubDate>Fri, 08 Aug 2025 07:15:55 +0800</pubDate>
