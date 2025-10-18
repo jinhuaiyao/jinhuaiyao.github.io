@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用浏览器随时访问VSCode，集中管理代码片段</title>
+<meta name="description" content="这两天决定重新启用服务器上的应用 code-server，用来整理工作中常用的代码和命令，把散乱在各处的片段集中到一起，电脑、手机上都可以通过浏览器访问。
+https://github.com/coder/code-server
+Run VS Code on any machine anywhere and access it in the browser.">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/access-vscode-anytime-with-a-browser/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.40602969775ec83f8e99714fa2300cc28ba60bb57dba65fa9406f626a931d492.css" integrity="sha256-QGApaXdeyD+OmXFPojAMwoumC7V9umX6lAb2Jqkx1JI=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+    <a href="http://www.jinhuaiyao.com/">
+        <img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/profile-picture.jpg" width="80" height="80" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-sm  gap-3 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">首页</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+    </div>
+
+
+    <header class="flex flex-col gap-1 mb-5">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">用浏览器随时访问VSCode，集中管理代码片段</h2>
+
+        <div class="text-xs font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2025-10-18 18:42:04 &#43;0800 &#43;08" title="2025-10-18 18:42:04 &#43;0800 &#43;08">
+    2025/10/18
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <p>这两天决定重新启用服务器上的应用 code-server，用来整理工作中常用的代码和命令，把散乱在各处的片段集中到一起，电脑、手机上都可以通过浏览器访问。</p>
+<p><a href="https://github.com/coder/code-server">https://github.com/coder/code-server</a></p>
+<p>Run VS Code on any machine anywhere and access it in the browser. （在任何地方的任何机器上运行 VS Code，并在浏览器中访问。）</p>
+<p>效果图：</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-42-09.png" alt=""></p>
+<p><strong>安装</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@meta-unicorn-2:~/coder# pwd
+</span></span><span class="line"><span class="cl">/root/coder
+</span></span><span class="line"><span class="cl">root@meta-unicorn-2:~/coder# cat docker-compose.yaml
+</span></span><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  code-server:
+</span></span><span class="line"><span class="cl">    image: codercom/code-server:latest
+</span></span><span class="line"><span class="cl">    container_name: code-server
+</span></span><span class="line"><span class="cl">    ports:
+</span></span><span class="line"><span class="cl">      - &#34;8090:8080&#34;
+</span></span><span class="line"><span class="cl">    environment:
+</span></span><span class="line"><span class="cl">      - PASSWORD=xxx
+</span></span><span class="line"><span class="cl">    volumes:
+</span></span><span class="line"><span class="cl">      - ~/code-server-data:/home/coder
+</span></span><span class="line"><span class="cl">    restart: unless-stopped
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@meta-unicorn-2:~/coder# docker compose up -d
+</span></span><span class="line"><span class="cl">[+] Running 2/2
+</span></span><span class="line"><span class="cl"> ✔ Network coder_default  Created                                                                                                                                                                                0.1s
+</span></span><span class="line"><span class="cl"> ✔ Container code-server  Started                                                                                                                                                                                0.5s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@meta-unicorn-2:~# docker ps -a |head -2
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE                              COMMAND                  CREATED         STATUS                   PORTS                                         NAMES
+</span></span><span class="line"><span class="cl">f4bc53deff9e   codercom/code-server:latest        &#34;/usr/bin/entrypoint…&#34;   3 hours ago     Up 3 hours               0.0.0.0:8090-&gt;8080/tcp, :::8090-&gt;8080/tcp     code-server 
+</span></span></code></pre></div><p><strong>Cloudflare 设置域名解析</strong></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_21-06-01.png" alt=""></p>
+<p><strong>nginx 设置反向代理</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/nginx/conf.d/code.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">    listen 443 ssl;
+</span></span><span class="line"><span class="cl">    listen [::]:443 ssl;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    server_name code.xxx.com;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ssl_certificate /home/rjin/cert/cf.pem;
+</span></span><span class="line"><span class="cl">    ssl_certificate_key /home/rjin/cert/cf.key;
+</span></span><span class="line"><span class="cl">    ssl_session_timeout 1d;
+</span></span><span class="line"><span class="cl">    ssl_session_cache shared:MozSSL:10m;
+</span></span><span class="line"><span class="cl">    ssl_session_tickets off;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span class="line"><span class="cl">    ssl_ciphers &#39;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384&#39;;
+</span></span><span class="line"><span class="cl">    ssl_prefer_server_ciphers off;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location / {
+</span></span><span class="line"><span class="cl">        proxy_pass http://127.0.0.1:8090;
+</span></span><span class="line"><span class="cl">        proxy_redirect off;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        proxy_set_header Host $host;
+</span></span><span class="line"><span class="cl">        proxy_set_header Upgrade $http_upgrade;
+</span></span><span class="line"><span class="cl">        proxy_set_header Connection upgrade;
+</span></span><span class="line"><span class="cl">        proxy_set_header Accept-Encoding gzip;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP $remote_addr;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-Proto $scheme;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo nginx -s reload
+</span></span></code></pre></div><p>访问 <a href="https://code.xxx.com">https://code.xxx.com</a> 验证一下。</p>
+<p><strong>设置 Cloudflare Zero Trust</strong></p>
+<p>访问网页前强制登录，在 code-server 自带的访问密码之上多一层访问控制。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-50-05.png" alt=""></p>
+<p>只允许自己的邮箱可以验证。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-50-36.png" alt=""></p>
+<p>验证方式是一次性验证码。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-51-03.png" alt=""></p>
+<p>效果如下：</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-54-31.png" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-55-16.png" alt=""></p>
+<p><strong>设置类 macOS 应用</strong></p>
+<p>点击Chrome地址栏上的小图标。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-58-18.png" alt=""></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-39-37.png" alt=""></p>
+<p>这样就和VSCode app样子很像了。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-59-43.png" alt=""></p>
+<p><strong>Alfred 设置快捷键</strong></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_21-03-10.png" alt=""></p>
+<p>用option+k可以快速调出界面。</p>
+<p><strong>数据定期备份</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 服务器上</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat /root/backup_codeserver.sh
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl">rsync -a /root/code-server-data/ /home/rjin/code-server-data/
+</span></span><span class="line"><span class="cl">chown -R rjin:rjin /home/rjin/code-server-data
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cron job</span>
+</span></span><span class="line"><span class="cl"><span class="m">10</span> <span class="m">15</span> * * * /root/backup_codeserver.sh &gt; /root/backup_codeserver.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 家里 Mac mini 上</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_codeserver.sh
+</span></span><span class="line"><span class="cl"><span class="nv">IP</span><span class="o">=</span><span class="s2">&#34;104.xx.xx.xx&#34;</span>
+</span></span><span class="line"><span class="cl">/usr/bin/rsync -avr -e <span class="s2">&#34;ssh -p 10086&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --exclude<span class="o">=</span><span class="s1">&#39;.config&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --exclude<span class="o">=</span><span class="s1">&#39;.local&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --exclude<span class="o">=</span><span class="s1">&#39;.cache&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rjin@<span class="si">${</span><span class="nv">IP</span><span class="si">}</span>:/home/rjin/code-server-data/ <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    /Users/jinhuaiyao/Nextcloud/Backup/backup_codeserver/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cron job</span>
+</span></span><span class="line"><span class="cl"><span class="m">31</span> <span class="m">1</span> * * * /bin/bash /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/backup_codeserver.sh &gt; /Users/jinhuaiyao/Log/backup_codeserver.txt 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span></code></pre></div>
+    </section>
+
+
+
+
+    
+
+
+    <footer>
+        
+
+
+    </footer>
+
+
+
+
+
+        </main>
+        <br><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2025  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
