@@ -7,20 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sun, 12 Oct 2025 20:34:17 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>解决问题</title>
-      <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Sun, 12 Oct 2025 20:34:17 +0800</pubDate>
-      
-      <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 01 Nov 2025 18:48:30 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>备份</title>
       <link>http://www.jinhuaiyao.com/tags/%E5%A4%87%E4%BB%BD/</link>
-      <pubDate>Fri, 08 Aug 2025 07:15:55 +0800</pubDate>
+      <pubDate>Sat, 01 Nov 2025 18:48:30 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/tags/%E5%A4%87%E4%BB%BD/</guid>
       <description></description>
@@ -29,9 +20,18 @@
     <item>
       <title>方法</title>
       <link>http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Fri, 08 Aug 2025 07:15:55 +0800</pubDate>
+      <pubDate>Sat, 01 Nov 2025 18:48:30 +0800</pubDate>
       
       <guid>http://www.jinhuaiyao.com/tags/%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解决问题</title>
+      <link>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 12 Oct 2025 20:34:17 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/</guid>
       <description></description>
     </item>
     

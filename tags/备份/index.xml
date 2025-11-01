@@ -7,7 +7,150 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Fri, 08 Aug 2025 07:15:55 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Nov 2025 18:48:30 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的个人数据分级与备份体系 - 2025</title>
+      <link>http://www.jinhuaiyao.com/posts/my-personal-data-classification-and-backup-system-2025/</link>
+      <pubDate>Sat, 01 Nov 2025 18:48:30 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/my-personal-data-classification-and-backup-system-2025/</guid>
+      <description>&lt;p&gt;随着时间的推移，我的个人数据分级与备份体系也在不断地改进。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先集中，再分级，最后备份：建立个人数据体系&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;集中所有的数字资料数据：照片、视频、文档等等。&lt;/li&gt;
+&lt;li&gt;整理资料，分类，按照重要程度分等级。&lt;/li&gt;
+&lt;li&gt;根据数据分级制定相应的备份策略。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;我的个人数据分级&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;分类&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;内容&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;分级&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;个人照片和视频&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;个人文档资料&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;日记・笔记、文章・日常的琐碎记录&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;微信聊天记录&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;账号和密码&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;其他个人资料&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;投资统计・家庭开销统计・体检报告电子版・证件电子版・保险电子版・软件配置文件・云服务器上的数据&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;工作笔记&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;其他的收集&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;软件和工具・学习资料（英语、数据库、编程）・别人的文章及标注・图书、剧集、视频&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;我的备份体系：集中、自动、多重、安全&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我认为一个好的备份体系要做到以下几点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据源尽可能集中到一起，比如照片视频存放在一个统一的地方、所有文件存放在NextCloud里。我以前用了好几块移动硬盘备份手机相册，有时候同一张照片存放在好几个硬盘上，最后花了很多时间去整理、去重。&lt;/li&gt;
+&lt;li&gt;备份尽可能地自动化，手动备份要牵扯更多的精力，容易遗忘。&lt;/li&gt;
+&lt;li&gt;重要资料需要多重备份，比如只是定期把数据备份到移动硬盘里，突然有一天硬盘坏了，悲剧。&lt;/li&gt;
+&lt;li&gt;定期检查备份的可用性，万一哪天数据丢失了却发现之前的备份不可用，悲剧。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;个人照片和视频&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;iPhone手机是唯一的数据源，目前有600G+。&lt;/p&gt;
+&lt;p&gt;开通iCloud，Mac mini 上照片应用设置下载并保留原片到外接移动硬盘，外接移动硬盘通过Time Machine自动备份。&lt;/p&gt;
+&lt;p&gt;另外，通过家用服务器上的MT-Photos手动定期备份。&lt;/p&gt;
+&lt;p&gt;上传到MT-Photos里的照片在服务器上会通过cron job会每天rsync到外接硬盘。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_16-16-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_16-16-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;个人文档资料&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;日记、笔记、文章、日常的琐碎记录目前存放在Notion里，还有一些旧的markdown文档也会逐渐迁移过去。&lt;/p&gt;
+&lt;p&gt;备份方式是每个月月底手动导出整个Workspace，存放到NextCloud里。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_14-57-00.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微信聊天记录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;之前在上海的时候，每周会手动备份到Mac mini，再通过 Time Machine进行备份。&lt;/p&gt;
+&lt;p&gt;目前是每周手动备份到MacBook Pro。&lt;/p&gt;
+&lt;p&gt;此外，iCloud里iPhone备份中包含微信app的备份，这个是自动备份的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Picsew_20251101150406.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;账号和密码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;账号和密码都存于1Password，1Password主密码写到某本笔记本上了。&lt;/p&gt;
+&lt;p&gt;设置提醒每个月会导出1Password为1PUX文件，并用gpg加密一层后存放到NextCloud里。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Downloads % ls -ltr 1P*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-------  1 jinhuaiyao  staff  14869937 Nov  1 14:16 1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Downloads % which gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/homebrew/bin/gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Downloads % gpg -c 1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux &amp;gt; 1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;File &amp;#39;1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux.gpg&amp;#39; exists. Overwrite? (y/N) y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Downloads % gpg -d 1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux.gpg &amp;gt;1.1pux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg: AES256.CFB encrypted data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg: encrypted with 1 passphrase
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Downloads % ls -ltr |tail -3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-------   1 jinhuaiyao  staff   14869937 Nov  1 14:16 1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--   1 jinhuaiyao  staff   14870073 Nov  1 14:26 1PasswordExport-EXKZT3CWEVE23PT3L5SVJZHDNE-20251101-141630.1pux.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--   1 jinhuaiyao  staff   14869937 Nov  1 14:27 1.1pux
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;其他个人资料和工作笔记&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;投资统计、家庭开销统计、体检报告电子版、证件电子版、保险电子版、软件配置文件、云服务器上的数据、工作笔记，这些要么直接存放在家庭服务器上的NextCloud里，要么会通过网络备份到NextCloud。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_15-15-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他的收集&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;软件和工具，学习资料（英语，数据库，编程），别人的文章及标注，图书、剧集、视频。&lt;/p&gt;
+&lt;p&gt;这些直接存放到NextCloud里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NextCloud备份的设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NextCloud的里的所有文件会通过服务器上的Nextcloud客户端实时同步到另一个磁盘。（详情见：&lt;a href=&#34;https://www.jinhuaiyao.com/posts/what-is-installed-on-my-home-server/&#34;&gt;家庭NAS + 私有云，我的家用服务器装了什么&lt;/a&gt; 里“QEMU-KVM”部分）&lt;/p&gt;
+&lt;p&gt;另外，通过cron job每天自动rsync到外接硬盘。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~$ df -h |grep media
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sdb1       7.3T  2.1T  4.8T  31% /media/jinhuaiyao/data1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sda1       7.3T  2.4T  4.5T  35% /media/jinhuaiyao/data2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sdc1       7.3T  2.6T  4.4T  38% /media/jinhuaiyao/backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~$ crontab -l
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20 4 * * * cd /media/jinhuaiyao/data2 &amp;amp;&amp;amp; rsync -avh  HYPhoto /media/jinhuaiyao/backup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后，MacBook和Mac mini客户端也会下载重要文件夹到本地，又是一份保障。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Nextcloud % ls -ltr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  23 jinhuaiyao  staff  736 Jul 18 08:58 Reading
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x   6 jinhuaiyao  staff  192 Jul 27 19:27 Config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  17 jinhuaiyao  staff  544 Jul 31 11:04 Personal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x   9 jinhuaiyao  staff  288 Oct 27 20:46 Learning
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini Nextcloud % ls -ltr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x   5 jinhuaiyao  staff  160 Jul 27 19:27 Config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  15 jinhuaiyao  staff  480 Jul 28 13:34 Learning
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  22 jinhuaiyao  staff  704 Jul 28 14:35 Reading
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  16 jinhuaiyao  staff  512 Aug  2 14:18 Personal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  16 jinhuaiyao  staff  512 Oct 21 21:06 Backup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;高枕无忧！&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>一台 Mac mini 的日常用途分享</title>
       <link>http://www.jinhuaiyao.com/posts/sharing-the-everyday-uses-of-a-mac-mini/</link>
