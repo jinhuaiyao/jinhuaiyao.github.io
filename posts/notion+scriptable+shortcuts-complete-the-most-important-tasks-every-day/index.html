@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion&#43;Scriptable&#43;快捷指令，每天完成最重要的事</title>
+<meta name="description" content="每天完成最重要的几件事，这一天就算没有虚度。
+每天打开手机，看一眼，就知道还有什么事没做，简单而清晰。
+点击一下按钮，输入内容，即可完成打卡。
+实现方式还是利用自己的“三板斧”：Notion、Scriptable和Apple快捷指令。
+“今日打卡”部分
+Notion api&#43;Scriptable app，这个之前也提到过，需要做的就是明确一下需求和实现思路，脚本部分让AI帮忙即可。
+我的实现思路是调用Notion api，找到当天的所有记录，如果记录里符合特定的tag就表明这一项已经完成了。
+const TASK_TAGS = { &#34;晨间日记&#34;: &#34;Diary&#34;, &#34;背单词&#43;多邻国&#34;: &#34;Vocabulary&#34;, &#34;运动&#34;: &#34;Workout&#34;, &#34;平板支撑&#34;: &#34;Plank&#34;, &#34;阅读&#34;: &#34;Reading&#34;, &#34;学习数据库&#43;编程&#34;: &#34;DBLearning&#34;, &#34;总结工作&#34;: &#34;WorkingSummary&#34;, &#34;等等的每日一照&#34;: &#34;DengDengPhoto&#34; }; Scriptable的脚本：">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/notion&#43;scriptable&#43;shortcuts-complete-the-most-important-tasks-every-day/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.40602969775ec83f8e99714fa2300cc28ba60bb57dba65fa9406f626a931d492.css" integrity="sha256-QGApaXdeyD+OmXFPojAMwoumC7V9umX6lAb2Jqkx1JI=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+    <a href="http://www.jinhuaiyao.com/">
+        <img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/profile-picture.jpg" width="80" height="80" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-sm  gap-3 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">首页</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+    </div>
+
+
+    <header class="flex flex-col gap-1 mb-5">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">Notion&#43;Scriptable&#43;快捷指令，每天完成最重要的事</h2>
+
+        <div class="text-xs font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2025-11-22 17:15:16 &#43;0800 &#43;08" title="2025-11-22 17:15:16 &#43;0800 &#43;08">
+    2025/11/22
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <p>每天完成最重要的几件事，这一天就算没有虚度。</p>
+<p>每天打开手机，看一眼，就知道还有什么事没做，简单而清晰。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_7826.PNG" alt=""></p>
+<p>点击一下按钮，输入内容，即可完成打卡。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_7827.PNG" alt=""></p>
+<p>实现方式还是利用自己的“三板斧”：Notion、Scriptable和Apple快捷指令。</p>
+<p><strong>“今日打卡”部分</strong></p>
+<p>Notion api+Scriptable app，这个之前也提到过，需要做的就是明确一下需求和实现思路，脚本部分让AI帮忙即可。</p>
+<p>我的实现思路是调用Notion api，找到当天的所有记录，如果记录里符合特定的tag就表明这一项已经完成了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">const TASK_TAGS = {
+</span></span><span class="line"><span class="cl">  &#34;晨间日记&#34;:        &#34;Diary&#34;,
+</span></span><span class="line"><span class="cl">  &#34;背单词+多邻国&#34;:    &#34;Vocabulary&#34;,
+</span></span><span class="line"><span class="cl">  &#34;运动&#34;:            &#34;Workout&#34;,
+</span></span><span class="line"><span class="cl">  &#34;平板支撑&#34;:        &#34;Plank&#34;,
+</span></span><span class="line"><span class="cl">  &#34;阅读&#34;:            &#34;Reading&#34;,
+</span></span><span class="line"><span class="cl">  &#34;学习数据库+编程&#34;: &#34;DBLearning&#34;,
+</span></span><span class="line"><span class="cl">  &#34;总结工作&#34;:        &#34;WorkingSummary&#34;,
+</span></span><span class="line"><span class="cl">  &#34;等等的每日一照&#34;:        &#34;DengDengPhoto&#34;
+</span></span><span class="line"><span class="cl">};
+</span></span></code></pre></div><p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-39-04.png" alt=""></p>
+<p>Scriptable的脚本：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// Variables used by Scriptable.
+</span></span><span class="line"><span class="cl">// These must be at the very top of the file. Do not edit.
+</span></span><span class="line"><span class="cl">// icon-color: deep-gray; icon-glyph: magic;
+</span></span><span class="line"><span class="cl">// icon-color: blue; icon-glyph: check-square;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 今日要打卡的项目 =========
+</span></span><span class="line"><span class="cl">const TASKS = [
+</span></span><span class="line"><span class="cl">  &#34;晨间日记&#34;,
+</span></span><span class="line"><span class="cl">  &#34;背单词+多邻国&#34;,
+</span></span><span class="line"><span class="cl">  &#34;运动&#34;,
+</span></span><span class="line"><span class="cl">  &#34;平板支撑&#34;,
+</span></span><span class="line"><span class="cl">  &#34;阅读&#34;,
+</span></span><span class="line"><span class="cl">  &#34;学习数据库+编程&#34;,
+</span></span><span class="line"><span class="cl">  &#34;总结工作&#34;,
+</span></span><span class="line"><span class="cl">  &#34;等等的每日一照&#34;
+</span></span><span class="line"><span class="cl">];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 每个项目对应的 Notion Tag 名
+</span></span><span class="line"><span class="cl">const TASK_TAGS = {
+</span></span><span class="line"><span class="cl">  &#34;晨间日记&#34;:        &#34;Diary&#34;,
+</span></span><span class="line"><span class="cl">  &#34;背单词+多邻国&#34;:          &#34;Vocabulary&#34;,
+</span></span><span class="line"><span class="cl">  &#34;运动&#34;:            &#34;Workout&#34;,
+</span></span><span class="line"><span class="cl">  &#34;平板支撑&#34;:        &#34;Plank&#34;,
+</span></span><span class="line"><span class="cl">  &#34;阅读&#34;:            &#34;Reading&#34;,
+</span></span><span class="line"><span class="cl">  &#34;学习数据库+编程&#34;: &#34;DBLearning&#34;,
+</span></span><span class="line"><span class="cl">  &#34;总结工作&#34;:        &#34;WorkingSummary&#34;,
+</span></span><span class="line"><span class="cl">  &#34;等等的每日一照&#34;:        &#34;DengDengPhoto&#34;
+</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 反向映射：tag -&gt; taskName
+</span></span><span class="line"><span class="cl">const TAG_TO_TASK = {};
+</span></span><span class="line"><span class="cl">for (const [task, tag] of Object.entries(TASK_TAGS)) {
+</span></span><span class="line"><span class="cl">  TAG_TO_TASK[tag] = task;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 颜色（和你月视图一致） =========
+</span></span><span class="line"><span class="cl">const COLOR_BLUE = new Color(&#34;#1a7ee8d4&#34;);  // 已完成
+</span></span><span class="line"><span class="cl">const COLOR_GRAY = new Color(&#34;#DFE3EB&#34;);    // 未完成
+</span></span><span class="line"><span class="cl">const COLOR_TEXT = Color.black();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">const BOX_SIZE   = 18;
+</span></span><span class="line"><span class="cl">const BOX_RADIUS = 4;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= Notion 配置（改这里） =========
+</span></span><span class="line"><span class="cl">const NOTION_API_URL = &#34;https://api.notion.com/v1/databases/xxx/query&#34;; // ← 换成你的 Daily 数据库 query URL
+</span></span><span class="line"><span class="cl">const NOTION_TOKEN   = &#34;ntn_xxx&#34;;   
+</span></span><span class="line"><span class="cl">const NOTION_VERSION = &#34;2022-06-28&#34;;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 分页
+</span></span><span class="line"><span class="cl">const PAGE_SIZE         = 100;
+</span></span><span class="line"><span class="cl">const SAFETY_MULTIPLIER = 3;
+</span></span><span class="line"><span class="cl">const MAX_PAGES         = SAFETY_MULTIPLIER;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 通用工具 =========
+</span></span><span class="line"><span class="cl">function sleep(ms) { return new Promise(r =&gt; setTimeout(r, ms)); }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">function pad(n) { return n &lt; 10 ? &#34;0&#34; + n : &#34;&#34; + n; }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">function formatDateKey(d) {
+</span></span><span class="line"><span class="cl">  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 今天 00:00 ~ 明天 00:00
+</span></span><span class="line"><span class="cl">function getTodayRange() {
+</span></span><span class="line"><span class="cl">  const now  = new Date();
+</span></span><span class="line"><span class="cl">  const y    = now.getFullYear();
+</span></span><span class="line"><span class="cl">  const m    = now.getMonth();
+</span></span><span class="line"><span class="cl">  const d    = now.getDate();
+</span></span><span class="line"><span class="cl">  const start = new Date(y, m, d);
+</span></span><span class="line"><span class="cl">  const end   = new Date(y, m, d + 1);
+</span></span><span class="line"><span class="cl">  return { start, end };
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= Notion 请求封装 =========
+</span></span><span class="line"><span class="cl">async function notionQuery(body) {
+</span></span><span class="line"><span class="cl">  let req = new Request(NOTION_API_URL);
+</span></span><span class="line"><span class="cl">  req.method = &#34;POST&#34;;
+</span></span><span class="line"><span class="cl">  req.headers = {
+</span></span><span class="line"><span class="cl">    &#34;Authorization&#34;: `Bearer ${NOTION_TOKEN}`,
+</span></span><span class="line"><span class="cl">    &#34;Content-Type&#34;: &#34;application/json&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Notion-Version&#34;: NOTION_VERSION
+</span></span><span class="line"><span class="cl">  };
+</span></span><span class="line"><span class="cl">  req.body = JSON.stringify(body);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  const res = await req.loadJSON();
+</span></span><span class="line"><span class="cl">  return {
+</span></span><span class="line"><span class="cl">    results:     res.results     || [],
+</span></span><span class="line"><span class="cl">    has_more:    res.has_more    || false,
+</span></span><span class="line"><span class="cl">    next_cursor: res.next_cursor || null
+</span></span><span class="line"><span class="cl">  };
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 从 page 中抽日期：优先 Date / Time，其次 created_time
+</span></span><span class="line"><span class="cl">function extractDailyDate(page) {
+</span></span><span class="line"><span class="cl">  try {
+</span></span><span class="line"><span class="cl">    const d1 = page.properties?.Date?.date?.start;
+</span></span><span class="line"><span class="cl">    if (d1) return new Date(d1);
+</span></span><span class="line"><span class="cl">  } catch (_) {}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  try {
+</span></span><span class="line"><span class="cl">    const d2 = page.properties?.Time?.date?.start;
+</span></span><span class="line"><span class="cl">    if (d2) return new Date(d2);
+</span></span><span class="line"><span class="cl">  } catch (_) {}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  try {
+</span></span><span class="line"><span class="cl">    const d3 = page.properties?.Time?.created_time;
+</span></span><span class="line"><span class="cl">    if (d3) return new Date(d3);
+</span></span><span class="line"><span class="cl">  } catch (_) {}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if (page.created_time) return new Date(page.created_time);
+</span></span><span class="line"><span class="cl">  if (page.last_edited_time) return new Date(page.last_edited_time);
+</span></span><span class="line"><span class="cl">  return null;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 核心：从 Notion 拉取“今天的所有条目”，看 tag 是否命中 =========
+</span></span><span class="line"><span class="cl">async function loadTodayCompletedTasks() {
+</span></span><span class="line"><span class="cl">  const { start, end } = getTodayRange();
+</span></span><span class="line"><span class="cl">  const completedSet = new Set();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  // 构造 tag 过滤：Tags 包含任意一个对应 tag 即可
+</span></span><span class="line"><span class="cl">  const tagFilters = Object.values(TASK_TAGS).map(tagName =&gt; ({
+</span></span><span class="line"><span class="cl">    property: &#34;Tags&#34;,
+</span></span><span class="line"><span class="cl">    multi_select: { contains: tagName }
+</span></span><span class="line"><span class="cl">  }));
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  let hasMore    = true;
+</span></span><span class="line"><span class="cl">  let nextCursor = null;
+</span></span><span class="line"><span class="cl">  let pageCount  = 0;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  while (hasMore &amp;&amp; pageCount &lt; MAX_PAGES) {
+</span></span><span class="line"><span class="cl">    const payload = {
+</span></span><span class="line"><span class="cl">      filter: {
+</span></span><span class="line"><span class="cl">        or: tagFilters   // Tags 包含任何一个目标 tag
+</span></span><span class="line"><span class="cl">      },
+</span></span><span class="line"><span class="cl">      sorts: [
+</span></span><span class="line"><span class="cl">        { timestamp: &#34;created_time&#34;, direction: &#34;descending&#34; }
+</span></span><span class="line"><span class="cl">      ],
+</span></span><span class="line"><span class="cl">      page_size: PAGE_SIZE
+</span></span><span class="line"><span class="cl">    };
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    if (nextCursor) payload.start_cursor = nextCursor;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    const { results, has_more, next_cursor } = await notionQuery(payload);
+</span></span><span class="line"><span class="cl">    pageCount += 1;
+</span></span><span class="line"><span class="cl">    hasMore    = !!has_more;
+</span></span><span class="line"><span class="cl">    nextCursor = next_cursor || null;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    let seenOlderThanToday = false;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    for (const page of results || []) {
+</span></span><span class="line"><span class="cl">      const d = extractDailyDate(page);
+</span></span><span class="line"><span class="cl">      if (!d) continue;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      if (d &gt;= start &amp;&amp; d &lt; end) {
+</span></span><span class="line"><span class="cl">        // 今天的记录：检查它有哪些 tag
+</span></span><span class="line"><span class="cl">        const tagList = page.properties?.Tags?.multi_select || [];
+</span></span><span class="line"><span class="cl">        for (const t of tagList) {
+</span></span><span class="line"><span class="cl">          const tagName = t.name;
+</span></span><span class="line"><span class="cl">          const taskName = TAG_TO_TASK[tagName];
+</span></span><span class="line"><span class="cl">          if (taskName) {
+</span></span><span class="line"><span class="cl">            completedSet.add(taskName);  // 该项目视为已完成
+</span></span><span class="line"><span class="cl">          }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">      } else if (d &lt; start) {
+</span></span><span class="line"><span class="cl">        // 已经翻到昨天之前，可以停了
+</span></span><span class="line"><span class="cl">        seenOlderThanToday = true;
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    if (seenOlderThanToday) break;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    if (hasMore) await sleep(150);
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  return completedSet;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 拉取今天已完成的项目 =========
+</span></span><span class="line"><span class="cl">let COMPLETED_TODAY = new Set();
+</span></span><span class="line"><span class="cl">try {
+</span></span><span class="line"><span class="cl">  COMPLETED_TODAY = await loadTodayCompletedTasks();
+</span></span><span class="line"><span class="cl">} catch (e) {
+</span></span><span class="line"><span class="cl">  console.error(&#34;Load Notion failed:&#34;, e);
+</span></span><span class="line"><span class="cl">  COMPLETED_TODAY = new Set();
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 某个项目是否完成
+</span></span><span class="line"><span class="cl">function isTaskDone(taskName) {
+</span></span><span class="line"><span class="cl">  return COMPLETED_TODAY.has(taskName);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 构建 Widget（左右两列，齐头对齐） =========
+</span></span><span class="line"><span class="cl">let widget = new ListWidget();
+</span></span><span class="line"><span class="cl">// 左边距调大一点，美观
+</span></span><span class="line"><span class="cl">widget.setPadding(10, 26, 10, 12);
+</span></span><span class="line"><span class="cl">widget.backgroundColor = Color.clear();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 标题
+</span></span><span class="line"><span class="cl">let titleText = widget.addText(&#34;今日打卡&#34;);
+</span></span><span class="line"><span class="cl">titleText.font = Font.boldSystemFont(16);
+</span></span><span class="line"><span class="cl">titleText.textColor = COLOR_TEXT;
+</span></span><span class="line"><span class="cl">widget.addSpacer(6);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 左右列容器
+</span></span><span class="line"><span class="cl">let grid = widget.addStack();
+</span></span><span class="line"><span class="cl">grid.layoutHorizontally();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 左列
+</span></span><span class="line"><span class="cl">let leftCol = grid.addStack();
+</span></span><span class="line"><span class="cl">leftCol.layoutVertically();
+</span></span><span class="line"><span class="cl">leftCol.spacing = 4;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 中间间隔
+</span></span><span class="line"><span class="cl">grid.addSpacer(24);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 右列
+</span></span><span class="line"><span class="cl">let rightCol = grid.addStack();
+</span></span><span class="line"><span class="cl">rightCol.layoutVertically();
+</span></span><span class="line"><span class="cl">rightCol.spacing = 4;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 每列的行数
+</span></span><span class="line"><span class="cl">const rowsPerCol = Math.ceil(TASKS.length / 2);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 左列放 0,2,4,6 ；右列放 1,3,5,7
+</span></span><span class="line"><span class="cl">for (let i = 0; i &lt; rowsPerCol; i++) {
+</span></span><span class="line"><span class="cl">  const leftIndex = 2 * i;
+</span></span><span class="line"><span class="cl">  if (leftIndex &lt; TASKS.length) {
+</span></span><span class="line"><span class="cl">    const name = TASKS[leftIndex];
+</span></span><span class="line"><span class="cl">    addTaskRow(leftCol, name, isTaskDone(name));
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  const rightIndex = 2 * i + 1;
+</span></span><span class="line"><span class="cl">  if (rightIndex &lt; TASKS.length) {
+</span></span><span class="line"><span class="cl">    const name = TASKS[rightIndex];
+</span></span><span class="line"><span class="cl">    addTaskRow(rightCol, name, isTaskDone(name));
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 单行：方块 + 文本
+</span></span><span class="line"><span class="cl">function addTaskRow(parentStack, taskName, checked) {
+</span></span><span class="line"><span class="cl">  let row = parentStack.addStack();
+</span></span><span class="line"><span class="cl">  row.layoutHorizontally();
+</span></span><span class="line"><span class="cl">  row.spacing = 6;
+</span></span><span class="line"><span class="cl">  row.centerAlignContent();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  let box = row.addStack();
+</span></span><span class="line"><span class="cl">  box.size = new Size(BOX_SIZE, BOX_SIZE);
+</span></span><span class="line"><span class="cl">  box.cornerRadius = BOX_RADIUS;
+</span></span><span class="line"><span class="cl">  box.centerAlignContent();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if (checked) {
+</span></span><span class="line"><span class="cl">    box.backgroundColor = COLOR_BLUE;
+</span></span><span class="line"><span class="cl">    let check = box.addText(&#34;✓&#34;);
+</span></span><span class="line"><span class="cl">    check.font = Font.systemFont(12);
+</span></span><span class="line"><span class="cl">    check.textColor = Color.white();
+</span></span><span class="line"><span class="cl">    check.centerAlignText();
+</span></span><span class="line"><span class="cl">  } else {
+</span></span><span class="line"><span class="cl">    box.backgroundColor = COLOR_GRAY;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  let label = row.addText(taskName);
+</span></span><span class="line"><span class="cl">  label.font = Font.systemFont(13);
+</span></span><span class="line"><span class="cl">  label.textColor = COLOR_TEXT;
+</span></span><span class="line"><span class="cl">  label.lineLimit = 1;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// ========= 完成 =========
+</span></span><span class="line"><span class="cl">if (config.runsInWidget) {
+</span></span><span class="line"><span class="cl">  Script.setWidget(widget);
+</span></span><span class="line"><span class="cl">} else {
+</span></span><span class="line"><span class="cl">  await widget.presentMedium();
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">Script.complete();
+</span></span></code></pre></div><p>点击一下看看效果。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Picsew_20251122105537.JPEG" alt=""></p>
+<p>然后设置桌面小组件，效果如文中的第一张图。</p>
+<p><strong>按钮部分</strong></p>
+<p>使用Notion api+快捷指令app。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-42-14.png" alt=""></p>
+<p>这里有两种按钮，一种是不需要输入内容的，例如“晨间日记”。另一种是需要输入具体内容的，比如“运动”。</p>
+<p>第一种，内容和标记这两个变量的值都是固定的：</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-47-13.png" alt=""></p>
+<p>第二种，内容从固定值Text改为“Ask for Input”即可，点击以后会提示输入，效果如文中的第二张图。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-48-17.png" alt=""></p>
+<p>搞定！</p>
+
+    </section>
+
+
+
+
+    
+
+
+    <footer>
+        
+
+
+    </footer>
+
+
+
+
+
+        </main>
+        <br><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2025  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
