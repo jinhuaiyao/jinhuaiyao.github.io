@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025</title>
+
+    <link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.016b570564e57a382125bc2a70b62abbd29dbdff95b5c298af32857637308095.css" integrity="sha256-AWtXBWTlejghJbwqcLYqu9Kdvf+VtcKYrzKFdjcwgJU=" > 
+
+    <style>
+        .heatmap-description {
+            width: 900px; /* Matching width with the heatmap containers */
+            margin: 5px auto 0 auto; /* Centering and spacing adjustments */
+            text-align: left; /* Center-aligns the text */
+            font-size: 16px; /* Sets a suitable font size */
+            font-weight: bold; /* Makes the text bold */
+            color: #333; /* Sets a dark color for the text */
+            margin-bottom: 0px; /* No space below the description */
+        }
+
+        .heatmap {
+            width: 900px; /* Adjust width for each heatmap */
+            height: 200px; /* Adjust height for each heatmap */
+            float: left; /* Allows side-by-side arrangement */
+            margin: -10px 5px 5px 5px; /* Top margin reduced to 0 */
+        }
+        /* Clear floats after the heatmaps */
+        .clear {
+            clear: both;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+</head>
+
+
+<body class="max-w-screen-md px-10 mx-auto">
+    <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+        <div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+            <a href="http://www.jinhuaiyao.com/">
+                <img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/profile-picture.jpg" width="80" height="80" alt="Huaiyao Jin">
+            </a>
+        </div>
+        <div class="flex flex-col gap-5">
+            <a href="http://www.jinhuaiyao.com/">
+                <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800">Huaiyao Jin</h3>
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-left uppercase text-sm gap-3 text-gray-500">
+                    <li class="hover:text-gray-500"><a href="/">首页</a></li>
+                    <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main id="content">
+        <article class="flex flex-col gap-5">
+            <header class="flex flex-col gap-1 mb-5">
+                <h2 class="text-xl leading-snug font-bold text-gray-900">2025</h2>
+                <div class="text-xs font-semibold text-gray-500 flex gap-3">
+                </div>
+            </header>
+            <div class="heatmap-description">运动</div>
+            <div id="heatmap1" class="heatmap"></div>
+            
+            <div class="heatmap-description">跑步</div>
+            <div id="heatmap2" class="heatmap"></div>
+            
+            <div class="heatmap-description">阅读</div>
+            <div id="heatmap3" class="heatmap"></div>
+
+
+            <div class="heatmap-description">背单词</div>
+            <div id="heatmap4" class="heatmap"></div>
+
+            
+            <div class="clear"></div>
+        </article>
+    </main>
+
+
+    <script type="text/javascript">
+        function createHeatmap(containerId, dataUrl) {
+            var chartDom = document.getElementById(containerId);
+            var myChart = echarts.init(chartDom);
+            var option = {
+                tooltip: {
+                    position: 'top',
+                    formatter: function (params) {
+                        return params.value[0] + ' - ' + params.value[2];
+                    }
+                },
+                calendar: {
+                    top: 'middle',
+                    left: 'center',
+                    orient: 'horizontal',
+                    cellSize: [15, 15],
+                    range: '2025',  
+                    itemStyle: {
+                        borderWidth: 1,
+                        borderColor: '#ccc'
+                    }
+                },
+                series: [{
+                    type: 'heatmap',
+                    coordinateSystem: 'calendar',
+                    data: []
+                }]
+            };
+            myChart.setOption(option);
+    
+            fetch(dataUrl)
+            .then(response => response.text())
+            .then(text => {
+                const data = text.split('\n').map(line => {
+                    const parts = line.split('|');
+                    if (parts.length === 3) {
+                        return [parts[0].trim(), 1, parts[2].trim()]; // 使用 1 作为占位数值
+                    }
+                    return null;
+                }).filter(item => item !== null);
+                myChart.setOption({
+                    series: [{
+                        data: data
+                    }]
+                });
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+        }
+
+    
+
+        createHeatmap('heatmap1', 'https://utils.jinhuaiyao.com/workout_2026.txt');
+        createHeatmap('heatmap2', 'https://utils.jinhuaiyao.com/running_2026.txt');
+        createHeatmap('heatmap3', 'https://utils.jinhuaiyao.com/reading_2026.txt');
+        createHeatmap('heatmap4', 'https://utils.jinhuaiyao.com/vocabulary_2026.txt');
+    </script>
+</body>
+</html>
