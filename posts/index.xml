@@ -7,7 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sun, 22 Feb 2026 14:56:07 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Mar 2026 14:52:55 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我还在用的快捷指令</title>
+      <link>http://www.jinhuaiyao.com/posts/the-shortcut-i-am-still-using/</link>
+      <pubDate>Sun, 08 Mar 2026 14:52:55 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/the-shortcut-i-am-still-using/</guid>
+      <description>&lt;p&gt;没有新东西，只是记录一下当前（2026.03）还在用的快捷指令。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-24-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;获取 2026-03-08 这种格式的日期，用作晨间日记的标题。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-44-49.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;放到电脑上小组件里，需要的时候点击一下，剪贴板里就可以得到当前日期，每天可以省 5 秒手动时间 ：）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-33-50.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设定墙纸照片&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/&#34;&gt;把运动统计写在iPhone锁屏上，还会自动切换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New Todo 和 New Memos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzUxMjQyODEwMQ==&amp;amp;mid=2247484142&amp;amp;idx=1&amp;amp;sn=49f837cc3accd4bca6af5edda6c81c27&amp;amp;scene=21#wechat_redirect&#34;&gt;记录与回顾，All in One，我用Notion（1）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Running&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;调用 Notion API，快速记录跑步的距离到 Notion 里。&lt;/p&gt;
+&lt;p&gt;方法和 New Todo 和 New Memos 一样。&lt;/p&gt;
+&lt;p&gt;结果是这样：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-51-42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Memos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;三合一菜单，在 New Todo 和 New Memos 的基础上加了个从剪贴板获取内容发到 Notion，偶尔会用一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-56-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Log Weight&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每隔几天称重，点击一下记录体重。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1434.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1429.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以通过“健康” app 看到所有记录，长期记录后可以可以看到体重的历史变化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1431.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phone YY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;快速拨打电话。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_13-07-42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;剩余 8 个打卡相关的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;见&lt;a href=&#34;https://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/&#34;&gt;Notion+Scriptable+快捷指令，每天完成最重要的事&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后两个相当于“占位符”，为了 iPhone 上显示的美观（空两个就有点丑）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1432.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;就这些。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>把运动统计写在 iPhone 锁屏上，还会自动切换</title>
       <link>http://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/</link>
