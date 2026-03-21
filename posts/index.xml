@@ -7,7 +7,89 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sun, 15 Mar 2026 15:30:34 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Mar 2026 20:13:58 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数据备份再检查 &#43; 新的冷备</title>
+      <link>http://www.jinhuaiyao.com/posts/data-backup-recheck-and-new-cold-backup/</link>
+      <pubDate>Sat, 21 Mar 2026 20:13:58 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/data-backup-recheck-and-new-cold-backup/</guid>
+      <description>&lt;p&gt;作为一名 DBA，深知备份的重要性，以及备份可用性的检查的重要性。&lt;/p&gt;
+&lt;p&gt;今天来检查一下设置好的备份策略有没有被正常地执行。&lt;/p&gt;
+&lt;p&gt;对照着&lt;a href=&#34;https://www.jinhuaiyao.com/posts/my-personal-data-classification-and-backup-system-2025/&#34;&gt;我的个人数据分级与备份体系 - 2025&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;照片和视频&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mac mini 上 Time machine 里的备份&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-18-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;远程到家里的 mac mini，可以看到最新的时间戳。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;家用服务器上的 MT-Photos&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/HYPhoto$ find . -mtime -1 -exec ls -ltr {} +  |tail
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   3123224 Mar 21 07:16 G4 Instant - 3-21-2026, 7.16.24am.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   1598933 Mar 21 08:39 IMG_5361.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root    440308 Mar 21 08:54 IMG_1866.JPG
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   1380533 Mar 21 09:39 IMG_5363.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   3060951 Mar 21 09:39 IMG_5364.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   1388246 Mar 21 09:39 IMG_5367.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   3340990 Mar 21 10:02 G4 Instant - 3-21-2026, 10.02.52am.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root   2190676 Mar 21 10:15 IMG_1877.PNG
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root       435 Mar 21 11:18 IMG_1706.MOV.xmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 root root       435 Mar 21 11:19 IMG_1807.MOV.xmp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到最新的文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MT-Photos 的备份&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/HYPhoto$ crontab -l
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/data2/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20 4 * * * cd /media/jinhuaiyao/data2 &amp;amp;&amp;amp; rsync -avh  HYPhoto /media/jinhuaiyao/backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/backup/HYPhoto$  find . -mtime -1 -exec ls -ltr {} +  |tail
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao    251581 Mar 19 09:03 IMG_1802.JPG
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao    251581 Mar 19 09:03 IMG_1802_2.JPG
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao    251581 Mar 19 09:03 IMG_1802_1.JPG
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2655260 Mar 19 12:01 IMG_1806.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2655260 Mar 19 12:01 IMG_1806_1.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2158177 Mar 19 12:07 IMG_1807.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   3837559 Mar 19 12:07 IMG_1807_2.MOV
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2158177 Mar 19 12:07 IMG_1807_2.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2158177 Mar 19 12:07 IMG_1807_1.HEIC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-rw- 1 jinhuaiyao jinhuaiyao       435 Mar 20 17:30 IMG_1807_2.MOV.xmp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里最新的文件是 3 月 19 号的，是因为过去两天没有手动打开手机上的 MT-Photos app，刚刚备份了增量数据就没问题了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文档资料&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nextcloud 里的备份文件夹&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-31-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;看一下文件夹的时间戳，没问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;服务器上 Nextcloud 的备份&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2$ crontab -l
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/data2/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20 4 * * * cd /media/jinhuaiyao/data2 &amp;amp;&amp;amp; rsync -avh  HYPhoto /media/jinhuaiyao/backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~$ cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sending incremental file list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sent 4.89M bytes  received 10.15K bytes  1.96M bytes/sec
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total size is 1.61T  speedup is 328,716.98
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data1/nextcloud/admin/files$ cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;amp;&amp;amp; sudo rsync -avh  * /media/jinhuaiyao/data2/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sending incremental file list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sent 4.89M bytes  received 10.14K bytes  1.96M bytes/sec
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total size is 1.61T  speedup is 328,717.52
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;没有新的文件，说明都正常 rsync 复制了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;两周前新增加了放置于 Google Drive 的冷备&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;订阅了 Google AI Pro，有 2T 的 Google Drive 空间，利用一下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;export GPG_TTY=$(tty)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Nextcloud/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -czf - Personal | gpg -c --cipher-algo AES256 | split -b 10G - /Users/jinhuaiyao/Downloads/Nextcloud.Personal.tar.gz.gpg.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -czf - Config Learning Reading | gpg -c --cipher-algo AES256 | split -b 10G - /Users/jinhuaiyao/Downloads/Nextcloud.Others.tar.gz.gpg.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;把最重要的 4 个文件夹打包后用 gpg 加密，然后分割成 10G 一个的文件，上传到 Google Drive，作为冷备，增加一份保障。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-48-41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;就这样。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>推荐 YaoYao 这个跳绳 app</title>
       <link>http://www.jinhuaiyao.com/posts/recommend-the-yaoyao-jump-rope-app/</link>

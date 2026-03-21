@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据备份再检查 &#43; 新的冷备</title>
+<meta name="description" content="作为一名 DBA，深知备份的重要性，以及备份可用性的检查的重要性。
+今天来检查一下设置好的备份策略有没有被正常地执行。
+对照着我的个人数据分级与备份体系 - 2025。
+照片和视频
+mac mini 上 Time machine 里的备份
+远程到家里的 mac mini，可以看到最新的时间戳。">
+<link rel="canonical" href="http://www.jinhuaiyao.com/posts/data-backup-recheck-and-new-cold-backup/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="http://www.jinhuaiyao.com/css/app.min.c4fb5d1d37a7278dec35c95c5cec7493ee464a96974b357140dc61b5f0888822.css" integrity="sha256-xPtdHTenJ43sNclcXOx0k+5GSpaXSzVxQNxhtfCIiCI=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+    <a href="http://www.jinhuaiyao.com/">
+        <img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/profile-picture.jpg" width="80" height="80" alt="Huaiyao Jin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="http://www.jinhuaiyao.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Huaiyao Jin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-left uppercase text-sm  gap-3 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">首页</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">文章</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-5">
+
+    <div class="fixed top-24 left-8 hidden lg:inline-block text-sm " >
+        
+    </div>
+
+
+    <header class="flex flex-col gap-1 mb-5">
+        <h2 class="text-xl leading-snug font-bold text-gray-900">数据备份再检查 &#43; 新的冷备</h2>
+
+        <div class="text-xs font-semibold text-gray-500 flex gap-3">
+        
+        
+<time datetime="2026-03-21 20:13:58 &#43;0800 &#43;08" title="2026-03-21 20:13:58 &#43;0800 &#43;08">
+    2026/03/21
+</time>
+        
+        
+        </div>
+    </header>
+    </article>
+
+
+
+    <section class="content text-base text-gray-800 mt-3">
+    <p>作为一名 DBA，深知备份的重要性，以及备份可用性的检查的重要性。</p>
+<p>今天来检查一下设置好的备份策略有没有被正常地执行。</p>
+<p>对照着<a href="https://www.jinhuaiyao.com/posts/my-personal-data-classification-and-backup-system-2025/">我的个人数据分级与备份体系 - 2025</a>。</p>
+<p><strong>照片和视频</strong></p>
+<p><strong>mac mini 上 Time machine 里的备份</strong></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-18-55.png" alt=""></p>
+<p>远程到家里的 mac mini，可以看到最新的时间戳。</p>
+<p><strong>家用服务器上的 MT-Photos</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/HYPhoto$ find . -mtime -1 -exec ls -ltr {} +  |tail
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   3123224 Mar 21 07:16 G4 Instant - 3-21-2026, 7.16.24am.jpg
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   1598933 Mar 21 08:39 IMG_5361.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root    440308 Mar 21 08:54 IMG_1866.JPG
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   1380533 Mar 21 09:39 IMG_5363.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   3060951 Mar 21 09:39 IMG_5364.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   1388246 Mar 21 09:39 IMG_5367.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   3340990 Mar 21 10:02 G4 Instant - 3-21-2026, 10.02.52am.jpg
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root   2190676 Mar 21 10:15 IMG_1877.PNG
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root       435 Mar 21 11:18 IMG_1706.MOV.xmp
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 root root       435 Mar 21 11:19 IMG_1807.MOV.xmp
+</span></span></code></pre></div><p>可以看到最新的文件。</p>
+<p><strong>MT-Photos 的备份</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/HYPhoto$ crontab -l
+</span></span><span class="line"><span class="cl">10 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;&amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+</span></span><span class="line"><span class="cl">30 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;&amp; sudo rsync -avh  * /media/jinhuaiyao/data2/Nextcloud
+</span></span><span class="line"><span class="cl">20 4 * * * cd /media/jinhuaiyao/data2 &amp;&amp; rsync -avh  HYPhoto /media/jinhuaiyao/backup
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/backup/HYPhoto$  find . -mtime -1 -exec ls -ltr {} +  |tail
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao    251581 Mar 19 09:03 IMG_1802.JPG
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao    251581 Mar 19 09:03 IMG_1802_2.JPG
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao    251581 Mar 19 09:03 IMG_1802_1.JPG
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2655260 Mar 19 12:01 IMG_1806.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2655260 Mar 19 12:01 IMG_1806_1.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2158177 Mar 19 12:07 IMG_1807.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   3837559 Mar 19 12:07 IMG_1807_2.MOV
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2158177 Mar 19 12:07 IMG_1807_2.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao   2158177 Mar 19 12:07 IMG_1807_1.HEIC
+</span></span><span class="line"><span class="cl">-rw-rw-rw- 1 jinhuaiyao jinhuaiyao       435 Mar 20 17:30 IMG_1807_2.MOV.xmp
+</span></span></code></pre></div><p>这里最新的文件是 3 月 19 号的，是因为过去两天没有手动打开手机上的 MT-Photos app，刚刚备份了增量数据就没问题了。</p>
+<p><strong>文档资料</strong></p>
+<p><strong>Nextcloud 里的备份文件夹</strong></p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-31-43.png" alt=""></p>
+<p>看一下文件夹的时间戳，没问题。</p>
+<p><strong>服务器上 Nextcloud 的备份</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2$ crontab -l
+</span></span><span class="line"><span class="cl">10 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;&amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+</span></span><span class="line"><span class="cl">30 4 * * * cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;&amp; sudo rsync -avh  * /media/jinhuaiyao/data2/Nextcloud
+</span></span><span class="line"><span class="cl">20 4 * * * cd /media/jinhuaiyao/data2 &amp;&amp; rsync -avh  HYPhoto /media/jinhuaiyao/backup
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyao-t7820:~$ cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;&amp; sudo rsync -avh  * /media/jinhuaiyao/backup/Nextcloud
+</span></span><span class="line"><span class="cl">sending incremental file list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sent 4.89M bytes  received 10.15K bytes  1.96M bytes/sec
+</span></span><span class="line"><span class="cl">total size is 1.61T  speedup is 328,716.98
+</span></span><span class="line"><span class="cl">jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data1/nextcloud/admin/files$ cd /media/jinhuaiyao/data1/nextcloud/admin/files  &amp;&amp; sudo rsync -avh  * /media/jinhuaiyao/data2/Nextcloud
+</span></span><span class="line"><span class="cl">sending incremental file list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sent 4.89M bytes  received 10.14K bytes  1.96M bytes/sec
+</span></span><span class="line"><span class="cl">total size is 1.61T  speedup is 328,717.52
+</span></span></code></pre></div><p>没有新的文件，说明都正常 rsync 复制了。</p>
+<p><strong>两周前新增加了放置于 Google Drive 的冷备</strong></p>
+<p>订阅了 Google AI Pro，有 2T 的 Google Drive 空间，利用一下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export GPG_TTY=$(tty)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd /Users/jinhuaiyao/Nextcloud/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tar -czf - Personal | gpg -c --cipher-algo AES256 | split -b 10G - /Users/jinhuaiyao/Downloads/Nextcloud.Personal.tar.gz.gpg.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tar -czf - Config Learning Reading | gpg -c --cipher-algo AES256 | split -b 10G - /Users/jinhuaiyao/Downloads/Nextcloud.Others.tar.gz.gpg.
+</span></span></code></pre></div><p>把最重要的 4 个文件夹打包后用 gpg 加密，然后分割成 10G 一个的文件，上传到 Google Drive，作为冷备，增加一份保障。</p>
+<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-48-41.png" alt=""></p>
+<p>就这样。</p>
+
+    </section>
+
+
+
+
+    
+
+
+    <footer>
+        
+
+
+    </footer>
+
+
+
+
+
+        </main>
+        <br><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2017 - 2026  
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    
+    </ul>
+</div>
+</footer></body>
+</html>
