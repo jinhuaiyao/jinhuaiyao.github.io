@@ -9,6 +9,31 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>花一小时，我和 AI 做了个错题本 app</title>
+      <link>http://www.jinhuaiyao.com/posts/spent-an-hour-creating-a-wrong-question-book-app-with-ai/</link>
+      <pubDate>Sat, 28 Mar 2026 14:23:43 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/spent-an-hour-creating-a-wrong-question-book-app-with-ai/</guid>
+      <description>&lt;p&gt;小朋友二年级了，课堂练习里有一些错题，想要做个 app 把这些题集中一下，定期让他复习。&lt;/p&gt;
+&lt;p&gt;现在有 AI 了，一切变得如此简单。&lt;/p&gt;
+&lt;p&gt;打开 Claude，要求它后端用 Python，数据库用 SQLite，对话几轮即可。群里闲聊这事，朋友也对错题本 app 感兴趣，于是让 AI 加个多用户登录和邀请码注册的功能。&lt;/p&gt;
+&lt;p&gt;把代码部署到自己的云服务器，测试一下，让 AI 修复几个问题。再配置一下 Nginx，一个轻量、开箱即用的错题管理系统就能工作了，支持拍照上传、间隔复习、多用户、邀请码注册。一小时就搞定了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-45-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错题列表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-45-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;添加错题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-46-07.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;复习模式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-46-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;统计分析&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-46-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后加个 Cloudflare Zero Trust Access，只允许特定的邮箱登录，在原有的密码登录基础再加上一层防护。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-44-47.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;完工。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>数据备份再检查 &#43; 新的冷备</title>
       <link>http://www.jinhuaiyao.com/posts/data-backup-recheck-and-new-cold-backup/</link>
       <pubDate>Sat, 21 Mar 2026 20:13:58 +0800</pubDate>
