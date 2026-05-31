@@ -7,7 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2017 - {year}</copyright>
-    <lastBuildDate>Sat, 28 Mar 2026 14:23:43 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 May 2026 11:48:32 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的macOS配置清单 - 2026</title>
+      <link>http://www.jinhuaiyao.com/posts/my-macos-setup---2026/</link>
+      <pubDate>Sat, 30 May 2026 11:48:32 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/my-macos-setup---2026/</guid>
+      <description>&lt;p&gt;最近重装了一遍 macOS，顺手把配置过程记录下来。这次的配置原则只有一个：只装必须的，能不装就不装，尽量极简。&lt;/p&gt;
+&lt;p&gt;下面按我实际的安装顺序走一遍。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chrome&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一个装的就是 Chrome，登录 Gmail，配置同步过来。&lt;/p&gt;
+&lt;p&gt;外观里把书签栏关掉（&lt;code&gt;chrome://settings/appearance → Show bookmarks bar&lt;/code&gt;关闭），桌面清爽一点。&lt;/p&gt;
+&lt;p&gt;另外把几个自建服务装成独立的app，比如 Planka、code-server，从&lt;code&gt;chrome://apps/&lt;/code&gt;里可以确认。这样它们就像本地应用一样，单独一个窗口，配合 Alfred 的热键，用起来更顺手。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;输入法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;系统自带英文之外，把五笔加上。我平时还是习惯五笔。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1Password&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;密码管理用 1Password，手机 app 扫码登录就行，不用再手输主密码。后面所有需要登录的地方，密码都从这里取。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;登录 Apple ID&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;登录 Apple ID 之后，先去 App Store 把截图工具 Xnip 装上。&lt;/p&gt;
+&lt;p&gt;快捷键设成 &lt;code&gt;option + x&lt;/code&gt;，保存位置指到桌面。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Surge&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;网络代理用 Surge。Mac 版直接下最新的 v5：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://dl.nssurge.com/mac/v5/Surge-latest.zip&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;配置文件是通过 iCloud 同步的，配置文件的路径改成 iCloud Drive/Surge 就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nextcloud&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;个人资料的同步靠自建的 Nextcloud。&lt;/p&gt;
+&lt;p&gt;老的 Nextcloud 文件夹我提前拷了一份，装好客户端后，进到目录里把残留的同步数据库清掉，再重新关联：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~/Nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm .sync_*.db .sync_*.db-wal
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;先只同步 Config 文件夹，把各种配置拉下来；另外把「虚拟文件」关掉，我习惯文件都存在本地。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alfred&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;效率工具用 Alfred（alfredapp.com）。配置同样走 Nextcloud 同步，指到 &lt;code&gt;~/Nextcloud/Config/Alfred_config&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;装好之后去系统设置里，把 Spotlight 的两个快捷键取消勾选，热键让给 Alfred。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;系统设置：桌面与程序坞&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;按自己的习惯调一下「桌面与程序坞」，这个看个人，调到顺眼为止。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notion / Claude / iTerm2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;接着是几个高频应用。&lt;/p&gt;
+&lt;p&gt;Notion 装上登录就行，我的笔记、待办、日记全在里面。&lt;/p&gt;
+&lt;p&gt;Claude 也装上，顺手把 Claude Code 装好：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://claude.ai/install.sh | bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iTerm2 导入之前的配置，然后把 .zshrc 软链到同步目录里那份，配置一处维护就好：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/profile.txt ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;微信 / Finder / 控制中心&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;微信装上备用。&lt;/p&gt;
+&lt;p&gt;Finder 按习惯调一下显示方式。控制中心那一排图标有点挤，我用 App Stor e里的 Hidden Bar 把不常用的折叠起来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SSH key&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;把备份里的 SSH key 拷回来，测一下能不能连上VPS服务器：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh -p &amp;lt;port&amp;gt; root@&amp;lt;your-server&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;能直接登录就说明没问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;命令行的包管理离不开 Homebrew：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#39;eval &amp;#34;$(/opt/homebrew/bin/brew shellenv)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;source ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;装好之后顺手把几个基础工具装上：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install python3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;翻译 / VS Code / 输入法细调&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;翻译我用一个开源的翻译工具 NextAI Translator，配上自己的 API key。&lt;/p&gt;
+&lt;p&gt;VS Code 登录 GitHub 账号开启配置同步，主题用 GitHub Light Default。&lt;/p&gt;
+&lt;p&gt;输入法再按自己的习惯细调一下候选词、标点之类的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主机名与共享&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设一下主机名，方便局域网里认。共享功能按需要开，我主要用远程登录和文件共享。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;博客是 Hugo 搭的，装一个固定版本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~/Downloads
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -LO https://github.com/gohugoio/hugo/releases/download/v0.110.0/hugo_extended_0.110.0_darwin-universal.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzf hugo_extended_0.110.0_darwin-universal.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mv hugo /opt/homebrew/bin/hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x /opt/homebrew/bin/hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;进到博客目录 hugo server 起一下，本地 http://localhost:1313/ 能打开就OK。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一些零碎应用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;剩下的就是按需补的小工具：&lt;/p&gt;
+&lt;p&gt;Downie 4，下载视频；
+Itsycal，一个菜单栏小日历；
+Office 三件套（Word、Excel、PowerPoint）；
+PDF Expert，看 PDF；
+PicGo，配阿里云 OSS 做图床；
+Obsidian、Logseq，偶尔翻看一下旧的记录；
+Parallels Desktop，跑虚拟机；
+Reeder Classic，看 RSS；
+最后把几个快捷指令小组件摆到桌面上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;还没装的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面这些是「想起来再装」的清单，目前都没装，用到哪个补哪个：&lt;/p&gt;
+&lt;p&gt;aDrive、CleanMyMac X、GitHub Desktop、IINA、Moom、Oka Unarchiver、Redacted、Telegram（现在直接用网页版）、腾讯会议、TinyPNG4Mac、VMware Fusion、WhatsApp、Windows App、万兴 PDF。&lt;/p&gt;
+&lt;p&gt;这样一台能干活的 Mac 就配好了。装的东西比前几年少了不少，很多以前觉得「必备」的，其实空着也没影响。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>花一小时，我和 AI 做了个错题本 app</title>
       <link>http://www.jinhuaiyao.com/posts/spent-an-hour-creating-a-wrong-question-book-app-with-ai/</link>
