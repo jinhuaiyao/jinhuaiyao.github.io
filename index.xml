@@ -9,6 +9,93 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>把微信读书的划线做成随机回顾卡片</title>
+      <link>http://www.jinhuaiyao.com/posts/turn-wechat-reading-highlights-into-random-review-cards/</link>
+      <pubDate>Sat, 06 Jun 2026 16:59:38 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/turn-wechat-reading-highlights-into-random-review-cards/</guid>
+      <description>&lt;p&gt;我用微信读书阅读的时候划了很多线，但说实话，划完基本就再也不会回头看了。&lt;/p&gt;
+&lt;p&gt;一直想给这些划线找个出口：能不能让我读过的句子，每天随机冒出来一条，让我重新读到、再思考。&lt;/p&gt;
+&lt;p&gt;直到上个月微信读书官方 Skill 出来了，看了下说明，它可以实现不少功能，正好用它来自动导出我的划线内容。&lt;/p&gt;
+&lt;p&gt;先用 Claude code 安装一下这个 Skill，微信读书 app 里获取到 API Key，然后让 Claude 写个脚本去全量 + 增量拉取所有的划线。&lt;/p&gt;
+&lt;p&gt;有了 AI，这个需求很快就做成了：一个自托管的&amp;quot;读书卡片回顾站&amp;quot;，打开网页就随机给我一张过去划线的卡片。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;卡片长什么样&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;前端是浅米色背景，霞鹜文楷的字体，一次只随机显示一张卡片，干干净净。电脑端空格或方向键切换下一张，按 R 重新洗牌；手机上点一下或左滑下一张，右滑上一张。点卡片上的书名，可以只看这一本书的划线。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wechat-to-notion.jinhuaiyao.com/imgs/a231432b53d5489437a749efc3c88cd7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wechat-to-notion.jinhuaiyao.com/imgs/12ab48302e130de828de20a596d15489.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;它是怎么运转的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整条链路其实很简单：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;微信读书 App（划线 / 想法）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[云服务器上 cron job 每 3 小时] python3 export_notes.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├─→ notes/*.md （个人 Markdown 存档）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└─→ web/cards.json （结构化数据，给卡片页用）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;weread.jinhuaiyao.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↓ Cloudflare Access（邮箱白名单）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↓ nginx（静态 serve）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;浏览器打开 → 随机一张卡片
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;脚本会干两件事：一是把每本书的划线和想法写成 Markdown 存到本地；二是生成一份 cards.json 给前端用。一份是给自己存档的纯文本，一份是拿来展示的。数据都在自己手上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;增量同步&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一次是全量拉取数据，之后就走增量：每本书有个 sort 游标，没变化的直接跳过，几乎不消耗 API。配合 cron 每3小时跑一次，新划的线最多 3 小时就会出现在卡片里。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 */3 * * * cd /root/weread-export &amp;amp;&amp;amp; /usr/bin/python3 export_notes.py &amp;gt;&amp;gt; export.log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;排除一些书&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;还加了个排除功能，有个文件 excluded_books.txt，按书名或 bookId 排除。我把一些几本工具书排掉了，不需要回顾这些书里的划线。规则改完等 cron 自动生效，已经存的 Markdown 不受影响。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@meta-unicorn-2:~/weread-export# cat excluded_books.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 排除清单 — 在这里列出不想出现在卡片和 Markdown 里的书
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 规则：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 每行一条
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 以 # 开头的行是注释
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 普通文字：按&amp;#34;书名包含&amp;#34;匹配（子串匹配，区分大小写）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 以 id: 开头：按 bookId 精确匹配
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 示例（默认全部注释掉，按需启用）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 看天下 # 排除所有「看天下」系列期刊
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 读者
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 看世界
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# id:3300195464 # 通过 bookId 精确排除某一本
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 改完后重跑 export_notes.py 即可生效：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 命中规则的书不会出现在 cards.json（不显示在卡片页）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 已经导出的 Markdown 文件保留不动（个人存档）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# - 后续取消排除：脚本会自动重新拉取并补回卡片
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;englishpod
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Learning Perl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MySQL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Python
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;部署在自己的 VPS 上&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整套东西跑在我自己的服务器上，nginx 静态 serve，前面套了一层 Cloudflare：HTTPS、CDN，再加 Cloudflare Access 做邮箱白名单，只有我自己能访问。毕竟划线和想法算是挺私人的东西，不想公开。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;listen 443 ssl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;listen [::]:443 ssl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_certificate /home/rjin/cert/cf.pem;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_certificate_key /home/rjin/cert/cf.key;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_session_timeout 1d;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_session_cache shared:MozSSL:10m;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_session_tickets off;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_protocols TLSv1.2 TLSv1.3;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssl_prefer_server_ciphers off;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server_name weread.jinhuaiyao.com;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gzip on;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gzip_types application/json text/css application/javascript;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gzip_min_length 1024;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root /root/weread-export/web;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;index index.html;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;try_files $uri $uri/ =404;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;整个系统不复杂，核心就一个 Python 脚本加一个静态页面。如果你也用微信读书、也有一堆划完就忘的线，这个思路可以参考。有需要的话，我可以把脚本整理一下分享出来。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>我的macOS配置清单 - 2026</title>
       <link>http://www.jinhuaiyao.com/posts/my-macos-setup---2026/</link>
       <pubDate>Sat, 30 May 2026 11:48:32 +0800</pubDate>
