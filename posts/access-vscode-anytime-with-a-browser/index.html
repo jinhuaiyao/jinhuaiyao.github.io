@@ -53,7 +53,7 @@ Run VS Code on any machine anywhere and access it in the browser.">
         <div class="text-xs font-semibold text-gray-500 flex gap-3">
         
         
-<time datetime="2025-10-18 18:42:04 &#43;0800 CST" title="2025-10-18 18:42:04 &#43;0800 CST">
+<time datetime="2025-10-18 18:42:04 &#43;0800 &#43;08" title="2025-10-18 18:42:04 &#43;0800 &#43;08">
     2025/10/18
 </time>
         
@@ -69,7 +69,7 @@ Run VS Code on any machine anywhere and access it in the browser.">
 <p><a href="https://github.com/coder/code-server">https://github.com/coder/code-server</a></p>
 <p>Run VS Code on any machine anywhere and access it in the browser. （在任何地方的任何机器上运行 VS Code，并在浏览器中访问。）</p>
 <p>效果图：</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-42-09.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-42-09.png" alt=""></p>
 <p><strong>安装</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@meta-unicorn-2:~/coder# pwd
 </span></span><span class="line"><span class="cl">/root/coder
@@ -96,7 +96,7 @@ Run VS Code on any machine anywhere and access it in the browser.">
 </span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE                              COMMAND                  CREATED         STATUS                   PORTS                                         NAMES
 </span></span><span class="line"><span class="cl">f4bc53deff9e   codercom/code-server:latest        &#34;/usr/bin/entrypoint…&#34;   3 hours ago     Up 3 hours               0.0.0.0:8090-&gt;8080/tcp, :::8090-&gt;8080/tcp     code-server 
 </span></span></code></pre></div><p><strong>Cloudflare 设置域名解析</strong></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_21-06-01.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_21-06-01.png" alt=""></p>
 <p><strong>nginx 设置反向代理</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vi /etc/nginx/conf.d/code.conf
 </span></span><span class="line"><span class="cl">
@@ -136,22 +136,22 @@ Run VS Code on any machine anywhere and access it in the browser.">
 </span></span></code></pre></div><p>访问 <a href="https://code.xxx.com">https://code.xxx.com</a> 验证一下。</p>
 <p><strong>设置 Cloudflare Zero Trust</strong></p>
 <p>访问网页前强制登录，在 code-server 自带的访问密码之上多一层访问控制。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-50-05.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-50-05.png" alt=""></p>
 <p>只允许自己的邮箱可以验证。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-50-36.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-50-36.png" alt=""></p>
 <p>验证方式是一次性验证码。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-51-03.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-51-03.png" alt=""></p>
 <p>效果如下：</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-54-31.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-55-16.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-54-31.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-55-16.png" alt=""></p>
 <p><strong>设置类 macOS 应用</strong></p>
 <p>点击Chrome地址栏上的小图标。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-58-18.png" alt=""></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-39-37.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-58-18.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-39-37.png" alt=""></p>
 <p>这样就和VSCode app样子很像了。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-59-43.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-59-43.png" alt=""></p>
 <p><strong>Alfred 设置快捷键</strong></p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_21-03-10.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2025-10-17_21-03-10.png" alt=""></p>
 <p>用option+k可以快速调出界面。</p>
 <p><strong>数据定期备份</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 服务器上</span>

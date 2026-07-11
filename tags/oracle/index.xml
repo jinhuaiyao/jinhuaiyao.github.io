@@ -1189,20 +1189,20 @@
 &lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
 &lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://yum.oracle.com/oracle-linux-isos.html&#34;&gt;https://yum.oracle.com/oracle-linux-isos.html&lt;/a&gt;，下载&lt;code&gt;OracleLinux-R8-U8-Server-aarch64-dvd.iso&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在 VMware Fusion 里安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
 &lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;安装-oracle-19c-数据库&#34;&gt;安装 Oracle 19c 数据库&lt;/h1&gt;
 &lt;p&gt;安装依赖包
 &lt;code&gt;dnf -y install oracle-database-preinstall-19c.aarch64&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然后到解压后的 database 目录里运行 &lt;code&gt;./runInstaller&lt;/code&gt;，图形化安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1241,7 +1241,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl disable avahi-daemon.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;vmware-里共享硬盘的配置&#34;&gt;VMWare 里共享硬盘的配置&lt;/h1&gt;
 &lt;p&gt;两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -1308,7 +1308,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ocr&#34;&gt;OCR&lt;/h1&gt;
 &lt;p&gt;忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg

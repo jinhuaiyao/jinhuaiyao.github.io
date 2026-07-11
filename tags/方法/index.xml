@@ -16,9 +16,9 @@
       <guid>http://www.jinhuaiyao.com/posts/notion&#43;scriptable&#43;shortcuts-complete-the-most-important-tasks-every-day/</guid>
       <description>&lt;p&gt;每天完成最重要的几件事，这一天就算没有虚度。&lt;/p&gt;
 &lt;p&gt;每天打开手机，看一眼，就知道还有什么事没做，简单而清晰。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_7826.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_7826.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;点击一下按钮，输入内容，即可完成打卡。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_7827.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_7827.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;实现方式还是利用自己的“三板斧”：Notion、Scriptable和Apple快捷指令。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“今日打卡”部分&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Notion api+Scriptable app，这个之前也提到过，需要做的就是明确一下需求和实现思路，脚本部分让AI帮忙即可。&lt;/p&gt;
@@ -33,7 +33,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;总结工作&amp;#34;:        &amp;#34;WorkingSummary&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;等等的每日一照&amp;#34;:        &amp;#34;DengDengPhoto&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-39-04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-39-04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Scriptable的脚本：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;// Variables used by Scriptable.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;// These must be at the very top of the file. Do not edit.
@@ -309,16 +309,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Script.complete();
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;点击一下看看效果。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Picsew_20251122105537.JPEG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Picsew_20251122105537.JPEG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后设置桌面小组件，效果如文中的第一张图。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;按钮部分&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;使用Notion api+快捷指令app。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-42-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-42-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里有两种按钮，一种是不需要输入内容的，例如“晨间日记”。另一种是需要输入具体内容的，比如“运动”。&lt;/p&gt;
 &lt;p&gt;第一种，内容和标记这两个变量的值都是固定的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-47-13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-47-13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;第二种，内容从固定值Text改为“Ask for Input”即可，点击以后会提示输入，效果如文中的第二张图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-48-17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-48-17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;搞定！&lt;/p&gt;
 </description>
     </item>
@@ -396,17 +396,17 @@
 &lt;p&gt;开通iCloud，Mac mini 上照片应用设置下载并保留原片到外接移动硬盘，外接移动硬盘通过Time Machine自动备份。&lt;/p&gt;
 &lt;p&gt;另外，通过家用服务器上的MT-Photos手动定期备份。&lt;/p&gt;
 &lt;p&gt;上传到MT-Photos里的照片在服务器上会通过cron job会每天rsync到外接硬盘。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_16-16-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_16-16-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_16-16-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_16-16-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;个人文档资料&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;日记、笔记、文章、日常的琐碎记录目前存放在Notion里，还有一些旧的markdown文档也会逐渐迁移过去。&lt;/p&gt;
 &lt;p&gt;备份方式是每个月月底手动导出整个Workspace，存放到NextCloud里。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_14-57-00.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_14-57-00.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;微信聊天记录&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;之前在上海的时候，每周会手动备份到Mac mini，再通过 Time Machine进行备份。&lt;/p&gt;
 &lt;p&gt;目前是每周手动备份到MacBook Pro。&lt;/p&gt;
 &lt;p&gt;此外，iCloud里iPhone备份中包含微信app的备份，这个是自动备份的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Picsew_20251101150406.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Picsew_20251101150406.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;账号和密码&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;账号和密码都存于1Password，1Password主密码写到某本笔记本上了。&lt;/p&gt;
 &lt;p&gt;设置提醒每个月会导出1Password为1PUX文件，并用gpg加密一层后存放到NextCloud里。&lt;/p&gt;
@@ -430,7 +430,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--   1 jinhuaiyao  staff   14869937 Nov  1 14:27 1.1pux
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;其他个人资料和工作笔记&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;投资统计、家庭开销统计、体检报告电子版、证件电子版、保险电子版、软件配置文件、云服务器上的数据、工作笔记，这些要么直接存放在家庭服务器上的NextCloud里，要么会通过网络备份到NextCloud。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_15-15-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_15-15-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;其他的收集&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;软件和工具，学习资料（英语，数据库，编程），别人的文章及标注，图书、剧集、视频。&lt;/p&gt;
 &lt;p&gt;这些直接存放到NextCloud里。&lt;/p&gt;
@@ -475,24 +475,24 @@
       <description>&lt;p&gt;分享一点我的 Mac mini 的日常使用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;网络设置&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Mac mini 用网线连接路由器，手动设置 ip。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-08-04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-08-04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;家庭网络默认网段是 10.0.0.0/24，设置 Proxy 网段为 10.0.3.0/24，并且默认网关指向 Mac mini 的 ip - 10.0.3.100。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_20-58-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_20-58-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;开启 Surge 增强模式，启用 ip 转发功能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-12-12.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-12-12.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % sysctl net.inet.ip.forwarding
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;net.inet.ip.forwarding: 1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样，所有连接到 Proxy 网络的设备，其流量都会通过 Mac mini 转发。&lt;/p&gt;
 &lt;p&gt;同时开启 Surge Ponte，可以在外通过安装了 Surge 的手机或电脑，远程访问家庭网络。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;共享功能&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-07-28.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-07-28.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;开启共享功能后，可以通过远程桌面连接到 Mac mini，支持 SSH 登录，也可以通过网络挂载 Mac mini 的文件夹。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;照片 &amp;amp; 时间机器&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Mac mini 外接 1T 的 SSD 移动硬盘，并将照片图库的默认存储位置迁移到该外接硬盘，同时设置为下载并保留原片，确保所有原始照片完整保存在本地。&lt;/p&gt;
 &lt;p&gt;再连接一块 4T 的 HDD 移动硬盘，配置 Time Machine 每小时备份照片库，作为照片和视频的本地备份。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-40.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-53.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-24-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-18-40.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-18-53.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-24-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;定时作业&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;通过 cronjob 去定时完成一些备份、数据传输、监控功能。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % crontab -l
@@ -526,15 +526,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（备份 gitea 里的脚本到本地）
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Nextcloud&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;安装 Nextcloud 客户端，保留最重要的个人资料到本地，并通过 Time Machine 定期备份。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-09-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-38-06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-09-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-38-06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Reeder&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;配置每小时抓取一次 feeds，通过 iCloud 同步，这样其他设备上就不用重复抓取了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-11-17.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_4699.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-11-17.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_4699.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;微信备份&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;每周手动同步一次手机微信到 Mac mini，作为备份。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-46-05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-46-05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -558,60 +558,60 @@
 &lt;h1 id=&#34;记录的内容及我自己的一些使用方法&#34;&gt;记录的内容及我自己的一些使用方法&lt;/h1&gt;
 &lt;h2 id=&#34;日常所见所想&#34;&gt;日常所见所想&lt;/h2&gt;
 &lt;p&gt;把日常的记录、待办事项都放到这个 Memos 的数据库里，用时间线去罗列。可以通过数据库的各种属性去展示和筛选。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-04-21.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-04-21.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;快捷输入，主要依赖于 Notion API 及苹果系统的快捷指令。快捷指令参考 &lt;a href=&#34;https://www.youtube.com/watch?v=mKgi6CWedeg&#34;&gt;https://www.youtube.com/watch?v=mKgi6CWedeg&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s0-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0070.JPG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s0-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0070.JPG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;点击桌面上的 &amp;ldquo;New Memos&amp;rdquo;，键盘输入，长句子也可以通过苹果键盘自带的语音输入快速记录。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s1-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0068.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s1-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0068.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;记录就会插入 Memos 这个数据库。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-36-20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-36-20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;锁屏界面也可以点击锁屏小组件调用快捷指令来快捷输入。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s2-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0071.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s2-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0071.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s3-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0072.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s3-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0072.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;macOS 上结合 Alfred，可以实现类似手机端的快捷输入。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-00-25.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-00-25.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;先准备一个&amp;quot;3 合 1&amp;quot;的快捷指令，然后用 Aflred 的 workflow 去调用它。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-05-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-03-29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-05-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-03-29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Apple Watch上也可以调用快捷指令。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s5-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/incoming-1210D72F-6B3E-49A6-B41F-86D32244E8E5.PNG&#34; width=&#34;30%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s5-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/incoming-1210D72F-6B3E-49A6-B41F-86D32244E8E5.PNG&#34; width=&#34;30%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;h2 id=&#34;晨间日记&#34;&gt;晨间日记&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-12-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-12-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;通过日期列的筛选还可以实现&amp;quot;那年今日&amp;quot;的功能。&lt;/p&gt;
 &lt;p&gt;还可以使用自定义的模板。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-15-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-15-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;年终回顾的时候，可以用特定的筛选条件来过滤今年的以及还没有 review 过的记录。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-16-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-16-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;待办事项&#34;&gt;待办事项&lt;/h2&gt;
 &lt;p&gt;用来取代 Things，让完成的事项也有迹可寻。&lt;/p&gt;
 &lt;p&gt;每天重复的待办事项罗列得清楚。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-20-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-20-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;通过 Notion 自动化，把完成的项目自动添加到 Memos 数据库。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s6-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_17-48-31.png&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s6-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_17-48-31.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;其他重复的待办事项也一目了然，并且有自动化加持。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-23-58.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s7-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-21-16.png&#34; width=&#34;40%&#34;/&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-23-58.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s7-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-21-16.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s8-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-21-34.png&#34; width=&#34;60%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s8-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-21-34.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;完成某一项待办事项的时候点击 Button，可以把当前日期附加到 Records 这一列当中，当作历史记录。同时会根据 Interval 和 Unit 计算下一次待办事项的日期，更新 NextTime 列。例如现在点一下 Button，结果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-26-22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-26-22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Mac mini 上设置一个 cronjob 每天去检查 NextTime 列的日期，如果某条事项的日期是当天的话就更新 Text 列为当天的时间。当 Text 列被编辑，又会自动调用 Notion 的自动化去发出一个提醒到 Inbox 里，手机上也会有消息推送。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Notion update for nexttime - 12/19/2024
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 05 * * * /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/notion_update_for_nexttime.py &amp;gt;&amp;gt; /Users/jinhuaiyao/Log/notion_update_for_nexttime.txt 2&amp;gt;&amp;amp;1
@@ -704,22 +704,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/notion_update_for_nexttime.py
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Successfully updated Text property for page: 13c41d22-a693-8009-8515-e0ce0d4629f8
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hahahugoshortcode-s9-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-38-40.png&#34; width=&#34;40%&#34;/&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hahahugoshortcode-s9-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-38-40.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-34-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-34-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-34-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-34-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;等等的每日一照&#34;&gt;等等的每日一照&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-25-15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-25-15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;英文学习&#34;&gt;英文学习&lt;/h2&gt;
 &lt;p&gt;可以标注并且添加注释。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-26-39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-26-39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;文章剪藏&#34;&gt;文章剪藏&lt;/h2&gt;
 &lt;p&gt;电脑端
 &lt;a href=&#34;https://www.notion.com/web-clipper&#34;&gt;https://www.notion.com/web-clipper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;手机端，发送到Notion。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s10-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0074.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s10-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0074.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;h2 id=&#34;桌面小组件展示&#34;&gt;桌面小组件展示&lt;/h2&gt;
@@ -871,12 +871,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return utc_time.toLocaleString(&amp;#39;zh-CN&amp;#39;, options);
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-49-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s11-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0073.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-49-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s11-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0073.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;又比如一些重要的提醒循环显示在手机桌面。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s12-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0069.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s12-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0069.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;h2 id=&#34;数据同步到-2024-打卡记录2024&#34;&gt;数据同步到 &lt;a href=&#34;http://www.jinhuaiyao.com/2024&#34;&gt;2024 打卡记录&lt;/a&gt;&lt;/h2&gt;
@@ -1006,11 +1006,11 @@
 &lt;p&gt;最开始在 ESLPOD 和 EnglishPod 之间决定学习 EnglishPod 的原因是听了它的第一段的对话 &amp;ldquo;Difficult Customer&amp;rdquo;，觉得内容挺有意思的。后来愈发觉得它很接地气，每节课都在强调 &amp;ldquo;give you real English&amp;rdquo;，也正是我需要的。&lt;/p&gt;
 &lt;h1 id=&#34;下载&#34;&gt;下载&lt;/h1&gt;
 &lt;p&gt;从 &lt;a href=&#34;https://archive.org/details/englishpod_all&#34;&gt;https://archive.org/details/englishpod_all&lt;/a&gt; 下载所有对话和文本。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;主持人对话本文&#34;&gt;主持人对话本文&lt;/h1&gt;
 &lt;p&gt;用 Buzz 把 englishpod_xxx_pb.mp3 转录一下，得到主持人对话本文。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;微信读书标注&#34;&gt;微信读书标注&lt;/h1&gt;
 &lt;p&gt;Buzz 转录出来的文本导出成 SRT 格式，需要导入到微信读书里可以划线、标注或者查词翻译。&lt;/p&gt;
 &lt;p&gt;首先需要把 SRT 文本里的时间戳部分清洗掉，借助 ChatGPT：&lt;/p&gt;
@@ -1063,9 +1063,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning the house. That&lt;span class=&#34;s1&#34;&gt;&amp;#39;s a real life situation. So we&amp;#39;&lt;/span&gt;re going to give you real English.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Exactly. So in today&lt;span class=&#34;s1&#34;&gt;&amp;#39;s lesson we&amp;#39;&lt;/span&gt;re going to look at language about cleaning the house.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最后将 txt 文本导入微信读书。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-5-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-5-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;我的学习步骤&#34;&gt;我的学习步骤&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;不看文本听一遍 englishpod_xxx_pb.mp3，留意一下听得模糊的地方。&lt;/li&gt;
@@ -1073,7 +1073,7 @@
 &lt;li&gt;对着主持人对话文本再听一遍 englishpod_xxx_pb.mp3，注意一下主持人的发音。&lt;/li&gt;
 &lt;li&gt;复习微信读书里的划线并导出到 Obsidian，以后再浏览。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-6.png&#34; width=&#34;50%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-6.png&#34; width=&#34;50%&#34;/&gt;
 &lt;/figure&gt;
 
 </description>
@@ -1101,7 +1101,7 @@
 &lt;li&gt;曾经的工作笔记&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以上存于 Dropbox，通过 Mac mini 的 Time Machine 备份，同时每天定时 rsync 到 Onedrive。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240316204251.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240316204251.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup dropbox daily
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Dropbox
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_daily ~/OneDrive/Backup/backup_dropbox
@@ -1172,7 +1172,7 @@
 &lt;p&gt;记账时选择分类不要过于纠结。&lt;/p&gt;
 &lt;p&gt;10 块钱以下的消费可以不用记录。&lt;/p&gt;
 &lt;p&gt;优化一下分类与子类。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-bookkeeping.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/about-bookkeeping.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;投资记录与资产更新每两个月统计到 excel。&lt;/p&gt;
 </description>
     </item>
@@ -1265,7 +1265,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini servers % which nginx
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/homebrew/bin/nginx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;网页验证一下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;安装-mkdocs&#34;&gt;安装 mkdocs&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -1314,7 +1314,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew services restart nginx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;添加图片&#34;&gt;添加图片&lt;/h1&gt;
 &lt;p&gt;在docs 目录下新建 images 文件夹。&lt;/p&gt;
 &lt;p&gt;图片路径需要使用相对路径。例如：&lt;/p&gt;
@@ -1342,7 +1342,7 @@
 &lt;p&gt;macOS 上一切就绪后，想着手机端能不能也更新文件然后自动 mkdocs build 呢。一番研究，最后搞定。&lt;/p&gt;
 &lt;h2 id=&#34;移动主文件夹到-icloud-obsidian&#34;&gt;移动主文件夹到 iCloud Obsidian&lt;/h2&gt;
 &lt;p&gt;把 mkdocs 和 mkdocs.yml 拷备到 iCloud Obsidian 里，然后 iOS 上打开 mkdocs 作为新的 vault，这样就可以在手机上编辑文档了，文档更新可以通过 iCloud 同步。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置-build-自动化&#34;&gt;配置 build 自动化&lt;/h2&gt;
 &lt;p&gt;在 mac mini 上同样安装 mkdocs。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs
@@ -1402,8 +1402,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;#34;$mdfile&amp;#34; |sed &amp;#34;s#assets/dayone#images#g&amp;#34; | sed &amp;#34;s#../assets/#../images/#g&amp;#34;&amp;gt; &amp;#34;$mdfile&amp;#34;.tmp
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv &amp;#34;$mdfile&amp;#34;.tmp  &amp;#34;$mdfile&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。每天早晨起来可以打开网页快速回顾一下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; width=&#34;50%&#34;/&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-5.png&#34; width=&#34;50%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;改用-dropbox&#34;&gt;改用 Dropbox&lt;/h1&gt;
@@ -1421,7 +1421,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: &amp;#34;LXGW WenKai Screen&amp;#34;, sans-serif;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240115190216.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240115190216.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1446,12 +1446,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;例句&amp;gt;(例句翻译)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;修改主题
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0859.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0859.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;使用效果&#34;&gt;使用效果&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tips: 可以使用 iOS 键盘自带的语音输入
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0858.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>
@@ -1467,20 +1467,20 @@
 &lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
 &lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://yum.oracle.com/oracle-linux-isos.html&#34;&gt;https://yum.oracle.com/oracle-linux-isos.html&lt;/a&gt;，下载&lt;code&gt;OracleLinux-R8-U8-Server-aarch64-dvd.iso&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在 VMware Fusion 里安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
 &lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;安装-oracle-19c-数据库&#34;&gt;安装 Oracle 19c 数据库&lt;/h1&gt;
 &lt;p&gt;安装依赖包
 &lt;code&gt;dnf -y install oracle-database-preinstall-19c.aarch64&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然后到解压后的 database 目录里运行 &lt;code&gt;./runInstaller&lt;/code&gt;，图形化安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1592,16 +1592,16 @@
 &lt;h1 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h1&gt;
 &lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
 &lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;每日复习&#34;&gt;每日复习&lt;/h1&gt;
 &lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
 &lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;我自己写了发送到 Things3 的部分，整个脚本如下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -1644,8 +1644,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果某些单词不用再复习了，就再其前面加上 # 号，&lt;code&gt;${word:0:1} != &#39;#&#39;&lt;/code&gt; 会去过滤。&lt;/p&gt;
 &lt;p&gt;最后把脚本加到 cron job 即可。&lt;/p&gt;
 &lt;p&gt;最后效果如下，直接变成当天的待办事项，相当“暴力”。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1665,9 +1665,9 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h1&gt;
 &lt;p&gt;速干衣，跑步水杯，跑步袜。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-preparation-for-running-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这个水杯一直拿着太轻便了，去年用的水杯太大，得放在路边，结果今年第一次跑步就被环卫工人收走了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-preparation-for-running-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;早上6点多起来，简单洗漱，拉伸一下，穿上跑鞋，戴上 AirPods 和 Apple watch，水杯加点水，迅速下楼。&lt;/p&gt;
 &lt;p&gt;整个跑步体验比去年的好多了。&lt;/p&gt;</description>
     </item>
@@ -1799,19 +1799,19 @@
 &lt;p&gt;之前看 《Designing Data-Intensive Applications》的时候，有些段落理解不到位，用 Google Translator 翻译成中文，需要把在 PDF 文件里把需要的段落复制到 Google Translator，点击翻译然后得到结果，感觉很不方便。想着有没有什么工具可以直接能把截图上的英文翻译成中文，当时找了一下，无果，只能记在 to do list 里。&lt;/p&gt;
 &lt;p&gt;随着 ChatGPT 的到来，发现已经有工具能够 exactly 实现我的诉求了。&lt;/p&gt;
 &lt;p&gt;就是 &lt;a href=&#34;https://www.iplaysoft.com/openai-translator.html&#34;&gt;OpenAI Translator - 最强开源 AI 划词翻译工具&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
 &lt;h1 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h1&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
 &lt;h1 id=&#34;糟糕的网络环境&#34;&gt;糟糕的“网络环境”&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;又联想到经常遇到的无法使用 ChatGPT 网页版。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;于是上午开始研究独立的 VPS，以及科学上网工具。&lt;/p&gt;
 &lt;p&gt;一番研究后决定选用 Vultr，注册账号然后支付宝充值 50 刀，因为优惠（&lt;a href=&#34;https://www.vultryhw.cn/rules-for-free-credit-in-vultrmatch/&#34;&gt;Vultr充多少送多少活动&lt;/a&gt;）总共得到 100 刀，可以用上一年了。&lt;/p&gt;
 &lt;p&gt;选用 Los Angeles 6$/month 套餐，Ubuntu 20.04 LTS 系统，很快得到一个主机和 IP。(外加一句，后面我又创建了 3 台不同地区的主机做测试，Vultr 是按照使用时间收费而不是主机数量，这一点就特别好，即使 IP 有问题，创建个新的主机就好，不用额外付费。)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
 &lt;h2 id=&#34;安装-v2ray&#34;&gt;安装 V2Ray&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
@@ -1910,7 +1910,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status ssh.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Client 端配置&lt;/p&gt;
 &lt;p&gt;Mac 上 V2rayU 添加节点：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
 &lt;h2 id=&#34;quota-报错&#34;&gt;Quota 报错&lt;/h2&gt;
 &lt;p&gt;You exceeded your current quota, please check your plan and billing details&lt;/p&gt;
@@ -1918,7 +1918,7 @@
 &lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;
 &lt;h1 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。&lt;/p&gt;
 &lt;p&gt;最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。&lt;/p&gt;</description>
     </item>
@@ -1958,7 +1958,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl disable avahi-daemon.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;vmware-里共享硬盘的配置&#34;&gt;VMWare 里共享硬盘的配置&lt;/h1&gt;
 &lt;p&gt;两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -2025,7 +2025,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ocr&#34;&gt;OCR&lt;/h1&gt;
 &lt;p&gt;忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg
@@ -2100,8 +2100,8 @@
       
       <guid>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</guid>
       <description>&lt;p&gt;5 月 3 号到 8 月 18 号，3 个半月，减重 20 斤。时隔 7 年，终于成功了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;回顾一下这 3 个半月。&lt;/p&gt;
 &lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
@@ -2129,11 +2129,11 @@
 &lt;li&gt;彻底解封以后开始早上去跑步。刚跑的时候走一段跑一段，跑不动了就走走，没有负担。刚开始边跑步边听微信听书，后来看了&lt;a href=&#34;https://weread.qq.com/book-detail?type=1&amp;amp;senderVid=37432009&amp;amp;v=5aa32dc0718048ef5aab966k6bb4288042d316bb61e34a1&#34;&gt;《当我谈跑步时，我谈些什么》&lt;/a&gt;，开始听 Eric Clapton 的 &lt;a href=&#34;https://open.spotify.com/album/3lIVRVNgrOxfmjUAY2yfwW?si=NWzxLux8T4Of2AkyvkPwrg&#34;&gt;Reptile&lt;/a&gt; ，的确适合跑步时听，伴着悠扬的音乐，边跑边思绪纷飞。&lt;/li&gt;
 &lt;li&gt;有个小技巧，把跑步需要的物品和准备工作列个清单，早上起来以后对照着快速准备一下，迅速出门。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;看了下 Keep 里 7 月份的记录，跑得还算多的。(跑跑走走，忽略配速。)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;刻意走楼梯，多走路，多出力干点家务。尽可能地多消耗能量。&lt;/li&gt;
 &lt;li&gt;每周打球。每次打完球都和同事一起吃一顿麦当劳的汉堡 + 薯条 + 可乐，很爽，也不必有心理负担。&lt;/li&gt;
@@ -2164,13 +2164,13 @@
 &lt;ul&gt;
 &lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_1.png&#34; width=&#34;50%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_1.png&#34; width=&#34;50%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/p&gt;
@@ -2195,23 +2195,23 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;每天的笔记尽量记录详细一些，加上当时的想法和详细操作。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;log和command贴在笔记里需要用 ``` 标记成 code，这样显示不会凌乱，Obsidian 索引的时候也不会费时。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;笔记仍然按照时间线去记录，每天一个以日期命名的笔记文件。dailynote 的主要作用仍然是当天的“工作台”，记录处理各个任务时的步骤、解决问题的思路和方法，其中小部分值得提取出来再加工的可以单独新建一个笔记文档，用 Obsidian 里的 &lt;code&gt;[[ ]]&lt;/code&gt; 去关联。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;VSCode 作为主力编辑器，Obsidian 用来回顾及组织笔记之间的关联。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;及时回顾、整理当天的记录。整理过的 daily note 重命名。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

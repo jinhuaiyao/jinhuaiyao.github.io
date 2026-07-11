@@ -21,8 +21,8 @@
 &lt;p&gt;有了 AI，这个需求很快就做成了：一个自托管的&amp;quot;读书卡片回顾站&amp;quot;，打开网页就随机给我一张过去划线的卡片。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;卡片长什么样&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;前端是浅米色背景，霞鹜文楷的字体，一次只随机显示一张卡片，干干净净。电脑端空格或方向键切换下一张，按 R 重新洗牌；手机上点一下或左滑下一张，右滑上一张。点卡片上的书名，可以只看这一本书的划线。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechat-to-notion.jinhuaiyao.com/imgs/a231432b53d5489437a749efc3c88cd7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechat-to-notion.jinhuaiyao.com/imgs/12ab48302e130de828de20a596d15489.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/a231432b53d5489437a749efc3c88cd7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/12ab48302e130de828de20a596d15489.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;它是怎么运转的&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;整条链路其实很简单：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;微信读书 App（划线 / 想法）
@@ -196,17 +196,17 @@ Reeder Classic，看 RSS；
 &lt;p&gt;现在有 AI 了，一切变得如此简单。&lt;/p&gt;
 &lt;p&gt;打开 Claude，要求它后端用 Python，数据库用 SQLite，对话几轮即可。群里闲聊这事，朋友也对错题本 app 感兴趣，于是让 AI 加个多用户登录和邀请码注册的功能。&lt;/p&gt;
 &lt;p&gt;把代码部署到自己的云服务器，测试一下，让 AI 修复几个问题。再配置一下 Nginx，一个轻量、开箱即用的错题管理系统就能工作了，支持拍照上传、间隔复习、多用户、邀请码注册。一小时就搞定了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-45-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-28_11-45-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;错题列表&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-45-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-28_11-45-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;添加错题&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-46-07.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-28_11-46-07.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;复习模式&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-46-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-28_11-46-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;统计分析&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-46-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-28_11-46-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最后加个 Cloudflare Zero Trust Access，只允许特定的邮箱登录，在原有的密码登录基础再加上一层防护。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-28_11-44-47.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-28_11-44-47.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;完工。&lt;/p&gt;
 </description>
     </item>
@@ -222,7 +222,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;对照着&lt;a href=&#34;https://www.jinhuaiyao.com/posts/my-personal-data-classification-and-backup-system-2025/&#34;&gt;我的个人数据分级与备份体系 - 2025&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;照片和视频&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;mac mini 上 Time machine 里的备份&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-18-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-21_11-18-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;远程到家里的 mac mini，可以看到最新的时间戳。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;家用服务器上的 MT-Photos&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/HYPhoto$ find . -mtime -1 -exec ls -ltr {} +  |tail
@@ -258,7 +258,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里最新的文件是 3 月 19 号的，是因为过去两天没有手动打开手机上的 MT-Photos app，刚刚备份了增量数据就没问题了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文档资料&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Nextcloud 里的备份文件夹&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-31-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-21_11-31-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;看一下文件夹的时间戳，没问题。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;服务器上 Nextcloud 的备份&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -288,7 +288,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -czf - Config Learning Reading | gpg -c --cipher-algo AES256 | split -b 10G - /Users/jinhuaiyao/Downloads/Nextcloud.Others.tar.gz.gpg.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;把最重要的 4 个文件夹打包后用 gpg 加密，然后分割成 10G 一个的文件，上传到 Google Drive，作为冷备，增加一份保障。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-21_11-48-41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-21_11-48-41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;就这样。&lt;/p&gt;
 </description>
     </item>
@@ -301,16 +301,16 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/recommend-the-yaoyao-jump-rope-app/</guid>
       <description>&lt;p&gt;戴上手表，拿起跳绳，点击 app 图标，开跳。&lt;/p&gt;
 &lt;p&gt;“YaoYao 是专门为智能穿戴设备（如手表、AirPods）设计开发的跳绳计数应用，它将你的跳绳运动数字化”。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1674.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1674.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;跳绳个数的数字统计直观地、全方位地敦促我去持续积累。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;手机 app&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1685.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1685.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;分享界面&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1598.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1598.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;负一屏小组件&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1686.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1686.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;锁屏屏幕&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1687.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1687.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;就这些。&lt;/p&gt;
 </description>
     </item>
@@ -322,12 +322,12 @@ Reeder Classic，看 RSS；
       
       <guid>http://www.jinhuaiyao.com/posts/the-shortcut-i-am-still-using/</guid>
       <description>&lt;p&gt;没有新东西，只是记录一下当前（2026.03）还在用的快捷指令。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-24-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-08_12-24-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;获取 2026-03-08 这种格式的日期，用作晨间日记的标题。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-44-49.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-08_12-44-49.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;放到电脑上小组件里，需要的时候点击一下，剪贴板里就可以得到当前日期，每天可以省 5 秒手动时间 ：）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-33-50.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-08_12-33-50.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;设定墙纸照片&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/&#34;&gt;把运动统计写在iPhone锁屏上，还会自动切换&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;New Todo 和 New Memos&lt;/strong&gt;&lt;/p&gt;
@@ -336,23 +336,23 @@ Reeder Classic，看 RSS；
 &lt;p&gt;调用 Notion API，快速记录跑步的距离到 Notion 里。&lt;/p&gt;
 &lt;p&gt;方法和 New Todo 和 New Memos 一样。&lt;/p&gt;
 &lt;p&gt;结果是这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-51-42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-08_12-51-42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Memos&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;三合一菜单，在 New Todo 和 New Memos 的基础上加了个从剪贴板获取内容发到 Notion，偶尔会用一下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_12-56-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-08_12-56-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Log Weight&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;每隔几天称重，点击一下记录体重。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1434.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1429.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1434.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1429.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;可以通过“健康” app 看到所有记录，长期记录后可以可以看到体重的历史变化。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1431.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1431.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Phone YY&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;快速拨打电话。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-03-08_13-07-42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-03-08_13-07-42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;剩余 8 个打卡相关的&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;见&lt;a href=&#34;https://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/&#34;&gt;Notion+Scriptable+快捷指令，每天完成最重要的事&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;最后两个相当于“占位符”，为了 iPhone 上显示的美观（空两个就有点丑）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1432.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1432.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;就这些。&lt;/p&gt;
 </description>
     </item>
@@ -364,14 +364,14 @@ Reeder Classic，看 RSS；
       
       <guid>http://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/</guid>
       <description>&lt;p&gt;先看下效果。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0005.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0005.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;之前总觉得 iPhone 锁屏界面中间这部分区域不能自定义一些文字有点遗憾。倘若能放一些重要的提醒或者运动统计信息，可以更好地提醒自己、督促自己运动。毕竟手机一点亮就可以看到。&lt;/p&gt;
 &lt;p&gt;之前也问过 AI，都没有得到什么好的方案。&lt;/p&gt;
 &lt;p&gt;直到有一天，同事发给我这个网站。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://lifegrid-wallpapers.pages.dev/&#34;&gt;https://lifegrid-wallpapers.pages.dev/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;受它的启发，一通研究，最后实现我想要的效果。真是念念不忘，必有回响。&lt;/p&gt;
 &lt;p&gt;大致流程如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2026-02-22_10-21-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-02-22_10-21-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;下面是实现过程。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Notion 里记录运动&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;快捷输入，参照 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/notion+scriptable+shortcuts-complete-the-most-important-tasks-every-day/&#34;&gt;Notion+Scriptable+快捷指令，每天完成最重要的事&lt;/a&gt;&lt;/p&gt;
@@ -552,9 +552,9 @@ Reeder Classic，看 RSS；
 &lt;p&gt;&lt;a href=&#34;https://xx.xx.com/final_wallpaper.png&#34;&gt;https://xx.xx.com/final_wallpaper.png&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;iPhone快捷指令每天定时更新壁纸&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;设计一个快捷指令，并设置自动化每天凌晨运行一次。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1028.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1029.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_1030.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1028.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1029.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_1030.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;完工！&lt;/p&gt;
 </description>
     </item>
@@ -569,11 +569,11 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;开始定投标普500，纳指100，黄金指数，白银指数，多元化配置。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0162.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0162.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;白酒“跌跌不休”，反复纠结要不要重启定投。最后还是决定相信基金经理，重启定投张坤的易方达优质精选混合。大不了再放个几年，&lt;a href=&#34;https://www.jinhuaiyao.com/posts/the-15th-year-of-fund-regular-investment/&#34;&gt;毕竟也“相识”了15年了&lt;/a&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0161.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0161.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;重读《投次第1课》，温故知新，建立框架。&lt;/p&gt;
@@ -598,10 +598,10 @@ Reeder Classic，看 RSS；
 &lt;p&gt;想增加他的主观能动性，不赖床、吃饭不拖拉、主动背古诗、阅读。&lt;/p&gt;
 &lt;p&gt;一顿搜索，想找到一个能“收集星星”的 app。&lt;/p&gt;
 &lt;p&gt;最后找到了“呱呱计数”，投其所好。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0008.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0007.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0009.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0010.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0008.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0007.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0009.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0010.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;使用之后，效果挺好。&lt;/p&gt;
 &lt;p&gt;冬天早上也能嗖地一下起床；每天背古诗，扇贝 app 背单词，平板支撑，跳绳，阅读。&lt;/p&gt;
 &lt;p&gt;推荐一下。&lt;/p&gt;
@@ -631,23 +631,23 @@ Reeder Classic，看 RSS；
 &lt;p&gt;晨间日记一年，年末回看，也是一种享受。&lt;/p&gt;
 &lt;p&gt;等等的每日一照，一年，继续记录等等的变化。&lt;/p&gt;
 &lt;p&gt;Notion 里记录了一年。经过一整年的使用和改进，Notion 的记录框架已趋于完备。Memos 里 5675 条记录，Notes 453篇笔记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-12-31_10-10-57.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-12-31_10-12-20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-12-31_10-10-57.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-12-31_10-12-20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;扇贝背单词，一年，多邻国，几乎一年。继续保持语感。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_8994.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Duolingo_Sharing.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_8994.JPG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Duolingo_Sharing.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;微信读书。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_8996.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_8996.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;体重变化不大。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_8997.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_8997.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;跑步 46 次，共计 251 公里。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-12-31_11-08-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-12-31_11-08-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;跳绳了一段时间，没有继续下去。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_8998.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_8998.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;7 月份重拾公众号，到年底一共写了 11 篇文章，关于自己的生活、用的工具、解决的一些问题。8 月初开通“流量主”，公众号文章也有收入了，不过这收入的象征意义大于实际意义；也有了陌生人的关注和回复，开始有一些正反馈。&lt;/p&gt;
 &lt;p&gt;11 月开始做平板支撑，1 分 40 秒，个人新纪录了，明年继续努力。&lt;/p&gt;
 &lt;p&gt;今年是基金定投的第15年。7 月，上证指数终于上了 3500 点，10 月底，上证指数突破 4000 点。9 月开始暂停了主动基金的定投，陆续把收益率超过 100% 的基金赎回了一部分，落袋为安。也开始看书、学习、思考更长期的投资策略。今年的收益率勉强跑赢沪深 300 指数。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_8995.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_8995.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;今年工作上研究学习了许多 python 脚本，对于 db console 这一套系统的了解深入了许多。7 月份开始忙 corp db migration to exadata，积累不少的数据库迁移经验。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;今年的新事物&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2 月把主力 Apple ID 换成美区，并加入了别人的 Apple One 家庭组。12 月开始自己订阅了美区 Apple One。&lt;/p&gt;
@@ -662,7 +662,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;12月开始订阅 Google Pro AI，频繁使用 Gemini，NotebookLM 和 Antigravity。有不懂的东西、内心的困惑，都会去问问 AI。&lt;/p&gt;
 &lt;p&gt;APEX，在自己的测试环境里搭建、学习一下。&lt;/p&gt;
 &lt;p&gt;今年的订阅情况。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-12-31_10-51-01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-12-31_10-51-01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;等等&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;今年每个季度带等等检查视力、检查牙齿。目前牙齿尚可，远视储备几乎耗尽。&lt;/p&gt;
 &lt;p&gt;今年和等等一起学习 + 玩乐的项目：读语文课本，订正语数英练习，看故事书，背单词，做数独，做迷宫题，读古诗，玩 iPad 游戏，涂鸦，在家里捉迷藏，玩飞行棋，玩大富翁，下国际象棋。&lt;/p&gt;
@@ -693,10 +693,10 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/playing-monument-valley-again/</guid>
       <description>&lt;p&gt;看到消息说纪念碑谷 3 来了，赶紧去美区 app store 下载一下。&lt;/p&gt;
 &lt;p&gt;回想起很久之前玩的 1 和 2，不记得是什么时候了，去搜索一下以前的记录才知道已经过去了这么久。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-12-05_10-33-30.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-12-05_10-33-30.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;又想到这么好玩的游戏等等也可以玩呀，在他的 iPad 上下载好，他放学回来就开心地玩了起来。&lt;/p&gt;
 &lt;p&gt;我也在旁边陪同，遇到他闯不过去关卡我们就一起研究一下。过去了这么久，再玩起来还是觉得很有意思。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_8365.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_8365.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;强烈推荐一下。&lt;/p&gt;
 </description>
     </item>
@@ -709,9 +709,9 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/notion&#43;scriptable&#43;shortcuts-complete-the-most-important-tasks-every-day/</guid>
       <description>&lt;p&gt;每天完成最重要的几件事，这一天就算没有虚度。&lt;/p&gt;
 &lt;p&gt;每天打开手机，看一眼，就知道还有什么事没做，简单而清晰。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_7826.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_7826.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;点击一下按钮，输入内容，即可完成打卡。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_7827.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_7827.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;实现方式还是利用自己的“三板斧”：Notion、Scriptable和Apple快捷指令。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“今日打卡”部分&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Notion api+Scriptable app，这个之前也提到过，需要做的就是明确一下需求和实现思路，脚本部分让AI帮忙即可。&lt;/p&gt;
@@ -726,7 +726,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;总结工作&amp;#34;:        &amp;#34;WorkingSummary&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;等等的每日一照&amp;#34;:        &amp;#34;DengDengPhoto&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-39-04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-39-04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Scriptable的脚本：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;// Variables used by Scriptable.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;// These must be at the very top of the file. Do not edit.
@@ -1002,16 +1002,16 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Script.complete();
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;点击一下看看效果。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Picsew_20251122105537.JPEG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Picsew_20251122105537.JPEG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后设置桌面小组件，效果如文中的第一张图。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;按钮部分&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;使用Notion api+快捷指令app。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-42-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-42-14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里有两种按钮，一种是不需要输入内容的，例如“晨间日记”。另一种是需要输入具体内容的，比如“运动”。&lt;/p&gt;
 &lt;p&gt;第一种，内容和标记这两个变量的值都是固定的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-47-13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-47-13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;第二种，内容从固定值Text改为“Ask for Input”即可，点击以后会提示输入，效果如文中的第二张图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-21_16-48-17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-21_16-48-17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;搞定！&lt;/p&gt;
 </description>
     </item>
@@ -1089,17 +1089,17 @@ Reeder Classic，看 RSS；
 &lt;p&gt;开通iCloud，Mac mini 上照片应用设置下载并保留原片到外接移动硬盘，外接移动硬盘通过Time Machine自动备份。&lt;/p&gt;
 &lt;p&gt;另外，通过家用服务器上的MT-Photos手动定期备份。&lt;/p&gt;
 &lt;p&gt;上传到MT-Photos里的照片在服务器上会通过cron job会每天rsync到外接硬盘。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_16-16-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_16-16-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_16-16-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_16-16-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;个人文档资料&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;日记、笔记、文章、日常的琐碎记录目前存放在Notion里，还有一些旧的markdown文档也会逐渐迁移过去。&lt;/p&gt;
 &lt;p&gt;备份方式是每个月月底手动导出整个Workspace，存放到NextCloud里。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_14-57-00.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_14-57-00.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;微信聊天记录&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;之前在上海的时候，每周会手动备份到Mac mini，再通过 Time Machine进行备份。&lt;/p&gt;
 &lt;p&gt;目前是每周手动备份到MacBook Pro。&lt;/p&gt;
 &lt;p&gt;此外，iCloud里iPhone备份中包含微信app的备份，这个是自动备份的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Picsew_20251101150406.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Picsew_20251101150406.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;账号和密码&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;账号和密码都存于1Password，1Password主密码写到某本笔记本上了。&lt;/p&gt;
 &lt;p&gt;设置提醒每个月会导出1Password为1PUX文件，并用gpg加密一层后存放到NextCloud里。&lt;/p&gt;
@@ -1123,7 +1123,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--   1 jinhuaiyao  staff   14869937 Nov  1 14:27 1.1pux
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;其他个人资料和工作笔记&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;投资统计、家庭开销统计、体检报告电子版、证件电子版、保险电子版、软件配置文件、云服务器上的数据、工作笔记，这些要么直接存放在家庭服务器上的NextCloud里，要么会通过网络备份到NextCloud。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-11-01_15-15-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-11-01_15-15-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;其他的收集&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;软件和工具，学习资料（英语，数据库，编程），别人的文章及标注，图书、剧集、视频。&lt;/p&gt;
 &lt;p&gt;这些直接存放到NextCloud里。&lt;/p&gt;
@@ -1169,7 +1169,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;&lt;a href=&#34;https://github.com/coder/code-server&#34;&gt;https://github.com/coder/code-server&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Run VS Code on any machine anywhere and access it in the browser. （在任何地方的任何机器上运行 VS Code，并在浏览器中访问。）&lt;/p&gt;
 &lt;p&gt;效果图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-42-09.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-42-09.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@meta-unicorn-2:~/coder# pwd
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/root/coder
@@ -1196,7 +1196,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CONTAINER ID   IMAGE                              COMMAND                  CREATED         STATUS                   PORTS                                         NAMES
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;f4bc53deff9e   codercom/code-server:latest        &amp;#34;/usr/bin/entrypoint…&amp;#34;   3 hours ago     Up 3 hours               0.0.0.0:8090-&amp;gt;8080/tcp, :::8090-&amp;gt;8080/tcp     code-server 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Cloudflare 设置域名解析&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_21-06-01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_21-06-01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;nginx 设置反向代理&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi /etc/nginx/conf.d/code.conf
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -1236,22 +1236,22 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问 &lt;a href=&#34;https://code.xxx.com&#34;&gt;https://code.xxx.com&lt;/a&gt; 验证一下。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;设置 Cloudflare Zero Trust&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;访问网页前强制登录，在 code-server 自带的访问密码之上多一层访问控制。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-50-05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-50-05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;只允许自己的邮箱可以验证。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-50-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-50-36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;验证方式是一次性验证码。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-51-03.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-51-03.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-54-31.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-55-16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-54-31.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-55-16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;设置类 macOS 应用&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;点击Chrome地址栏上的小图标。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-58-18.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-39-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-58-18.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-39-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这样就和VSCode app样子很像了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_20-59-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_20-59-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Alfred 设置快捷键&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-17_21-03-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-17_21-03-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;用option+k可以快速调出界面。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;数据定期备份&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 服务器上&lt;/span&gt;
@@ -1290,13 +1290,13 @@ Reeder Classic，看 RSS；
 &lt;p&gt;&lt;strong&gt;访问国内家庭局域网&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Surge 里之前的策略和规则绝大部分都不适用了。&lt;/p&gt;
 &lt;p&gt;研究了一圈，最后其实就是使用 Surge Ponte，简简单单添加一条策略就行：家里在局域网段的访问通过家里的 Mac mini。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-12_11-25-02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-12_10-46-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-12_11-25-02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-12_10-46-19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;另外，有一些必须要中国 IP 才能访问的资源，单独加一条规则即可，通过家里网络中转一下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-10-12_10-47-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-10-12_10-47-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Apple Watch跑步定位的问题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;本来以为 Apple Watch 跑步定位轨迹一定要 eSIM，其实只要 GPS 就行。到了新加坡关闭了国内的 eSIM 服务一样可以定位跑步轨迹。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_6425.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_6425.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Apple Pay绑定OCBC借记卡&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;拿到实体卡当天就尝试在 Apple Pay 里添加，一直报错。打电话给客服，说是要等 12 小时，结果还是不行。&lt;/p&gt;
 &lt;p&gt;最后还是在 xhs 上找到了解决方案：把 iPhone 地区改成新加坡，语言改成英语，重启一下即可成功添加。&lt;/p&gt;
@@ -1311,7 +1311,7 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/the-15th-year-of-fund-regular-investment/</guid>
       <description>&lt;p&gt;从 2010 年 12 月 13 日的第一笔基金定投，到现在快 15 年整了。&lt;/p&gt;
 &lt;p&gt;这 15 年里每个月都会买入基金，没有断过，也算是一种坚持了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/640.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/640.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;前 8 年都是买的都是基金经理打理的基金，2018 年开始买入指数基金。&lt;/p&gt;
 &lt;p&gt;回头看去，最省心还是一篮子指数基金计划，比如 E大的长赢指数和有知有行的长钱账户。不用操心基金的买入和卖出，只要长期持有即可，对于绝大部分的普通投资者非常友好。&lt;/p&gt;
 &lt;p&gt;推荐一下有知有行的&lt;a href=&#34;https://book.douban.com/subject/36295222/&#34;&gt;《投资第1课》&lt;/a&gt;。&lt;/p&gt;
@@ -1327,24 +1327,24 @@ Reeder Classic，看 RSS；
       <description>&lt;p&gt;分享一点我的 Mac mini 的日常使用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;网络设置&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Mac mini 用网线连接路由器，手动设置 ip。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-08-04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-08-04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;家庭网络默认网段是 10.0.0.0/24，设置 Proxy 网段为 10.0.3.0/24，并且默认网关指向 Mac mini 的 ip - 10.0.3.100。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_20-58-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_20-58-53.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;开启 Surge 增强模式，启用 ip 转发功能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-12-12.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-12-12.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % sysctl net.inet.ip.forwarding
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;net.inet.ip.forwarding: 1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样，所有连接到 Proxy 网络的设备，其流量都会通过 Mac mini 转发。&lt;/p&gt;
 &lt;p&gt;同时开启 Surge Ponte，可以在外通过安装了 Surge 的手机或电脑，远程访问家庭网络。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;共享功能&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-07-28.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-07-28.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;开启共享功能后，可以通过远程桌面连接到 Mac mini，支持 SSH 登录，也可以通过网络挂载 Mac mini 的文件夹。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;照片 &amp;amp; 时间机器&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Mac mini 外接 1T 的 SSD 移动硬盘，并将照片图库的默认存储位置迁移到该外接硬盘，同时设置为下载并保留原片，确保所有原始照片完整保存在本地。&lt;/p&gt;
 &lt;p&gt;再连接一块 4T 的 HDD 移动硬盘，配置 Time Machine 每小时备份照片库，作为照片和视频的本地备份。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-40.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-18-53.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-24-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-18-40.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-18-53.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-24-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;定时作业&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;通过 cronjob 去定时完成一些备份、数据传输、监控功能。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % crontab -l
@@ -1378,15 +1378,15 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（备份 gitea 里的脚本到本地）
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Nextcloud&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;安装 Nextcloud 客户端，保留最重要的个人资料到本地，并通过 Time Machine 定期备份。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-09-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-38-06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-09-55.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-38-06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Reeder&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;配置每小时抓取一次 feeds，通过 iCloud 同步，这样其他设备上就不用重复抓取了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-06_21-11-17.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_4699.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-06_21-11-17.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_4699.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;微信备份&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;每周手动同步一次手机微信到 Mac mini，作为备份。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-08-07_21-46-05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-08-07_21-46-05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1433,7 +1433,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~/glance/config$ git config --global credential.helper store
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~/glance/config$ git push -u origin master
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250717073557.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250717073557.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3. PDF 转 markdown 文件的问题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;断断续续收集了许多 PDF 格式的文章，需要一款工具能够方便地将值得反思读的文章转成 markdown 格式，存于 Notion，阅读 + 批注。&lt;/p&gt;
 &lt;p&gt;最近找到了微软开源的工具 markitdown，试用了一下，符合预期。&lt;/p&gt;
@@ -1472,12 +1472,12 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(.venv) jinhuaiyao@jinhuaiyaos-macbook-air Documents % markitdown a.pdf &amp;gt; a.md
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;命令行的方式还是不方便，需要一个可以用图形化的方式。&lt;/p&gt;
 &lt;p&gt;打开 Automator，新建一个 Quick Action，命名为 ToMarkDown。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-07-15_09-26-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-07-15_09-26-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;设置调用 shell 脚本去执行 python 脚本。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~/Documents/markitdown
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;file_path=&amp;#34;$(realpath&amp;#34;$1&amp;#34;)&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./.venv/bin/python3 /Users/jinhuaiyao/Nextcloud/Config/Mac_Script/convert_pdf.py &amp;#34;$file_path&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250717073735.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250717073735.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-macbook-pro Mac_Script % cat convert_pdf.py
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import sys
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import os
@@ -1495,12 +1495,12 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;print (f&amp;#34;Saved to: {output_file}&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;右击一个 PDF 文件，Quick Actions → ToMarkdown，就可以在当前目录得到同名的 markdown 文件了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250717073804.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250717073804.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;也可以通过 System Settings → Keyboard → Keyboard Shortcuts → Services → Files and Folders，给 ToMarkDown 设置一个快捷键，这样就不需要鼠标操作了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250717073822.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250717073822.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;效果图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-07-16_20-03-23.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2025-07-16_20-57-35.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-07-16_20-03-23.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2025-07-16_20-57-35.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1526,35 +1526,35 @@ Reeder Classic，看 RSS；
 &lt;p&gt;用于 DEVONthink 和 Zotero 的同步。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@jinhuaiyao-t7820:/home/jinhuaiyao/webdav# ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;devonthink.dtCloud  index.html  zotero
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200458.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200532.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200458.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200532.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Samba&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;用于局域网的设备访问服务器里的资料。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200625.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200625.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Docker 里安装了以下几个服务。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200706.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200706.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Glance&lt;/p&gt;
 &lt;p&gt;自托管的信息仪表盘，上面这个界面就是来自于 Glance。&lt;/p&gt;
 &lt;p&gt;Gitea&lt;/p&gt;
 &lt;p&gt;轻量级的、开源的 Git 代码仓库托管平台，用来管理我的代码和配置文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200746.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200746.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Immich + MT-Photos&lt;/p&gt;
 &lt;p&gt;开源自托管照片应用，存放我和家人的照片、视频。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200817.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200843.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200817.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200843.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Memos&lt;/p&gt;
 &lt;p&gt;轻量级的、开源的、自托管 “碎片记录”，用来临时存放一些信息。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712200935.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712200935.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Portainer&lt;/p&gt;
 &lt;p&gt;一个开源的 Docker 图形化管理面板。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201015.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712201015.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;NginxProxyManager&lt;/p&gt;
 &lt;p&gt;反向代理和 HTTPS 管理工具。使用它让我的内网也能使用 https。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201045.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712201045.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Nextcloud&lt;/p&gt;
 &lt;p&gt;开源、自托管的私有云存储平台，我用来替代 OneDrive、Dropbox。尽可能地把所有个人数据都存放在这里。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201110.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712201110.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;数据存放在 /media/jinhuaiyao/data1 这个磁盘上。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data1/nextcloud$ ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;admin  appdata_ochyim22b4zf  audit.log  fts-index.done  index.html  nextcloud.log
@@ -1563,7 +1563,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/sdb1       7.3T  2.2T  4.7T  32% /media/jinhuaiyao/data1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Glances&lt;/p&gt;
 &lt;p&gt;系统性能监控工具，用来监控 Ubuntu 服务器的状态。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201143.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712201143.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;QEMU-KVM&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;用它安装了两台虚拟机，Ubuntu 桌面版和 Windows 10。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:~$ virsh list --all
@@ -1571,11 +1571,11 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 1    nextcloud-vm   running
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 23   win10          running
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201229.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712201229.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Ubuntu 桌面版上安装 Nextcloud 的客户端，数据同步存放在 /media/jinhuaiyao/data2 这个磁盘上，可作为一份数据备份。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@jinhuaiyao-t7820:/media/jinhuaiyao/data2/Nextcloud$ ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Backup  Config  DengDeng  Learning  Personal  Reading  Tools  TV  Videos  Zotero
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20250712201306.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20250712201306.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Windows 10 一般只是临时用一下，使用 macOS 上的 “Windows App” 远程连接。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;目前，这些应用和服务已经基本覆盖了我的使用需求。关于数据备份和内网访问，我会在后续单独写文章详细展开一下。&lt;/p&gt;
@@ -1608,7 +1608,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;户外活动，大都是去附近的顾村公园和上海大学，享受和等等的户外快乐时光。&lt;/li&gt;
 &lt;li&gt;牙线，10 月份等等检查出有蛀牙后睡前就会用牙线帮他清理牙缝。&lt;/li&gt;
 &lt;li&gt;打卡，有时候想不起来要和等等学习什么、玩什么，于是列了一个打卡清单，他热衷于完成各种项目然后打“√ ”。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-29_14-47-10.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-29_14-47-10.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1623,20 +1623,20 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;记账，一年，全年的家庭收入与开销一目了然。&lt;/li&gt;
 &lt;li&gt;晨间日记，一年。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-31_14-56-02.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-31_14-56-02.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;等等的每日一照，一年。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-31_12-48-30.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-31_12-48-30.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;微信读书，断断续续。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-31_11-54-02.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-31_11-54-02.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;阅读、运动、英语学习的记录，自动同步到&lt;a href=&#34;http://www.jinhuaiyao.com/2024&#34;&gt;“我的 2024”&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;体重，继续保持。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-26_17-03-08.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-26_17-03-08.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1646,7 +1646,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;有知有行里的海外长钱，年末开始定投一点。恭喜有知有行获得了证监会批复的基金销售资质，恭喜孟岩！&lt;/li&gt;
 &lt;li&gt;今年第三次也是全部赎回了银河创新成长混合这只基金。从 2015 年 12 月定投到 2018 年 7 月，投入 24300，收益 23082，收益率 95%，勉强满意。&lt;/li&gt;
 &lt;li&gt;今年全年收益率终于为正了。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-28_10-12-07.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-28_10-12-07.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1658,7 +1658,7 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;UDM-SE，AP，摄像头，设置 VLAN 和防火墙规则，又把墙内网线换成六类线，后面不用再折腾家庭网络了。&lt;/li&gt;
 &lt;li&gt;宜家的桌下理线架，让桌面变得清清爽爽。
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-26_16-44-01.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-26_16-44-01.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;iPhone 16 Pro，1T，照片除了 iCloud 外也在本机下载并保留原片，相册里的视频可以瞬间打开了。&lt;/li&gt;
@@ -1705,7 +1705,7 @@ Reeder Classic，看 RSS；
 &lt;h2 id=&#34;一些不足&#34;&gt;一些不足&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/2023-review-2024-plan/&#34;&gt;2023年总结与2024年计划&lt;/a&gt;中提到的许多目标虽然逐步落实，但仍有不足。比如，Dota 和象棋依然占用了许多时间，导致精力分散。&lt;br&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-26_16-45-43.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-26_16-45-43.png&#34; width=&#34;60%&#34;/&gt;
   &lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;年末阶段总是容易懈怠，饮食控制没能坚持到底。&lt;/li&gt;
@@ -1744,60 +1744,60 @@ Reeder Classic，看 RSS；
 &lt;h1 id=&#34;记录的内容及我自己的一些使用方法&#34;&gt;记录的内容及我自己的一些使用方法&lt;/h1&gt;
 &lt;h2 id=&#34;日常所见所想&#34;&gt;日常所见所想&lt;/h2&gt;
 &lt;p&gt;把日常的记录、待办事项都放到这个 Memos 的数据库里，用时间线去罗列。可以通过数据库的各种属性去展示和筛选。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-04-21.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-04-21.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;快捷输入，主要依赖于 Notion API 及苹果系统的快捷指令。快捷指令参考 &lt;a href=&#34;https://www.youtube.com/watch?v=mKgi6CWedeg&#34;&gt;https://www.youtube.com/watch?v=mKgi6CWedeg&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s0-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0070.JPG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s0-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0070.JPG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;点击桌面上的 &amp;ldquo;New Memos&amp;rdquo;，键盘输入，长句子也可以通过苹果键盘自带的语音输入快速记录。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s1-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0068.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s1-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0068.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;记录就会插入 Memos 这个数据库。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-36-20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-36-20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;锁屏界面也可以点击锁屏小组件调用快捷指令来快捷输入。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s2-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0071.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s2-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0071.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s3-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0072.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s3-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0072.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;macOS 上结合 Alfred，可以实现类似手机端的快捷输入。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-00-25.png&#34; width=&#34;60%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-00-25.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;先准备一个&amp;quot;3 合 1&amp;quot;的快捷指令，然后用 Aflred 的 workflow 去调用它。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-05-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-03-29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-05-48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-03-29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Apple Watch上也可以调用快捷指令。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s5-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/incoming-1210D72F-6B3E-49A6-B41F-86D32244E8E5.PNG&#34; width=&#34;30%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s5-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/incoming-1210D72F-6B3E-49A6-B41F-86D32244E8E5.PNG&#34; width=&#34;30%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;h2 id=&#34;晨间日记&#34;&gt;晨间日记&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-12-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-12-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;通过日期列的筛选还可以实现&amp;quot;那年今日&amp;quot;的功能。&lt;/p&gt;
 &lt;p&gt;还可以使用自定义的模板。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-15-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-15-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;年终回顾的时候，可以用特定的筛选条件来过滤今年的以及还没有 review 过的记录。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-16-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-16-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;待办事项&#34;&gt;待办事项&lt;/h2&gt;
 &lt;p&gt;用来取代 Things，让完成的事项也有迹可寻。&lt;/p&gt;
 &lt;p&gt;每天重复的待办事项罗列得清楚。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-20-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-20-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;通过 Notion 自动化，把完成的项目自动添加到 Memos 数据库。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s6-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_17-48-31.png&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s6-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_17-48-31.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;其他重复的待办事项也一目了然，并且有自动化加持。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-23-58.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s7-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-21-16.png&#34; width=&#34;40%&#34;/&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-23-58.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s7-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-21-16.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s8-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-21-34.png&#34; width=&#34;60%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s8-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-21-34.png&#34; width=&#34;60%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;完成某一项待办事项的时候点击 Button，可以把当前日期附加到 Records 这一列当中，当作历史记录。同时会根据 Interval 和 Unit 计算下一次待办事项的日期，更新 NextTime 列。例如现在点一下 Button，结果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-26-22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-26-22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Mac mini 上设置一个 cronjob 每天去检查 NextTime 列的日期，如果某条事项的日期是当天的话就更新 Text 列为当天的时间。当 Text 列被编辑，又会自动调用 Notion 的自动化去发出一个提醒到 Inbox 里，手机上也会有消息推送。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Notion update for nexttime - 12/19/2024
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;30 05 * * * /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/notion_update_for_nexttime.py &amp;gt;&amp;gt; /Users/jinhuaiyao/Log/notion_update_for_nexttime.txt 2&amp;gt;&amp;amp;1
@@ -1890,22 +1890,22 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % /Users/jinhuaiyao/Dropbox/my_config/Mac_Script/notion_update_for_nexttime.py
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Successfully updated Text property for page: 13c41d22-a693-8009-8515-e0ce0d4629f8
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hahahugoshortcode-s9-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-38-40.png&#34; width=&#34;40%&#34;/&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hahahugoshortcode-s9-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-38-40.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-34-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-34-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-34-28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-34-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;等等的每日一照&#34;&gt;等等的每日一照&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-25-15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-25-15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;英文学习&#34;&gt;英文学习&lt;/h2&gt;
 &lt;p&gt;可以标注并且添加注释。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_15-26-39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_15-26-39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;文章剪藏&#34;&gt;文章剪藏&lt;/h2&gt;
 &lt;p&gt;电脑端
 &lt;a href=&#34;https://www.notion.com/web-clipper&#34;&gt;https://www.notion.com/web-clipper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;手机端，发送到Notion。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s10-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0074.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s10-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0074.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;h2 id=&#34;桌面小组件展示&#34;&gt;桌面小组件展示&lt;/h2&gt;
@@ -2057,12 +2057,12 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return utc_time.toLocaleString(&amp;#39;zh-CN&amp;#39;, options);
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-12-19_16-49-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s11-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0073.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-12-19_16-49-52.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s11-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0073.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;p&gt;又比如一些重要的提醒循环显示在手机桌面。&lt;/p&gt;
-&lt;h2 id=&#34;hahahugoshortcode-s12-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0069.PNG&#34; width=&#34;40%&#34;/&gt;
+&lt;h2 id=&#34;hahahugoshortcode-s12-hbhb&#34;&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0069.PNG&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 &lt;/h2&gt;
 &lt;h2 id=&#34;数据同步到-2024-打卡记录2024&#34;&gt;数据同步到 &lt;a href=&#34;http://www.jinhuaiyao.com/2024&#34;&gt;2024 打卡记录&lt;/a&gt;&lt;/h2&gt;
@@ -2235,12 +2235,12 @@ Reeder Classic，看 RSS；
 &lt;p&gt;Stream your workspace directly to your web browser on any device and from any location.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://kasmweb.com/&#34;&gt;https://kasmweb.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;主要为了在公司电脑上也可以使用 gpt4 网页版，在本地浏览器里访问 Ubuntu 云主机里的浏览器。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240717165049.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240717165049.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;planka&#34;&gt;Planka&lt;/h1&gt;
 &lt;p&gt;The realtime kanban board for workgroups built with React and Redux.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/plankanban/planka&#34;&gt;https://github.com/plankanban/planka&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;工作上的很多 task 放到 things 里展示还是很不直观，在以前的公司里使用过 Trello，现在使用 planka 可以实现类似的效果，数据还在自己手上。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240717165840.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240717165840.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;file-store&#34;&gt;File store&lt;/h1&gt;
 &lt;p&gt;提供 &lt;a href=&#34;https://www.jinhuaiyao.com/2024/&#34;&gt;https://www.jinhuaiyao.com/2024/&lt;/a&gt; 的数据源，定期从本地 Mac mini 上 scp 最新的 txt 文件到 VPS 上。&lt;/p&gt;
 &lt;h1 id=&#34;aliyun-oss-image-backup&#34;&gt;Aliyun oss image backup&lt;/h1&gt;
@@ -2256,14 +2256,14 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/habit-tracker-in-blog/</guid>
       <description>&lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
 &lt;p&gt;看到少数派上介绍 &lt;a href=&#34;https://sspai.com/post/88456&#34;&gt;HabitKit&lt;/a&gt;，发现它的呈现方式有点像 github 代码提交的热力图，挺好看。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/HabitKit.jpg&#34; width=&#34;30%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/HabitKit.jpg&#34; width=&#34;30%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;加上之前也浏览过椒盐豆豉的文章 &lt;a href=&#34;https://blog.douchi.space/hugo-blog-heatmap/#gsc.tab=0&#34;&gt;如何给 Hugo 博客添加热力图&lt;/a&gt;，想着能不能在自己的博客上也用类似的形式来记录一下平常的运动、学习，也是一种激励。&lt;/p&gt;
 &lt;h1 id=&#34;实现&#34;&gt;实现&lt;/h1&gt;
 &lt;p&gt;了解到可以用 echart 的 js 后，和 ChatGPT 4 展开了数轮的对话，历经众多问题，终于得到了我想到的样子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-05-11_11-42-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2024-05-11_11-42-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;主要代码如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    function createHeatmap(containerId, dataUrl) {
@@ -2375,11 +2375,11 @@ Reeder Classic，看 RSS；
 &lt;p&gt;最开始在 ESLPOD 和 EnglishPod 之间决定学习 EnglishPod 的原因是听了它的第一段的对话 &amp;ldquo;Difficult Customer&amp;rdquo;，觉得内容挺有意思的。后来愈发觉得它很接地气，每节课都在强调 &amp;ldquo;give you real English&amp;rdquo;，也正是我需要的。&lt;/p&gt;
 &lt;h1 id=&#34;下载&#34;&gt;下载&lt;/h1&gt;
 &lt;p&gt;从 &lt;a href=&#34;https://archive.org/details/englishpod_all&#34;&gt;https://archive.org/details/englishpod_all&lt;/a&gt; 下载所有对话和文本。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;主持人对话本文&#34;&gt;主持人对话本文&lt;/h1&gt;
 &lt;p&gt;用 Buzz 把 englishpod_xxx_pb.mp3 转录一下，得到主持人对话本文。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;微信读书标注&#34;&gt;微信读书标注&lt;/h1&gt;
 &lt;p&gt;Buzz 转录出来的文本导出成 SRT 格式，需要导入到微信读书里可以划线、标注或者查词翻译。&lt;/p&gt;
 &lt;p&gt;首先需要把 SRT 文本里的时间戳部分清洗掉，借助 ChatGPT：&lt;/p&gt;
@@ -2432,9 +2432,9 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning the house. That&lt;span class=&#34;s1&#34;&gt;&amp;#39;s a real life situation. So we&amp;#39;&lt;/span&gt;re going to give you real English.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Exactly. So in today&lt;span class=&#34;s1&#34;&gt;&amp;#39;s lesson we&amp;#39;&lt;/span&gt;re going to look at language about cleaning the house.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最后将 txt 文本导入微信读书。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-5-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-5-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;我的学习步骤&#34;&gt;我的学习步骤&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;不看文本听一遍 englishpod_xxx_pb.mp3，留意一下听得模糊的地方。&lt;/li&gt;
@@ -2442,7 +2442,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;对着主持人对话文本再听一遍 englishpod_xxx_pb.mp3，注意一下主持人的发音。&lt;/li&gt;
 &lt;li&gt;复习微信读书里的划线并导出到 Obsidian，以后再浏览。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/learn-englishpod-6.png&#34; width=&#34;50%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/learn-englishpod-6.png&#34; width=&#34;50%&#34;/&gt;
 &lt;/figure&gt;
 
 </description>
@@ -2470,7 +2470,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;曾经的工作笔记&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以上存于 Dropbox，通过 Mac mini 的 Time Machine 备份，同时每天定时 rsync 到 Onedrive。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240316204251.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240316204251.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# backup dropbox daily
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /Users/jinhuaiyao/Dropbox
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -av my_daily ~/OneDrive/Backup/backup_dropbox
@@ -2563,7 +2563,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;changeFont()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113175203.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240113175203.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;macos-客户端&#34;&gt;MacOS 客户端&lt;/h2&gt;
 &lt;p&gt;MacOS 没有专门的 app，也不太习惯 Moe Memos，搜索了一下，最后用 nativefier 把网页打包成 app。&lt;/p&gt;
 &lt;p&gt;参考：&lt;br&gt;
@@ -2572,16 +2572,16 @@ Reeder Classic，看 RSS；
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo npm install nativefier -g
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nativefier &amp;#34;http://10.0.0.100:5230&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240110091054-1.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240110091054-1.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;用 Alfred 给它设置快捷键，愉快地使用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240113201126-1.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240113201126-1.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ios-客户端&#34;&gt;iOS 客户端&lt;/h2&gt;
 &lt;p&gt;直接用网页版，Safari 里添加网页到主屏幕。&lt;/p&gt;
 &lt;p&gt;但是 Memos 服务是运行在内网，在外面如何访问 memos 是个问题。&lt;/p&gt;
 &lt;p&gt;折腾了好一会儿，还是没有把握将 Mac mini 暴露在公网上，搜索了一阵，最后在 Mac mini、Macbook、iPhone 上安装 Tailscale，把这些设备组成一个虚拟局域网，安全易用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/021B9348-8B3B-4758-96FE-32219F117265_1_102_o.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/021B9348-8B3B-4758-96FE-32219F117265_1_102_o.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;运行 Tailscale 后手机网页访问 Mac mini IP 加端口即可：&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-memos-1.png&#34; width=&#34;40%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/about-memos-1.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;导入旧数据&#34;&gt;导入旧数据&lt;/h1&gt;
@@ -2671,7 +2671,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;group&amp;#34;: &amp;#34;test&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;iPhone 上收到推送。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240114083757.png&#34; width=&#34;40%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240114083757.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;memos-api-获取数据&#34;&gt;Memos api 获取数据&lt;/h2&gt;
@@ -2757,7 +2757,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-01-13 15:56:48 - #important 这是一个测试C。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % python3 test.py
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2024-01-13 15:56:31 - #important 这是一个测试A。
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240114114033.png&#34; width=&#34;40%&#34;/&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240114114033.png&#34; width=&#34;40%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Mac mini 上添加一个 cronjob 即可。&lt;/p&gt;
@@ -3982,9 +3982,9 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;1 月初，我和老婆都阳了。1 月底的某天，回小区的路上我们都没有戴口罩，好似疫情从来没有发生一样，恍惚。今年总体感觉身体状态不如去年，感冒发烧了好几回。&lt;/li&gt;
 &lt;li&gt;1 月底体重 76.6 kg，年底的时候 81.1 kg，胖了不少，脸又圆润回来了。 &lt;br&gt;
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-review-2024-plan-1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2023-review-2024-plan-1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;7 月份开始跑步比较多，全年跑步 34 次，太少。 &lt;br&gt;
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-review-2024-plan-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2023-review-2024-plan-2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;年底发现似乎很久没有午睡，午睡的习惯没了，中午也不困，白天的精神状态很好，不错。&lt;/li&gt;
 &lt;li&gt;今年第一次尝试在家附近的三甲医院体检，体验挺不错。离家近，开车 5 分钟。人也不多，各项检查很快，CT 以外的其他项目都在体检中心；给你体检的都是医院里的医生，水平有保证；检查用的设备是医院里的，总体信任度更高一些；检查报告出来以后有专家解答，如果需要看门诊的话也不用重复检查。缺点就是有点小贵，不过公司能报销，满意。&lt;/li&gt;
 &lt;/ul&gt;
@@ -3992,9 +3992,9 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;阅读，找工作的日子里看了一些书，记录在&lt;a href=&#34;https://www.jinhuaiyao.com/links/&#34;&gt;博客&lt;/a&gt;。下半年开始新工作了阅读就少了许多。&lt;/li&gt;
 &lt;li&gt;晨间日记，等等的每日一照，一整年。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-review-2024-plan-4.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2023-review-2024-plan-4.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;继续坚持基金投资，今年的行情真是惨淡，不过还是耐心等待吧。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2023-review-2024-plan-3.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2023-review-2024-plan-3.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;博客，今年写了 16 篇文章，有特别想写的就很自然地写下来。&lt;/li&gt;
 &lt;li&gt;英语，新工作对英文听说要求比以前高了许多，下半年听力提升了不少。&lt;/li&gt;
 &lt;li&gt;PLSQL，工作上为了深入了解分区表管理需要看很长的 PLSQL 代码，工作需要也会写一些简单的 Procedure 去快速统计数据，今年写 PLSQL 的水平进步了不少。&lt;/li&gt;
@@ -4054,7 +4054,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;记账时选择分类不要过于纠结。&lt;/p&gt;
 &lt;p&gt;10 块钱以下的消费可以不用记录。&lt;/p&gt;
 &lt;p&gt;优化一下分类与子类。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/about-bookkeeping.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/about-bookkeeping.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;投资记录与资产更新每两个月统计到 excel。&lt;/p&gt;
 </description>
     </item>
@@ -4147,7 +4147,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini servers % which nginx
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/homebrew/bin/nginx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;网页验证一下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;安装-mkdocs&#34;&gt;安装 mkdocs&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -4196,7 +4196,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew services restart nginx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;添加图片&#34;&gt;添加图片&lt;/h1&gt;
 &lt;p&gt;在docs 目录下新建 images 文件夹。&lt;/p&gt;
 &lt;p&gt;图片路径需要使用相对路径。例如：&lt;/p&gt;
@@ -4224,7 +4224,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;macOS 上一切就绪后，想着手机端能不能也更新文件然后自动 mkdocs build 呢。一番研究，最后搞定。&lt;/p&gt;
 &lt;h2 id=&#34;移动主文件夹到-icloud-obsidian&#34;&gt;移动主文件夹到 iCloud Obsidian&lt;/h2&gt;
 &lt;p&gt;把 mkdocs 和 mkdocs.yml 拷备到 iCloud Obsidian 里，然后 iOS 上打开 mkdocs 作为新的 vault，这样就可以在手机上编辑文档了，文档更新可以通过 iCloud 同步。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置-build-自动化&#34;&gt;配置 build 自动化&lt;/h2&gt;
 &lt;p&gt;在 mac mini 上同样安装 mkdocs。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jinhuaiyao@huaiyaos-mac-mini ~ % pip3 install mkdocs
@@ -4284,8 +4284,8 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;#34;$mdfile&amp;#34; |sed &amp;#34;s#assets/dayone#images#g&amp;#34; | sed &amp;#34;s#../assets/#../images/#g&amp;#34;&amp;gt; &amp;#34;$mdfile&amp;#34;.tmp
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv &amp;#34;$mdfile&amp;#34;.tmp  &amp;#34;$mdfile&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果如下。每天早晨起来可以打开网页快速回顾一下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/personal-wiki-setup-5.png&#34; width=&#34;50%&#34;/&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/personal-wiki-setup-5.png&#34; width=&#34;50%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;改用-dropbox&#34;&gt;改用 Dropbox&lt;/h1&gt;
@@ -4303,7 +4303,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: &amp;#34;LXGW WenKai Screen&amp;#34;, sans-serif;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;效果图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/20240115190216.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/20240115190216.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -4314,48 +4314,48 @@ Reeder Classic，看 RSS；
       
       <guid>http://www.jinhuaiyao.com/posts/home-server-with-mac-mini/</guid>
       <description>&lt;p&gt;因为家里众多设备都是在苹果生态里，也有备份 Onedrive 文件和 iCloud 照片的需求，此外也想使用 Surge 接管家里的科学上网，于是 5 月份购买了 Mac mini 搭建家用服务器，那会儿新工作确定了，有闲情去折腾新东西了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一些设置&#34;&gt;一些设置&lt;/h1&gt;
 &lt;h2 id=&#34;登录-apple-id&#34;&gt;登录 Apple ID&lt;/h2&gt;
 &lt;p&gt;开启 iCloud 照片和 iCloud Drive。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;关闭-wifi连接网线&#34;&gt;关闭 Wifi，连接网线&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;永不锁屏&#34;&gt;永不锁屏&lt;/h2&gt;
 &lt;p&gt;关闭锁屏密码。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;防止自动睡眠，断电后自动重启。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-4.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-4.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;自动登录&#34;&gt;自动登录&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;共享&#34;&gt;共享&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-8.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-8.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;文件共享&lt;/p&gt;
 &lt;p&gt;其他设备可以通过网络访问共享文件夹。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-9.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-9.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;内容缓存&lt;/p&gt;
 &lt;p&gt;“内容缓存可加快通过互联网分发的 Apple 软件的下载速度。内容缓存可将软件的本地副本储存在 Mac 上，因此所连接的客户端能够加快下载速度”。参考&lt;a href=&#34;https://support.apple.com/zh-cn/HT204675&#34;&gt;官方文章&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-10.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;远程管理和远程登录&lt;/p&gt;
 &lt;p&gt;在其他的 Mac 上访问 Mac mini 以及使用远程桌面。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-11.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-12.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-11.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-12.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;备份&#34;&gt;备份&lt;/h1&gt;
 &lt;h2 id=&#34;icloud-照片备份&#34;&gt;iCloud 照片备份&lt;/h2&gt;
 &lt;p&gt;虽说手机里的照片都存在云上，但是没有一份本地的备份总是不放心。研究了一番，最后使用以下方案。&lt;/p&gt;
 &lt;p&gt;Mac mini 外接 1T 的 SSD 移动硬盘，将照片库的默认存储位置改成外接硬盘，并且设置下载并保留原片，再配置两份 Time Machine 每个小时去备份这个 1T 外接硬盘。&lt;/p&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://support.apple.com/zh-cn/HT201517&#34;&gt;转移照片图库以节省 Mac 上的空间&lt;/a&gt;，&lt;a href=&#34;https://support.apple.com/zh-cn/HT204414&#34;&gt;在“照片”中指定“系统照片图库”&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-13.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-14.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-15.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-16.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-13.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-14.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-15.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-16.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;重要文件备份&#34;&gt;重要文件备份&lt;/h2&gt;
 &lt;p&gt;Onedrive/iCloud Drive 挑选重要资料文件夹，将其设置成总是下载到本地。DEVONthink 下载数据库到本地，这三者再通过 Time Machine 进行定期备份到两个外接硬盘。这样重要数据多一份保障，此外本地文件访问也能快些。&lt;/p&gt;
 &lt;h1 id=&#34;旁路由&#34;&gt;旁路由&lt;/h1&gt;
 &lt;p&gt;在 Mac mini 上安装 Surge，需要科学上网的设备，就选择使用 Surge 当作网关。此外也可以查看设备的网络访问情况。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-18.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-19.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-18.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-19.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;定时作业&#34;&gt;定时作业&lt;/h1&gt;
 &lt;p&gt;设置 cronjob 定时运行一些脚本。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# on this day
@@ -4373,7 +4373,7 @@ Reeder Classic，看 RSS；
 &lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
 &lt;h2 id=&#34;reeder&#34;&gt;Reeder&lt;/h2&gt;
 &lt;p&gt;在 Mac mini 上安装 Reeder，配置 30 min 查询 feeds 一次，再通过 iCloud 同步结果，其他设备上就不用重复查询了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/home-server-with-mac-mini-20.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/home-server-with-mac-mini-20.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ups&#34;&gt;UPS&lt;/h2&gt;
 &lt;p&gt;上周买了 UPS（不间断电源），把光猫、路由器、NAS 和 Mac mini 的电源全都接到 UPS 上，以后家里短暂断电也不会有影响了。&lt;/p&gt;
 &lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
@@ -4401,12 +4401,12 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;例句&amp;gt;(例句翻译)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;修改主题
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0859.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0859.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;使用效果&#34;&gt;使用效果&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tips: 可以使用 iOS 键盘自带的语音输入
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/IMG_0858.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/IMG_0858.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>
@@ -4422,20 +4422,20 @@ Reeder Classic，看 RSS；
 &lt;h1 id=&#34;oracle-linux&#34;&gt;Oracle Linux&lt;/h1&gt;
 &lt;p&gt;下载、安装 Oracle Linux 8.8 Arm version&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://docs.oracle.com/en/database/oracle/oracle-database/19/ladbi/oracle-linux-8-distributions-for-arm.html#GUID-E2BFE9DA-3AEE-474D-9780-67FB613DE337&#34;&gt;Database Installation Guide for Linux&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://yum.oracle.com/oracle-linux-isos.html&#34;&gt;https://yum.oracle.com/oracle-linux-isos.html&lt;/a&gt;，下载&lt;code&gt;OracleLinux-R8-U8-Server-aarch64-dvd.iso&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在 VMware Fusion 里安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;oracle-database-19c&#34;&gt;Oracle Database 19c&lt;/h1&gt;
 &lt;p&gt;下载 Oracle Database 19c (19.19) for LINUX ARM (aarch64)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&#34;&gt;https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;安装-oracle-19c-数据库&#34;&gt;安装 Oracle 19c 数据库&lt;/h1&gt;
 &lt;p&gt;安装依赖包
 &lt;code&gt;dnf -y install oracle-database-preinstall-19c.aarch64&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然后到解压后的 database 目录里运行 &lt;code&gt;./runInstaller&lt;/code&gt;，图形化安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/oracle-test-env-under-m1-chip-macbook-new-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -4547,16 +4547,16 @@ Reeder Classic，看 RSS；
 &lt;h1 id=&#34;记录单词到文件&#34;&gt;记录单词到文件&lt;/h1&gt;
 &lt;p&gt;用 OpenAI Translator 翻译不清楚的单词、短语或句子，刚开始是手动复制粘贴到一个文本文件，后面感觉太麻烦，就改进一下。&lt;/p&gt;
 &lt;p&gt;设计了一个 alfred workflow，Command + C 复制单词，Option + E 调用以后它会将剪贴板里的内容以指定格式放入指定文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;每日复习&#34;&gt;每日复习&lt;/h1&gt;
 &lt;p&gt;思路是将 English.md 文件里以 &amp;lsquo;---&amp;rsquo; 作为分隔符，把每一段切分出来，然后发送到 Things3 里。&lt;/p&gt;
 &lt;p&gt;利用一下 ChatGPT，一开始想用 Python 的，后来改用 Shell 了。ChatGPT 让生活美好了许多。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;我自己写了发送到 Things3 的部分，整个脚本如下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -4599,8 +4599,8 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果某些单词不用再复习了，就再其前面加上 # 号，&lt;code&gt;${word:0:1} != &#39;#&#39;&lt;/code&gt; 会去过滤。&lt;/p&gt;
 &lt;p&gt;最后把脚本加到 cron job 即可。&lt;/p&gt;
 &lt;p&gt;最后效果如下，直接变成当天的待办事项，相当“暴力”。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/review-the-words-daily-9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/review-the-words-daily-9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -4736,9 +4736,9 @@ Reeder Classic，看 RSS；
 &lt;/ul&gt;
 &lt;h1 id=&#34;新的跑步装备&#34;&gt;新的跑步装备&lt;/h1&gt;
 &lt;p&gt;速干衣，跑步水杯，跑步袜。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-preparation-for-running-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这个水杯一直拿着太轻便了，去年用的水杯太大，得放在路边，结果今年第一次跑步就被环卫工人收走了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-preparation-for-running-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-preparation-for-running-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;早上6点多起来，简单洗漱，拉伸一下，穿上跑鞋，戴上 AirPods 和 Apple watch，水杯加点水，迅速下楼。&lt;/p&gt;
 &lt;p&gt;整个跑步体验比去年的好多了。&lt;/p&gt;</description>
     </item>
@@ -4870,19 +4870,19 @@ Reeder Classic，看 RSS；
 &lt;h1 id=&#34;icloud-照片备份问题&#34;&gt;iCloud 照片备份问题&lt;/h1&gt;
 &lt;p&gt;最近改用了一个新的照片备份方案。&lt;/p&gt;
 &lt;p&gt;在原来公司 MacBook 上设置下载保留原片。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-few-problems-recently-solved-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;将桌面移动硬盘连接到电脑上，并设置每小时自动开启 TimeMachine 备份。&lt;/p&gt;
 &lt;p&gt;除了备份照片外，iCloud Drive 中的某些文件夹也会被顺便备份。&lt;/p&gt;
 &lt;p&gt;目前，iCloud 照片仅有 430G，远小于电脑硬盘 1T 的容量，因此这个方案可以使用很长一段时间。&lt;/p&gt;
 &lt;p&gt;之前曾将照片备份到 OneDrive 和 NAS 中，现已停用。&lt;/p&gt;
 &lt;h1 id=&#34;桌面移动硬盘声音响&#34;&gt;桌面移动硬盘声音响&lt;/h1&gt;
 &lt;p&gt;西部数据的桌面移动硬盘运行时声音太响，忍了很久都没有好的解决办法，直到某天看到快递里的防震气泡袋。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-few-problems-recently-solved-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;reeder-5-icloud-rss-不能批量删除问题&#34;&gt;Reeder 5 iCloud RSS 不能批量删除问题&lt;/h1&gt;
 &lt;p&gt;之前在 Reeder 中添加了 iCloud Feeds，这样 MacOS 和 iOS 设备上的 RSS 订阅可以通过 iCloud 同步。&lt;/p&gt;
 &lt;p&gt;某天导入了一个包含中文博客 &lt;a href=&#34;https://github.com/timqian/chinese-independent-blogs/blob/master/feed.opml&#34;&gt;opml 文件&lt;/a&gt; 的文件，一下子增加了很多 RSS 订阅。想删除其中一些时，发现 Reeder 没有提供批量删除的选项。&lt;/p&gt;
 &lt;p&gt;一顿研究，决定先清空 iCloud Feeds，并编辑 opml 文件后重新导入。然而在尝试删除账户以清空 iCloud Feeds 时并不起作用；重新添加账户后原来的 Feeds 会再次出现。因此需要找到另外一种方法来彻底清空 iCloud 数据。最后终于找到了可行的方法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-few-problems-recently-solved-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;虚拟机运行导致-mac-发热严重&#34;&gt;虚拟机运行导致 Mac 发热严重&lt;/h1&gt;
 &lt;p&gt;之前文章 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/some-records-for-rac-installation-on-macbook/&#34;&gt;Some Records for RAC Installation on Macbook&lt;/a&gt; 里说到在 Intel 芯片的 Macbook Pro 上装 Oracle RAC 测试环境，使用时候发现笔记本经常发热，风扇嗡嗡响，让人不是很自在。而且笔记本经常会休眠，连接 RAC 之前还得登录一下系统，不方便。&lt;/p&gt;
 &lt;p&gt;最后决定启用 Dell T7820 工作站。&lt;/p&gt;
@@ -4921,7 +4921,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;打开 Virtual Network Editor，编辑 vmnet1。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/the-few-problems-recently-solved-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/the-few-problems-recently-solved-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;配置远程桌面，以后图形界面无需外接显示器。&lt;/p&gt;
@@ -4958,19 +4958,19 @@ Reeder Classic，看 RSS；
 &lt;p&gt;之前看 《Designing Data-Intensive Applications》的时候，有些段落理解不到位，用 Google Translator 翻译成中文，需要把在 PDF 文件里把需要的段落复制到 Google Translator，点击翻译然后得到结果，感觉很不方便。想着有没有什么工具可以直接能把截图上的英文翻译成中文，当时找了一下，无果，只能记在 to do list 里。&lt;/p&gt;
 &lt;p&gt;随着 ChatGPT 的到来，发现已经有工具能够 exactly 实现我的诉求了。&lt;/p&gt;
 &lt;p&gt;就是 &lt;a href=&#34;https://www.iplaysoft.com/openai-translator.html&#34;&gt;OpenAI Translator - 最强开源 AI 划词翻译工具&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;本文记录了安装、配置和使用过程中遇到的问题及其解决方法。&lt;/p&gt;
 &lt;h1 id=&#34;安装步骤&#34;&gt;安装步骤&lt;/h1&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/yetone/openai-translator&#34;&gt;https://github.com/yetone/openai-translator&lt;/a&gt; 即可，并无难处。&lt;/p&gt;
 &lt;h1 id=&#34;糟糕的网络环境&#34;&gt;糟糕的“网络环境”&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;又联想到经常遇到的无法使用 ChatGPT 网页版。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;于是上午开始研究独立的 VPS，以及科学上网工具。&lt;/p&gt;
 &lt;p&gt;一番研究后决定选用 Vultr，注册账号然后支付宝充值 50 刀，因为优惠（&lt;a href=&#34;https://www.vultryhw.cn/rules-for-free-credit-in-vultrmatch/&#34;&gt;Vultr充多少送多少活动&lt;/a&gt;）总共得到 100 刀，可以用上一年了。&lt;/p&gt;
 &lt;p&gt;选用 Los Angeles 6$/month 套餐，Ubuntu 20.04 LTS 系统，很快得到一个主机和 IP。(外加一句，后面我又创建了 3 台不同地区的主机做测试，Vultr 是按照使用时间收费而不是主机数量，这一点就特别好，即使 IP 有问题，创建个新的主机就好，不用额外付费。)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-vps.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;又一番研究，决定选用 VMess 协议的 V2Ray 工具。&lt;/p&gt;
 &lt;h2 id=&#34;安装-v2ray&#34;&gt;安装 V2Ray&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34;&gt;https://github.com/v2fly/fhs-install-v2ray&lt;/a&gt;，其实就是一个命令：&lt;/p&gt;
@@ -5069,7 +5069,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl status ssh.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Client 端配置&lt;/p&gt;
 &lt;p&gt;Mac 上 V2rayU 添加节点：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;自此，不再出现 IP 问题，结果又报了另外的错误。&lt;/p&gt;
 &lt;h2 id=&#34;quota-报错&#34;&gt;Quota 报错&lt;/h2&gt;
 &lt;p&gt;You exceeded your current quota, please check your plan and billing details&lt;/p&gt;
@@ -5077,7 +5077,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;于是开始研究如何申请一张「虚拟信用卡」。&lt;/p&gt;
 &lt;p&gt;参考 &lt;a href=&#34;https://www.iplaysoft.com/chatgpt.html&#34;&gt;ChatGPT 怎样注册账号&lt;/a&gt;，分别注册了 Depay 和欧易账号，在欧易上充值了 15 刀的 USDT，结果要等一天才能转到 Depay，不想等这么久，继续想办法。找到欧易上给我充值的卖家，打电话过去问能不能直接给 Depay 转账，一番周折花了 2 刀手续费，在 Depay 上得到 15 刀 USDT，成功申请到一张虚拟信用卡。接着绑定到 &lt;a href=&#34;https://platform.openai.com/account/billing/payment-methods&#34;&gt;Payment methods&lt;/a&gt;，终于可以正常使用 OpenAI Translator 了。&lt;/p&gt;
 &lt;h1 id=&#34;设置图标不要总是显示&#34;&gt;设置图标不要总是显示&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/tool-to-get-ocr-translation-by-screenshot-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;不然会导致莫名其妙的 Copy/Paste 问题，可能和我使用的 Alfred 哪里有些冲突。&lt;/p&gt;
 &lt;p&gt;最后，感觉有点忧伤，如果美帝不搞封锁的话其实只要 5 分钟就可以使用了。一番周折终于可以使用，好好利用它吧。&lt;/p&gt;</description>
     </item>
@@ -5185,7 +5185,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl disable avahi-daemon.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;vmware-里共享硬盘的配置&#34;&gt;VMWare 里共享硬盘的配置&lt;/h1&gt;
 &lt;p&gt;两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-2.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -5252,7 +5252,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ----------------------------------------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ocr&#34;&gt;OCR&lt;/h1&gt;
 &lt;p&gt;忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-3.png&#34; width=&#34;80%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg
@@ -5341,7 +5341,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;和等等一起的家庭阅读时间，一家人围着书桌各自看书看报，等等东看看西看看，一会儿翻翻绘本，一会儿拿笔各种涂鸦。&lt;/li&gt;
 &lt;li&gt;9 月底带等等回了一趟老家，好久没回去了，和大家庭在一起的感觉真好。&lt;/li&gt;
 &lt;li&gt;今年 Spotify 的最爱歌曲前三名都是等等喜欢的，播放次数多是因为他喜欢听。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;工作&#34;&gt;工作&lt;/h2&gt;
 &lt;ul&gt;
@@ -5358,19 +5358,19 @@ Reeder Classic，看 RSS；
 &lt;li&gt;12 月拿全了公司给的福利：显示器，自动升降桌，笔记本电脑，工作站，几乎是免费。&lt;/li&gt;
 &lt;li&gt;12 月 27 号，9 个人的小型年会，年会奖品的丰厚超出了我的认知。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;12 月 30 号，正式离职。中午发了消息给Patrick，他是为数不多的还在的老 Stubber 了。下午去办公室拿了劳动手册。2014/10 - 2022/12，幸运的 8 年。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;健康&#34;&gt;健康&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;过去的一年几乎天天可以睡到 7 点，睡眠时间充足，幸福感很高，身体状态也很好。&lt;/li&gt;
 &lt;li&gt;体重，五月初封控降级可以下楼，开始在小区里活动，散步，跳绳，走楼梯，6 月解封以后开始跑步，历时 3 个半月，&lt;a href=&#34;https://www.jinhuaiyao.com/posts/lose-weight-10kg/&#34;&gt;减重 20 斤&lt;/a&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;打球，6 月下旬开始，一周打一次，8 月裁员以后有一段时间一周打两次，有时候还会打全场，体力消耗太大，也有些不一样的体验。打完球回到办公室附近吃麦当劳，每周的快乐。&lt;/li&gt;
 &lt;li&gt;幽门杆菌清除了，2 月初检查是阴性，10 月体检时再检查，还是阴性，完美。今年年初吃完了胃药以后整个一年胃几乎没有什么不舒服。&lt;/li&gt;
@@ -5381,7 +5381,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;继续记账。跟老婆说不用让她记账了，她很开心。主要是看她记账很痛苦，还不如折中一下，她的账户只更新资产，不记录花费明细，就轻松了很多。&lt;/li&gt;
 &lt;li&gt;继续基金定投，每个月底统计各个账户资产，并记录转入转出。有知有行 app 里可以投资以后就开始定投 “长钱账户” 。2022 年的总收益还是负的，没关系。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;阅读方面，印象比较深的有：
 &lt;ul&gt;
@@ -5400,7 +5400,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;《请回答 1988》，年初看完了，好看，好温暖，好有意思！又让同事 Dennis 帮忙在 PT 站里下载了高清视频，收藏一下。&lt;/li&gt;
 &lt;li&gt;Logseq，6 月份开始使用 &lt;a href=&#34;https://www.jinhuaiyao.com/posts/about-logseq/&#34;&gt;Logseq&lt;/a&gt;，很喜欢这个 app，把以前 DayOne 里的记录迁移到 Logseq 里了，每天的晨间日记和日常思考总结也记录在这里。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;家用服务器，一开始把&lt;a href=&#34;https://www.jinhuaiyao.com/posts/oracle-test-env-under-m1-chip-macbook/&#34;&gt;旧 MacBook 改成服务器&lt;/a&gt;，后面拿到了 DELL 工作站以后尝试虚拟化平台 Proxmox VE (PVE)，又使用 openfiler 配置共享磁盘，最后安装了 Oracle 19c 两节点 RAC 当做测试环境，加上有了公网 IP，在外面也可以访问 Oracle 数据库了。&lt;/li&gt;
 &lt;li&gt;个人博客，6 月中旬开始工作上没什么事了，花点时间研究搭建个人网站。买了 5 年的域名，研究了一圈博客框架，最后使用 hugo 框架 + github 静态页面，体验很不错，又添加了博客的访问统计以及评论系统。现在想写文章的时候新建 markdown 文件就可以写起来了。&lt;/li&gt;
@@ -5415,12 +5415,12 @@ Reeder Classic，看 RSS；
 &lt;li&gt;智能锁，一次不小心反锁在门外以后就决定换个智能锁，现在出门不会再担心钥匙的事了。&lt;/li&gt;
 &lt;li&gt;Just My Socks，之前购买的 VPS 的 IP 再次被封之后赶紧研究 Just My Socks，同事推荐的，很快购买了服务。现在有 6 个节点可用，用的域名，IP 不可用了后台会替换，不用再担心科学上网了，而且一年才 60 刀，两个 VPS 也不用再续费，还省钱了。&lt;/li&gt;
 &lt;li&gt;Pendo，用这个 app 去记录日常的一些事情，它带有时间线，写晨间日记的时候有了一些线索，回想起来会比较容易一些。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-9.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-9.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Kindle 越狱，研究并实施了一下，越狱后看 epub 电子书还是有些问题，体验不好，比较鸡肋了。&lt;/li&gt;
 &lt;li&gt;Reeder 5 macOS + iOS 客户端，把 Chrome 里收藏的博客的 RSS 都订阅了一遍，闲来无事看一看别人的文章。&lt;/li&gt;
 &lt;li&gt;ChatGPT，注册使用一下，多了一个利器，还需要深入挖掘、利用一下。这个 DBA 面试的自我介绍比我自己写的好多了。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-review-2023-plan-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-review-2023-plan-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;买了一年的 Starfall 订阅，又买了 2kids 识字和数学的会员，让等等在 iPad 上多玩一些有意思的益智游戏。&lt;/li&gt;
 &lt;/ul&gt;
@@ -5492,11 +5492,11 @@ Reeder Classic，看 RSS；
 &lt;p&gt;孩子 3 岁了要不要立规矩？- 我们的想法是不要太早立规矩，除了孩子安全问题以外，不对孩子限制太多，让他自由、充分地成长。&lt;/p&gt;
 &lt;p&gt;孩子不爱吃饭怎么办？- 小朋友在家有时候也不爱吃饭，我们也不逼他吃，怕他坏了吃饭的兴致，以后对吃饭会抵触。一般会想想是不是他饭前吃零食了，或者是不是饭菜烧得不可口。吃饭是人的本能，饿了他就会吃，不饿逼他吃也没用。&lt;/p&gt;
 &lt;p&gt;不知道哪一天开始小朋友会在家里各种涂鸦，一开始还愿意在给他的纸上涂和画，后来发展到家里的墙面，地面，桌面，到处是孩子的 “杰作”。我们也不管他，任由他去，开始看着墙面还有点别扭，后面就熟视无睹了，以后重新粉刷就是了。有图为证：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/family-education-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/family-education-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/family-education-3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/family-education-4.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/family-education-5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/family-education-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/family-education-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/family-education-3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/family-education-4.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/family-education-5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;孩子爱看动画片怎么办？- 小朋友要看动画片了就让他看，动画片不是洪水猛兽，多看一些也不会让小朋友眼睛就近视了。最初我们还用沙漏想去限制一下时间，发现没什么用，索性也就不限制了，最多用其他事情转移一下他的注意力，比如去吃点水果，洗个澡，玩会拼图，去游乐场玩玩。晚上还规定了 “家庭读书时间”，那段时间把家里的其他灯都关掉，只开台灯，每个人都围坐在书桌旁边看书看报，这样大家一起陪他看绘本，他就想不起来要看动画片了。&lt;/p&gt;
 &lt;p&gt;最后列举一下自己看过的育儿书，我们绝大部分的家庭教育的理念都源自它们。&lt;/p&gt;
 &lt;ul&gt;
@@ -5516,8 +5516,8 @@ Reeder Classic，看 RSS；
       
       <guid>http://www.jinhuaiyao.com/posts/lose-weight-10kg/</guid>
       <description>&lt;p&gt;5 月 3 号到 8 月 18 号，3 个半月，减重 20 斤。时隔 7 年，终于成功了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;回顾一下这 3 个半月。&lt;/p&gt;
 &lt;h1 id=&#34;缘起&#34;&gt;缘起&lt;/h1&gt;
@@ -5545,11 +5545,11 @@ Reeder Classic，看 RSS；
 &lt;li&gt;彻底解封以后开始早上去跑步。刚跑的时候走一段跑一段，跑不动了就走走，没有负担。刚开始边跑步边听微信听书，后来看了&lt;a href=&#34;https://weread.qq.com/book-detail?type=1&amp;amp;senderVid=37432009&amp;amp;v=5aa32dc0718048ef5aab966k6bb4288042d316bb61e34a1&#34;&gt;《当我谈跑步时，我谈些什么》&lt;/a&gt;，开始听 Eric Clapton 的 &lt;a href=&#34;https://open.spotify.com/album/3lIVRVNgrOxfmjUAY2yfwW?si=NWzxLux8T4Of2AkyvkPwrg&#34;&gt;Reptile&lt;/a&gt; ，的确适合跑步时听，伴着悠扬的音乐，边跑边思绪纷飞。&lt;/li&gt;
 &lt;li&gt;有个小技巧，把跑步需要的物品和准备工作列个清单，早上起来以后对照着快速准备一下，迅速出门。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;看了下 Keep 里 7 月份的记录，跑得还算多的。(跑跑走走，忽略配速。)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/lose-weight-10kg-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/lose-weight-10kg-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;刻意走楼梯，多走路，多出力干点家务。尽可能地多消耗能量。&lt;/li&gt;
 &lt;li&gt;每周打球。每次打完球都和同事一起吃一顿麦当劳的汉堡 + 薯条 + 可乐，很爽，也不必有心理负担。&lt;/li&gt;
@@ -5638,7 +5638,7 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/about-logseq/</guid>
       <description>&lt;p&gt;这两礼拜每天都在用 Logseq，真是太喜欢了。&lt;/p&gt;
 &lt;p&gt;这篇文章的形成也来自于 Logseq。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-sample_1.png&#34; alt=&#34;Logseq&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Logseq-sample_1.png&#34; alt=&#34;Logseq&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;对我启发最大的两个资源&#34;&gt;对我启发最大的两个资源&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1X44y1K7X1?vd_source=326dc31e3febf5f2fd25078a753ea3d0&#34;&gt;我如何使用 Logseq 管理我的生活和笔记&lt;/a&gt;&lt;/li&gt;
@@ -5661,7 +5661,7 @@ Reeder Classic，看 RSS；
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;perl -pi -e &amp;#34;s/\t- ####/- ####/g&amp;#34; *.md
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;daily-template&#34;&gt;Daily template&lt;/h1&gt;
 &lt;p&gt;自定义好 daily_template_journals:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Logseq-daily-template_1.png&#34; alt=&#34;daily-template&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Logseq-daily-template_1.png&#34; alt=&#34;daily-template&#34;&gt;&lt;/p&gt;
 &lt;p&gt;每天早上打开 Journals，输入 /template 回车，然后选中 daily_template_journals 回车，就可以了。&lt;/p&gt;
 &lt;h1 id=&#34;备份&#34;&gt;备份&lt;/h1&gt;
 &lt;p&gt;Logseq 所有的内容是存在 iCloud 里的，只有一份，做为一名 DBA，重要的资料必须要有一份冗余。&lt;/p&gt;
@@ -5680,7 +5680,7 @@ Reeder Classic，看 RSS；
 &lt;p&gt;简单的讲就是给 /usr/sbin/cron 赋予 Full Disk Access 权限。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;-- update on 2022-08-06&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;今天在 QNAP NAS 里开启了 Time Machine 服务，配置新 MacBook 上的 Time Machine 备份到 NAS 里，这样每个小时都会自动备份，又多了一重保障。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/logseq_backup_to_timemachine_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/logseq_backup_to_timemachine_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;那年今日&#34;&gt;那年今日&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;-- added on 2022-07-22&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;从 Dayone 迁移过来以后就想着在 Logseq 里实现类似 Dayone 里“那年今日”的功能。&lt;/p&gt;
@@ -5699,7 +5699,7 @@ Reeder Classic，看 RSS；
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;\n-\n-\n&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ../pages/On_This_Day.md
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以展开或折叠，效果如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/on_this_day_2.png&#34; alt=&#34;on_this_day&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/on_this_day_2.png&#34; alt=&#34;on_this_day&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -5710,7 +5710,7 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/if-dont-understand-dont-mess-around/</guid>
       <description>&lt;p&gt;教育子女方面虽然我不是懂的很多，没有很多经验。但是我一直在学习、思考、实践。&lt;/p&gt;
 &lt;p&gt;就这样就已经好于绝大部分观念还停留在&amp;quot;远古时代&amp;quot;的家长们了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2022-06-13_1.jpeg&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2022-06-13_1.jpeg&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;图书&lt;a href=&#34;https://weread.qq.com/book-detail?type=1&amp;amp;senderVid=37432009&amp;amp;v=45032570725cad7345009bfkcfc32da010cfcd208495488&#34; title=&#34;微信读书&#34;&gt;《少年发声》陈瑜 &lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
@@ -5721,34 +5721,34 @@ Reeder Classic，看 RSS；
       
       <guid>http://www.jinhuaiyao.com/posts/implement-a-requirement/</guid>
       <description>&lt;p&gt;最近看 sqlserver 官方文档的 pdf，越看越觉得其中的知识点十分繁杂，众多分支无穷尽焉，让人心生畏惧。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;于是想着能不能有个工具，可以把 pdf 里的大纲提取出来，并且能够标记完成度，这样能有信心一点一点去学习，逐渐拨开层层迷雾。&lt;/p&gt;
 &lt;p&gt;一顿谷歌，发现没有现成的工具可以一步到位实现需求。不过搜索过程中发现了 OmniOutliner，试用了一下，发现它界面精美，可以展示大纲并且可以标记，完美符合我的需求。&lt;/p&gt;
 &lt;p&gt;剩下的问题就是如何把 pdf 文档里的大纲导出然后导入 OmniOutliner 了。&lt;/p&gt;
 &lt;p&gt;又是一番搜索，找到了 &lt;a href=&#34;https://mupdf.com&#34;&gt;mupdf&lt;/a&gt;，这个工具可以导出 pdf 大纲。&lt;/p&gt;
 &lt;p&gt;虚拟机 Windows 里运行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c:\mupdf-1.20.0-windows&amp;gt;mutool.exe show SQLServer.pdf outline &amp;gt;b.txt
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mac 里处理一下多余的字符&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;去掉右面的 #page=xxx&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi b.txt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/#page.*$//g
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:set list
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
 &lt;p&gt;去除左面多余 |tab 和 -tab 以及所有的双引号&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/|^I//g
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/-^I//g
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:1,$s/&amp;#34;//g
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:set nolist
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
 &lt;p&gt;搞定!&lt;/p&gt;
 &lt;p&gt;导入 OmniOutliner，看成果图，完美。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/implement-a-requirement-9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/implement-a-requirement-9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -5784,7 +5784,7 @@ Reeder Classic，看 RSS；
       <guid>http://www.jinhuaiyao.com/posts/creation-begins-with-imitation/</guid>
       <description>&lt;p&gt;最近除了学习象棋就是学习 Python，象棋不谈也罢，Python的学习是通过学习 flask 框架进行的。&lt;/p&gt;
 &lt;p&gt;这里推荐一下 &lt;a href=&#34;https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world&#34;&gt;https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/creation-begins-with-imitation_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;可以按照教程一步一步从无到有、从简单到复杂地搭建一个网站并且实现很多功能。&lt;/p&gt;
 &lt;p&gt;可以一行一行照着教程敲代码，熟悉 Python 的使用方法，同时训练自己的专注能力（代码很容易就会有缺漏，运行的时候就会获得一堆报错，笑）。&lt;/p&gt;
 &lt;p&gt;可以在某些地方做一些更改，看看更改之后有什么效果。&lt;/p&gt;
@@ -5794,15 +5794,15 @@ Reeder Classic，看 RSS；
 &lt;p&gt;学习过程中会遇到很多一时难以理解的地方，也会有些报错需要排查，可以借此来挑战一下自己。&lt;/p&gt;
 &lt;p&gt;学到第10章就已经有了许多网站一样的功能。&lt;/p&gt;
 &lt;h1 id=&#34;有登录登出&#34;&gt;有登录登出&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/creation-begins-with-imitation_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有发贴&#34;&gt;有发贴&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/creation-begins-with-imitation_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有关注取关&#34;&gt;有关注取关&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/creation-begins-with-imitation_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有编辑个人信息&#34;&gt;有编辑个人信息&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/creation-begins-with-imitation_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;有密码重置&#34;&gt;有密码重置&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/creation-begins-with-imitation_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/creation-begins-with-imitation_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -5849,22 +5849,22 @@ Reeder Classic，看 RSS；
 &lt;li&gt;Switch 健身环大冒险，等等也跟着我们一起运动， 这是等等每天最期待的环节，玩之前让他收拾客厅不要太积极哦。&lt;/li&gt;
 &lt;li&gt;体重，保持平稳。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2021-review-2022-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;积累&#34;&gt;积累&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;记账一年，清楚地知道这一年花了多少钱，赚了多少钱。&lt;/li&gt;
 &lt;li&gt;晨间日记一整年。&lt;/li&gt;
 &lt;li&gt;等等的每日一照，一整年。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2021-review-2022-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;坚持每个月基金定投，虽然今年的总收益是负的（笑）。每个月月底 Excel 里统计一下总资产，有知有行 app 里记录一下转入转出和总资产，可以清楚地知道这一年投入了多少钱，年收益率是多少。今年基金收益比较惨淡，不过已经看淡了，咱也算是经历过十年”风浪“的基金定投选手。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2021-review-2022-plan_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;阅读方面，看了 16 本书，大多是小说，不提也罢。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2021-review-2022-plan_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2021-review-2022-plan_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;写了七篇公众号文章，少得可怜。&lt;/li&gt;
 &lt;/ul&gt;
@@ -5904,13 +5904,13 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;用来复用。工作记录有迹可寻的话，过去解决问题的思路方法，用过的命令、步骤很多都直接可以复用，跟 database shared pool 似的，省时省力。例如：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_1.png&#34; width=&#34;50%&#34;/&gt;
+&lt;figure&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_1.png&#34; width=&#34;50%&#34;/&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;用来回顾。闲来无事可以随机打开一个笔记（ Obsidian 的插件），回顾一下，可以看看过去在忙什么，可以看看以前解决问题的思路、方法，对比一下现在，看看有无进步。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;用于周报（现在不需要了），不然忙了一个礼拜，都不知道忙了什么。&lt;/p&gt;
@@ -5935,23 +5935,23 @@ Reeder Classic，看 RSS；
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;每天的笔记尽量记录详细一些，加上当时的想法和详细操作。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;log和command贴在笔记里需要用 ``` 标记成 code，这样显示不会凌乱，Obsidian 索引的时候也不会费时。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;笔记仍然按照时间线去记录，每天一个以日期命名的笔记文件。dailynote 的主要作用仍然是当天的“工作台”，记录处理各个任务时的步骤、解决问题的思路和方法，其中小部分值得提取出来再加工的可以单独新建一个笔记文档，用 Obsidian 里的 &lt;code&gt;[[ ]]&lt;/code&gt; 去关联。例如：
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;VSCode 作为主力编辑器，Obsidian 用来回顾及组织笔记之间的关联。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;及时回顾、整理当天的记录。整理过的 daily note 重命名。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/impove-note-taking_7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/impove-note-taking_7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -6103,7 +6103,7 @@ Reeder Classic，看 RSS；
 &lt;li&gt;今年运动少了许多，整个一年打篮球约有5次，跑步10次左右，主要做做室内运动。以前用 ihabit 打卡，现在记录到 DayOne 里。&lt;/li&gt;
 &lt;li&gt;DayOne 里等等的每日一照，记录整一年；晨间日记记录一年，偶尔有间断。DayOne 也新增几个日记本，打算把众多的记录整合到一起。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2020-review-2021-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;记账，10 月份开始用 MoneyWiz 记账，真是太好用太有成就感了。&lt;/li&gt;
 &lt;/ul&gt;
@@ -6119,14 +6119,14 @@ Reeder Classic，看 RSS；
 &lt;li&gt;做了个肠镜，了却一桩心事。&lt;/li&gt;
 &lt;li&gt;体重，基本保持。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/2020-review-2021-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;投资&#34;&gt;投资&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;3 月初下决心把分散在各个地方的投资情况梳理了一下，做到心中有数。&lt;/li&gt;
 &lt;li&gt;基金定投新增加了富国天惠成长混合（感谢 Peter 推荐）。&lt;/li&gt;
 &lt;li&gt;中欧恒利三年，三年的封闭期，今年赎回时总的收益率才 10.5%，教训。以后新发的基金坚决不买，除非基金经理是张坤或谢治宇。&lt;/li&gt;
 &lt;li&gt;今年陆续给好几个小伙伴安利基金定投，就像 2011 年陈梁给我安利一样，希望他们能坚持几年有个好收益。基金今年一年收益率大幅跑赢沪深300。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_3.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2020-review-2021-plan_3.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;清理&#34;&gt;清理&lt;/h2&gt;
 &lt;ul&gt;
@@ -6155,7 +6155,7 @@ Reeder Classic，看 RSS；
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;iOS 14，桌面和小组件达到目前最舒适的状态。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2020-review-2021-plan_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2020-review-2021-plan_4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;手机 SIM 卡设置了密码，丢手机的话 SIM 卡多了一层保护。&lt;/p&gt;
@@ -6227,9 +6227,9 @@ Reeder Classic，看 RSS；
 &lt;li&gt;上班开车路上漫听 BBC Global News，一年。&lt;/li&gt;
 &lt;li&gt;通过观察思考加实践，篮球技艺又提高了一点。&lt;/li&gt;
 &lt;li&gt;投资方面，定投的主动基金跑赢了沪深300，还是很开心的。且慢里的指数基金经过一年半不到的时间也有 15.5% 的收益。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2019-review-2020-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2019-review-2020-plan_1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;维持了一年的体重，减重有点难，2020 年再出发。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2019-review-2020-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2019-review-2020-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;2019 年看书很少，只有可怜的 6 本，其中还包括 2 本小说。在珠海参加年会的时候因为太闲了，几乎都在酒店待着，开始看《微习惯》，看了马上实践。以前给自己订下目标，总是太大，要耗费太多的意志力，最后几乎总是以失败告终。但是如果我们刚开始的时候建立一些微小到甚至不需要耗费意志力、不可能失败的习惯，比如每天一个俯卧撑，看两页书。这样就没有压力，不需要思想斗争，五分钟就可以完成，不会有机会体验没有完成目标导致的愧疚和失败感。这样有一个好的开始，更容易形成惯性，一点一点进步。&lt;/li&gt;
 &lt;li&gt;过去的一年也在尝试和自己和解，知道意志力是有限的，所以很多事情没有坚持下来也原谅自己，来年换些方法继续前行。&lt;/li&gt;
 &lt;/ul&gt;
@@ -6315,8 +6315,8 @@ Reeder Classic，看 RSS；
 &lt;li&gt;5 月 4 号，收获小朋友一枚！2018 年最大的收获。&lt;/li&gt;
 &lt;li&gt;5 - 12 月，陪伴小朋友成长。打怪升级，披荆斩棘。每次小家伙咧着嘴对着我笑，都觉得心快融化了。小孩子长得好快的，不经意的几个月就像大孩子了，抱久了都有些吃力。&lt;/li&gt;
 &lt;li&gt;7 月份老婆带着孩子回娘家，自己在家各种整理、打扫，各种跑步、快走，各种看书、写字。7 月份体重今年最低，阅读量今年最高。有图为证。
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2018-review-2019-plan_1.png&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/2018-review-2019-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2018-review-2019-plan_1.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://img.jinhuaiyao.com/images/2018-review-2019-plan_2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;11、12 月份有些懈怠，不怎么运动了，饮食也不控制了，体重就渐渐增加了，抵抗力也下降了，身体时常不适。&lt;/li&gt;
 &lt;li&gt;理财方面，1 月份赎回了两只基金，将近 7w，现在回头看算是很明智的。2018 这一年的收益是 -19.15%（天天基金 only ），对比沪深300 的 -26.34%，还算可以的，亏钱了仍然很淡定。希望过两年基金能翻倍可以补偿家人今年的大力支持。&lt;/li&gt;
 &lt;li&gt;胆红素问题搞定。&lt;/li&gt;

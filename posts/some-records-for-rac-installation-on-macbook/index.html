@@ -55,7 +55,7 @@
         <div class="text-xs font-semibold text-gray-500 flex gap-3">
         
         
-<time datetime="2023-02-02 16:19:18 &#43;0800 CST" title="2023-02-02 16:19:18 &#43;0800 CST">
+<time datetime="2023-02-02 16:19:18 &#43;0800 &#43;08" title="2023-02-02 16:19:18 &#43;0800 &#43;08">
     2023/02/02
 </time>
         
@@ -96,7 +96,7 @@
 </span></span><span class="line"><span class="cl">systemctl disable avahi-daemon.service
 </span></span></code></pre></div><h1 id="vmware-里共享硬盘的配置">VMWare 里共享硬盘的配置</h1>
 <p>两个虚拟机都需要一些特别的配置，不然启动节点二db server会报错，无法使用共享磁盘。以前设置过的，这次想省略这一步试试看，结果不行，老老实实配置起来。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-2.png" width="80%"/>
+<figure><img src="https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-2.png" width="80%"/>
 </figure>
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
@@ -163,7 +163,7 @@
 </span></span><span class="line"><span class="cl"># ----------------------------------------------------------------
 </span></span></code></pre></div><h1 id="ocr">OCR</h1>
 <p>忘记 OCR 和 Voting disk 的冗余方式了，又打开 OneNote 查看一下以前的记录，Redundancy 要选 Normal，Oracle 会生成一份冗余，asmcmd lsdg 里 Req_mir_free_MB 和 Usable_file_MB 可以看出来。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/some-records-for-rac-installation-on-macbook-3.png" width="80%"/>
+<figure><img src="https://img.jinhuaiyao.com/images/some-records-for-rac-installation-on-macbook-3.png" width="80%"/>
 </figure>
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[grid@pve01dbs005 ~]$ asmcmd lsdg vote_dg

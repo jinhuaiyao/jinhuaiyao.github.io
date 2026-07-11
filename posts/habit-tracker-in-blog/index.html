@@ -53,7 +53,7 @@
         <div class="text-xs font-semibold text-gray-500 flex gap-3">
         
         
-<time datetime="2024-05-11 11:12:12 &#43;0800 CST" title="2024-05-11 11:12:12 &#43;0800 CST">
+<time datetime="2024-05-11 11:12:12 &#43;0800 &#43;08" title="2024-05-11 11:12:12 &#43;0800 &#43;08">
     2024/05/11
 </time>
         
@@ -67,14 +67,14 @@
     <section class="content text-base text-gray-800 mt-3">
     <h1 id="缘起">缘起</h1>
 <p>看到少数派上介绍 <a href="https://sspai.com/post/88456">HabitKit</a>，发现它的呈现方式有点像 github 代码提交的热力图，挺好看。</p>
-<figure><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/HabitKit.jpg" width="30%"/>
+<figure><img src="https://img.jinhuaiyao.com/images/HabitKit.jpg" width="30%"/>
 </figure>
 
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>加上之前也浏览过椒盐豆豉的文章 <a href="https://blog.douchi.space/hugo-blog-heatmap/#gsc.tab=0">如何给 Hugo 博客添加热力图</a>，想着能不能在自己的博客上也用类似的形式来记录一下平常的运动、学习，也是一种激励。</p>
 <h1 id="实现">实现</h1>
 <p>了解到可以用 echart 的 js 后，和 ChatGPT 4 展开了数轮的对话，历经众多问题，终于得到了我想到的样子。</p>
-<p><img src="https://huaiyao-image-hosting.oss-cn-shanghai.aliyuncs.com/images/Xnip2024-05-11_11-42-24.png" alt=""></p>
+<p><img src="https://img.jinhuaiyao.com/images/Xnip2024-05-11_11-42-24.png" alt=""></p>
 <p>主要代码如下：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;script type=&#34;text/javascript&#34;&gt;
 </span></span><span class="line"><span class="cl">    function createHeatmap(containerId, dataUrl) {
