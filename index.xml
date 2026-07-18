@@ -9,6 +9,86 @@
     <copyright>2017 - {year}</copyright>
     <lastBuildDate>Thu, 02 Jun 2022 11:04:49 +0800</lastBuildDate><atom:link href="http://www.jinhuaiyao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>我的云服务器上运行了什么 - 2026</title>
+      <link>http://www.jinhuaiyao.com/posts/what-is-running-on-my-vps-2026/</link>
+      <pubDate>Sat, 18 Jul 2026 13:26:23 +0800</pubDate>
+      
+      <guid>http://www.jinhuaiyao.com/posts/what-is-running-on-my-vps-2026/</guid>
+      <description>&lt;p&gt;前情提要 - &lt;a href=&#34;https://www.jinhuaiyao.com/posts/what-is-running-on-my-vps/&#34;&gt;我的云服务器上运行了什么&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@meta-unicorn-2:~# uptime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 11:47:04 up 77 days, 20:43,  1 user,  load average: 0.05, 0.06, 0.05
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2 个月前重装了 VPS 的系统，利用 AI 实践了一把服务器上所有数据和服务的备份和恢复。这次让 AI 直接 ssh 到服务器上进行检查和安全加固。&lt;/p&gt;
+&lt;p&gt;2026 年 7 月更新一下云服务器上最新的应用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare → nginx → 本地后端。nginx 负责反向代理和 TLS，后端服务全部只绑在 127.0.0.1 上，不直接暴露在公网。&lt;/p&gt;
+&lt;p&gt;除了反代自己的应用，还做了三个 API 中转，在国内不用科学途径也能直接调用。&lt;/p&gt;
+&lt;p&gt;OpenAI：https://x1.xxx.com/v1 → api.openai.com&lt;/p&gt;
+&lt;p&gt;Notion：https://x2.xxx.com/v1 → api.notion.com&lt;/p&gt;
+&lt;p&gt;Gemini：https://x3.xxx.com → generativelanguage.googleapis.com&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@meta-unicorn-2:~# docker ps -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CONTAINER ID   IMAGE                              COMMAND                  CREATED        STATUS                  PORTS                       NAMES
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4d13a84d3e91   doocs/md:latest                    &amp;#34;md&amp;#34;                     6 weeks ago    Up 6 weeks              127.0.0.1:8089-&amp;gt;80/tcp      md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;97972d4d25f4   codercom/code-server:latest        &amp;#34;/usr/bin/entrypoint…&amp;#34;   2 months ago   Up 2 months             127.0.0.1:8090-&amp;gt;8080/tcp    code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0af6d17b7067   finab/bark-server                  &amp;#34;/entrypoint.sh bark…&amp;#34;   2 months ago   Up 2 months             127.0.0.1:10086-&amp;gt;8080/tcp   bark
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6afa659efdc9   neosmemo/memos:0.18.2              &amp;#34;./memos&amp;#34;                2 months ago   Up 2 months             127.0.0.1:5230-&amp;gt;5230/tcp    memos
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fc129e17d4c4   ghcr.io/plankanban/planka:1.26.1   &amp;#34;docker-entrypoint.s…&amp;#34;   2 months ago   Up 2 months (healthy)   127.0.0.1:3000-&amp;gt;1337/tcp    planka-planka-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;e992937ef310   postgres:14-alpine                 &amp;#34;docker-entrypoint.s…&amp;#34;   2 months ago   Up 2 months (healthy)   5432/tcp                    planka-postgres-1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;docker 里运行以下应用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;code-server&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在浏览器里访问 VS Code，任何机器上打开网页就能写代码、管理代码片段。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Planka&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;看板应用，类似 Trello，工作上的 task 都放在这里，数据在自己手上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Memos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;轻量笔记服务，我把它用在博客里，调用 memo s的 api 展示一些只言片语。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bark&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;iOS 推送服务，监控脚本、定期提醒都靠它给 iPhone 推消息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;doocs/md&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;公众号排版工具。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;自己定制的应用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这一年多和 AI 一起写了几个小应用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错题本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给小朋友整理错题用的。&lt;a href=&#34;https://www.jinhuaiyao.com/posts/spent-an-hour-creating-a-wrong-question-book-app-with-ai/&#34;&gt;花一小时，我和 AI做了个错题本 app&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-07-18_12-50-59.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;复习卡片&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给小朋友用的学习卡片工具，这个目前没怎么用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-07-18_12-51-59.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;小朋友的进步手册&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;记录小朋友的日常进步。当他遇到困难、哭鼻子的时候就打开给他看看，让他回顾一下通过努力得到的进步。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-07-18_12-53-20.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;微信文章存 Notion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;看到好的微信文章，复制链接，轻点 iPhone 背面三下，调用快捷指令，就可以存到 Notion 里归档。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微信读书划线卡片&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jinhuaiyao.com/posts/turn-wechat-reading-highlights-into-random-review-cards/&#34;&gt;把微信读书的划线做成随机回顾卡片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.jinhuaiyao.com/images/Xnip2026-07-18_13-04-27.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Cron定时任务&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@meta-unicorn-2:~# crontab -l |grep -v &amp;#39;^#&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHELL=/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 1 * * 0 /root/backup-vps.sh &amp;gt; /var/log/backup-vps-$(date +\%Y\%m\%d).log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 3 1 * * find /var/log -name &amp;#39;backup-vps-*.log&amp;#39; -mtime +60 -delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;25 * * * * /root/wallpaper_env/bin/python3 /root/wallpaper_env/generate_wallpaper.py &amp;gt;/root/generate_wallpaper.log  2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 */3 * * * cd /root/weread-export &amp;amp;&amp;amp; /usr/bin/python3 export_notes.py &amp;gt;&amp;gt; export.log 2&amp;gt;&amp;amp;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;每周日凌晨整机备份，每月清理 60 天前的备份日志。&lt;/p&gt;
+&lt;p&gt;每小时生成一张打卡壁纸。&lt;a href=&#34;https://www.jinhuaiyao.com/posts/auto-rotating-workout-stats-for-your-iphone-lock-screen/&#34;&gt;把运动统计写在 iPhone 锁屏上，还会自动切换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上面提到的微信读书划线卡片，每3小时把最新的划线导出。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;安全&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ufw 防火墙：只放行 SSH 和 Cloudflare 网段的 80/443。&lt;/p&gt;
+&lt;p&gt;fail2ban：防 SSH 暴力破解。&lt;/p&gt;
+&lt;p&gt;sshd：非标准端口，仅密钥登录。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一台 2 核 2G 小机器，跑了这么多东西，太值了。&lt;/p&gt;
+&lt;p&gt;就这样。2027 年再来更新。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>我还在订阅的服务 - 2026</title>
       <link>http://www.jinhuaiyao.com/posts/my-active-subscriptions---2026/</link>
       <pubDate>Sun, 12 Jul 2026 11:55:11 +0800</pubDate>
